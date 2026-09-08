@@ -1,0 +1,44 @@
+.container{
+    position: relative;
+    width: 750px;
+}
+
+.icone{
+    position: absolute;
+}
+.icone-01{
+    left: 65px;
+    top: 40px;
+}
+.icone-02{
+    left: 200px;
+    top: 120px;
+}
+.icone-03{
+    left: 385px;
+    top: 190px;
+}
+.icone-04{
+    left: 265px;
+    top: 225px;
+}
+.icone-05{
+    left: 212px;
+    top: 45px;
+}
+.icone-06{
+    left: 505px;
+    top: 45px;
+}
+.icone-07{
+    left: 597px;
+    top: 152px;
+}
+.icone-08{
+    left: 649px;
+    top: 107px;
+}
+.icone-09{
+    left: 660px;
+    top: 310px;
+}

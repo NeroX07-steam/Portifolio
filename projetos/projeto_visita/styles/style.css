@@ -1,0 +1,26 @@
+.card {
+    background-color: rgb(58, 58, 58);
+    margin: 30px;
+    padding: 30px;
+    border-radius: 15px;
+    object-fit: contain;
+    width: 400px;
+    height: 300px;
+}
+
+img {
+    height: 100px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+span{
+    color: aqua;
+}
+
+.white{
+    color: white;
+    font-size: 20px;
+    font-weight: 1;
+}

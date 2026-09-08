@@ -1,0 +1,26 @@
+#vermelho{
+    background-color: red;
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+#amarelo{
+    background-color: rgb(222, 247, 2);
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
+}
+#verde{
+    background-color: rgb(0, 255, 0);
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+
+
+h1 {
+    text-align: center;
+    line-height: 300px;
+}

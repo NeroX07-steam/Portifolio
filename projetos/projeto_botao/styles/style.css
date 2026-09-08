@@ -1,0 +1,142 @@
+.first{
+    color: black ;
+    border: 2px solid black;
+    cursor: pointer;
+
+}
+.first:hover{
+    color: white;
+    background-color: black;
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+button{
+    width: 180px;
+    margin: 10px;
+    padding: 15px;
+    font-size: 16px;
+}
+
+.second{
+    color: black;
+    background-color: rgb(5, 70, 247);
+    border: 2px solid white;
+    border-radius: 40px;
+        cursor: pointer;
+}
+
+.second:hover{
+    color: black;
+    background-color: rgba(67, 131, 248, 0.938);
+}
+
+.third{
+    color: black;
+    background-color: rgb(69, 247, 69);
+    border: 2px ;
+    border-radius: 10px;
+        cursor: pointer;
+}
+.third:hover{
+    color: black;
+    background-color: rgb(135, 253, 135);
+
+}
+
+.fourth{
+    color: white;
+    background-color: rgb(250, 59, 186);
+    border-radius: 10px;
+    border: 2px solid rgb(250, 59, 186);
+    cursor: pointer;
+}
+
+.fourth:hover{
+    color: rgb(250, 59, 186);
+    background-color: white;
+}
+
+.fifth{
+    color: rgba(255, 0, 0, 0.938);
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 0, 0);
+    border-radius: 20px;
+        cursor: pointer;
+}
+.fifth:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 13, 13, 0.938);
+}
+
+.sixth{
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 2px 2px ;
+        cursor: pointer;
+}
+
+.sixth:hover{
+    color: white;
+    background-color: rgb(80, 79, 79);
+}
+
+.seventh{
+    border: 2px;
+    box-shadow: 0px 2px 0px;
+        cursor: pointer;
+}
+.seventh:hover{
+    color: rgb(95, 92, 92);
+    background-color: rgb(255, 255, 255);
+}
+.eighth{
+    color: black;
+    background-color: rgb(248, 224, 6);
+    border-radius: 10px;
+    box-shadow: -3px 0px 1px ;
+        cursor: pointer;
+}
+
+.eighth:hover{
+    color: rgb(0, 0, 0);
+    border: 2px solid yellow;
+    background-color: rgb(255, 255, 255);
+    box-shadow: -3px 0px 0px yellow;
+}
+.ninth{
+    color: rgb(6, 51, 2);
+    background-color: rgb(95, 248, 6);
+    border-radius: 40px 0px;
+    border: 2px;
+        cursor: pointer;
+
+}
+
+.ninth:hover{
+    color: rgb(2, 255, 2);
+    border: 2px;
+    background-color: darkgreen;
+
+}
+
+.tenth{
+    color: rgb(174, 0, 255);
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    border: 1px dashed rgb(174, 0, 255);
+        cursor: pointer;
+
+}
+.tenth:hover{
+    color: rgb(255, 255, 255);
+    border: 2px ;
+    background-color: rgb(174, 0, 255);
+
+}

@@ -1,0 +1,29 @@
+
+
+body {
+    background-color: blue;
+
+
+}
+
+div {
+    margin: 0 auto;
+    width: 750px;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url("../assets/background.jpg");
+    background-size: cover;
+    border: 2px solid cyan;
+
+}
+
+h1 {
+    text-align: center;
+
+}
+
+.fig {
+    width: 150px;
+    padding: 50px;
+    
+}

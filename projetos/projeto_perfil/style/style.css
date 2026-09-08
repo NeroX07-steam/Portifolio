@@ -1,0 +1,29 @@
+h1 {
+    color: blue;
+    font-size: 40px;
+}
+
+p {
+    font-size: 25px;
+}
+span {
+    color:rgb(22, 255, 255)
+}
+
+.first {
+    color: rgb(255, 69, 100);
+}
+
+.yellow {
+    color: yellow;
+    font-size: 50px;
+    font-weight: 100
+    ;
+}
+
+#gray {
+    color: gray;
+    font-size: 20px;
+    font-weight: 1000
+    ;
+}

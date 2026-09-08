@@ -1,0 +1,156 @@
+
+
+
+.top {
+    display: flex ;
+    justify-content: end;
+    gap: 10px;
+    margin: 10px;
+
+}
+
+
+a {
+    display:flex ;
+    text-align: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #00C200;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #00C200;
+    border-color: #00C200;;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #ffffff;
+    background-color: #00C200;
+
+}
+
+.top-conteiner {
+    display: flex;
+    background-color: #2b2b2b;
+    color: black;
+    height: 62px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body {
+    background-color:  #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+nav {
+    display: flex;
+    padding: 20px;
+    gap: 10px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: rgb(54, 54, 54);
+    padding: 100px;
+}
+
+
+.container-cards {
+    margin: 0 auto;
+    width: 800px;
+    display: flex;
+    flex-wrap: wrap;  
+    gap: 20px;
+    justify-content: center;
+
+}
+
+.box {
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    width: 250px;
+    height: 320px;
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    gap: 10px;
+    border: solid 1px rgb(190, 189, 189);
+}
+
+
+.int {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 200px;
+    height: 100px;
+    background-color: #ffffff;
+    border: solid 1px rgb(190, 189, 189);
+
+
+}
+
+.item {
+    width:100%;
+    height: 90px;
+    object-fit: cover;
+}
+
+
+.btn {
+    height: 40px;
+    width: 100%;
+    padding: 8px;
+    background-color: #00C200;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid #00c200 ;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover {
+    
+    color: #00C200;
+    background-color: white;
+}
+
+span{
+    font-size: small;
+}
+
+.preço {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.coracao{
+    position: absolute;
+    
+    cursor: pointer;
+    left: 7px;
+}
+.des{
+
+    position: absolute;
+    cursor: pointer;
+    left: 180px;
+    background-color: #00C200;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+

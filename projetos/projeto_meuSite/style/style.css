@@ -1,0 +1,21 @@
+header {
+    background-color: rgb(0, 119, 255);
+    color: rgb(255, 255, 255);
+}
+
+#blue {
+    color: rgb(171, 210, 255);
+}
+
+body {
+    background-color: lightblue ;
+}
+
+main {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 20px;
+}
+span {
+    color: red;
+}

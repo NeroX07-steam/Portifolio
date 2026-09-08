@@ -1,0 +1,46 @@
+body {
+    
+  margin: 0;
+  height: 100vh;
+  overflow-x: hidden;
+  background: #111;
+}
+
+p {
+    color: #b30000;
+}
+
+span {
+    color: purple;
+}
+
+h1 {
+    color: #b30000;
+    text-align: center;
+}
+iframe {
+    display: block;
+    margin: 0 auto;
+}
+
+
+.heart {
+  position: absolute;
+  color: red;
+  font-size: 20px;
+  animation: subir 4s linear forwards;
+}
+
+
+@keyframes subir {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-200px) scale(1.5);
+    opacity: 0;
+  }
+}
+
