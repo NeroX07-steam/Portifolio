@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="description" content="Portfólio pessoal de Luiz Eduardo Benta Souza.">
+    <meta name="theme-color" content="#070707">
+
     <title>Luiz Eduardo — Portfólio</title>
 
     <link rel="stylesheet" href="style.css">
@@ -12,114 +15,58 @@
 
 <body>
 
-    <div class="cursor-glow"></div>
-
-    <header class="header">
-
-        <a href="#" class="logo">
-            LUIZ<span>.</span>
-        </a>
+    <header>
+        <a href="#top" class="logo">LUIZ</a>
 
         <nav>
             <a href="#sobre">Sobre</a>
+            <a href="#trajetoria">Trajetória</a>
             <a href="#julya">Julya ?</a>
             <a href="#tofu">Tofu</a>
+            <a href="#gostos">Gostos</a>
             <a href="#tecnologias">Tecnologias</a>
             <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
         </nav>
 
         <div class="header-status">
-            <span></span>
-            2026
+            <span>ONLINE</span> / <span data-year>2026</span>
         </div>
-
     </header>
 
 
-    <main>
+    <main id="top">
 
         <!-- HERO -->
 
         <section class="hero">
 
-            <div class="hero-background">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
             <div class="hero-content">
 
-                <div class="hero-label">
-                    <span></span>
+                <div class="hero-status">
                     DESENVOLVEDOR EM FORMAÇÃO
                 </div>
 
                 <h1>
-                    Luiz Eduardo
-                    <span>Benta Souza</span>
+                    Luiz
+                    <span>Eduardo.</span>
                 </h1>
 
-                <p class="hero-text">
+                <p class="hero-subtitle">
                     Eu ainda estou aprendendo, mas já descobri uma coisa:
                     gosto de transformar ideias em alguma coisa que possa
                     ser vista, usada e lembrada.
                 </p>
 
                 <div class="hero-buttons">
-
-                    <a href="#projetos" class="button primary">
-                        Ver projetos
-                        <span>↗</span>
-                    </a>
-
-                    <a href="#sobre" class="button secondary">
-                        Sobre mim
-                    </a>
-
-                </div>
-
-                <div class="hero-info">
-
-                    <div>
-                        <strong>19</strong>
-                        <small>PROJETOS</small>
-                    </div>
-
-                    <div>
-                        <strong>07</strong>
-                        <small>TECNOLOGIAS</small>
-                    </div>
-
-                    <div>
-                        <strong>01</strong>
-                        <small>CAMINHO</small>
-                    </div>
-
+                    <a href="#projetos">Ver projetos ↗</a>
+                    <a href="#sobre">Sobre mim</a>
                 </div>
 
             </div>
 
-
             <div class="hero-photo">
-
-                <div class="photo-number">
-                    001 / LUIZ
-                </div>
-
-                <div class="photo-box">
-
-                    <img
-                        src="./Img/fotos/1.jpg"
-                        alt="Imagem de Luiz Eduardo"
-                    >
-
-                </div>
-
-                <p>
-                    criando, errando e aprendendo.
-                </p>
-
+                <img src="./Img/1.jpg" alt="Foto de Luiz Eduardo">
             </div>
 
         </section>
@@ -127,69 +74,121 @@
 
         <!-- SOBRE -->
 
-        <section id="sobre" class="section about">
+        <section id="sobre">
 
-            <div class="section-top">
+            <div class="section-label">01 / SOBRE MIM</div>
 
-                <span>01</span>
+            <div class="about-grid">
 
                 <div>
-                    <small>UM POUCO SOBRE MIM</small>
-                    <h2>Quem sou eu?</h2>
+                    <div class="about-number">01</div>
+                </div>
+
+                <div>
+
+                    <h2 class="section-title">
+                        Quem sou eu?
+                    </h2>
+
+                    <p class="section-description">
+                        Meu nome é Luiz Eduardo. Estou estudando programação
+                        e construindo meu caminho aos poucos.
+                        Atualmente estudo no SENAI e venho aprendendo
+                        principalmente colocando a mão no código.
+                    </p>
+
+                    <p class="section-description">
+                        Já fiz vários exercícios e projetos durante meus estudos.
+                        Alguns ficaram bons, outros serviram mais para descobrir
+                        onde eu tinha errado KKKKK.
+                    </p>
+
+                    <p class="section-description">
+                        Gosto de ver uma ideia saindo da cabeça e virando alguma
+                        coisa que realmente funciona na tela.
+                    </p>
+
+                    <div class="about-tags">
+                        <span>programação</span>
+                        <span>web</span>
+                        <span>SENAI</span>
+                        <span>projetos</span>
+                        <span>aprendendo na prática</span>
+                    </div>
+
                 </div>
 
             </div>
 
+        </section>
 
-            <div class="about-content">
 
-                <div class="about-text">
+        <!-- TRAJETÓRIA -->
 
-                    <p class="highlight">
-                        Meu nome é Luiz Eduardo.
-                        Estou construindo meu caminho
-                        dentro da programação.
-                    </p>
+        <section id="trajetoria" class="timeline-section">
+
+            <div class="section-label">02 / TRAJETÓRIA</div>
+
+            <h2 class="section-title">
+                Aprendendo fazendo.
+            </h2>
+
+            <p class="section-description">
+                Minha evolução aconteceu muito mais fazendo projeto,
+                errando e tentando de novo do que só ficando olhando teoria.
+            </p>
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+
+                    <span class="timeline-year">
+                        01 — PRIMEIROS CÓDIGOS
+                    </span>
+
+                    <h3>
+                        Começando pela base
+                    </h3>
 
                     <p>
-                        Comecei aprendendo os fundamentos da programação
-                        e do desenvolvimento web. Desde então, cada
-                        exercício e cada projeto foram se tornando uma
-                        pequena parte da minha evolução.
-                    </p>
-
-                    <p>
-                        Eu gosto de aprender fazendo. Às vezes o código
-                        funciona de primeira. Às vezes não funciona nem
-                        depois de dez tentativas KKKKK. Mas cada erro
-                        acaba ensinando alguma coisa.
-                    </p>
-
-                    <p>
-                        Esse portfólio representa justamente isso:
-                        <strong>minha evolução.</strong>
+                        Comecei pelos fundamentos e fui entendendo aos poucos
+                        como uma página realmente funciona.
                     </p>
 
                 </div>
 
 
-                <div class="about-box">
+                <div class="timeline-item">
 
-                    <span class="box-label">
-                        STATUS
+                    <span class="timeline-year">
+                        02 — SENAI
                     </span>
 
                     <h3>
-                        Em constante
-                        <br>
-                        evolução.
+                        Aprendendo na prática
                     </h3>
 
-                    <div class="line"></div>
+                    <p>
+                        No SENAI comecei a colocar mais coisa em prática,
+                        fazendo exercícios, atividades e projetos.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <span class="timeline-year">
+                        03 — MEUS PROJETOS
+                    </span>
+
+                    <h3>
+                        Começando a criar sozinho
+                    </h3>
 
                     <p>
-                        Não quero apenas aprender a programar.
-                        Quero aprender a criar.
+                        Depois fui juntando o que aprendi e criando projetos
+                        próprios para testar ideias e aprender coisas novas.
                     </p>
 
                 </div>
@@ -201,54 +200,65 @@
 
         <!-- JULYA -->
 
-        <section id="julya" class="special-section julya-section">
+        <section id="julya" class="julya-section">
 
-            <div class="special-background">
-                ?
-            </div>
+            <div class="julya-layout">
 
-            <div class="special-content">
+                <div class="julya-photo">
 
-                <div class="priority">
-
-                    <span class="priority-dot"></span>
-
-                    PRIORIDADE 01
+                    <img
+                        src="./Img/19.jpg"
+                        alt="Julya"
+                    >
 
                 </div>
 
-                <p class="special-label">
-                    UMA PESSOA IMPORTANTE
-                </p>
+                <div class="julya-text">
 
-                <h2>
-                    Julya
-                    <span>?</span>
-                </h2>
+                    <span class="mini-title">
+                        UMA PESSOA IMPORTANTE
+                    </span>
 
-                <div class="special-divider"></div>
-
-                <p class="special-description">
-                    Existem pessoas que simplesmente aparecem
-                    na nossa história e acabam ficando.
-                </p>
-
-                <p class="special-description">
-                    Julya é uma dessas pessoas.
-                    Não preciso colocar um título específico
-                    para explicar a importância que ela tem.
-                    Algumas pessoas simplesmente ocupam
-                    um lugar diferente.
-                </p>
-
-                <div class="special-message">
-
-                    <span>01 / PRIORIDADE</span>
+                    <h2>
+                        Julya
+                        <span>?</span>
+                    </h2>
 
                     <p>
-                        "Tem gente que não precisa ser explicada.
-                        Só precisa estar por perto."
+                        PRIORIDADE 1.
                     </p>
+
+                    <p>
+                        Ela é meio revoltadinha, lembra de umas coisas mínimas
+                        que ninguém mais lembraria e provavelmente vai usar
+                        alguma coisa que eu falei há meses contra mim KKKKK.
+                    </p>
+
+                    <p>
+                        Não preciso inventar um título bonito para explicar.
+                        Ela simplesmente é uma pessoa importante para mim
+                        e ocupa um lugar diferente.
+                    </p>
+
+                    <div class="julya-points">
+
+                        <div>
+                            PRIORIDADE 01
+                        </div>
+
+                        <div>
+                            REVOLTADINHA
+                        </div>
+
+                        <div>
+                            MEMÓRIA ABSURDA
+                        </div>
+
+                        <div>
+                            IMPORTANTE PRA CARALHO
+                        </div>
+
+                    </div>
 
                 </div>
 
@@ -259,68 +269,42 @@
 
         <!-- TOFU -->
 
-        <section id="tofu" class="section tofu-section">
+        <section id="tofu" class="tofu-section">
 
-            <div class="section-top">
-
-                <span>03</span>
-
-                <div>
-                    <small>MEMBRO DA FAMÍLIA</small>
-                    <h2>Tofu.</h2>
-                </div>
-
+            <div class="section-label">
+                04 / MEMBRO DA FAMÍLIA
             </div>
 
+            <div class="tofu-card">
 
-            <div class="tofu-grid">
+                <img
+                    src="./Img/20.jpg"
+                    alt="Tofu"
+                >
 
-                <div class="tofu-image">
+                <div class="tofu-content">
 
-                    <img
-                        src="./Img/fotos/2.jpg"
-                        alt="Tofu"
-                    >
-
-                    <div class="tofu-tag">
+                    <span class="tofu-label">
                         NOSSO FILHO
-                    </div>
-
-                </div>
-
-
-                <div class="tofu-text">
-
-                    <span class="tofu-number">
-                        002
                     </span>
 
-                    <h3>
-                        Tofu
-                    </h3>
+                    <h2>
+                        Tofu.
+                    </h2>
 
-                    <p class="tofu-role">
+                    <p>
+                        Uma criatura oficialmente reconhecida como nosso filho.
+                    </p>
+
+                    <p>
+                        Não trabalha, não paga conta, provavelmente não sabe
+                        o que é HTML e ainda assim conseguiu ganhar um espaço
+                        nesse portfólio.
+                    </p>
+
+                    <span class="tofu-tag">
                         filho meu e da Julya
-                    </p>
-
-                    <p>
-                        Uma criatura oficialmente reconhecida
-                        como nosso filho.
-                    </p>
-
-                    <p>
-                        Não trabalha, não paga conta, provavelmente
-                        não sabe o que é HTML e ainda assim conseguiu
-                        ganhar um espaço nesse portfólio.
-                    </p>
-
-                    <p>
-                        Justo.
-                    </p>
-
-                    <div class="tofu-signature">
-                        Tofu © 2026
-                    </div>
+                    </span>
 
                 </div>
 
@@ -329,64 +313,164 @@
         </section>
 
 
-        <!-- TECNOLOGIAS -->
+        <!-- GOSTOS -->
 
-        <section id="tecnologias" class="section technologies">
+        <section id="gostos" class="tastes-section">
 
-            <div class="section-top">
+            <div class="section-label">
+                05 / COISAS QUE EU GOSTO
+            </div>
 
-                <span>04</span>
+            <h2 class="section-title">
+                Um pouco do meu gosto.
+            </h2>
 
-                <div>
-                    <small>O QUE ESTOU APRENDENDO</small>
-                    <h2>Tecnologias</h2>
-                </div>
+            <p class="section-description">
+                Nem tudo aqui é sobre programação. Também tem as coisas
+                que eu curto quando não estou mexendo em código.
+            </p>
+
+            <div class="taste-grid">
+
+                <article class="taste-card main-taste">
+
+                    <span>
+                        ANIME / FAVORITO
+                    </span>
+
+                    <h3>
+                        A Voz do Silêncio
+                    </h3>
+
+                    <p>
+                        Um dos animes que mais gosto. É daqueles que ficam
+                        na cabeça depois que termina.
+                    </p>
+
+                </article>
+
+
+                <article class="taste-card">
+
+                    <span>
+                        ANIME
+                    </span>
+
+                    <h3>
+                        Serial Experiments Lain
+                    </h3>
+
+                    <p>
+                        Estranho, psicológico e com aquela estética de internet
+                        que eu curto.
+                    </p>
+
+                </article>
+
+
+                <article class="taste-card">
+
+                    <span>
+                        MANGÁ
+                    </span>
+
+                    <h3>
+                        Oyasumi Punpun
+                    </h3>
+
+                    <p>
+                        Um dos mangás que mais marcou meu gosto.
+                    </p>
+
+                </article>
+
+
+                <article class="taste-card">
+
+                    <span>
+                        ESTÉTICA
+                    </span>
+
+                    <h3>
+                        Internet estranha
+                    </h3>
+
+                    <p>
+                        Sites, imagens, músicas e aquela estética meio
+                        melancólica que combina comigo.
+                    </p>
+
+                </article>
+
+
+                <article class="taste-card">
+
+                    <span>
+                        PROJETOS
+                    </span>
+
+                    <h3>
+                        Fazer coisas
+                    </h3>
+
+                    <p>
+                        Quando tenho uma ideia, gosto de tentar transformar
+                        ela em alguma coisa de verdade.
+                    </p>
+
+                </article>
 
             </div>
 
+        </section>
+
+
+        <!-- TECNOLOGIAS -->
+
+        <section id="tecnologias">
+
+            <div class="section-label">
+                06 / O QUE ESTOU APRENDENDO
+            </div>
+
+            <h2 class="section-title">
+                Tecnologias.
+            </h2>
+
+            <p class="section-description">
+                Algumas coisas que já usei ou estou aprendendo durante meus estudos.
+            </p>
 
             <div class="tech-grid">
 
                 <div class="tech-card">
                     <span>01</span>
-                    <h3>HTML</h3>
-                    <p>Estrutura para páginas web.</p>
+                    <strong>HTML</strong>
                 </div>
 
                 <div class="tech-card">
                     <span>02</span>
-                    <h3>CSS</h3>
-                    <p>Estilo, layout e responsividade.</p>
+                    <strong>CSS</strong>
                 </div>
 
                 <div class="tech-card">
                     <span>03</span>
-                    <h3>JavaScript</h3>
-                    <p>Interação e lógica.</p>
+                    <strong>JavaScript</strong>
                 </div>
 
                 <div class="tech-card">
                     <span>04</span>
-                    <h3>Python</h3>
-                    <p>Programação e automação.</p>
+                    <strong>Python</strong>
                 </div>
 
                 <div class="tech-card">
                     <span>05</span>
-                    <h3>C++</h3>
-                    <p>Lógica e fundamentos.</p>
+                    <strong>Banco de dados</strong>
                 </div>
 
                 <div class="tech-card">
                     <span>06</span>
-                    <h3>Java</h3>
-                    <p>Programação orientada a objetos.</p>
-                </div>
-
-                <div class="tech-card">
-                    <span>07</span>
-                    <h3>SQL</h3>
-                    <p>Banco de dados.</p>
+                    <strong>Sistemas</strong>
                 </div>
 
             </div>
@@ -398,16 +482,12 @@
 
         <section class="quote-section">
 
-            <div class="quote-mark">
-                "
-            </div>
-
-            <h2>
+            <blockquote>
                 Ainda não cheguei onde quero,
                 mas já estou muito longe de onde comecei.
-            </h2>
+            </blockquote>
 
-            <p>
+            <p class="quote-author">
                 — Luiz Eduardo
             </p>
 
@@ -416,322 +496,941 @@
 
         <!-- PROJETOS -->
 
-        <section id="projetos" class="section projects-section">
+        <section id="projetos">
 
-            <div class="section-top">
-
-                <span>05</span>
+            <div class="projects-header">
 
                 <div>
-                    <small>COISAS QUE EU FIZ</small>
-                    <h2>Projetos</h2>
+
+                    <div class="section-label">
+                        07 / COISAS QUE EU FIZ
+                    </div>
+
+                    <h2 class="section-title">
+                        Projetos.
+                    </h2>
+
+                </div>
+
+                <div class="project-counter">
+
+                    <strong>
+                        00
+                    </strong>
+
+                    <br>
+
+                    PROJETOS
+
                 </div>
 
             </div>
 
 
-            <div class="projects">
+            <div class="projects-grid">
 
 
-                <a href="./projeto_erro/index.html" class="project">
+                <!-- 01 -->
 
-                    <div class="project-image">
-                        <img src="./Img/fotos/1.jpg" alt="Projeto Erro">
-                    </div>
-
-                    <div class="project-info">
-                        <span>01</span>
-                        <h3>Projeto Erro</h3>
-                        <p>Projeto desenvolvido durante os estudos.</p>
-                        <strong>↗</strong>
-                    </div>
-
-                </a>
-
-
-                <a href="./projeto_album/index.html" class="project">
+                <a
+                    href="./projeto_erro/index.html"
+                    class="project-card"
+                >
 
                     <div class="project-image">
-                        <img src="./Img/fotos/2.jpg" alt="Projeto Álbum">
+                        <img
+                            src="./Img/2.jpg"
+                            alt="Projeto Erro"
+                        >
                     </div>
 
-                    <div class="project-info">
-                        <span>02</span>
-                        <h3>Projeto Álbum</h3>
-                        <p>Projeto de criação de álbum.</p>
-                        <strong>↗</strong>
+                    <div class="project-content">
+
+                        <span class="project-number">
+                            01
+                        </span>
+
+                        <h3>
+                            Projeto Erro
+                        </h3>
+
+                        <p>
+                            Projeto desenvolvido durante os estudos.
+                        </p>
+
+                        <span class="project-link">
+                            Abrir projeto
+                        </span>
+
                     </div>
 
                 </a>
 
 
-                <a href="./projeto_botao/index.html" class="project">
+                <!-- 02 -->
+
+                <a
+                    href="./projeto_album/index.html"
+                    class="project-card"
+                >
 
                     <div class="project-image">
-                        <img src="./Img/fotos/3.jpg" alt="Projeto Botão">
+                        <img
+                            src="./Img/3.jpg"
+                            alt="Projeto Álbum"
+                        >
                     </div>
 
-                    <div class="project-info">
-                        <span>03</span>
-                        <h3>Projeto Botão</h3>
-                        <p>Exercício envolvendo botões e estilos.</p>
-                        <strong>↗</strong>
+                    <div class="project-content">
+
+                        <span class="project-number">
+                            02
+                        </span>
+
+                        <h3>
+                            Projeto Álbum
+                        </h3>
+
+                        <p>
+                            Projeto de criação de álbum.
+                        </p>
+
+                        <span class="project-link">
+                            Abrir projeto
+                        </span>
+
                     </div>
 
                 </a>
 
 
-                <a href="./projeto_curriculo/index.html" class="project">
+                <!-- 03 -->
+
+                <a
+                    href="./projeto_botao/index.html"
+                    class="project-card"
+                >
 
                     <div class="project-image">
-                        <img src="./Img/fotos/4.jpg" alt="Projeto Currículo">
+                        <img
+                            src="./Img/4.jpg"
+                            alt="Projeto Botão"
+                        >
                     </div>
 
-                    <div class="project-info">
-                        <span>04</span>
-                        <h3>Projeto Currículo</h3>
-                        <p>Página de currículo.</p>
-                        <strong>↗</strong>
+                    <div class="project-content">
+
+                        <span class="project-number">
+                            03
+                        </span>
+
+                        <h3>
+                            Projeto Botão
+                        </h3>
+
+                        <p>
+                            Exercício envolvendo botões e estilos.
+                        </p>
+
+                        <span class="project-link">
+                            Abrir projeto
+                        </span>
+
                     </div>
 
                 </a>
 
 
-                <a href="./projeto_diario/index.html" class="project">
+                <!-- 04 -->
+
+                <a
+                    href="./projeto_curriculo/index.html"
+                    class="project-card"
+                >
 
                     <div class="project-image">
-                        <img src="./Img/fotos/5.jpg" alt="Projeto Diário">
+                        <img
+                            src="./Img/5.jpg"
+                            alt="Projeto Currículo"
+                        >
                     </div>
 
-                    <div class="project-info">
-                        <span>05</span>
-                        <h3>Projeto Diário</h3>
-                        <p>Projeto de página de diário.</p>
-                        <strong>↗</strong>
+                    <div class="project-content">
+
+                        <span class="project-number">
+                            04
+                        </span>
+
+                        <h3>
+                            Projeto Currículo
+                        </h3>
+
+                        <p>
+                            Página de currículo.
+                        </p>
+
+                        <span class="project-link">
+                            Abrir projeto
+                        </span>
+
                     </div>
 
                 </a>
 
 
-                <a href="./projeto_evento/index.html" class="project">
+                <!-- 05 -->
+
+                <a
+                    href="./projeto_diario/index.html"
+                    class="project-card"
+                >
 
                     <div class="project-image">
-                        <img src="./Img/fotos/6.jpg" alt="Projeto Evento">
+                        <img
+                            src="./Img/6.jpg"
+                            alt="Projeto Diário"
+                        >
                     </div>
 
-                    <div class="project-info">
-                        <span>06</span>
-                        <h3>Projeto Evento</h3>
-                        <p>Página para divulgação de evento.</p>
-                        <strong>↗</strong>
+                    <div class="project-content">
+
+                        <span class="project-number">
+                            05
+                        </span>
+
+                        <h3>
+                            Projeto Diário
+                        </h3>
+
+                        <p>
+                            Projeto de página de diário.
+                        </p>
+
+                        <span class="project-link">
+                            Abrir projeto
+                        </span>
+
                     </div>
 
                 </a>
 
 
-                <a href="./projeto_fundo/index.html" class="project">
+                <!-- 06 -->
+
+                <a
+                    href="./projeto_evento/index.html"
+                    class="project-card"
+                >
 
                     <div class="project-image">
-                        <img src="./Img/fotos/7.jpg" alt="Projeto Fundo">
+                        <img
+                            src="./Img/7.jpg"
+                            alt="Projeto Evento"
+                        >
                     </div>
 
-                    <div class="project-info">
-                        <span>07</span>
-                        <h3>Projeto Fundo</h3>
-                        <p>Exercícios com imagens e fundos.</p>
-                        <strong>↗</strong>
+                    <div class="project-content">
+
+                        <span class="project-number">
+                            06
+                        </span>
+
+                        <h3>
+                            Projeto Evento
+                        </h3>
+
+                        <p>
+                            Página para divulgação de evento.
+                        </p>
+
+                        <span class="project-link">
+                            Abrir projeto
+                        </span>
+
                     </div>
 
                 </a>
 
 
-                <a href="./projeto_margin/index.html" class="project">
+                <!-- 07 -->
+
+                <a
+                    href="./projeto_fundo/index.html"
+                    class="project-card"
+                >
 
                     <div class="project-image">
-                        <img src="./Img/fotos/8.jpg" alt="Projeto Margin">
+                        <img
+                            src="./Img/8.jpg"
+                            alt="Projeto Fundo"
+                        >
                     </div>
 
-                    <div class="project-info">
-                        <span>08</span>
-                        <h3>Projeto Margin</h3>
-                        <p>Exercício de espaçamento com CSS.</p>
-                        <strong>↗</strong>
+                    <div class="project-content">
+
+                        <span class="project-number">
+                            07
+                        </span>
+
+                        <h3>
+                            Projeto Fundo
+                        </h3>
+
+                        <p>
+                            Exercícios com imagens e fundos.
+                        </p>
+
+                        <span class="project-link">
+                            Abrir projeto
+                        </span>
+
                     </div>
 
                 </a>
 
 
-                <a href="./projeto_meuSite/index.html" class="project">
+                <!-- 08 -->
+
+                <a
+                    href="./projeto_margin/index.html"
+                    class="project-card"
+                >
 
                     <div class="project-image">
-                        <img src="./Img/fotos/9.jpg" alt="Meu Site">
+                        <img
+                            src="./Img/9.jpg"
+                            alt="Projeto Margin"
+                        >
                     </div>
 
-                    <div class="project-info">
-                        <span>09</span>
-                        <h3>Meu Site</h3>
-                        <p>Projeto de site pessoal.</p>
-                        <strong>↗</strong>
+                    <div class="project-content">
+
+                        <span class="project-number">
+                            08
+                        </span>
+
+                        <h3>
+                            Projeto Margin
+                        </h3>
+
+                        <p>
+                            Exercício de espaçamento com CSS.
+                        </p>
+
+                        <span class="project-link">
+                            Abrir projeto
+                        </span>
+
                     </div>
 
                 </a>
 
 
-                <a href="./projeto_passatempo/index.html" class="project">
+                <!-- 09 -->
+
+                <a
+                    href="./projeto_meuSite/index.html"
+                    class="project-card"
+                >
 
                     <div class="project-image">
-                        <img src="./Img/fotos/10.jpg" alt="Projeto Passatempo">
+                        <img
+                            src="./Img/10.jpg"
+                            alt="Meu Site"
+                        >
                     </div>
 
-                    <div class="project-info">
-                        <span>10</span>
-                        <h3>Projeto Passatempo</h3>
-                        <p>Página sobre passatempos.</p>
-                        <strong>↗</strong>
+                    <div class="project-content">
+
+                        <span class="project-number">
+                            09
+                        </span>
+
+                        <h3>
+                            Meu Site
+                        </h3>
+
+                        <p>
+                            Projeto de site pessoal.
+                        </p>
+
+                        <span class="project-link">
+                            Abrir projeto
+                        </span>
+
                     </div>
 
                 </a>
 
 
-                <a href="./projeto_perfil/index.html" class="project">
+                <!-- 10 -->
+
+                <a
+                    href="./projeto_passatempo/index.html"
+                    class="project-card"
+                >
 
                     <div class="project-image">
-                        <img src="./Img/fotos/11.jpg" alt="Projeto Perfil">
+                        <img
+                            src="./Img/11.jpg"
+                            alt="Projeto Passatempo"
+                        >
                     </div>
 
-                    <div class="project-info">
-                        <span>11</span>
-                        <h3>Projeto Perfil</h3>
-                        <p>Página de perfil.</p>
-                        <strong>↗</strong>
+                    <div class="project-content">
+
+                        <span class="project-number">
+                            10
+                        </span>
+
+                        <h3>
+                            Projeto Passatempo
+                        </h3>
+
+                        <p>
+                            Página sobre passatempos.
+                        </p>
+
+                        <span class="project-link">
+                            Abrir projeto
+                        </span>
+
                     </div>
 
                 </a>
 
 
-                <a href="./projeto_planejador/index.html" class="project">
+                <!-- 11 -->
+
+                <a
+                    href="./projeto_perfil/index.html"
+                    class="project-card"
+                >
 
                     <div class="project-image">
-                        <img src="./Img/fotos/12.jpg" alt="Projeto Planejador">
+                        <img
+                            src="./Img/12.jpg"
+                            alt="Projeto Perfil"
+                        >
                     </div>
 
-                    <div class="project-info">
-                        <span>12</span>
-                        <h3>Projeto Planejador</h3>
-                        <p>Projeto de organização.</p>
-                        <strong>↗</strong>
+                    <div class="project-content">
+
+                        <span class="project-number">
+                            11
+                        </span>
+
+                        <h3>
+                            Projeto Perfil
+                        </h3>
+
+                        <p>
+                            Página de perfil.
+                        </p>
+
+                        <span class="project-link">
+                            Abrir projeto
+                        </span>
+
                     </div>
 
                 </a>
 
 
-                <a href="./projeto_receita/index.html" class="project">
+                <!-- 12 -->
+
+                <a
+                    href="./projeto_planejador/index.html"
+                    class="project-card"
+                >
 
                     <div class="project-image">
-                        <img src="./Img/fotos/13.jpg" alt="Projeto Receita">
+                        <img
+                            src="./Img/13.jpg"
+                            alt="Projeto Planejador"
+                        >
                     </div>
 
-                    <div class="project-info">
-                        <span>13</span>
-                        <h3>Projeto Receita</h3>
-                        <p>Página de receita.</p>
-                        <strong>↗</strong>
+                    <div class="project-content">
+
+                        <span class="project-number">
+                            12
+                        </span>
+
+                        <h3>
+                            Projeto Planejador
+                        </h3>
+
+                        <p>
+                            Projeto de organização.
+                        </p>
+
+                        <span class="project-link">
+                            Abrir projeto
+                        </span>
+
                     </div>
 
                 </a>
 
 
-                <a href="./projeto_seletor/index.html" class="project">
+                <!-- 13 -->
+
+                <a
+                    href="./projeto_receita/index.html"
+                    class="project-card"
+                >
 
                     <div class="project-image">
-                        <img src="./Img/fotos/14.jpg" alt="Projeto Seletor">
+                        <img
+                            src="./Img/14.jpg"
+                            alt="Projeto Receita"
+                        >
                     </div>
 
-                    <div class="project-info">
-                        <span>14</span>
-                        <h3>Projeto Seletor</h3>
-                        <p>Exercício com seletores CSS.</p>
-                        <strong>↗</strong>
+                    <div class="project-content">
+
+                        <span class="project-number">
+                            13
+                        </span>
+
+                        <h3>
+                            Projeto Receita
+                        </h3>
+
+                        <p>
+                            Página de receita.
+                        </p>
+
+                        <span class="project-link">
+                            Abrir projeto
+                        </span>
+
                     </div>
 
                 </a>
 
 
-                <a href="./projeto_semáforo/index.html" class="project">
+                <!-- 14 -->
+
+                <a
+                    href="./projeto_seletor/index.html"
+                    class="project-card"
+                >
 
                     <div class="project-image">
-                        <img src="./Img/fotos/15.jpg" alt="Projeto Semáforo">
+                        <img
+                            src="./Img/15.jpg"
+                            alt="Projeto Seletor"
+                        >
                     </div>
 
-                    <div class="project-info">
-                        <span>15</span>
-                        <h3>Projeto Semáforo</h3>
-                        <p>Projeto envolvendo lógica.</p>
-                        <strong>↗</strong>
+                    <div class="project-content">
+
+                        <span class="project-number">
+                            14
+                        </span>
+
+                        <h3>
+                            Projeto Seletor
+                        </h3>
+
+                        <p>
+                            Exercício com seletores CSS.
+                        </p>
+
+                        <span class="project-link">
+                            Abrir projeto
+                        </span>
+
                     </div>
 
                 </a>
 
 
-                <a href="./projeto_video/index.html" class="project">
+                <!-- 15 -->
+
+                <a
+                    href="./projeto_semáforo/index.html"
+                    class="project-card"
+                >
 
                     <div class="project-image">
-                        <img src="./Img/fotos/16.jpg" alt="Projeto Vídeo">
+                        <img
+                            src="./Img/16.jpg"
+                            alt="Projeto Semáforo"
+                        >
                     </div>
 
-                    <div class="project-info">
-                        <span>16</span>
-                        <h3>Projeto Vídeo</h3>
-                        <p>Página com conteúdo em vídeo.</p>
-                        <strong>↗</strong>
+                    <div class="project-content">
+
+                        <span class="project-number">
+                            15
+                        </span>
+
+                        <h3>
+                            Projeto Semáforo
+                        </h3>
+
+                        <p>
+                            Projeto envolvendo lógica.
+                        </p>
+
+                        <span class="project-link">
+                            Abrir projeto
+                        </span>
+
                     </div>
 
                 </a>
 
 
-                <a href="./projeto_visita/index.html" class="project">
+                <!-- 16 -->
+
+                <a
+                    href="./projeto_video/index.html"
+                    class="project-card"
+                >
 
                     <div class="project-image">
-                        <img src="./Img/fotos/17.jpg" alt="Projeto Visita">
+                        <img
+                            src="./Img/17.jpg"
+                            alt="Projeto Vídeo"
+                        >
                     </div>
 
-                    <div class="project-info">
-                        <span>17</span>
-                        <h3>Projeto Visita</h3>
-                        <p>Projeto de página de visita.</p>
-                        <strong>↗</strong>
+                    <div class="project-content">
+
+                        <span class="project-number">
+                            16
+                        </span>
+
+                        <h3>
+                            Projeto Vídeo
+                        </h3>
+
+                        <p>
+                            Página com conteúdo em vídeo.
+                        </p>
+
+                        <span class="project-link">
+                            Abrir projeto
+                        </span>
+
                     </div>
 
                 </a>
 
 
-                <a href="./prova/index.html" class="project">
+                <!-- 17 -->
+
+                <a
+                    href="./projeto_visita/index.html"
+                    class="project-card"
+                >
 
                     <div class="project-image">
-                        <img src="./Img/fotos/18.jpg" alt="Projeto Prova">
+                        <img
+                            src="./Img/18.jpg"
+                            alt="Projeto Visita"
+                        >
                     </div>
 
-                    <div class="project-info">
-                        <span>18</span>
-                        <h3>Prova</h3>
-                        <p>Projeto desenvolvido para avaliação.</p>
-                        <strong>↗</strong>
+                    <div class="project-content">
+
+                        <span class="project-number">
+                            17
+                        </span>
+
+                        <h3>
+                            Projeto Visita
+                        </h3>
+
+                        <p>
+                            Projeto de página de visita.
+                        </p>
+
+                        <span class="project-link">
+                            Abrir projeto
+                        </span>
+
                     </div>
 
                 </a>
 
 
-                <a href="./revisao_prova/index.html" class="project no-image">
+                <!-- 18 -->
 
-                    <div class="project-info">
-                        <span>19</span>
-                        <h3>Revisão Prova</h3>
-                        <p>Revisão dos conteúdos estudados.</p>
-                        <strong>↗</strong>
+                <a
+                    href="./prova/index.html"
+                    class="project-card"
+                >
+
+                    <div class="project-image">
+                        <img
+                            src="./Img/21.jpg"
+                            alt="Prova"
+                        >
+                    </div>
+
+                    <div class="project-content">
+
+                        <span class="project-number">
+                            18
+                        </span>
+
+                        <h3>
+                            Prova
+                        </h3>
+
+                        <p>
+                            Projeto desenvolvido para avaliação.
+                        </p>
+
+                        <span class="project-link">
+                            Abrir projeto
+                        </span>
+
                     </div>
 
                 </a>
 
+
+                <!-- 19 -->
+
+                <a
+                    href="./revisao_prova/index.html"
+                    class="project-card"
+                >
+
+                    <div class="project-image">
+                        <img
+                            src="./Img/22.jpg"
+                            alt="Revisão Prova"
+                        >
+                    </div>
+
+                    <div class="project-content">
+
+                        <span class="project-number">
+                            19
+                        </span>
+
+                        <h3>
+                            Revisão Prova
+                        </h3>
+
+                        <p>
+                            Revisão dos conteúdos estudados.
+                        </p>
+
+                        <span class="project-link">
+                            Abrir projeto
+                        </span>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- GALERIA -->
+
+        <section class="gallery-section">
+
+            <div class="section-label">
+                08 / GALERIA
+            </div>
+
+            <h2 class="section-title">
+                Algumas imagens.
+            </h2>
+
+            <p class="section-description">
+                Um pouco das coisas que fazem parte desse projeto e da minha história.
+                Clica nas imagens.
+            </p>
+
+            <div class="gallery">
+
+                <div class="gallery-item">
+                    <img src="./Img/1.jpg" alt="Imagem 01">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="./Img/2.jpg" alt="Imagem 02">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="./Img/3.jpg" alt="Imagem 03">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="./Img/4.jpg" alt="Imagem 04">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="./Img/5.jpg" alt="Imagem 05">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="./Img/6.jpg" alt="Imagem 06">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="./Img/7.jpg" alt="Imagem 07">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="./Img/8.jpg" alt="Imagem 08">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="./Img/9.jpg" alt="Imagem 09">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="./Img/10.jpg" alt="Imagem 10">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="./Img/11.jpg" alt="Imagem 11">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="./Img/12.jpg" alt="Imagem 12">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="./Img/13.jpg" alt="Imagem 13">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="./Img/14.jpg" alt="Imagem 14">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="./Img/15.jpg" alt="Imagem 15">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="./Img/16.jpg" alt="Imagem 16">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="./Img/17.jpg" alt="Imagem 17">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="./Img/18.jpg" alt="Imagem 18">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="./Img/19.jpg" alt="Imagem 19">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="./Img/20.jpg" alt="Imagem 20">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="./Img/21.jpg" alt="Imagem 21">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="./Img/22.jpg" alt="Imagem 22">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTATO -->
+
+        <section id="contato" class="contact-section">
+
+            <div class="section-label">
+                09 / CONTATO
+            </div>
+
+            <h2 class="section-title">
+                Me encontra por aí.
+            </h2>
+
+            <p class="section-description">
+                Se quiser ver mais coisas minhas, esses são os lugares onde eu apareço.
+            </p>
+
+            <div class="social-grid">
+
+                <a
+                    class="social-card"
+                    href="https://www.instagram.com/luz_mais_ego/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <span>
+                        01 / INSTAGRAM
+                    </span>
+
+                    <strong>
+                        @luz_mais_ego
+                    </strong>
+
+                    <small>
+                        abrir perfil ↗
+                    </small>
+
+                </a>
+
+
+                <a
+                    class="social-card"
+                    href="https://open.spotify.com/user/31ydaudx7rf6gusyu7bned2tf65i"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <span>
+                        02 / SPOTIFY
+                    </span>
+
+                    <strong>
+                        Luiz Eduardo
+                    </strong>
+
+                    <small>
+                        abrir perfil ↗
+                    </small>
+
+                </a>
+
+
+                <a
+                    class="social-card"
+                    href="https://github.com/NeroX07-steam"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <span>
+                        03 / GITHUB
+                    </span>
+
+                    <strong>
+                        NeroX07-steam
+                    </strong>
+
+                    <small>
+                        ver projetos ↗
+                    </small>
+
+                </a>
 
             </div>
 
@@ -742,16 +1441,18 @@
 
     <footer>
 
-        <div class="footer-logo">
-            LUIZ<span>.</span>
+        <div>
+            <strong>
+                LUIZ.
+            </strong>
         </div>
 
-        <p>
+        <div>
             feito por Luiz Eduardo
-        </p>
+        </div>
 
-        <div class="footer-year">
-            © 2026
+        <div>
+            © <span data-year>2026</span>
         </div>
 
     </footer>
