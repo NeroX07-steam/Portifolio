@@ -7,6 +7,8 @@
 
     <meta name="description" content="Portfólio pessoal de Luiz Eduardo Benta Souza.">
     <meta name="theme-color" content="#070707">
+    <!-- Depois de publicar o Mente em Flor separado no Vercel, troque o content abaixo pela URL pública terminada em /index.html. -->
+    <meta name="mental-project-url" content="../mente-em-flor/index.html">
 
     <title>Luiz Eduardo — Portfólio</title>
 
@@ -18,12 +20,17 @@
     <header>
         <a href="#top" class="logo">LUIZ</a>
 
-        <nav>
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="site-nav">
+            <span></span><span></span>
+        </button>
+
+        <nav id="site-nav" aria-label="Navegação principal">
             <a href="#sobre">Sobre</a>
             <a href="#trajetoria">Trajetória</a>
             <a href="#julya">Julya ?</a>
             <a href="#tofu">Tofu</a>
             <a href="#gostos">Gostos</a>
+            <a href="#saude-mental" class="nav-health-link">Saúde mental</a>
             <a href="#tecnologias">Tecnologias</a>
             <a href="#projetos">Projetos</a>
             <a href="#contato">Contato</a>
@@ -61,6 +68,7 @@
                 <div class="hero-buttons">
                     <a href="#projetos">Ver projetos ↗</a>
                     <a href="#sobre">Sobre mim</a>
+                    <a href="#saude-mental" class="hero-health-link">Saúde mental ↗</a>
                 </div>
 
             </div>
@@ -430,7 +438,7 @@
         <section id="tecnologias">
 
             <div class="section-label">
-                06 / O QUE ESTOU APRENDENDO
+                07 / O QUE ESTOU APRENDENDO
             </div>
 
             <h2 class="section-title">
@@ -478,6 +486,58 @@
         </section>
 
 
+        <!-- PROJETO DE SAÚDE MENTAL -->
+
+        <section id="saude-mental" class="mental-project-section">
+
+            <div class="section-label">06 / UM PROJETO COM PROPÓSITO</div>
+
+            <div class="mental-project-layout">
+                <div class="mental-project-copy">
+                    <span class="mental-kicker"><i></i> PROJETO AUTORAL · BEM-ESTAR</span>
+                    <h2 class="section-title">Saúde mental também merece <em>espaço.</em></h2>
+                    <p class="section-description">
+                        Esse projeto também tem um lado pessoal. Nem sempre foi fácil entender o que eu sentia,
+                        mas aprendi que não precisava guardar tudo sozinho. Conversar com meus amigos foi uma parte
+                        importante desse processo — poder falar, ser ouvido e perceber que eu não estava sozinho fez diferença.
+                    </p>
+                    <p class="mental-project-note">
+                        O Gabriel, o Felipe e o João fizeram parte dessa caminhada. Sou especialmente grato ao João,
+                        porque o apoio dele significou muito para mim. Com o tempo, também tentei estar presente para
+                        meus amigos nos momentos difíceis, ouvindo sem julgar e oferecendo companhia quando precisavam.
+                        Isso me mostrou que, às vezes, uma conversa sincera pode ser um começo importante.
+                    </p>
+                    <p class="mental-project-note">
+                        Foi uma das razões para criar o <strong>Mente em Flor</strong>: compartilhar acolhimento,
+                        falar sobre saúde mental sem fingir que tudo é simples e lembrar que pedir ajuda não é fraqueza.
+                        Cada pessoa vive as coisas de um jeito; conversar com alguém de confiança pode ajudar, e buscar
+                        apoio profissional também é válido quando necessário.
+                    </p>
+                    <a class="mental-project-cta" href="../mente-em-flor/index.html" data-mental-project-link target="_blank" rel="noopener noreferrer">
+                        Conheça o Mente em Flor <span aria-hidden="true">↗</span>
+                    </a>
+                    <span class="mental-project-caption">UM PROJETO DE CONSCIENTIZAÇÃO · FEITO COM HTML, CSS E JS</span>
+                </div>
+
+                <div class="mental-project-art" aria-label="Resumo do projeto Mente em Flor">
+                    <div class="mental-art-orbit mental-art-orbit-one"></div>
+                    <div class="mental-art-orbit mental-art-orbit-two"></div>
+                    <div class="mental-art-center"><span>mf</span><i>✳</i></div>
+                    <div class="mental-art-card mental-art-card-top"><span>01 / CONVERSAR</span><strong>Você não precisa guardar tudo.</strong></div>
+                    <div class="mental-art-card mental-art-card-bottom"><span>02 / ESTAR PRESENTE</span><strong>Ouvir alguém também é cuidado.</strong></div>
+                    <div class="mental-art-stamp">CUIDADO<br>SEM PRESSA</div>
+                </div>
+            </div>
+
+            <div class="mental-feature-row">
+                <article><span>01</span><div><strong>Minha experiência</strong><p>Aprendi a importância de conversar e aceitar apoio.</p></div></article>
+                <article><span>02</span><div><strong>Amizades que apoiam</strong><p>Gabriel, Felipe e João fizeram parte da minha caminhada.</p></div></article>
+                <article><span>03</span><div><strong>Retribuir o cuidado</strong><p>Tento estar presente para meus amigos quando eles passam por momentos difíceis.</p></div></article>
+            </div>
+
+        </section>
+
+
         <!-- FRASE -->
 
         <section class="quote-section">
@@ -503,7 +563,7 @@
                 <div>
 
                     <div class="section-label">
-                        07 / COISAS QUE EU FIZ
+                        08 / COISAS QUE EU FIZ
                     </div>
 
                     <h2 class="section-title">
@@ -1242,7 +1302,7 @@
         <section class="gallery-section">
 
             <div class="section-label">
-                08 / GALERIA
+                09 / GALERIA
             </div>
 
             <h2 class="section-title">
@@ -1354,7 +1414,7 @@
         <section id="contato" class="contact-section">
 
             <div class="section-label">
-                09 / CONTATO
+                10 / CONTATO
             </div>
 
             <h2 class="section-title">
@@ -1369,7 +1429,7 @@
 
                 <a
                     class="social-card"
-                    href="https://www.instagram.com/luz_mais_ego/"
+                    href="https://www.instagram.com/lxqrens/"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
@@ -1379,7 +1439,7 @@
                     </span>
 
                     <strong>
-                        @luz_mais_ego
+                        @lxqrens
                     </strong>
 
                     <small>
