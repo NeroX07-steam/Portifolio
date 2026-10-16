@@ -292,6 +292,7 @@ function bind(){
    if(event.key==="Enter"&&!event.shiftKey){event.preventDefault();q("#message-form").requestSubmit();}
  });
  q("#mobile-toggle").addEventListener("click",()=>q(".channel-panel").classList.toggle("mobile-open"));
+ q("#mobile-open-channels").addEventListener("click",()=>q(".channel-panel").classList.toggle("mobile-open"));
  q("#server-title").addEventListener("click",()=>q(".channel-panel").classList.toggle("mobile-open"));
 }
 async function boot(){
