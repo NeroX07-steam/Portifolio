@@ -38,6 +38,17 @@ A experiência **não reproduz páginas de mangás existentes**. Ela usa conceit
 - O atalho não interfere na digitação em inputs, textareas, selects ou no menu de busca global.
 - O modo pode lembrar o estado escolhido neste navegador.
 
+### Procurar os exercícios
+
+A seção **Projetos** reúne 19 cartões de trabalhos feitos em diferentes fases do meu aprendizado. A busca ignora a diferença entre letras com e sem acentos. Você também pode filtrar por:
+
+- **TODOS**: lista completa.
+- **ESTRUTURA**: atividades com foco em organização de conteúdo HTML.
+- **ESTILO CSS**: prática de seletores, botões e espaçamento.
+- **PÁGINAS**: exercícios de páginas completas ou de conteúdo.
+
+Os filtros não alteram os arquivos, não enviam nenhuma consulta a servidores e podem ser removidos pelo botão **LIMPAR BUSCA**.
+
 ### Mangateca
 
 As 22 obras possuem cartões com informações curtas, sem reprodução de capítulos protegidos. Os controles de estado giram entre:
