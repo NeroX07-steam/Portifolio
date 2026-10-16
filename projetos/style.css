@@ -3039,3 +3039,34 @@ body[data-ink-palette="night"] .ink-screen-noise, body[data-ink-palette="plum"] 
 .xq-motion-progress{position:fixed;left:0;right:0;top:0;height:2px;z-index:9000;pointer-events:none}.xq-motion-progress span{display:block;width:100%;height:100%;background:#a9a098;transform:scaleX(0);transform-origin:left center;will-change:transform}
 @media(hover:hover) and (pointer:fine){.xq-manga-panel.xq-tile-in:hover{transform:perspective(1000px) rotateX(var(--xq-rotate-x,0deg)) rotateY(var(--xq-rotate-y,0deg)) translateY(-8px)}}
 @media(prefers-reduced-motion:reduce){.xq-motion-word,.xq-tile-ready,.xq-motion-progress{display:none}}
+
+
+/* Arquivo Vivo: os 20 capitulos ficam em linhas separadas e legiveis. */
+.ink-chapters .ink-chapter-list .ink-chapter-item { min-width: 0; }
+.ink-chapters .ink-chapter-list .ink-chapter-item strong {
+    min-width: 0;
+    overflow-wrap: break-word;
+    line-height: 1.1;
+}
+@media (max-width: 1050px) {
+    .ink-chapters .ink-chapter-list .ink-chapter-item {
+        grid-template-columns: 42px minmax(0, 1fr) minmax(0, 190px) 24px;
+        gap: 12px;
+    }
+    .ink-chapters .ink-chapter-list .ink-chapter-item strong {
+        font-size: clamp(26px, 3.6vw, 38px);
+    }
+}
+@media (max-width: 760px) {
+    .ink-chapters .ink-chapter-list .ink-chapter-item {
+        grid-template-columns: 34px minmax(0, 1fr) 20px;
+        gap: 10px;
+    }
+    .ink-chapters .ink-chapter-list .ink-chapter-item small { display: none; }
+    .ink-chapters .ink-section-overline { flex-wrap: wrap; }
+}
+@media (max-width: 420px) {
+    .ink-chapters .ink-chapter-list .ink-chapter-item strong {
+        font-size: clamp(25px, 8vw, 31px);
+    }
+}

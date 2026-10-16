@@ -28,12 +28,6 @@
       toast.timer=setTimeout(()=>node.classList.remove("is-visible"),3100);
     }
     function text(node,value){if(node)node.textContent=String(value);}
-    function showSection(id) {
-      const section=document.getElementById(id);
-      if (!section)return;
-      section.scrollIntoView({behavior:reduceMotion?"instant":"smooth",block:"start"});
-      history.replaceState(null,"","#"+id);
-    }
     function safeTask(fn,label) {
       try{fn();}catch(error){console.error("Arquivo Vivo / "+label,error);}
     }
@@ -52,82 +46,6 @@
       },{threshold:.045,rootMargin:"0px 0px -35px 0px"});
       elements.forEach(node=>observer.observe(node));
     },"revelações");
-
-    /* 01: MODO MANGÁ • capítulos reais + navegação por teclado */
-    safeTask(()=>{
-      const chapters=[
-        {id:"sobre",label:"Quem sou eu"},{id:"evolucao",label:"Evolução"},
-        {id:"julya-exe",label:"Julya.exe"},{id:"tofu-world",label:"Tofu World"},
-        {id:"sala-musica",label:"Sala de Música"},{id:"senai-lab",label:"Laboratório SENAI"},
-        {id:"mangateca",label:"Mangateca"},{id:"segredos",label:"Segredos"}
-      ];
-      const toolbar=$("#xq2-reader-tools"),indicator=$("#xq2-reader-count");
-      const docks=$$(".xq2-chapter-dock a[href^='#']");
-      if(!toolbar||!indicator)return;
-      let index=0;
-      let reading=false;
-      const modeKey="manga-mode";
-      function update(){
-        text(indicator,String(index+1).padStart(2,"0")+" / "+String(chapters.length).padStart(2,"0"));
-        docks.forEach(link=>{
-          if(link.getAttribute("href")==="#"+chapters[index].id)link.setAttribute("aria-current","location");
-          else link.removeAttribute("aria-current");
-        });
-      }
-      function enable(on,scrollOnStart=false){
-        reading=Boolean(on);
-        toolbar.hidden=!reading;
-        document.body.classList.toggle("xq2-reader-active",reading);
-        const toggle=$("#xq2-reader-toggle");
-        toggle?.setAttribute("aria-pressed",String(reading));
-        toggle?.setAttribute("aria-label",reading?"Desativar modo mangá":"Ativar modo mangá");
-        local.set(modeKey,reading?"on":"off");
-        if(reading&&scrollOnStart)showSection(chapters[index].id);
-        toast(reading?"Modo mangá ativado. Use as setas para trocar de capítulo.":"Modo mangá encerrado.");
-        update();
-      }
-      function jump(next){
-        index=Math.min(chapters.length-1,Math.max(0,next));
-        update();showSection(chapters[index].id);
-      }
-      $("#xq2-reader-toggle")?.addEventListener("click",()=>enable(!reading,true));
-      $("#xq2-start-reading")?.addEventListener("click",()=>{
-        index=0;enable(true,true);
-      });
-      $("#xq2-reader-prev")?.addEventListener("click",()=>jump(index-1));
-      $("#xq2-reader-next")?.addEventListener("click",()=>jump(index+1));
-      $("#xq2-reader-exit")?.addEventListener("click",()=>enable(false));
-      docks.forEach(link=>link.addEventListener("click",()=>{
-        const found=chapters.findIndex(c=>"#"+c.id===link.getAttribute("href"));
-        if(found>=0){index=found;update();}
-      }));
-      document.addEventListener("keydown",event=>{
-        if(!reading||event.ctrlKey||event.metaKey||event.altKey)return;
-        if(document.activeElement?.closest("input,textarea,select,[contenteditable=true]"))return;
-        const command=$("#ink-command-backdrop");
-        if(command&&!command.hidden)return;
-        if(event.key==="ArrowRight"||event.key==="PageDown"){event.preventDefault();jump(index+1);}
-        if(event.key==="ArrowLeft"||event.key==="PageUp"){event.preventDefault();jump(index-1);}
-        if(event.key==="Escape"){enable(false);}
-      });
-      if("IntersectionObserver" in window){
-        let best=0;
-        const observer=new IntersectionObserver(entries=>{
-          if(!entries.some(e=>e.isIntersecting))return;
-          const current=chapters.map((c,i)=>{
-            const r=document.getElementById(c.id)?.getBoundingClientRect();
-            return {i,d:r?Math.abs(r.top-innerHeight*.24):Number.POSITIVE_INFINITY};
-          }).sort((a,b)=>a.d-b.d)[0];
-          if(current){best=current.i;index=best;update();}
-        },{rootMargin:"-15% 0px -55% 0px",threshold:0});
-        chapters.forEach(c=>{const el=document.getElementById(c.id);if(el)observer.observe(el);});
-      }
-      const original=chapters.findIndex(c=>"#"+c.id===location.hash);
-      if(original>=0)index=original;
-      update();
-      if(local.get(modeKey)==="on"){reading=true;toolbar.hidden=false;document.body.classList.add("xq2-reader-active");}
-    },"modo mangá");
-
     /* 02: QUATRO CARTAS • nada é salvo ou enviado */
     safeTask(()=>{
       const letters={
@@ -487,30 +405,5 @@
       });
       draw();
     },"segredos");
-
-    /* Anchor updates keep the new chapter dock current without rewriting old navigation */
-    safeTask(()=>{
-      const links=$$(".xq2-chapter-dock a");
-      const active=()=>{
-        let current=null,distance=Number.POSITIVE_INFINITY;
-        links.forEach(link=>{
-          const target=document.getElementById(link.hash.slice(1));
-          if(!target)return;
-          const rect=target.getBoundingClientRect();
-          const d=Math.abs(rect.top-window.innerHeight*.28);
-          if(d<distance){distance=d;current=link;}
-        });
-        links.forEach(link=>{
-          if(link===current)link.setAttribute("aria-current","location");
-          else link.removeAttribute("aria-current");
-        });
-      };
-      let scheduled=false;
-      addEventListener("scroll",()=>{
-        if(scheduled)return;
-        scheduled=true;requestAnimationFrame(()=>{active();scheduled=false;});
-      },{passive:true});
-      active();
-    },"índice de capítulos");
   });
 })();

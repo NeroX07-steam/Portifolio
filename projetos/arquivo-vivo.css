@@ -17,9 +17,8 @@
 .xq2-edition *, .xq2-edition *::before, .xq2-edition *::after {box-sizing:border-box}
 .xq2-edition button,.xq2-edition input,.xq2-edition select,.xq2-edition textarea{font:inherit}
 .xq2-edition button{cursor:pointer}
-.xq2-edition button:focus-visible,.xq2-edition a:focus-visible,.xq2-chapter-dock button:focus-visible,
-.xq2-reader-tools button:focus-visible,.xq2-secret-panel button:focus-visible{outline:2px solid #9cae83;outline-offset:4px}
-.xq2-edition [hidden],.xq2-chapter-dock [hidden],.xq2-reader-tools [hidden],.xq2-secret-panel[hidden]{display:none!important}
+.xq2-edition button:focus-visible,.xq2-edition a:focus-visible,.xq2-secret-panel button:focus-visible{outline:2px solid #9cae83;outline-offset:4px}
+.xq2-edition [hidden],.xq2-secret-panel[hidden]{display:none!important}
 .xq2-edition a{text-underline-offset:4px}
 .xq2-wrap{width:min(1210px,calc(100% - 72px));margin:0 auto}
 .xq2-section{position:relative;padding:118px 0;overflow:hidden;isolation:isolate;border-top:1px solid var(--xq2-line)}
@@ -40,30 +39,6 @@
 .xq2-action-primary{background:var(--xq2-ink);color:var(--bg,#e8e3d9);border-color:var(--xq2-ink)}
 .xq2-action-primary:hover{background:var(--xq2-sheet);color:var(--xq2-ink)}
 .xq2-stamp{font:9px/1.7 var(--mono,monospace);text-transform:uppercase;letter-spacing:.14em;color:var(--xq2-muted)}
-/* Manga chapter controls: do not obstruct the existing header */
-.xq2-chapter-dock{position:fixed;right:15px;top:50%;transform:translateY(-50%);
-  z-index:95;display:flex;flex-direction:column;gap:4px;padding:8px;border:1px solid var(--ink-line);
-  background:var(--ink-sheet);box-shadow:0 12px 35px rgba(0,0,0,.16);max-height:80vh;overflow-y:auto}
-.xq2-chapter-dock a,.xq2-chapter-dock button{display:grid;place-items:center;min-height:31px;min-width:33px;
-  border:0;background:transparent;color:var(--text);font:10px var(--mono,monospace);text-decoration:none;
-  transition:background .2s,color .2s}
-.xq2-chapter-dock a:hover,.xq2-chapter-dock a[aria-current="location"]{background:var(--text);color:var(--bg)}
-.xq2-chapter-dock button{border-top:1px solid var(--ink-line);font-size:16px}
-.xq2-chapter-dock .xq2-dock-label{font:8px var(--mono,monospace);letter-spacing:.08em;writing-mode:vertical-rl;transform:rotate(180deg);
-  justify-self:center;align-self:center;padding:8px 0;color:var(--muted)}
-.xq2-reader-tools{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:96;
-  display:flex;align-items:center;gap:8px;max-width:calc(100vw - 24px);
-  border:1px solid #d5cbb9;background:#19191d;color:#f1eee9;padding:7px 10px;
-  box-shadow:0 12px 50px #0007;font:10px var(--mono,monospace)}
-.xq2-reader-tools button{background:transparent;border:1px solid #ffffff36;color:#f1eee9;padding:10px 14px;cursor:pointer}
-.xq2-reader-tools button:hover{background:#ffffff18}
-.xq2-reader-tools #xq2-reader-count{white-space:nowrap;letter-spacing:.15em;color:#c4b5a0}
-.xq2-reader-active .xq2-chapter-dock{border-color:#acb6a6}
-.xq2-cover-note{display:flex;align-items:center;gap:15px;flex-wrap:wrap;margin-top:25px;padding:12px 0;
-  border-top:1px solid var(--ink-line);font:10px/1.7 var(--mono,monospace);color:var(--muted)}
-.xq2-cover-note button{cursor:pointer;border:1px solid var(--ink-line);background:var(--ink-sheet);color:var(--text);
-  padding:10px 14px;font:10px var(--mono,monospace)}
-.xq2-cover-note button:hover{border-color:var(--text)}
 /* Milestones with source links, no invented activity counters */
 .xq2-timeline{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--xq2-line);border-left:1px solid var(--xq2-line)}
 .xq2-milestone{position:relative;display:flex;flex-direction:column;min-height:350px;
@@ -209,7 +184,6 @@
 .xq2-edition .xq2-reveal.xq2-in{opacity:1;transform:none}
 @keyframes xq2-spin{to{transform:rotate(360deg)}}
 @media(max-width:1100px){
- .xq2-chapter-dock{right:8px}
  .xq2-timeline{grid-template-columns:repeat(2,minmax(0,1fr))}
  .xq2-love-grid,.xq2-music-feature{grid-template-columns:1fr}
  .xq2-record{width:min(260px,75%)}
@@ -219,13 +193,6 @@
  .xq2-wrap{width:min(100% - 38px,650px)}
  .xq2-intro{grid-template-columns:1fr;gap:22px;margin:35px 0}
  .xq2-intro h2{font-size:clamp(46px,12vw,68px)}
- .xq2-chapter-dock{top:auto;bottom:8px;right:8px;transform:none;padding:5px;
-  flex-direction:row;max-width:calc(100% - 16px);overflow-x:auto;overflow-y:hidden}
- .xq2-chapter-dock .xq2-dock-label{writing-mode:horizontal-tb;transform:none;padding:0 7px}
- .xq2-chapter-dock a{min-width:28px;min-height:30px;font-size:9px}
- .xq2-chapter-dock button{border:0;border-left:1px solid var(--ink-line);min-width:30px}
- .xq2-reader-tools{bottom:51px;gap:5px;padding:6px}
- .xq2-reader-tools button{padding:10px 9px;font-size:10px}
  .xq2-love-grid,.xq2-tofu-layout,.xq2-study-stage{grid-template-columns:1fr}
  .xq2-timeline{grid-template-columns:1fr}
  .xq2-milestone{min-height:250px}
@@ -241,7 +208,6 @@
  .xq2-letter-card{padding:27px;min-height:320px}
  .xq2-tofu-card{padding:25px}
  .xq2-music-panel{padding:27px 22px}
- .xq2-reader-tools #xq2-reader-count{display:none}
 }
 @media(prefers-reduced-motion:reduce){
  .xq2-edition .xq2-reveal{opacity:1;transform:none;transition:none}
@@ -253,8 +219,6 @@
 
 
 /* Refinamentos depois da integração no site original */
-.hero .xq2-cover-note{grid-column:1/-1;position:relative;z-index:3;margin-top:-20px;margin-bottom:25px}
-.hero .xq2-cover-note a{font:10px/1.5 var(--mono);text-decoration:underline;color:var(--text)}
 .xq2-secret-section .xq2-action{color:#eee7de;border-color:#d3c7b87a}
 .xq2-secret-section .xq2-action:hover:not(:disabled){background:#e9e2d7;color:#18191c}
 .xq2-secret-section .xq2-action:disabled{opacity:.45;cursor:not-allowed}
@@ -267,11 +231,7 @@
 }
 .xq2-manga-upgraded .xq-manga-panel{min-width:0}
 .xq2-manga-upgraded .xq-manga-panel h3{overflow-wrap:anywhere}
-@media(max-width:760px){
-  .hero .xq2-cover-note{margin-top:0}
-  .xq2-chapter-dock{box-shadow:0 8px 28px #0005}
-  .xq2-reader-tools{box-shadow:0 8px 32px #0009}
-}
+
 
 
 /* Finder de projetos, sem substituir o contador de 19 exercícios */
