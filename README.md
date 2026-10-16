@@ -46,12 +46,13 @@ Não é uma plataforma comercial. Não estou tentando parecer um desenvolvedor e
 | **07 · Evolução GitHub** | Marcos do aprendizado | Quatro etapas ligadas a arquivos e histórico reais |
 | **08 · Segredos** | Fragmentos escondidos | Três fragmentos, mensagem desbloqueável e um código no teclado |
 
-Esses recursos **complementam** o portfólio que já existia, com as seções Sobre, Julya, Tofu, projetos, SENAI, mangás, Mente em Flor e contato.
+Esses recursos **complementam** o portfólio que já existia, com as seções Sobre, Julya, Tofu, projetos, SENAI, mangás, Mente em Flor e contato. A grade dos **19 exercícios** agora também tem **busca sem acentos, filtros por tipo de atividade e contador de resultados visíveis**.
 
 <details>
 <summary><b>✳ Interações extras, para quem gosta de explorar</b></summary>
 
 - Pesquisar títulos por nome e filtrar por **psicológico, drama, arte ou fantasia**.
+- Pesquisar os **19 projetos** pelo nome e filtrar por estrutura, estilos CSS e páginas.
 - Marcar uma obra como **descobrir, quero ler, lendo ou já tenho**, e alternar favoritos.
 - Sortear uma sugestão da estante visível.
 - Trocar entre **papel, noite e ameixa**.
@@ -189,6 +190,7 @@ Sou estudante e recebo bem observações específicas: bugs, sugestões de acess
 ## 🌱 Próximas melhorias
 
 - [x] Índice e modo leitura em capítulos
+- [x] Busca dos 19 projetos, filtros de tema e contador de resultados
 - [x] Mangateca com busca, filtros e lista de leitura local
 - [x] Cartas para Julya, Tofu World e Sala de Música
 - [x] Comparações didáticas no Laboratório SENAI
