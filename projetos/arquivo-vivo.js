@@ -198,7 +198,7 @@
         text(trackName,saved?.title||"Nenhuma faixa escolhida.");
         text(trackArtist,saved?.artist?("ARTISTA / "+saved.artist+" · ESCOLHIDA MANUALMENTE"):
           "Esse destaque só existe neste navegador. Não mostra reprodução em tempo real.");
-        vinyl?.classList.toggle("xq2-music-playing",Boolean(saved)&&!reduceMotion);
+        // O destaque musical NÃO representa uma reprodução em tempo real.
         const old=$("#xq2-track-search-link");
         old?.remove();
         if(saved){
@@ -211,6 +211,12 @@
           trackArtist?.after(link);
         }
       }
+      $("#xq2-vinyl-toggle")?.addEventListener("click",event=>{
+        if(reduceMotion){toast("Movimento reduzido está ativo. O vinil fica parado.");return;}
+        const isSpinning=vinyl?.classList.toggle("xq2-music-playing");
+        event.currentTarget.setAttribute("aria-pressed",String(Boolean(isSpinning)));
+        event.currentTarget.textContent=isSpinning?"PARAR O DISCO ■":"GIRAR O DISCO ♫";
+      });
       const saved=parse();
       if(saved){title.value=saved.title;artist.value=saved.artist;}
       draw(saved);
