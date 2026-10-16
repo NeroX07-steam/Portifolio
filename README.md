@@ -188,3 +188,26 @@ A comunidade está em **beta**: a estrutura de dados e os arquivos estão criado
 
 Verifique com **duas contas diferentes**: cadastro/login, entrada no mesmo servidor, contagem online, upload/troca/remoção do avatar, envio da imagem com e sem texto, leitura do arquivo em outro login, restrição para quem não pertence ao servidor e layout no celular. Também monitore os limites de uso do Supabase Storage e Realtime.
 
+
+---
+
+## ✳ Ajustes visuais na Comunidade e expansão do Mente em Flor
+
+### Comunidade
+
+Os controles de **editar foto de perfil** e o indicador de **pessoas online** receberam estilos escuros específicos, contraste, foco visível e espaçamento corrigido para celular. Os estilos essenciais desses controles estão embutidos no HTML, além do CSS principal, para evitar que versões desatualizadas do CSS deixem botões com aparência padrão.
+
+Para ver a versão atualizada, abra `projetos/comunidade/index.html` e atualize o navegador sem cache (`Ctrl + Shift + R`).
+
+### Mente em Flor
+
+O projeto `mente-em-flor/` ganhou três seções:
+
+- **Kit para dias diferentes:** ideias opcionais de pausa para cansaço, cabeça cheia, vontade de companhia e dificuldade de identificar sentimentos, com botão de próxima ideia e cópia.
+- **Conversas que acolhem:** mensagens-modelo para pedir companhia, escutar um amigo e procurar a orientação de um adulto. Não substitui atendimento.
+- **Uma carta pessoal:** textarea com contagem, exportação TXT, salvar local opcional e exclusão. O botão de salvar exige confirmar que se trata de dispositivo pessoal. **Nunca digite informações sensíveis em computadores compartilhados da escola.**
+- **Sobre o autor:** o site agora explica o vínculo do Luiz Eduardo com o SENAI e a motivação pessoal de ouvir e apoiar amigos.
+
+Novo arquivo: `mente-em-flor/novidades.js`. Os antigos `index.html`, `style.css` e `script.js` continuam presentes.
+
+A atualização foi gravada no **GitHub**, sem publicar ou acionar um deploy manual na Vercel. Confirme visualmente o resultado após o próximo deploy da sua plataforma de hospedagem.
