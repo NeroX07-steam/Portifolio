@@ -3332,3 +3332,17 @@ body.dark-mode .footer-brand .brand-name span {
   .flor-kit-choice,.flor-conversation-card,.flor-letter-buttons button{transition:none}
   .flor-kit-choice:hover,.flor-conversation-card:hover,.flor-letter-buttons button:hover{transform:none}
 }
+
+
+/* Ajustes de contraste: nos dois temas, superfícies de destaque usam texto reverso. */
+.flor-kit-result>p:not(.flor-kit-foot){color:var(--paper);opacity:.83}
+.flor-kit-small{color:var(--paper);opacity:.75}
+.flor-kit-actions button:not(.flor-kit-next){color:var(--paper);border-color:var(--paper)}
+.flor-kit-actions button:not(.flor-kit-next):hover{background:var(--paper);color:var(--ink)}
+.flor-kit-result .flor-kit-foot{color:var(--paper);opacity:.64}
+.flor-conversation-guidance p{color:var(--paper);opacity:.84}
+.flor-conversation-guidance a{color:var(--paper);font-weight:600}
+.flor-guidance-marker{border-color:var(--paper)}
+.flor-kit-result h3{color:var(--paper)}
+.flor-kit-result .flor-kit-next{color:#142018}
+.flor-kit-result .flor-kit-next:hover{background:#f2f8ed;color:#142018}
