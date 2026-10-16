@@ -304,8 +304,8 @@
 
         /* Movimento 3D discreto nas imagens principais */
         if (finePointer && wideScreen && !reducedMotion) {
-            // A moldura do hero permanece reta; apenas a arte do projeto usa tilt 3D.
             const tiltItems = [
+                document.querySelector(".hero-photo"),
                 document.querySelector(".mental-project-art")
             ].filter(Boolean);
 
