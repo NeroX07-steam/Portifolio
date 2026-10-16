@@ -100,3 +100,35 @@ Sou Luiz Eduardo, estudante de desenvolvimento de sistemas e desenvolvedor em fo
 *Feito com código, curiosidade e um pouco de caos.* 🖤
 
 </div>
+
+---
+
+## ✳ Edição mangá interativo — Outubro de 2026
+
+O projeto original foi expandido mantendo os trabalhos do SENAI e a estrutura já existente em `projetos/`.
+
+### Novidades
+
+- **Capítulos editoriais:** índice navegável com 12 destinos principais.
+- **A Julya é minha namorada:** capítulo atualizado, com homenagem especial.
+- **Biblioteca pessoal:** obras que gosto e quero conhecer, sem reproduzir mangás protegidos por direitos autorais.
+- **Fragmentos pessoais:** cartões sobre música, código, SENAI, projetos e memórias.
+- **Laboratório:** frases aleatórias, cartas breves, partículas, controle de atmosfera e uma mini linha do tempo.
+- **Três atmosferas:** papel, noite e ameixa, salvas neste navegador.
+- **Diário local:** salva texto apenas no navegador, permite exportar TXT e apagar.
+- **Navegação rápida:** pressione `Ctrl + K` (ou `⌘ + K` no Mac).
+- **Movimento acessível:** as novas animações respeitam `prefers-reduced-motion`.
+- **Responsividade:** regras específicas de layout para celular e tablet.
+
+### Organização
+
+Os arquivos principais continuam em:
+
+- `projetos/index.html`
+- `projetos/style.css`
+- `projetos/script.js`
+
+**Observação sobre a publicação:** se a Vercel estiver configurada com a pasta `projetos` como raiz, o diretório irmão `mente-em-flor` não será servido automaticamente. É necessário configurar a publicação para incluir as duas pastas ou informar o endereço público separado do Mente em Flor.
+
+**Sobre a quantidade de código:** o site tem mais de seis mil linhas distribuídas entre HTML, CSS e JavaScript, incluindo o código preservado do projeto anterior. Quantidade de linhas não equivale a quantidade de recursos nem garante qualidade.
+
