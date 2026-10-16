@@ -2989,3 +2989,27 @@ body[data-ink-palette="night"] .ink-screen-noise, body[data-ink-palette="plum"] 
     .ink-book, .ink-note { transform: none !important; transition: none; }
     .ink-screen-noise { opacity: .08; }
 }
+
+
+/* Correção: o header global do portfólio não deve afetar
+   os cabeçalhos internos dos cartões do laboratório. */
+.ink-lab-card > header.ink-card-head {
+    position: static;
+    inset: auto;
+    height: auto;
+    width: auto;
+    z-index: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    backdrop-filter: none;
+    color: inherit;
+    font: 10px var(--mono);
+    letter-spacing: .12em;
+    transition: none;
+}
+.ink-lab-card:not(.ink-lab-card-featured) > header.ink-card-head { color: var(--muted); }
