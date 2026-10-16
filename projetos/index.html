@@ -768,6 +768,19 @@
             </div>
 
 
+            <div class="xq2-project-tools xq2-edition" aria-label="Pesquisar exercícios e projetos">
+                <div class="xq2-project-toolbar-copy"><strong>19 EXPERIMENTOS, DIFERENTES FASES.</strong><span>Procure um projeto ou escolha um tipo de atividade.</span></div>
+                <label class="ink-visually-hidden" for="xq2-project-search">Buscar projeto pelo nome</label>
+                <input type="search" id="xq2-project-search" placeholder="PROCURAR PROJETO..." maxlength="90" autocomplete="off">
+                <div class="xq2-project-choices" role="group" aria-label="Filtrar projetos por tipo">
+                    <button type="button" data-project-group="todos" aria-pressed="true">TODOS</button>
+                    <button type="button" data-project-group="html" aria-pressed="false">ESTRUTURA</button>
+                    <button type="button" data-project-group="css" aria-pressed="false">ESTILO CSS</button>
+                    <button type="button" data-project-group="pagina" aria-pressed="false">PÁGINAS</button>
+                </div>
+                <div class="xq2-project-summary" aria-live="polite"><span id="xq2-project-count">19 PROJETOS VISÍVEIS</span><button type="button" id="xq2-project-clear">LIMPAR BUSCA ×</button></div>
+            </div>
+
             <div class="projects-grid">
 
 
@@ -775,7 +788,7 @@
 
                 <a
                     href="./projeto_erro/index.html"
-                    class="project-card"
+                    class="project-card" data-project-kind="html"
                 >
 
                     <div class="project-image">
@@ -796,7 +809,7 @@
                         </h3>
 
                         <p>
-                            Projeto desenvolvido durante os estudos.
+                            Exercício que faz parte das minhas primeiras práticas com HTML.
                         </p>
 
                         <span class="project-link">
@@ -812,7 +825,7 @@
 
                 <a
                     href="./projeto_album/index.html"
-                    class="project-card"
+                    class="project-card" data-project-kind="pagina"
                 >
 
                     <div class="project-image">
@@ -833,7 +846,7 @@
                         </h3>
 
                         <p>
-                            Projeto de criação de álbum.
+                            Prática de organização de imagens e conteúdo em uma página.
                         </p>
 
                         <span class="project-link">
@@ -849,7 +862,7 @@
 
                 <a
                     href="./projeto_botao/index.html"
-                    class="project-card"
+                    class="project-card" data-project-kind="css"
                 >
 
                     <div class="project-image">
@@ -870,7 +883,7 @@
                         </h3>
 
                         <p>
-                            Exercício envolvendo botões e estilos.
+                            Explorando estilos de botões e propriedades do CSS.
                         </p>
 
                         <span class="project-link">
@@ -886,7 +899,7 @@
 
                 <a
                     href="./projeto_curriculo/index.html"
-                    class="project-card"
+                    class="project-card" data-project-kind="pagina"
                 >
 
                     <div class="project-image">
@@ -907,7 +920,7 @@
                         </h3>
 
                         <p>
-                            Página de currículo.
+                            Estrutura HTML para apresentar formação e informações profissionais.
                         </p>
 
                         <span class="project-link">
@@ -923,7 +936,7 @@
 
                 <a
                     href="./projeto_diario/index.html"
-                    class="project-card"
+                    class="project-card" data-project-kind="pagina"
                 >
 
                     <div class="project-image">
@@ -944,7 +957,7 @@
                         </h3>
 
                         <p>
-                            Projeto de página de diário.
+                            Página de registros de partidas e treinos, organizada por dias.
                         </p>
 
                         <span class="project-link">
@@ -960,7 +973,7 @@
 
                 <a
                     href="./projeto_evento/index.html"
-                    class="project-card"
+                    class="project-card" data-project-kind="pagina"
                 >
 
                     <div class="project-image">
@@ -981,7 +994,7 @@
                         </h3>
 
                         <p>
-                            Página para divulgação de evento.
+                            Exercício de organização de informações para um evento.
                         </p>
 
                         <span class="project-link">
@@ -997,7 +1010,7 @@
 
                 <a
                     href="./projeto_fundo/index.html"
-                    class="project-card"
+                    class="project-card" data-project-kind="css"
                 >
 
                     <div class="project-image">
@@ -1018,7 +1031,7 @@
                         </h3>
 
                         <p>
-                            Exercícios com imagens e fundos.
+                            Estudando imagens de fundo, cores e apresentação visual.
                         </p>
 
                         <span class="project-link">
@@ -1034,7 +1047,7 @@
 
                 <a
                     href="./projeto_margin/index.html"
-                    class="project-card"
+                    class="project-card" data-project-kind="css"
                 >
 
                     <div class="project-image">
@@ -1055,7 +1068,7 @@
                         </h3>
 
                         <p>
-                            Exercício de espaçamento com CSS.
+                            Testes de margens e espaçamento entre elementos HTML.
                         </p>
 
                         <span class="project-link">
@@ -1071,7 +1084,7 @@
 
                 <a
                     href="./projeto_meuSite/index.html"
-                    class="project-card"
+                    class="project-card" data-project-kind="html"
                 >
 
                     <div class="project-image">
@@ -1092,7 +1105,7 @@
                         </h3>
 
                         <p>
-                            Projeto de site pessoal.
+                            Um dos meus primeiros experimentos de página pessoal.
                         </p>
 
                         <span class="project-link">
@@ -1108,7 +1121,7 @@
 
                 <a
                     href="./projeto_passatempo/index.html"
-                    class="project-card"
+                    class="project-card" data-project-kind="pagina"
                 >
 
                     <div class="project-image">
@@ -1129,7 +1142,7 @@
                         </h3>
 
                         <p>
-                            Página sobre passatempos.
+                            Prática de página com conteúdo sobre interesses pessoais.
                         </p>
 
                         <span class="project-link">
@@ -1145,7 +1158,7 @@
 
                 <a
                     href="./projeto_perfil/index.html"
-                    class="project-card"
+                    class="project-card" data-project-kind="pagina"
                 >
 
                     <div class="project-image">
@@ -1166,7 +1179,7 @@
                         </h3>
 
                         <p>
-                            Página de perfil.
+                            Estruturando informações de um perfil com HTML e CSS.
                         </p>
 
                         <span class="project-link">
@@ -1182,7 +1195,7 @@
 
                 <a
                     href="./projeto_planejador/index.html"
-                    class="project-card"
+                    class="project-card" data-project-kind="pagina"
                 >
 
                     <div class="project-image">
@@ -1203,7 +1216,7 @@
                         </h3>
 
                         <p>
-                            Projeto de organização.
+                            Página de organização de itens relacionados a jogos.
                         </p>
 
                         <span class="project-link">
@@ -1219,7 +1232,7 @@
 
                 <a
                     href="./projeto_receita/index.html"
-                    class="project-card"
+                    class="project-card" data-project-kind="pagina"
                 >
 
                     <div class="project-image">
@@ -1240,7 +1253,7 @@
                         </h3>
 
                         <p>
-                            Página de receita.
+                            Organização de ingredientes e instruções numa página web.
                         </p>
 
                         <span class="project-link">
@@ -1256,7 +1269,7 @@
 
                 <a
                     href="./projeto_seletor/index.html"
-                    class="project-card"
+                    class="project-card" data-project-kind="css"
                 >
 
                     <div class="project-image">
@@ -1277,7 +1290,7 @@
                         </h3>
 
                         <p>
-                            Exercício com seletores CSS.
+                            Praticando como selecionar e estilizar elementos.
                         </p>
 
                         <span class="project-link">
@@ -1293,7 +1306,7 @@
 
                 <a
                     href="./projeto_semáforo/index.html"
-                    class="project-card"
+                    class="project-card" data-project-kind="html"
                 >
 
                     <div class="project-image">
@@ -1314,7 +1327,7 @@
                         </h3>
 
                         <p>
-                            Projeto envolvendo lógica.
+                            Exercício visual com os estados pare, atenção e ande.
                         </p>
 
                         <span class="project-link">
@@ -1330,7 +1343,7 @@
 
                 <a
                     href="./projeto_video/index.html"
-                    class="project-card"
+                    class="project-card" data-project-kind="pagina"
                 >
 
                     <div class="project-image">
@@ -1351,7 +1364,7 @@
                         </h3>
 
                         <p>
-                            Página com conteúdo em vídeo.
+                            Experimento de incorporação de vídeo numa página.
                         </p>
 
                         <span class="project-link">
@@ -1367,7 +1380,7 @@
 
                 <a
                     href="./projeto_visita/index.html"
-                    class="project-card"
+                    class="project-card" data-project-kind="pagina"
                 >
 
                     <div class="project-image">
@@ -1388,7 +1401,7 @@
                         </h3>
 
                         <p>
-                            Projeto de página de visita.
+                            Prática de cartão de visita digital em HTML.
                         </p>
 
                         <span class="project-link">
@@ -1404,7 +1417,7 @@
 
                 <a
                     href="./prova/index.html"
-                    class="project-card"
+                    class="project-card" data-project-kind="html"
                 >
 
                     <div class="project-image">
@@ -1425,7 +1438,7 @@
                         </h3>
 
                         <p>
-                            Projeto desenvolvido para avaliação.
+                            Atividade de avaliação dos conteúdos estudados.
                         </p>
 
                         <span class="project-link">
@@ -1441,7 +1454,7 @@
 
                 <a
                     href="./revisao_prova/index.html"
-                    class="project-card"
+                    class="project-card" data-project-kind="html"
                 >
 
                     <div class="project-image">
@@ -1462,7 +1475,7 @@
                         </h3>
 
                         <p>
-                            Revisão dos conteúdos estudados.
+                            Revisão de conceitos praticados nas aulas de web.
                         </p>
 
                         <span class="project-link">
