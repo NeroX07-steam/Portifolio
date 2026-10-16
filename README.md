@@ -6,7 +6,7 @@
 
 Sou Luiz Eduardo, estudante de Desenvolvimento de Sistemas. Uso este repositório para mostrar o que estou aprendendo com **HTML, CSS e JavaScript**, desde exercícios de aula até páginas mais completas.
 
-[**🌐 Conhecer o portfólio**](https://xqrens-portifolio.vercel.app/) · [**🧠 Conhecer o Mente em Flor**](./mente-em-flor/) · [**📚 Ver meus projetos**](./docs/PROJETOS.md)
+[**🌐 Conhecer o portfólio**](https://portifolio-projetos-git-main-pedro-luiz.vercel.app/) · [**🧠 Conhecer o Mente em Flor**](https://xqrens-portifolio.vercel.app/) · [**📚 Ver meus projetos**](./docs/PROJETOS.md)
 
 ![HTML5](https://img.shields.io/badge/HTML5-estudando-181818?style=flat-square&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-estudando-181818?style=flat-square&logo=css&logoColor=white)
@@ -16,6 +16,8 @@ Sou Luiz Eduardo, estudante de Desenvolvimento de Sistemas. Uso este repositóri
 </div>
 
 ---
+
+> **Sites diferentes:** este portfólio está em [portifolio-projetos](https://portifolio-projetos-git-main-pedro-luiz.vercel.app/). O projeto de saúde mental **Mente em Flor** está em [xqrens-portifolio](https://xqrens-portifolio.vercel.app/). Ambos têm código neste repositório.
 
 ## ✦ O projeto em 10 segundos
 
@@ -30,7 +32,7 @@ Sou Luiz Eduardo, estudante de Desenvolvimento de Sistemas. Uso este repositóri
 | Projeto | O que é | Código |
 | --- | --- | --- |
 | **XQRENS · Portfólio** | Site pessoal com navegação por capítulos, referências a mangás, animações e experimentos com JavaScript. | [Abrir arquivos](./projetos/) |
-| **Mente em Flor** | Projeto educativo com dicas, check-in, pausa guiada, kit de cuidado e informações sobre onde procurar ajuda. | [Abrir arquivos](./mente-em-flor/) |
+| **Mente em Flor** | Projeto educativo com dicas, check-in, pausa guiada, kit de cuidado e informações sobre onde procurar ajuda. | [Acessar site](https://xqrens-portifolio.vercel.app/) · [Código](./mente-em-flor/) |
 | **Meu Site** | Uma das páginas que fiz durante os estudos iniciais de HTML. | [Ver exercício](./projetos/projeto_meuSite/index.html) |
 | **Currículo** | Exercício de estruturação de informações em uma página HTML. | [Ver exercício](./projetos/projeto_curriculo/index.html) |
 | **Álbum** | Página de álbum criada durante os exercícios de web. | [Ver exercício](./projetos/projeto_album/index.html) |
@@ -58,7 +60,7 @@ A página inclui práticas cotidianas, um exercício de pausa guiada, registro d
 
 **Importante:** o projeto é educativo, não oferece diagnóstico nem substitui profissionais de saúde. O conteúdo da carta não é enviado a servidores; se a pessoa optar por salvar, ele fica no navegador utilizado.
 
-[**→ Ver o código do Mente em Flor**](./mente-em-flor/)
+[**→ Acessar o Mente em Flor**](https://xqrens-portifolio.vercel.app/) · [Ver o código](./mente-em-flor/)
 
 ## 🛠️ Tecnologias e aprendizado
 
@@ -123,7 +125,7 @@ Ideias para as próximas versões incluem revisar acessibilidade, desempenho, li
 
 ## ✉️ Contato
 
-[GitHub](https://github.com/NeroX07-steam) · [Instagram](https://www.instagram.com/lxqrens/) · [Site](https://xqrens-portifolio.vercel.app/)
+[GitHub](https://github.com/NeroX07-steam) · [Instagram](https://www.instagram.com/lxqrens/) · [Portfólio](https://portifolio-projetos-git-main-pedro-luiz.vercel.app/) · [Mente em Flor](https://xqrens-portifolio.vercel.app/)
 
 ---
 
