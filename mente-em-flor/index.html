@@ -9,8 +9,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="style.css?v=mef-cuidado-20261016">
+  <script defer src="script.js?v=mef-cuidado-20261016"></script>
+  <script defer src="novidades.js?v=mef-cuidado-20261016"></script>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -33,6 +34,7 @@
       <a href="#inicio" class="nav-link active">Início</a>
       <a href="#praticas" class="nav-link">Práticas</a>
       <a href="#pausas" class="nav-link">Pausas</a>
+      <a href="#kit" class="nav-link">Kit de cuidado</a>
       <a href="#apoio" class="nav-link">Apoio</a>
       <a href="#sobre" class="nav-link">Projeto</a>
     </nav>
@@ -108,6 +110,37 @@
       </div>
     </section>
 
+
+    <!-- Kit de pausas: atividades opcionais, sem diagnóstico ou coleta de dados -->
+    <section class="flor-kit section-shell" id="kit" aria-labelledby="flor-kit-title">
+      <div class="section-kicker reveal"><span>04 / UM POUCO DE ESPAÇO</span><span class="kicker-line"></span><span>ESCOLHA UM CAMINHO</span></div>
+      <div class="flor-feature-heading reveal">
+        <div><p class="overline">NÃO EXISTE UM JEITO CERTO DE SENTIR</p><h2 class="section-title" id="flor-kit-title">Um pequeno kit<br>para <em>dias diferentes.</em></h2></div>
+        <p>Nem tudo funciona para todo mundo. Aqui estão ideias pequenas e opcionais, sem promessas de fazer qualquer sentimento desaparecer. Escolha o que parece possível agora.</p>
+      </div>
+      <div class="flor-kit-layout">
+        <div class="flor-kit-menu reveal" role="group" aria-label="Escolha o tipo de pausa">
+          <button type="button" class="flor-kit-choice active" data-kit-category="cansaco" aria-pressed="true"><span>01</span><strong>Estou cansado</strong><span aria-hidden="true">↗</span></button>
+          <button type="button" class="flor-kit-choice" data-kit-category="mente" aria-pressed="false"><span>02</span><strong>Minha mente está cheia</strong><span aria-hidden="true">↗</span></button>
+          <button type="button" class="flor-kit-choice" data-kit-category="solidao" aria-pressed="false"><span>03</span><strong>Quero me sentir acompanhado</strong><span aria-hidden="true">↗</span></button>
+          <button type="button" class="flor-kit-choice" data-kit-category="incerto" aria-pressed="false"><span>04</span><strong>Nem sei o que estou sentindo</strong><span aria-hidden="true">↗</span></button>
+        </div>
+        <article class="flor-kit-result reveal" aria-live="polite" aria-atomic="true">
+          <div class="flor-kit-top"><span>UMA IDEIA DE CADA VEZ</span><span id="flor-kit-position">01 / 04</span></div>
+          <div class="flor-kit-orbit" aria-hidden="true"><span>✳</span><span>◌</span></div>
+          <span class="flor-kit-small" id="flor-kit-label">QUANDO O CORPO PEDE PAUSA</span>
+          <h3 id="flor-kit-idea">Talvez um copo de água.</h3>
+          <p id="flor-kit-description">Se for possível, faça uma pausa e beba um pouco de água. Não precisa transformar isso em uma missão.</p>
+          <div class="flor-kit-actions">
+            <button class="flor-kit-next" type="button" id="flor-kit-next">OUTRA IDEIA <span aria-hidden="true">→</span></button>
+            <button class="flor-kit-copy" type="button" id="flor-kit-copy">COPIAR IDEIA ▣</button>
+          </div>
+          <p class="flor-kit-foot">Isto não é tratamento nem substitui ajuda profissional. Você pode ignorar qualquer sugestão que não faça sentido.</p>
+        </article>
+      </div>
+      <div class="flor-kit-note reveal"><span>♡</span><p><strong>Não conseguiu fazer nada hoje?</strong> Você não precisa compensar isso amanhã. Cuidado não é uma prova que a gente precisa passar.</p><a href="#apoio">Caminhos de apoio ↗</a></div>
+    </section>
+
     <section class="hobby-section section-shell" id="hobbies">
       <div class="section-kicker reveal"><span>04 / PEQUENOS UNIVERSOS</span><span class="kicker-line"></span><span>LEITURA & ENTRETENIMENTO</span></div>
       <div class="section-heading-row"><div><p class="overline reveal">O QUE TE FAZ RESPIRAR?</p><h2 class="section-title reveal">Seus hobbies também<br>podem ser <em>abrigo.</em></h2></div><p class="section-intro reveal">Ler, jogar, desenhar, assistir a um filme, ouvir música ou cuidar de uma planta pode trazer prazer, expressão e conexão. Não precisa ser produtivo para ter valor.</p></div>
@@ -120,6 +153,22 @@
         </div>
       </div>
       <div class="saved-ideas reveal" id="savedIdeas" hidden><span>✳</span><p><b>Ideias guardadas</b><small id="savedIdeasList">Ainda nenhuma ideia guardada.</small></p><button type="button" id="clearIdeas">Limpar</button></div>
+    </section>
+
+
+    <!-- Guia para conversas: não presta atendimento, ajuda a iniciar conversas reais -->
+    <section class="flor-conversations section-shell" id="conversas" aria-labelledby="flor-conversations-title">
+      <div class="section-kicker reveal"><span>06 / ESTAR JUNTO</span><span class="kicker-line"></span><span>O VALOR DE UMA CONVERSA</span></div>
+      <div class="flor-feature-heading reveal"><div><p class="overline">NÃO PRECISA TER AS PALAVRAS PERFEITAS</p><h2 class="section-title" id="flor-conversations-title">Escutar também é<br><em>uma forma de cuidado.</em></h2></div><p>Às vezes você quer pedir apoio. Às vezes é um amigo que procura você. Dá para começar uma conversa sem tentar consertar a vida de ninguém.</p></div>
+      <div class="flor-conversation-cards">
+        <article class="flor-conversation-card reveal"><span class="flor-conversation-index">CARTA 01 / PEDIR COMPANHIA</span><div class="flor-conversation-symbol" aria-hidden="true">✉</div><h3>Quando eu preciso conversar.</h3><p>Você não precisa montar uma explicação inteira antes de pedir ajuda.</p><blockquote>“Não estou me sentindo muito bem. Pode conversar comigo um pouco? Não preciso que você resolva tudo, só queria ser ouvido.”</blockquote><button type="button" class="flor-copy-conversation">COPIAR MENSAGEM <span aria-hidden="true">▣</span></button></article>
+        <article class="flor-conversation-card reveal"><span class="flor-conversation-index">CARTA 02 / ESCUTAR UM AMIGO</span><div class="flor-conversation-symbol" aria-hidden="true">♡</div><h3>Quando um amigo se abre.</h3><p>Escutar sem julgamento costuma ser mais útil que apressar uma solução.</p><blockquote>“Obrigado por confiar em mim. Quer me contar mais? Posso te ouvir e, se você quiser, te ajudar a procurar alguém de confiança.”</blockquote><button type="button" class="flor-copy-conversation">COPIAR MENSAGEM <span aria-hidden="true">▣</span></button></article>
+        <article class="flor-conversation-card reveal"><span class="flor-conversation-index">CARTA 03 / CHAMAR UM ADULTO</span><div class="flor-conversation-symbol" aria-hidden="true">✳</div><h3>Quando a situação é maior.</h3><p>Você não precisa carregar sozinho algo que exige atenção e proteção.</p><blockquote>“Estou preocupado com uma pessoa próxima e não sei como ajudar direito. Você pode me orientar e ajudar a encontrar apoio?”</blockquote><button type="button" class="flor-copy-conversation">COPIAR MENSAGEM <span aria-hidden="true">▣</span></button></article>
+      </div>
+      <div class="flor-conversation-guidance reveal">
+        <div class="flor-guidance-marker" aria-hidden="true">!</div>
+        <div><h3>Ser amigo não significa virar psicólogo.</h3><p>Ouvir, respeitar e acompanhar já são atitudes importantes. Se alguém disser que pode se machucar, estiver em perigo ou pedir para você guardar segredo sobre um risco, procure imediatamente um adulto de confiança e atendimento adequado. Em emergência médica, ligue <a href="tel:192">192 (SAMU)</a>. Para apoio emocional, o <a href="tel:188">CVV atende pelo 188</a>.</p></div>
+      </div>
     </section>
 
     <section class="support-section section-shell" id="apoio">
@@ -135,15 +184,38 @@
       <p class="support-disclaimer reveal">Este site é educativo e não realiza atendimento, diagnóstico ou monitoramento de crises. Se houver perigo imediato, procure os serviços de emergência.</p>
     </section>
 
+
+    <!-- Carta pessoal: armazenamento local apenas por escolha explícita -->
+    <section class="flor-letter-section section-shell" id="carta" aria-labelledby="flor-letter-title">
+      <div class="section-kicker reveal"><span>08 / UM BILHETE SEU</span><span class="kicker-line"></span><span>SEM PÚBLICO E SEM PRESSA</span></div>
+      <div class="flor-feature-heading reveal"><div><p class="overline">QUANDO FALAR PARECE DIFÍCIL</p><h2 class="section-title" id="flor-letter-title">Uma carta que não<br>precisa ser <em>perfeita.</em></h2></div><p>Escreva uma frase para seu eu de amanhã, uma pequena lembrança ou apenas algo que não quer esquecer. Você escolhe se vai exportar, guardar ou apagar.</p></div>
+      <div class="flor-letter-layout">
+        <div class="flor-letter-paper reveal">
+          <div class="flor-letter-meta"><span>DIÁRIO PARTICULAR / CARTA 001</span><span id="flor-letter-date">HOJE</span></div>
+          <label for="flor-letter-text">Querido eu,</label>
+          <textarea id="flor-letter-text" maxlength="2500" rows="8" placeholder="Hoje eu queria lembrar que..."></textarea>
+          <div class="flor-letter-bottom"><span id="flor-letter-count">0 / 2500</span><span id="flor-letter-status" role="status" aria-live="polite">O texto ainda não foi salvo.</span></div>
+        </div>
+        <aside class="flor-letter-aside reveal">
+          <span class="flor-letter-sigil" aria-hidden="true">✿</span>
+          <h3>Uma coisa importante sobre privacidade.</h3>
+          <p>O texto não é enviado para este site nem para um banco de dados. Você pode exportar um arquivo .txt. Só guarde no navegador se este computador for pessoal: alguém que usa o mesmo perfil do navegador pode acessar o que ficou salvo.</p>
+          <label class="flor-private-device"><input id="flor-letter-private" type="checkbox"><span>Estou usando meu próprio dispositivo e entendi o risco de salvar localmente.</span></label>
+          <div class="flor-letter-buttons"><button id="flor-letter-save" type="button" disabled>GUARDAR AQUI ♡</button><button id="flor-letter-export" type="button">EXPORTAR .TXT ↓</button><button id="flor-letter-clear" type="button">APAGAR TEXTO ×</button></div>
+          <p class="flor-letter-warning">Em computadores compartilhados, como os da escola, prefira não salvar informações pessoais.</p>
+        </aside>
+      </div>
+    </section>
+
     <section class="about-section section-shell" id="sobre">
       <div class="about-decoration" aria-hidden="true"><span>m</span><span>f</span></div>
       <div class="section-kicker reveal"><span>06 / POR QUE ESTE ESPAÇO EXISTE</span><span class="kicker-line"></span><span>UM PROJETO DE CONSCIENTIZAÇÃO</span></div>
-      <div class="about-layout"><div class="about-main reveal"><p class="overline">CUIDADO NÃO PRECISA SER PERFEITO</p><h2 class="section-title">Um lembrete de que<br>ninguém é <em>máquina.</em></h2></div><div class="about-copy reveal"><p>O <b>Mente em Flor</b> nasceu da ideia de reunir informações acessíveis, práticas cotidianas e caminhos de apoio em um só lugar. A proposta é falar sobre saúde mental de forma humana, sem romantizar o sofrimento e sem prometer soluções mágicas.</p><p>Cada pessoa tem sua história, seus limites e seu próprio tempo. O que ajuda alguém pode não funcionar para outra pessoa — e tudo bem.</p><a class="button button-outline" href="#inicio">Voltar ao início <span>↑</span></a></div></div>
+      <div class="about-layout"><div class="about-main reveal"><p class="overline">CUIDADO NÃO PRECISA SER PERFEITO</p><h2 class="section-title">Um lembrete de que<br>ninguém é <em>máquina.</em></h2></div><div class="about-copy reveal"><p>O <b>Mente em Flor</b> nasceu da ideia de reunir informações acessíveis, práticas cotidianas e caminhos de apoio em um só lugar. A proposta é falar sobre saúde mental de forma humana, sem romantizar o sofrimento e sem prometer soluções mágicas.</p><p><b>Eu sou o Luiz Eduardo</b>, estudante de programação no SENAI. Já passei por conversas em que amigos precisavam desabafar, e eu tentei estar presente e ouvir sem julgar. Também conheço a importância de ter alguém que me escute. Por isso quis fazer um projeto que levasse a sério uma coisa simples: ninguém precisa enfrentar tudo calado.</p><p>Não sou psicólogo e este site não foi feito para diagnosticar ninguém. Estou aprendendo a desenvolver páginas e quis usar o que sei de HTML, CSS e JavaScript para criar um lugar informativo, com práticas opcionais e caminhos reais de apoio.</p><p>Cada pessoa tem sua história, seus limites e seu próprio tempo. O que ajuda alguém pode não funcionar para outra pessoa — e tudo bem.</p><a class="button button-outline" href="#inicio">Voltar ao início <span>↑</span></a></div></div>
       <div class="closing-note reveal"><span class="closing-flower">✳</span><p>Você não precisa florescer todos os dias.<br><em>Mas não precisa atravessar tudo sem apoio.</em></p><span class="closing-small">CUIDE-SE COMO QUEM CUIDARIA DE ALGUÉM QUERIDO.</span></div>
     </section>
   </main>
 
-  <footer class="site-footer"><a class="brand footer-brand" href="#inicio"><span class="brand-symbol">✳</span><span class="brand-name">mente<span>em flor</span></span></a><p>Feito com cuidado, para lembrar que cuidar de si também importa.</p><div class="footer-right"><a href="#apoio">Encontrar apoio ↗</a><span>© <span id="year">2026</span> · Projeto educativo</span></div></footer>
+  <footer class="site-footer"><a class="brand footer-brand" href="#inicio"><span class="brand-symbol">✳</span><span class="brand-name">mente<span>em flor</span></span></a><p>Feito com cuidado, para lembrar que cuidar de si também importa.</p><div class="footer-right"><a href="#conversas">Conversar com alguém ↗</a><a href="#carta">Escrever uma carta ↗</a><a href="#apoio">Encontrar apoio ↗</a><span>© <span id="year">2026</span> · Projeto educativo</span></div></footer>
 
   <div class="toast" id="toast" role="status" aria-live="polite"><span>✳</span><span id="toastText">Pronto.</span></div>
   <button class="back-top" id="backTop" type="button" aria-label="Voltar ao topo">↑</button>
