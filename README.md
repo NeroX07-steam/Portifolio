@@ -6,7 +6,7 @@
 
 Um espaço pessoal onde código, estética sombria, música, mangás e histórias se encontram.
 
-[🌐 Abrir portfólio](https://portifolio-8iuf-baab2xhhr-pedro-luiz.vercel.app/) · [📷 Instagram](https://www.instagram.com/lxqrens/)
+[🌐 Abrir portfólio](https://xqrens.vercel.app/) ·[📷 Instagram](https://www.instagram.com/lxqrens/)
 
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-6c5ce7?style=for-the-badge)
 ![Feito com](https://img.shields.io/badge/feito%20com-HTML%20%7C%20CSS%20%7C%20JavaScript-171717?style=for-the-badge)
