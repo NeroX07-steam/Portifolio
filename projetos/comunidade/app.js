@@ -421,7 +421,12 @@ async function boot(){
  bind();
  if(!window.supabase?.createClient){toast("Biblioteca de conexão não carregou. Verifique sua internet.");return;}
  state.client=window.supabase.createClient(URL,PUBLIC_KEY,{auth:{autoRefreshToken:true,persistSession:true,detectSessionInUrl:true}});
- window.XqCommunity?.initialize(state,{toast,notifyError,selectChannel,cacheNames});
+ if(window.XqCommunity?.initialize){
+   window.XqCommunity.initialize(state,{toast,notifyError,selectChannel,cacheNames});
+ }else{
+   console.warn("Módulo de perfil não encontrado. Verifique extras.js e tente atualizar a página.");
+   toast("A edição de fotos não carregou. Atualize a página sem cache.");
+ }
  state.client.auth.onAuthStateChange((_event,session)=>{setTimeout(()=>onAuthChange(session?.user||null).catch(notifyError),0);});
  try{
    const {data,error}=await state.client.auth.getSession();
@@ -429,5 +434,8 @@ async function boot(){
    await onAuthChange(data.session?.user||null);
  }catch(error){notifyError(error);}
 }
-if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",boot,{once:true});else boot();
+// Deferred app.js is executed while readyState may already be "interactive".
+ // Waiting for DOMContentLoaded ensures extras.js (also defer) has initialized first.
+ if(document.readyState==="complete")boot();
+ else document.addEventListener("DOMContentLoaded",boot,{once:true});
 })();
