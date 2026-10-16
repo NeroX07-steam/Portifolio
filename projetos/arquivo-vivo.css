@@ -250,3 +250,25 @@
  .xq2-edition .xq2-secret-tile,.xq2-edition .xq2-mood,
  .xq2-edition .xq2-milestone{transition:none;transform:none!important}
 }
+
+
+/* Refinamentos depois da integração no site original */
+.hero .xq2-cover-note{grid-column:1/-1;position:relative;z-index:3;margin-top:-20px;margin-bottom:25px}
+.hero .xq2-cover-note a{font:10px/1.5 var(--mono);text-decoration:underline;color:var(--text)}
+.xq2-secret-section .xq2-action{color:#eee7de;border-color:#d3c7b87a}
+.xq2-secret-section .xq2-action:hover:not(:disabled){background:#e9e2d7;color:#18191c}
+.xq2-secret-section .xq2-action:disabled{opacity:.45;cursor:not-allowed}
+.xq2-vinyl-button{align-self:center;background:#ffffff0d;color:#eee8df;border:1px solid #ffffff64;
+  padding:11px 18px;font:10px var(--mono);letter-spacing:.12em;cursor:pointer}
+.xq2-vinyl-button:hover{background:#ffffff2a}
+.xq2-vinyl-button[aria-pressed="true"]{background:#b9b8ab;color:#151619}
+.xq2-manga-tools input:focus-visible,.xq2-manga-tools select:focus-visible,.xq2-track-inputs input:focus-visible{
+  outline:2px solid var(--text);outline-offset:3px
+}
+.xq2-manga-upgraded .xq-manga-panel{min-width:0}
+.xq2-manga-upgraded .xq-manga-panel h3{overflow-wrap:anywhere}
+@media(max-width:760px){
+  .hero .xq2-cover-note{margin-top:0}
+  .xq2-chapter-dock{box-shadow:0 8px 28px #0005}
+  .xq2-reader-tools{box-shadow:0 8px 32px #0009}
+}
