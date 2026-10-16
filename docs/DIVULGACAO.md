@@ -10,7 +10,9 @@ O foco é mostrar o que estou aprendendo e pedir feedback útil, sem prometer n�
 >
 > Também fiz o Mente em Flor, um site educativo sobre saúde mental com interações e informações de apoio.
 >
-> Portfólio: https://xqrens-portifolio.vercel.app/
+> Portfólio: https://portifolio-projetos-git-main-pedro-luiz.vercel.app/
+>
+> Mente em Flor: https://xqrens-portifolio.vercel.app/
 >
 > Código e projetos: https://github.com/NeroX07-steam/Portifolio
 >
@@ -22,7 +24,9 @@ O foco é mostrar o que estou aprendendo e pedir feedback útil, sem prometer n�
 >
 > I've put together a personal portfolio with manga-inspired visuals and a collection of earlier exercises. One project I'm particularly interested in improving is Mente em Flor, an educational website about mental health awareness.
 >
-> Website: https://xqrens-portifolio.vercel.app/
+> Website: https://portifolio-projetos-git-main-pedro-luiz.vercel.app/
+>
+> Mente em Flor: https://xqrens-portifolio.vercel.app/
 >
 > Source code: https://github.com/NeroX07-steam/Portifolio
 >
