@@ -3029,3 +3029,18 @@ body[data-ink-palette="night"] .ink-screen-noise, body[data-ink-palette="plum"] 
 @media(max-width:820px){.xq-manga-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.xq-community-invite{grid-template-columns:1fr}.xq-community-invite-visual{min-height:220px}.xq-community-invite-visual span:first-child{font-size:240px}.xq-community-invite-copy{padding:60px 28px 0}}
 @media(max-width:570px){.xq-manga-world{width:calc(100% - 34px);padding:75px 0}.xq-manga-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.xq-manga-panel{min-height:285px;padding:13px}.xq-manga-panel h3{font-size:25px}.xq-manga-panel p{font-size:10px}.xq-manga-sigil{font-size:70px}.xq-kicker{font-size:8px;letter-spacing:.04em}.xq-manga-title{padding:40px 0 20px}.xq-manga-title h2{font-size:clamp(48px,13vw,75px)}.xq-community-invite h2{font-size:56px}.xq-community-invite-visual{min-height:200px}}
 @media(prefers-reduced-motion:reduce){.xq-community-invite-visual span:first-child{animation:none}.xq-manga-panel{transition:none}.xq-manga-panel:hover{transform:none}}
+
+
+/* XQRENS Motion Director: scroll cinematic cuts */
+.xq-manga-world,.xq-community-invite,.ink-love-letter {isolation:isolate}
+.xq-motion-word{display:inline-block;will-change:transform,opacity;transform:translate3d(0,1.1em,0) rotate(4deg);opacity:0;filter:blur(10px);transition:transform 1.15s cubic-bezier(.17,.85,.24,1),opacity .9s ease,filter 1.2s ease;transition-delay:calc(var(--word-index) * 62ms)}
+.xq-motion-playing .xq-motion-word{transform:translate3d(0,0,0) rotate(0);opacity:1;filter:blur(0)}
+.xq-motion-title{overflow:hidden;max-width:100%;padding-bottom:.1em}
+.xq-tile-ready{opacity:0!important;translate:0 75px;filter:blur(15px);transition:opacity .85s cubic-bezier(.17,.85,.24,1),translate 1.2s cubic-bezier(.17,.85,.24,1),filter 1.2s ease,transform .5s ease;transition-delay:calc(var(--tile-index) * 60ms)}
+.xq-tile-ready.xq-tile-in{opacity:1!important;translate:0 0;filter:none}
+.xq-community-invite .xq-community-invite-visual{opacity:.25;transform:scale(.8) rotate(-15deg);transition:opacity 1.5s ease,transform 1.5s cubic-bezier(.17,.85,.24,1)}
+.xq-community-invite.xq-on-screen .xq-community-invite-visual{opacity:1;transform:scale(1) rotate(0)}
+.julya-photo img{translate:0 var(--xq-love-offset,0px);will-change:translate}
+.xq-motion-progress{position:fixed;left:0;right:0;top:0;height:2px;z-index:9000;pointer-events:none}.xq-motion-progress span{display:block;width:100%;height:100%;background:#a9a098;transform:scaleX(0);transform-origin:left center;will-change:transform}
+@media(hover:hover) and (pointer:fine){.xq-manga-panel.xq-tile-in:hover{transform:perspective(1000px) rotateX(var(--xq-rotate-x,0deg)) rotateY(var(--xq-rotate-y,0deg)) translateY(-8px)}}
+@media(prefers-reduced-motion:reduce){.xq-motion-word,.xq-tile-ready,.xq-community-invite .xq-community-invite-visual{filter:none;transform:none;translate:none;opacity:1!important;transition:none}.xq-motion-progress{display:none}}
