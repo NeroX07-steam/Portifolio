@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./style.css?v=xqrens-social-20261016">
+    <link rel="stylesheet" href="./arquivo-vivo.css?v=2.0.0">
     <!-- Favicon: os arquivos ficam dentro da pasta Img -->
     <link rel="icon" href="./Img/favicon.ico?v=2" sizes="any">
     <link rel="icon" type="image/png" sizes="16x16" href="./Img/favicon-16x16.png?v=2">
@@ -61,7 +62,27 @@
     </header>
 
 
-    <main id="top">
+    
+    <div class="xq2-chapter-dock" aria-label="Navegação rápida da edição Arquivo Vivo">
+      <span class="xq2-dock-label">PÁGINAS</span>
+      <a href="#sobre" title="Sobre mim" aria-label="Sobre mim">01</a>
+      <a href="#evolucao" title="Evolução GitHub" aria-label="Evolução GitHub">02</a>
+      <a href="#julya-exe" title="Cartas para Julya" aria-label="Julya.exe">03</a>
+      <a href="#tofu-world" title="Tofu World" aria-label="Tofu World">04</a>
+      <a href="#sala-musica" title="Sala de Música" aria-label="Sala de Música">05</a>
+      <a href="#senai-lab" title="Laboratório SENAI" aria-label="Laboratório SENAI">06</a>
+      <a href="#mangateca" title="Mangateca" aria-label="Mangateca">07</a>
+      <a href="#segredos" title="Segredos" aria-label="Segredos">08</a>
+      <button type="button" id="xq2-reader-toggle" title="Ativar ou desativar modo leitura" aria-label="Alternar modo mangá">☷</button>
+    </div>
+    <div class="xq2-reader-tools" id="xq2-reader-tools" role="group" aria-label="Navegação do modo mangá" hidden>
+      <button type="button" id="xq2-reader-prev" aria-label="Capítulo anterior">← ANTERIOR</button>
+      <span id="xq2-reader-count">01 / 08</span>
+      <button type="button" id="xq2-reader-next" aria-label="Próximo capítulo">PRÓXIMO →</button>
+      <button type="button" id="xq2-reader-exit" aria-label="Sair do modo mangá">×</button>
+    </div>
+
+<main id="top">
 
         <!-- HERO -->
 
@@ -96,7 +117,13 @@
                 <img src="./Img/1.jpg" alt="Foto de Luiz Eduardo">
             </div>
 
-        </section>
+        
+            <div class="xq2-cover-note xq2-edition">
+                <span>✳ EDIÇÃO 02 / ARQUIVO VIVO · O PORTFÓLIO AGORA TEM NOVOS CAPÍTULOS</span>
+                <button type="button" id="xq2-start-reading">LER COMO MANGÁ ↗</button>
+                <a href="#evolucao">DESCOBRIR NOVIDADES ↓</a>
+            </div>
+</section>
 
 
         <!-- SOBRE -->
@@ -224,6 +251,22 @@
 
         </section>
 
+        <!-- ARQUIVO VIVO / LINHA DO TEMPO -->
+        <section class="xq2-edition xq2-section" id="evolucao" aria-labelledby="xq2-evolucao-title">
+          <div class="xq2-wrap">
+            <div class="xq2-topline"><span>ARQUIVO VIVO / 001</span><span>GITHUB · UMA HISTÓRIA EM COMMITS</span></div>
+            <div class="xq2-intro"><div><span class="xq2-kicker">NÃO EXISTE EVOLUÇÃO SEM TENTATIVAS</span><h2 id="xq2-evolucao-title">Ainda estou <em>me tornando.</em></h2></div><p>Não é uma linha do tempo inventada com conquistas mirabolantes. São fases que dá para acompanhar nos arquivos e no histórico do GitHub.</p></div>
+            <div class="xq2-timeline">
+              <article class="xq2-milestone xq2-reveal"><span>CAPÍTULO / 01</span><strong>O primeiro HTML.</strong><p>Aprender a colocar conteúdo numa página e perceber que cada tag tem seu papel.</p><a href="./projeto_meuSite/index.html">VISITAR EXERCÍCIO ↗</a></article>
+              <article class="xq2-milestone xq2-reveal"><span>CAPÍTULO / 02</span><strong>Estudando no SENAI.</strong><p>Praticar seletores, espaçamento, páginas, estruturas e pequenas atividades de front-end.</p><a href="./projeto_seletor/index.html">VER ATIVIDADE ↗</a></article>
+              <article class="xq2-milestone xq2-reveal"><span>CAPÍTULO / 03</span><strong>Meu próprio espaço.</strong><p>Juntar meus gostos, o que aprendo e experiências com animações num portfólio pessoal.</p><a href="https://github.com/NeroX07-steam/Portifolio/tree/main/projetos" target="_blank" rel="noopener noreferrer">ABRIR CÓDIGO ↗</a></article>
+              <article class="xq2-milestone xq2-reveal"><span>CAPÍTULO / 04</span><strong>Mente em Flor.</strong><p>Um projeto educativo para falar de saúde mental, conversas e caminhos de apoio com cuidado.</p><a href="https://xqrens-portifolio.vercel.app/" target="_blank" rel="noopener noreferrer">CONHECER SITE ↗</a></article>
+            </div>
+            <div class="xq2-git-foot"><span>O GitHub guarda os erros, as mudanças e as versões. Isso também é aprendizado.</span><a href="https://github.com/NeroX07-steam/Portifolio/commits/main/" target="_blank" rel="noopener noreferrer">ACOMPANHAR COMMITS REAIS ↗</a></div>
+          </div>
+        </section>
+
+
 
         <!-- JULYA -->
 
@@ -293,6 +336,29 @@
 
         </section>
 
+        <!-- ARQUIVO VIVO / CARTAS PARA JULYA -->
+        <section class="xq2-edition xq2-section xq2-love" id="julya-exe" aria-labelledby="xq2-julya-title">
+          <div class="xq2-wrap">
+            <div class="xq2-topline"><span>ARQUIVO VIVO / 002</span><span>UM CAPÍTULO QUE EU QUERO GUARDAR ♡</span></div>
+            <div class="xq2-intro"><div><span class="xq2-kicker">PRIORIDADE 01 / NOSSAS PEQUENAS COISAS</span><h2 id="xq2-julya-title">Julya<span aria-hidden="true">.</span><em>exe ♡</em></h2></div><p>Não é sobre escrever a frase mais bonita da internet. É sobre lembrar o que importa. Escolhe uma carta e vê o que eu queria conseguir dizer.</p></div>
+            <div class="xq2-love-grid">
+              <div class="xq2-letter-list" role="group" aria-label="Quatro cartas para Julya">
+                <button class="xq2-letter-trigger" type="button" data-letter="escuta" aria-pressed="true"><span>CARTA / 01</span><strong>Quando você escuta.</strong><span>ABRIR ↗</span></button>
+                <button class="xq2-letter-trigger" type="button" data-letter="gostos" aria-pressed="false"><span>CARTA / 02</span><strong>Nosso mundo estranho.</strong><span>ABRIR ↗</span></button>
+                <button class="xq2-letter-trigger" type="button" data-letter="gestos" aria-pressed="false"><span>CARTA / 03</span><strong>Quando faltam palavras.</strong><span>ABRIR ↗</span></button>
+                <button class="xq2-letter-trigger" type="button" data-letter="futuro" aria-pressed="false"><span>CARTA / 04</span><strong>O que quero cuidar.</strong><span>ABRIR ↗</span></button>
+              </div>
+              <article class="xq2-letter-card xq2-reveal" aria-live="polite" aria-atomic="true">
+                <span class="xq2-kicker" id="xq2-letter-number">CARTA 01 / PRA JULYA</span>
+                <h3 id="xq2-letter-heading">Obrigado por me escutar.</h3>
+                <p id="xq2-letter-body">Entre tantas conversas, tem uma coisa que eu nunca quero tratar como pequena: poder ser eu mesmo perto de você.</p>
+                <span class="xq2-stamp">ESCRITO COM CARINHO · LUIZ ♡</span>
+              </article>
+            </div>
+          </div>
+        </section>
+
+
 
         <!-- TOFU -->
 
@@ -338,6 +404,30 @@
             </div>
 
         </section>
+
+        <!-- ARQUIVO VIVO / TOFU WORLD -->
+        <section class="xq2-edition xq2-section xq2-tofu-world" id="tofu-world" aria-labelledby="xq2-tofu-title">
+          <div class="xq2-wrap">
+            <div class="xq2-topline"><span>ARQUIVO VIVO / 003</span><span>FAMÍLIA / NOSSO FILHO</span></div>
+            <div class="xq2-intro"><div><span class="xq2-kicker">PEQUENA CRIATURA · GRANDE PRESENÇA</span><h2 id="xq2-tofu-title">Tofu <em>World.</em></h2></div><p>Uma página para o Tofu, porque alguém aqui precisava ganhar um espaço interativo sem escrever uma linha de código.</p></div>
+            <div class="xq2-tofu-layout">
+              <figure class="xq2-tofu-photo xq2-reveal"><img src="./Img/20.jpg" alt="Foto do Tofu, que Luiz e Julya chamam carinhosamente de filho" loading="lazy"><figcaption class="xq2-photo-label">TOFU / ARQUIVO DE FAMÍLIA</figcaption></figure>
+              <article class="xq2-tofu-card xq2-reveal">
+                <span class="xq2-kicker">SIMULADOR COMPLETAMENTE NÃO CIENTÍFICO</span>
+                <h3>Um carinho no Tofu.</h3>
+                <p>Interage com esta versão virtual do nosso filho. Os carinhos são apenas uma brincadeira salva neste navegador; o Tofu real continua merecendo atenção de verdade.</p>
+                <div class="xq2-tofu-choices" role="group" aria-label="Interagir com Tofu">
+                  <button type="button" data-pet-action="carinho">♡ FAZER CARINHO</button>
+                  <button type="button" data-pet-action="brincar">✳ CHAMAR PRA BRINCAR</button>
+                  <button type="button" data-pet-action="foto">◌ OLHAR FOTO</button>
+                </div>
+                <p id="xq2-tofu-response" class="xq2-tofu-response" role="status" aria-live="polite">Tofu está oficialmente de folga.</p>
+                <div class="xq2-tofu-meter"><span>CARINHOS VIRTUAIS</span><strong id="xq2-tofu-count">0</strong><span class="xq2-tofu-hearts" aria-hidden="true">♡ ♡ ♡</span><button class="xq2-text-button" id="xq2-tofu-reset" type="button">REINICIAR</button></div>
+              </article>
+            </div>
+          </div>
+        </section>
+
 
 
         <!-- GOSTOS -->
@@ -451,6 +541,45 @@
 
         </section>
 
+        <!-- ARQUIVO VIVO / SALA DE MÚSICA -->
+        <section class="xq2-edition xq2-section xq2-music-section" id="sala-musica" aria-labelledby="xq2-music-title">
+          <div class="xq2-wrap">
+            <div class="xq2-topline"><span>ARQUIVO VIVO / 004</span><span>MÚSICA PARA LER / CODAR / EXISTIR</span></div>
+            <div class="xq2-intro"><div><span class="xq2-kicker">UM POUCO DO QUE CABE NOS FONES</span><h2 id="xq2-music-title">Sala de <em>Música.</em></h2></div><p>Um cantinho para guardar músicas, descobrir sons por clima e visitar meu Spotify. O status abaixo é editado manualmente, não finge que lê meu player em tempo real.</p></div>
+            <div class="xq2-music-feature">
+              <div class="xq2-vinyl-panel xq2-reveal" id="xq2-vinyl-panel">
+                <span class="xq2-kicker">DISCO / 001 · SALA PARTICULAR</span>
+                <div class="xq2-record" aria-hidden="true"><div class="xq2-record-center">L.</div></div>
+                <span class="xq2-stamp" style="color:#d7c7bd">SEM AUTOPLAY · UMA ATMOSFERA, NÃO UM STREAMING</span>
+              </div>
+              <div class="xq2-music-panel xq2-reveal">
+                <span class="xq2-kicker">MINHA VITRINE MUSICAL</span>
+                <h3>O que está <em>na minha cabeça?</em></h3>
+                <p>Adiciono uma faixa quando quero destacar alguma coisa. Se este campo estiver vazio, não significa que eu parei de ouvir música.</p>
+                <form id="xq2-track-form" autocomplete="off">
+                  <label class="xq2-track-label" for="xq2-track-title">FAIXA EM DESTAQUE / EDITAR NESTE DISPOSITIVO</label>
+                  <div class="xq2-track-inputs">
+                    <input id="xq2-track-title" maxlength="90" placeholder="Nome da música" aria-label="Nome da música">
+                    <input id="xq2-track-artist" maxlength="80" placeholder="Artista" aria-label="Nome do artista">
+                  </div>
+                  <div class="xq2-track-form-actions">
+                    <button type="submit" class="xq2-action xq2-action-primary">GUARDAR DESTAQUE ♫</button>
+                    <button type="button" class="xq2-action" id="xq2-track-clear">LIMPAR</button>
+                  </div>
+                </form>
+                <div class="xq2-track-preview" aria-live="polite"><span class="xq2-kicker">DESTAQUE SALVO LOCALMENTE</span><strong id="xq2-track-summary">Nenhuma faixa escolhida.</strong><small id="xq2-track-artist-view">Você pode colocar uma música sem conectar nenhuma conta.</small></div>
+                <a class="xq2-action" href="https://open.spotify.com/user/31ydaudx7rf6gusyu7bned2tf65i" target="_blank" rel="noopener noreferrer">ABRIR MEU SPOTIFY ↗</a>
+              </div>
+            </div>
+            <div class="xq2-moods">
+              <article class="xq2-mood xq2-reveal"><span>FREQUÊNCIA / 01</span><strong>Chuva e silêncio.</strong><a href="https://open.spotify.com/search/ambient%20rain" target="_blank" rel="noopener noreferrer">EXPLORAR NO SPOTIFY ↗</a></article>
+              <article class="xq2-mood xq2-reveal"><span>FREQUÊNCIA / 02</span><strong>Uma noite de código.</strong><a href="https://open.spotify.com/search/lofi%20coding" target="_blank" rel="noopener noreferrer">EXPLORAR NO SPOTIFY ↗</a></article>
+              <article class="xq2-mood xq2-reveal"><span>FREQUÊNCIA / 03</span><strong>Fim de capítulo.</strong><a href="https://open.spotify.com/search/indie%20melancholic" target="_blank" rel="noopener noreferrer">EXPLORAR NO SPOTIFY ↗</a></article>
+            </div>
+          </div>
+        </section>
+
+
 
         <!-- TECNOLOGIAS -->
 
@@ -503,6 +632,30 @@
             </div>
 
         </section>
+
+        <!-- ARQUIVO VIVO / SENAI -->
+        <section class="xq2-edition xq2-section xq2-study" id="senai-lab" aria-labelledby="xq2-senai-title">
+          <div class="xq2-wrap">
+            <div class="xq2-topline"><span>ARQUIVO VIVO / 005</span><span>DESENVOLVIMENTO DE SISTEMAS / SENAI</span></div>
+            <div class="xq2-intro"><div><span class="xq2-kicker">LABORATÓRIO DE APRENDIZADO</span><h2 id="xq2-senai-title">Do primeiro <em>código</em> ao próximo.</h2></div><p>Um pequeno laboratório para mostrar a diferença entre estrutura, aparência e comportamento. Estes exemplos são didáticos; meus exercícios verdadeiros estão nos links abaixo.</p></div>
+            <div class="xq2-study-tabs" role="group" aria-label="Escolher tecnologia para comparar">
+              <button type="button" data-study-topic="html" aria-pressed="true">01 / HTML</button>
+              <button type="button" data-study-topic="css" aria-pressed="false">02 / CSS</button>
+              <button type="button" data-study-topic="js" aria-pressed="false">03 / JAVASCRIPT</button>
+            </div>
+            <div class="xq2-study-stage">
+              <article class="xq2-study-pane xq2-reveal"><span class="xq2-kicker">PASSO 01 / ENTENDER O BÁSICO</span><strong id="xq2-study-before-title">A estrutura</strong><pre><code id="xq2-study-before">&lt;h1&gt;Meu primeiro site&lt;/h1&gt;</code></pre></article>
+              <article class="xq2-study-pane xq2-reveal"><span class="xq2-kicker">PASSO 02 / TENTAR MELHORAR</span><strong id="xq2-study-after-title">Mais significado</strong><pre><code id="xq2-study-after">&lt;main&gt;...&lt;/main&gt;</code></pre><p id="xq2-study-explanation">Organizar títulos, conteúdo e regiões semânticas ajuda quem navega pelo site e quem usa tecnologias assistivas.</p></article>
+            </div>
+            <div class="xq2-study-links">
+              <a href="./projeto_meuSite/index.html">PRIMEIRO SITE ↗</a>
+              <a href="./projeto_seletor/index.html">EXERCÍCIO CSS ↗</a>
+              <a href="./projeto_semáforo/index.html">SEMÁFORO ↗</a>
+              <a href="https://github.com/NeroX07-steam/Portifolio/tree/main/projetos" target="_blank" rel="noopener noreferrer">TODOS OS ARQUIVOS ↗</a>
+            </div>
+          </div>
+        </section>
+
 
 
         <!-- PROJETO DE SAÚDE MENTAL -->
@@ -1437,30 +1590,49 @@
             <p class="ink-disclaimer">* Esta é uma lista pessoal de gostos e leituras, não uma biblioteca de páginas reproduzidas.</p>
         </section>
 
-        <section class="xq-manga-world" id="mangateca">
-<div class="xq-kicker"><span>ARQUIVO DE MANGÁS</span><span>20 CAPÍTULOS PARA DESCOBRIR</span></div>
+        <section class="xq-manga-world xq2-manga-upgraded" id="mangateca">
+<div class="xq-kicker"><span>ARQUIVO DE MANGÁS</span><span>22 OBRAS PARA DESCOBRIR</span></div>
 <div class="xq-manga-title"><span>DO MEU JEITO.</span><h2>Histórias que deixam <i>alguma coisa.</i></h2><p>Uma seleção de mangás e quadrinhos com temas psicológicos, emocionais ou uma estética que combina com meu gosto. Alguns eu já conheço; outros estão na minha lista para descobrir. Não são todos recomendações de leitura leve.</p></div>
 <div class="xq-manga-filters" role="group" aria-label="Ordenar estante"><button data-xq-order="default" class="is-active" type="button">ORDEM ORIGINAL</button><button data-xq-order="az" type="button">A → Z</button><button data-xq-order="za" type="button">Z → A</button></div>
-<div class="xq-manga-grid" id="xq-manga-grid"><article class="xq-manga-panel" data-title="My Solo Exchange Diary"><span class="xq-manga-number">01 / 20</span><div class="xq-manga-sigil" aria-hidden="true">☾</div><h3>My Solo Exchange Diary</h3><p>Memórias, identidade e intimidade em quadrinhos.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="Solanin"><span class="xq-manga-number">02 / 20</span><div class="xq-manga-sigil" aria-hidden="true">✳</div><h3>Solanin</h3><p>Juventude, sonhos interrompidos e mudanças.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="Homunculus"><span class="xq-manga-number">03 / 20</span><div class="xq-manga-sigil" aria-hidden="true">◌</div><h3>Homunculus</h3><p>Um mergulho perturbador na percepção de si.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="Blue"><span class="xq-manga-number">04 / 20</span><div class="xq-manga-sigil" aria-hidden="true">✿</div><h3>Blue</h3><p>Uma história delicada e introspectiva.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="River's Edge"><span class="xq-manga-number">05 / 20</span><div class="xq-manga-sigil" aria-hidden="true">⌁</div><h3>River's Edge</h3><p>Retrato desconfortável da adolescência.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="My Brain is Different: Stories of ADHD and Other Developmental Disorders"><span class="xq-manga-number">06 / 20</span><div class="xq-manga-sigil" aria-hidden="true">✦</div><h3>My Brain is Different: Stories of ADHD and Other Developmental Disorders</h3><p>Vivências pessoais sobre diferenças e cotidiano.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="Look Back"><span class="xq-manga-number">07 / 20</span><div class="xq-manga-sigil" aria-hidden="true">☷</div><h3>Look Back</h3><p>Arte, amizade e o tempo que passa.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="Goodbye, Eri"><span class="xq-manga-number">08 / 20</span><div class="xq-manga-sigil" aria-hidden="true">⋆</div><h3>Goodbye, Eri</h3><p>Memória, cinema e a linha entre fato e ficção.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="My Lesbian Experience with Loneliness"><span class="xq-manga-number">09 / 20</span><div class="xq-manga-sigil" aria-hidden="true">☾</div><h3>My Lesbian Experience with Loneliness</h3><p>Relato autobiográfico sobre solidão e identidade.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="Hikari no Machi"><span class="xq-manga-number">10 / 20</span><div class="xq-manga-sigil" aria-hidden="true">✳</div><h3>Hikari no Machi</h3><p>Histórias interligadas sobre pessoas e solidão.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="Nijigahara Holograph"><span class="xq-manga-number">11 / 20</span><div class="xq-manga-sigil" aria-hidden="true">◌</div><h3>Nijigahara Holograph</h3><p>Drama psicológico sombrio e não linear.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="Tekkonkinkreet"><span class="xq-manga-number">12 / 20</span><div class="xq-manga-sigil" aria-hidden="true">✿</div><h3>Tekkonkinkreet</h3><p>Cidade, infância e contrastes emocionais.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="Blue Period"><span class="xq-manga-number">13 / 20</span><div class="xq-manga-sigil" aria-hidden="true">⌁</div><h3>Blue Period</h3><p>Arte, estudo e o desejo de se descobrir.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="A Menina do Outro Lado"><span class="xq-manga-number">14 / 20</span><div class="xq-manga-sigil" aria-hidden="true">✦</div><h3>A Menina do Outro Lado</h3><p>Fábula sombria com atmosfera delicada.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="Monster"><span class="xq-manga-number">15 / 20</span><div class="xq-manga-sigil" aria-hidden="true">☷</div><h3>Monster</h3><p>Thriller psicológico cheio de escolhas difíceis.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="Helter Skelter"><span class="xq-manga-number">16 / 20</span><div class="xq-manga-sigil" aria-hidden="true">⋆</div><h3>Helter Skelter</h3><p>Pressões da aparência e da fama.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="Haru's Curse"><span class="xq-manga-number">17 / 20</span><div class="xq-manga-sigil" aria-hidden="true">☾</div><h3>Haru's Curse</h3><p>Drama íntimo sobre perda e relações.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="My Broken Mariko"><span class="xq-manga-number">18 / 20</span><div class="xq-manga-sigil" aria-hidden="true">✳</div><h3>My Broken Mariko</h3><p>Luto e uma amizade que continua na memória.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="As Flores do Mal"><span class="xq-manga-number">19 / 20</span><div class="xq-manga-sigil" aria-hidden="true">◌</div><h3>As Flores do Mal</h3><p>Inquietações, vergonha e juventude.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="Oyasumi Punpun"><span class="xq-manga-number">20 / 20</span><div class="xq-manga-sigil" aria-hidden="true">✿</div><h3>Oyasumi Punpun</h3><p>Crescer nem sempre é simples.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article></div>
+
+<div class="xq2-manga-tools xq2-edition" aria-label="Busca e filtros de mangás">
+  <label class="ink-visually-hidden" for="xq2-manga-search">Buscar título na mangateca</label>
+  <input type="search" id="xq2-manga-search" maxlength="90" placeholder="PROCURAR MANGÁ OU QUADRINHO..." autocomplete="off">
+  <label class="ink-visually-hidden" for="xq2-manga-genre">Filtrar por tema</label>
+  <select id="xq2-manga-genre" aria-label="Filtrar por tema"><option value="todos">TODOS OS TEMAS</option><option value="psicologico">PSICOLÓGICO</option><option value="drama">DRAMA</option><option value="arte">ARTE / CRIAÇÃO</option><option value="fantasia">FANTASIA</option></select>
+  <label class="ink-visually-hidden" for="xq2-manga-state">Filtrar por estado de leitura</label>
+  <select id="xq2-manga-state" aria-label="Filtrar por estado de leitura"><option value="todos">TODOS OS ESTADOS</option><option value="tenho">JÁ TENHO</option><option value="lendo">LENDO</option><option value="quero">QUERO LER</option><option value="explorar">DESCOBRIR</option><option value="favorito">FAVORITOS ♡</option></select>
+</div>
+<div class="xq2-manga-stats" role="status" aria-live="polite">
+ <span><strong id="xq2-manga-visible">22</strong> MOSTRADOS</span>
+ <span><strong id="xq2-manga-owned">1</strong> NA ESTANTE FÍSICA</span>
+ <span><strong id="xq2-manga-wish">0</strong> NA LISTA DE DESEJOS</span>
+ <button type="button" class="xq2-text-button" id="xq2-manga-random">ME SURPREENDA ✳</button>
+ <button type="button" class="xq2-text-button" id="xq2-manga-reset">LIMPAR FILTROS</button>
+</div>
+<div class="xq-manga-grid" id="xq-manga-grid"><article class="xq-manga-panel" data-title="My Solo Exchange Diary"><span class="xq-manga-number">01 / 22</span><div class="xq-manga-sigil" aria-hidden="true">☾</div><h3>My Solo Exchange Diary</h3><p>Memórias, identidade e intimidade em quadrinhos.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
+<article class="xq-manga-panel" data-title="Solanin"><span class="xq-manga-number">02 / 22</span><div class="xq-manga-sigil" aria-hidden="true">✳</div><h3>Solanin</h3><p>Juventude, sonhos interrompidos e mudanças.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
+<article class="xq-manga-panel" data-title="Homunculus"><span class="xq-manga-number">03 / 22</span><div class="xq-manga-sigil" aria-hidden="true">◌</div><h3>Homunculus</h3><p>Um mergulho perturbador na percepção de si.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
+<article class="xq-manga-panel" data-title="Blue"><span class="xq-manga-number">04 / 22</span><div class="xq-manga-sigil" aria-hidden="true">✿</div><h3>Blue</h3><p>Uma história delicada e introspectiva.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
+<article class="xq-manga-panel" data-title="River's Edge"><span class="xq-manga-number">05 / 22</span><div class="xq-manga-sigil" aria-hidden="true">⌁</div><h3>River's Edge</h3><p>Retrato desconfortável da adolescência.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
+<article class="xq-manga-panel" data-title="My Brain is Different: Stories of ADHD and Other Developmental Disorders"><span class="xq-manga-number">06 / 22</span><div class="xq-manga-sigil" aria-hidden="true">✦</div><h3>My Brain is Different: Stories of ADHD and Other Developmental Disorders</h3><p>Vivências pessoais sobre diferenças e cotidiano.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
+<article class="xq-manga-panel" data-title="Look Back"><span class="xq-manga-number">07 / 22</span><div class="xq-manga-sigil" aria-hidden="true">☷</div><h3>Look Back</h3><p>Arte, amizade e o tempo que passa.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
+<article class="xq-manga-panel" data-title="Goodbye, Eri"><span class="xq-manga-number">08 / 22</span><div class="xq-manga-sigil" aria-hidden="true">⋆</div><h3>Goodbye, Eri</h3><p>Memória, cinema e a linha entre fato e ficção.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
+<article class="xq-manga-panel" data-title="My Lesbian Experience with Loneliness"><span class="xq-manga-number">09 / 22</span><div class="xq-manga-sigil" aria-hidden="true">☾</div><h3>My Lesbian Experience with Loneliness</h3><p>Relato autobiográfico sobre solidão e identidade.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
+<article class="xq-manga-panel" data-title="Hikari no Machi"><span class="xq-manga-number">10 / 22</span><div class="xq-manga-sigil" aria-hidden="true">✳</div><h3>Hikari no Machi</h3><p>Histórias interligadas sobre pessoas e solidão.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
+<article class="xq-manga-panel" data-title="Nijigahara Holograph"><span class="xq-manga-number">11 / 22</span><div class="xq-manga-sigil" aria-hidden="true">◌</div><h3>Nijigahara Holograph</h3><p>Drama psicológico sombrio e não linear.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
+<article class="xq-manga-panel" data-title="Tekkonkinkreet"><span class="xq-manga-number">12 / 22</span><div class="xq-manga-sigil" aria-hidden="true">✿</div><h3>Tekkonkinkreet</h3><p>Cidade, infância e contrastes emocionais.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
+<article class="xq-manga-panel" data-title="Blue Period"><span class="xq-manga-number">13 / 22</span><div class="xq-manga-sigil" aria-hidden="true">⌁</div><h3>Blue Period</h3><p>Arte, estudo e o desejo de se descobrir.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
+<article class="xq-manga-panel" data-title="A Menina do Outro Lado"><span class="xq-manga-number">14 / 22</span><div class="xq-manga-sigil" aria-hidden="true">✦</div><h3>A Menina do Outro Lado</h3><p>Fábula sombria com atmosfera delicada.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
+<article class="xq-manga-panel" data-title="Monster"><span class="xq-manga-number">15 / 22</span><div class="xq-manga-sigil" aria-hidden="true">☷</div><h3>Monster</h3><p>Thriller psicológico cheio de escolhas difíceis.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
+<article class="xq-manga-panel" data-title="Helter Skelter"><span class="xq-manga-number">16 / 22</span><div class="xq-manga-sigil" aria-hidden="true">⋆</div><h3>Helter Skelter</h3><p>Pressões da aparência e da fama.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
+<article class="xq-manga-panel" data-title="Haru's Curse"><span class="xq-manga-number">17 / 22</span><div class="xq-manga-sigil" aria-hidden="true">☾</div><h3>Haru's Curse</h3><p>Drama íntimo sobre perda e relações.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
+<article class="xq-manga-panel" data-title="My Broken Mariko"><span class="xq-manga-number">18 / 22</span><div class="xq-manga-sigil" aria-hidden="true">✳</div><h3>My Broken Mariko</h3><p>Luto e uma amizade que continua na memória.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
+<article class="xq-manga-panel" data-title="As Flores do Mal"><span class="xq-manga-number">19 / 22</span><div class="xq-manga-sigil" aria-hidden="true">◌</div><h3>As Flores do Mal</h3><p>Inquietações, vergonha e juventude.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
+<article class="xq-manga-panel" data-title="Oyasumi Punpun"><span class="xq-manga-number">20 / 22</span><div class="xq-manga-sigil" aria-hidden="true">✿</div><h3>Oyasumi Punpun</h3><p>Crescer nem sempre é simples.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
+
+<article class="xq-manga-panel" data-title="A Voz do Silêncio"><span class="xq-manga-number">21 / 22</span><div class="xq-manga-sigil" aria-hidden="true">♡</div><h3>A Voz do Silêncio</h3><p>Comunicação, arrependimento, amizade e a tentativa de mudar.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
+<article class="xq-manga-panel" data-title="A Depressão é uma Borboleta Azul"><span class="xq-manga-number">22 / 22</span><div class="xq-manga-sigil" aria-hidden="true">✿</div><h3>A Depressão é uma Borboleta Azul</h3><p>Uma obra que quero conhecer, com temas emocionais e delicados.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article></div>
 </section>
 <section class="ink-section ink-fragments" id="fragmentos">
             <div class="ink-section-overline">
@@ -1651,6 +1823,26 @@
                 </article>
             </div>
         </section>
+
+        <!-- ARQUIVO VIVO / SEGREDOS -->
+        <section class="xq2-edition xq2-section xq2-secret-section" id="segredos" aria-labelledby="xq2-secret-title">
+          <div class="xq2-wrap">
+            <div class="xq2-topline"><span>ARQUIVO VIVO / ???</span><span>NEM TODAS AS PÁGINAS ESTÃO NO ÍNDICE</span></div>
+            <div class="xq2-intro"><div><span class="xq2-kicker">NÃO PRECISA ENTENDER TUDO</span><h2 id="xq2-secret-title">Pequenos <em>segredos.</em></h2></div><p>Existem três fragmentos escondidos pelas novas seções. Procure símbolos ✳, experimente os botões e descubra uma pequena mensagem ao reunir os três.</p></div>
+            <div class="xq2-secret-grid">
+              <button class="xq2-secret-tile" type="button" data-egg="escuta" aria-pressed="false"><span>FRAGMENTO / 01</span><strong>Uma voz que fica.</strong><small>GUARDAR FRAGMENTO ↗</small></button>
+              <button class="xq2-secret-tile" type="button" data-egg="lembranca" aria-pressed="false"><span>FRAGMENTO / 02</span><strong>Uma pequena lembrança.</strong><small>GUARDAR FRAGMENTO ↗</small></button>
+              <button class="xq2-secret-tile" type="button" data-egg="amanha" aria-pressed="false"><span>FRAGMENTO / 03</span><strong>Uma página em branco.</strong><small>GUARDAR FRAGMENTO ↗</small></button>
+            </div>
+            <div class="xq2-secret-progress"><span id="xq2-secret-count">0 / 3 FRAGMENTOS REUNIDOS</span><button type="button" class="xq2-action" id="xq2-secret-open" disabled>ABRIR MENSAGEM SECRETA ↗</button><span>DICA EXTRA: ALGUNS SITES ESCONDEM CÓDIGOS DE TECLADO.</span></div>
+          </div>
+        </section>
+        <div id="xq2-secret-panel" class="xq2-secret-panel" role="dialog" aria-modal="false" aria-labelledby="xq2-secret-panel-title" hidden>
+          <div class="xq2-secret-head"><span class="xq2-kicker">ARQUIVO SECRETO / DESBLOQUEADO</span><button id="xq2-secret-close" type="button" aria-label="Fechar mensagem secreta">×</button></div>
+          <h2 id="xq2-secret-panel-title">Ainda estou aqui.</h2>
+          <p>Se você encontrou isso, leu mais do que parecia necessário. Obrigado por dedicar um pouco do seu tempo ao meu pequeno canto da internet. Até o próximo capítulo. ♡</p>
+        </div>
+
 
         <section class="ink-love-letter" aria-labelledby="ink-love-title">
             <div class="ink-love-text">
@@ -2029,6 +2221,7 @@
 
     <script src="./script.js?v=xqrens-social-20261016" defer></script>
     <script src="./motion.js?v=xqrens-motion-20261016" defer></script>
+    <script src="./arquivo-vivo.js?v=2.0.0" defer></script>
 
 </body>
 
