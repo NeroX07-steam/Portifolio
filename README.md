@@ -132,3 +132,32 @@ Os arquivos principais continuam em:
 
 **Sobre a quantidade de código:** o site tem mais de seis mil linhas distribuídas entre HTML, CSS e JavaScript, incluindo o código preservado do projeto anterior. Quantidade de linhas não equivale a quantidade de recursos nem garante qualidade.
 
+
+---
+
+## ☾ Atualização: mangateca, Julya e XQRENS Comunidade
+
+Nesta edição, acrescentei uma mangateca com 20 entradas, ajustei o texto da Julya (minha namorada), criei novas animações de entrada estilo editorial e um aplicativo de conversa inspirado na organização de servidores do Discord.
+
+### 🗨️ Comunidade
+
+Arquivos:
+- `projetos/comunidade/index.html`
+- `projetos/comunidade/style.css`
+- `projetos/comunidade/app.js`
+
+Integração: projeto Supabase existente, usando **URL e chave publishable**, sem `service_role` no cliente. As tabelas `xq_profiles`, `xq_servers`, `xq_members`, `xq_channels`, `xq_messages` e `xq_reports` usam Row Level Security (RLS).
+
+Inclui login e cadastro por e-mail, perfis com apelido, servidores **públicos**, entrada nos servidores, canais, mensagens em tempo real, denúncias e moderação básica por proprietário. **Servidores privados, convites, anexos, voz e chamadas de vídeo ainda não fazem parte desta versão.**
+
+### Publicação e segurança
+
+1. Confirme no Vercel que `projetos` é a raiz publicada, para que o caminho `/comunidade/index.html` exista.
+2. Em Supabase Auth, configure os URLs de redirecionamento e o endereço público real do site.
+3. Teste cadastro, confirmação de e-mail, login e envio de mensagens com pelo menos duas contas diferentes.
+4. Em produção, monitore denúncias, implemente regras de convivência e controles adicionais contra abuso.
+5. Ative **Leaked Password Protection** em Auth, se disponível no plano.
+6. Os servidores desta versão são públicos para pessoas cadastradas; nunca use o chat para compartilhar dados privados ou informações sensíveis.
+
+A comunidade está em **beta**: a estrutura de dados e os arquivos estão criados, mas precisam de testes completos de ponta a ponta com contas reais antes de divulgação ampla.
+
