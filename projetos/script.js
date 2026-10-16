@@ -911,7 +911,15 @@
             ["09", "Projetos", "projetos"],
             ["10", "Diário", "diario"],
             ["11", "Mente em Flor", "saude-mental"],
-            ["12", "Contato", "contato"]
+            ["12", "Contato", "contato"],
+            ["13", "Evolução GitHub", "evolucao"],
+            ["14", "Julya.exe e cartas", "julya-exe"],
+            ["15", "Tofu World", "tofu-world"],
+            ["16", "Sala de Música", "sala-musica"],
+            ["17", "Laboratório SENAI", "senai-lab"],
+            ["18", "Mangateca 2.0", "mangateca"],
+            ["19", "Segredos", "segredos"],
+            ["20", "Fragmentos", "fragmentos"]
         ];
         const modal = select("#ink-command-backdrop");
         const commandSearch = select("#ink-command-search");
