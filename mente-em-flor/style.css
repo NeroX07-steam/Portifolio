@@ -3121,3 +3121,214 @@ body.dark-mode .footer-brand .brand-name span {
     opacity:0
   }
 }
+
+
+/* ========================================================================
+   MENTE EM FLOR / NOVOS CAPÍTULOS DE CUIDADO
+   Kit de pausas, conversas e carta privada.
+   ======================================================================== */
+.flor-kit,
+.flor-conversations,
+.flor-letter-section {
+  position:relative;
+  padding-top:clamp(75px,10vw,150px);
+  padding-bottom:clamp(75px,10vw,150px)
+}
+.flor-kit{background:var(--paper-2);isolation:isolate}
+.flor-conversations{background:var(--paper)}
+.flor-letter-section{background:var(--paper-3)}
+.flor-feature-heading{
+  display:grid;
+  grid-template-columns:minmax(0,1.2fr) minmax(230px,.56fr);
+  gap:clamp(20px,6vw,100px);
+  align-items:end;
+  margin:clamp(45px,5vw,76px) 0 clamp(32px,4.5vw,72px)
+}
+.flor-feature-heading h2{margin:15px 0 0;font-size:clamp(44px,5.2vw,78px);line-height:1.04}
+.flor-feature-heading>p{font-size:13px;line-height:1.95;color:var(--muted);max-width:410px;margin:0 0 7px}
+.flor-kit-layout{
+  display:grid;
+  grid-template-columns:minmax(270px,.68fr) minmax(0,1.32fr);
+  gap:clamp(14px,2.5vw,35px);
+  align-items:stretch
+}
+.flor-kit-menu{
+  display:flex;
+  flex-direction:column;
+  gap:9px
+}
+.flor-kit-choice{
+  display:grid;
+  grid-template-columns:26px minmax(0,1fr) 22px;
+  gap:13px;
+  align-items:center;
+  min-height:89px;
+  padding:23px 20px;
+  background:var(--cream);
+  border:1px solid var(--line);
+  border-radius:17px;
+  color:var(--ink);
+  text-align:left;
+  cursor:pointer;
+  transition:background .3s,color .3s,transform .35s var(--ease),border-color .3s
+}
+.flor-kit-choice>span:first-child{font:10px var(--mono);opacity:.65}
+.flor-kit-choice strong{font:600 clamp(13px,1.3vw,16px) var(--sans)}
+.flor-kit-choice>span:last-child{font-size:20px;justify-self:end}
+.flor-kit-choice:hover{transform:translateX(5px);border-color:var(--moss)}
+.flor-kit-choice.active,.flor-kit-choice[aria-pressed="true"]{
+  background:var(--ink);color:var(--paper);border-color:var(--ink)
+}
+.flor-kit-result{
+  position:relative;isolation:isolate;overflow:hidden;
+  background:var(--ink);color:var(--paper);
+  min-height:460px;display:flex;flex-direction:column;
+  padding:clamp(24px,4.4vw,64px);
+  border:1px solid transparent;border-radius:24px
+}
+.flor-kit-top{display:flex;justify-content:space-between;gap:12px;
+  font:9px var(--mono);letter-spacing:1.3px;opacity:.7}
+.flor-kit-orbit{position:absolute;z-index:-1;inset:0;pointer-events:none;
+  display:grid;place-items:center;overflow:hidden}
+.flor-kit-orbit span:first-child{font:clamp(200px,31vw,440px)/1 var(--serif);
+  opacity:.09;transform:rotate(-21deg);animation:florOrbit 24s linear infinite}
+.flor-kit-orbit span:last-child{position:absolute;right:12%;top:16%;font-size:65px;opacity:.16}
+.flor-kit-small{display:block;margin-top:auto;font:10px var(--mono);letter-spacing:1.7px;
+  color:var(--green)}
+.flor-kit-result h3{font:normal clamp(32px,4.2vw,64px)/1.07 var(--serif);
+  letter-spacing:-1.5px;max-width:720px;margin:14px 0}
+.flor-kit-result>p:not(.flor-kit-foot){font-size:14px;max-width:560px;line-height:1.9;
+  color:#dce5db}
+.flor-kit-actions{display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin:27px 0 20px}
+.flor-kit-actions button{min-height:44px;padding:11px 18px;
+  border:1px solid #dce8d363;border-radius:8px;
+  font:10px var(--mono);cursor:pointer;letter-spacing:.65px;
+  background:transparent;color:#edf5e5;
+  transition:background .2s,color .2s,transform .25s}
+.flor-kit-actions .flor-kit-next{background:var(--green);color:#142018;border-color:var(--green)}
+.flor-kit-actions button:hover{transform:translateY(-3px);background:#f2f8ed;color:#16231b}
+.flor-kit-next span{margin-left:20px}
+.flor-kit-foot{font:10px/1.65 var(--mono);opacity:.65;max-width:560px;margin:8px 0 0}
+.flor-kit-note{display:flex;gap:24px;align-items:center;border-bottom:1px solid var(--line);
+  padding:30px 0;margin-top:20px}
+.flor-kit-note>span{font:45px var(--serif);color:var(--moss)}
+.flor-kit-note p{flex:1;font-size:13px;line-height:1.9;color:var(--muted);max-width:680px}
+.flor-kit-note p strong{color:var(--ink)}
+.flor-kit-note>a{font:11px var(--mono);color:var(--moss);text-decoration:underline;
+  text-underline-offset:6px;white-space:nowrap}
+.flor-conversation-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.flor-conversation-card{
+  min-height:460px;background:var(--cream);
+  color:var(--ink);border-radius:18px;border:1px solid var(--line);
+  padding:clamp(20px,2.4vw,33px);
+  display:flex;flex-direction:column;position:relative;overflow:hidden;
+  transition:transform .5s var(--ease),box-shadow .5s
+}
+.flor-conversation-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.flor-conversation-index{font:10px var(--mono);letter-spacing:1px;color:var(--muted)}
+.flor-conversation-symbol{font:70px/1 var(--serif);color:var(--moss);
+  margin:26px 0 10px}
+.flor-conversation-card h3{font:normal clamp(26px,2.8vw,38px)/1.08 var(--serif);
+  margin:12px 0;color:var(--ink)}
+.flor-conversation-card>p{font-size:12px;line-height:1.8;color:var(--muted)}
+.flor-conversation-card blockquote{
+  margin:24px 0;font:italic clamp(16px,1.6vw,22px)/1.55 var(--serif);
+  padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  color:var(--ink)
+}
+.flor-copy-conversation{display:flex;align-items:center;justify-content:space-between;gap:10px;
+  width:100%;margin-top:auto;min-height:44px;
+  padding:12px 0;color:var(--ink);background:transparent;border:0;
+  cursor:pointer;font:10px var(--mono);letter-spacing:1px;text-align:left}
+.flor-copy-conversation:hover{color:var(--moss)}
+.flor-copy-conversation>span{font-size:22px}
+.flor-conversation-guidance{display:grid;grid-template-columns:56px minmax(0,1fr);gap:20px;
+  align-items:start;background:var(--ink);color:var(--paper);border-radius:18px;
+  padding:clamp(22px,3.3vw,44px);margin-top:14px}
+.flor-guidance-marker{width:46px;height:46px;border:1px solid #ffffff50;
+  border-radius:50%;display:grid;place-items:center;font:25px var(--serif)}
+.flor-conversation-guidance h3{font:normal clamp(24px,2.7vw,35px) var(--serif);margin:0 0 10px}
+.flor-conversation-guidance p{font-size:13px;line-height:1.9;
+  color:#e0e6de;max-width:860px;margin:0}
+.flor-conversation-guidance a{color:var(--green);text-decoration:underline;text-underline-offset:3px}
+.flor-letter-layout{display:grid;grid-template-columns:minmax(0,1.13fr) minmax(300px,.73fr);
+  gap:clamp(14px,3vw,55px);align-items:start}
+.flor-letter-paper{position:relative;overflow:hidden;background:var(--cream);
+  border:1px solid var(--line);border-radius:17px;
+  box-shadow:var(--shadow);padding:clamp(22px,3.5vw,55px)}
+.flor-letter-meta{display:flex;justify-content:space-between;gap:12px;
+  padding-bottom:20px;border-bottom:1px solid var(--line);
+  font:9px var(--mono);letter-spacing:.8px;color:var(--muted)}
+.flor-letter-paper>label{display:block;font:italic clamp(29px,3vw,45px) var(--serif);
+  margin:35px 0 12px}
+.flor-letter-paper textarea{
+  display:block;width:100%;max-width:100%;border:0;outline:0;
+  border-radius:0;resize:vertical;min-height:260px;
+  background:repeating-linear-gradient(to bottom,transparent 0 35px,var(--line) 36px 37px);
+  color:var(--ink);font:15px/37px var(--sans);padding:0 0 15px
+}
+.flor-letter-paper textarea::placeholder{color:var(--muted);opacity:.7}
+.flor-letter-paper textarea:focus-visible{outline:2px solid var(--moss);outline-offset:4px}
+.flor-letter-bottom{border-top:1px solid var(--line);padding-top:14px;display:flex;
+  justify-content:space-between;gap:10px;flex-wrap:wrap;color:var(--muted);
+  font:10px/1.6 var(--mono)}
+.flor-letter-aside{padding:clamp(17px,3.1vw,42px) 0}
+.flor-letter-sigil{font:clamp(75px,10vw,150px)/1 var(--serif);color:var(--moss);
+  opacity:.85;animation:florOrbit 29s linear infinite}
+.flor-letter-aside h3{margin:18px 0;font:normal clamp(26px,3.3vw,43px)/1.1 var(--serif)}
+.flor-letter-aside>p{max-width:480px;line-height:1.85;font-size:12px;color:var(--muted)}
+.flor-private-device{display:flex;gap:12px;align-items:flex-start;padding:15px 0;
+  font:12px/1.7 var(--sans);color:var(--ink);cursor:pointer}
+.flor-private-device input{flex-shrink:0;width:19px;height:19px;accent-color:var(--moss);
+  margin:2px 0 0}
+.flor-letter-buttons{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}
+.flor-letter-buttons button{border:1px solid var(--line);background:var(--ink);color:var(--paper);
+  min-height:43px;padding:11px 13px;cursor:pointer;border-radius:7px;font:10px var(--mono);
+  transition:transform .3s var(--ease),background .3s}
+.flor-letter-buttons button:nth-child(2){background:var(--moss);color:#101b14;border-color:var(--moss)}
+.flor-letter-buttons button:nth-child(3){background:transparent;color:var(--ink)}
+.flor-letter-buttons button:disabled{opacity:.35;cursor:not-allowed}
+.flor-letter-buttons button:not(:disabled):hover{transform:translateY(-3px)}
+.flor-letter-warning{font:10px/1.8 var(--mono)!important;color:var(--muted)!important;
+  border-left:2px solid var(--moss);padding-left:13px}
+@keyframes florOrbit{to{transform:rotate(360deg)}}
+@media(max-width:1030px){
+  .flor-feature-heading{grid-template-columns:1fr;gap:16px}
+  .flor-feature-heading>p{max-width:670px}
+  .flor-kit-layout{grid-template-columns:minmax(240px,.8fr) minmax(0,1.2fr)}
+  .flor-conversation-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .flor-conversation-card:last-child{grid-column:1/-1;min-height:300px}
+  .flor-letter-layout{grid-template-columns:1fr}
+  .flor-letter-aside{padding:15px 0}
+}
+@media(max-width:730px){
+  .flor-kit-layout{grid-template-columns:1fr}
+  .flor-kit-menu{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+  .flor-kit-choice{min-height:105px;padding:15px 12px;grid-template-columns:1fr auto;gap:8px}
+  .flor-kit-choice>span:first-child{grid-column:1/-1}
+  .flor-kit-choice strong{font-size:12px}
+  .flor-kit-result{min-height:425px}
+  .flor-kit-note{align-items:flex-start;gap:12px;flex-wrap:wrap}
+  .flor-kit-note>span{font-size:32px}
+  .flor-kit-note p{flex:1 1 calc(100% - 55px)}
+  .flor-kit-note>a{margin-left:45px}
+  .flor-conversation-cards{grid-template-columns:1fr}
+  .flor-conversation-card,.flor-conversation-card:last-child{
+    grid-column:auto;min-height:360px}
+  .flor-conversation-symbol{margin:20px 0 0;font-size:50px}
+  .flor-conversation-guidance{grid-template-columns:1fr}
+  .flor-letter-paper{padding:25px 19px}
+  .flor-letter-aside{padding:16px 2px}
+}
+@media(max-width:450px){
+  .flor-feature-heading h2{font-size:clamp(35px,10vw,51px)}
+  .flor-kit-result{padding:24px 19px}
+  .flor-kit-result h3{font-size:37px}
+  .flor-letter-buttons button{font-size:9px;padding:9px}
+  .flor-letter-meta{font-size:8px}
+}
+@media(prefers-reduced-motion:reduce){
+  .flor-kit-orbit span:first-child,.flor-letter-sigil{animation:none}
+  .flor-kit-choice,.flor-conversation-card,.flor-letter-buttons button{transition:none}
+  .flor-kit-choice:hover,.flor-conversation-card:hover,.flor-letter-buttons button:hover{transform:none}
+}
