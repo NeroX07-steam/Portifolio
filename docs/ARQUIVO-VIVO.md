@@ -107,11 +107,12 @@ Essa é uma **base de acessibilidade**, não uma certificação WCAG. Os recurso
 3. Ative modo leitura, teste próximo, anterior e teclado; pressione Esc.
 4. Abra quatro cartas, teste os três controles do Tofu e reinicie a contagem.
 5. Grave um título e artista, recarregue a página e verifique o destaque. Limpe-o.
-6. Na Mangateca, teste os três filtros, estados, favoritos, sorteio e recarregamento.
-7. Percorra as três tecnologias do SENAI, conferindo exemplos e links reais.
-8. Colete três fragmentos e abra a mensagem.
-9. Repita no celular e com a preferência de movimento reduzido ativada.
-10. Teste com armazenamento local bloqueado; o conteúdo deve permanecer legível.
+6. Na seção Projetos, pesquise nomes, teste os filtros e depois limpe a busca.
+7. Na Mangateca, teste os três filtros, estados, favoritos, sorteio e recarregamento.
+8. Percorra as três tecnologias do SENAI, conferindo exemplos e links reais.
+9. Colete três fragmentos e abra a mensagem.
+10. Repita no celular e com a preferência de movimento reduzido ativada.
+11. Teste com armazenamento local bloqueado; o conteúdo deve permanecer legível.
 
 ## Por que não "500 funções"?
 
