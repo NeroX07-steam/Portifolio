@@ -19,7 +19,7 @@ filterButtons.forEach(btn=>btn.classList.toggle("is-active",btn.dataset.xqOrder=
 };
 filterButtons.forEach(btn=>btn.addEventListener("click",()=>reorder(btn.dataset.xqOrder)));
 if(reduced)return;
-const sections=[...document.querySelectorAll(".xq-manga-world,.xq-community-invite,.ink-love-letter")];
+const sections=[...document.querySelectorAll(".xq-manga-world,.ink-love-letter")];
 const introObserver=new IntersectionObserver(entries=>{
  entries.forEach(({target,isIntersecting})=>{
   if(!isIntersecting)return;
@@ -28,7 +28,7 @@ const introObserver=new IntersectionObserver(entries=>{
  });
 },{threshold:.15});
 sections.forEach(s=>introObserver.observe(s));
-const titleElements=[...document.querySelectorAll(".xq-manga-title h2,.xq-community-invite h2")];
+const titleElements=[...document.querySelectorAll(".xq-manga-title h2")];
 titleElements.forEach(title=>{
  let fragment=document.createDocumentFragment();
  const words=title.textContent.trim().split(/\s+/);
