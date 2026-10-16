@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./style.css?v=3">
+<link rel="stylesheet" href="./style.css?v=4">
 </head>
 <body>
 <div class="noise" aria-hidden="true"></div>
@@ -35,7 +35,7 @@
   <div class="profile-bar" id="profile-bar" hidden><div class="avatar" id="own-avatar">?</div><div class="profile-name"><strong id="profile-username">...</strong><small>conectado</small></div><button type="button" id="profile-edit" title="Editar nome">✎</button><button type="button" id="sign-out" title="Sair">⏻</button></div>
 </aside>
 <section class="conversation" aria-label="Conversa">
-  <header class="conversation-head"><div class="conversation-name"><span>#</span><strong id="channel-title">bem-vindo</strong><small id="channel-subtitle">um lugar para conversar e criar</small></div><button type="button" id="show-explore" class="header-action">EXPLORAR ↗</button></header>
+  <header class="conversation-head"><button type="button" id="mobile-open-channels" class="mobile-open-channels" aria-label="Abrir canais">☰</button><div class="conversation-name"><span>#</span><strong id="channel-title">bem-vindo</strong><small id="channel-subtitle">um lugar para conversar e criar</small></div><button type="button" id="show-explore" class="header-action">EXPLORAR ↗</button></header>
   <div class="welcome" id="welcome-panel"><span class="welcome-kicker">ONLINE / OUTUBRO DE 2026</span><div class="welcome-art" aria-hidden="true">☾</div><h2>Uma internet<br>mais <em>nossa.</em></h2><p>Crie uma conta, encontre servidores, abra canais de texto e converse com pessoas que também gostam de mangás, anime, música e código.</p><button type="button" class="primary" id="welcome-start">COMEÇAR <span>↗</span></button></div>
   <div id="chat-screen" class="chat-screen" hidden><div class="chat-topic"><div class="topic-icon">#</div><h2 id="chat-topic-name">geral</h2><p>Esse é o começo deste canal. Seja gentil, compartilhe ideias e não publique dados privados.</p></div><div class="messages" id="message-list" role="log" aria-live="polite" aria-relevant="additions"></div><form id="message-form" class="composer"><label for="message-input" class="sr-only">Enviar mensagem</label><textarea id="message-input" placeholder="Mensagem para #geral" maxlength="2000" rows="1" required></textarea><span id="message-count">0/2000</span><button type="submit" id="send-button">ENVIAR ↑</button></form></div>
 </section>
@@ -47,5 +47,5 @@
 <dialog id="explore-dialog" class="dialog dialog-wide"><div class="dialog-top"><span>SERVIDORES PÚBLICOS / 004</span><button type="button" data-close>×</button></div><h2>Explore <em>mundos.</em></h2><label for="server-search" class="sr-only">Buscar servidor</label><input id="server-search" placeholder="Procurar servidor pelo nome..."><div id="explore-results" class="explore-results"></div></dialog>
 <dialog id="profile-dialog" class="dialog"><div class="dialog-top"><span>SEU PERFIL / 005</span><button type="button" data-close>×</button></div><h2>Como quer ser <em>chamado?</em></h2><form id="profile-form"><label for="new-username">NOME DE EXIBIÇÃO</label><input id="new-username" minlength="3" maxlength="32" required><button class="primary" type="submit">SALVAR NOME ↗</button></form></dialog>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js" defer></script>
-<script src="./app.js?v=3" defer></script>
+<script src="./app.js?v=4" defer></script>
 </body></html>
