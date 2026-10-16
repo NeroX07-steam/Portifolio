@@ -89,7 +89,7 @@ O site não substitui ajuda profissional. Ele busca transmitir acolhimento e lem
 
 Sou Luiz Eduardo, estudante de desenvolvimento de sistemas e desenvolvedor em formação. Gosto de criar sites, explorar ideias visuais e aprender na prática. Este portfólio é um projeto vivo: ele muda conforme eu aprendo e descubro novas possibilidades.
 
-- **Portfólio:** https://portifolio-8iuf-baab2xhhr-pedro-luiz.vercel.app/
+- **Portfólio:** https://xqrens.vercel.app
 - **Instagram:** https://www.instagram.com/lxqrens/
 - **GitHub:** https://github.com/NeroX07-steam
 
