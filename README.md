@@ -134,80 +134,21 @@ Os arquivos principais continuam em:
 
 
 ---
-
-## ☾ Atualização: mangateca, Julya e XQRENS Comunidade
-
-Nesta edição, acrescentei uma mangateca com 20 entradas, ajustei o texto da Julya (minha namorada), criei novas animações de entrada estilo editorial e um aplicativo de conversa inspirado na organização de servidores do Discord.
-
-### 🗨️ Comunidade
-
-Arquivos:
-- `projetos/comunidade/index.html`
-- `projetos/comunidade/style.css`
-- `projetos/comunidade/app.js`
-
-Integração: projeto Supabase existente, usando **URL e chave publishable**, sem `service_role` no cliente. As tabelas `xq_profiles`, `xq_servers`, `xq_members`, `xq_channels`, `xq_messages` e `xq_reports` usam Row Level Security (RLS).
-
-Inclui login e cadastro por e-mail, perfis com apelido, servidores **públicos**, entrada nos servidores, canais, mensagens em tempo real, denúncias e moderação básica por proprietário. **Servidores privados, convites, anexos, voz e chamadas de vídeo ainda não fazem parte desta versão.**
-
-### Publicação e segurança
-
-1. Confirme no Vercel que `projetos` é a raiz publicada, para que o caminho `/comunidade/index.html` exista.
-2. Em Supabase Auth, configure os URLs de redirecionamento e o endereço público real do site.
-3. Teste cadastro, confirmação de e-mail, login e envio de mensagens com pelo menos duas contas diferentes.
-4. Em produção, monitore denúncias, implemente regras de convivência e controles adicionais contra abuso.
-5. Ative **Leaked Password Protection** em Auth, se disponível no plano.
-6. Os servidores desta versão são públicos para pessoas cadastradas; nunca use o chat para compartilhar dados privados ou informações sensíveis.
-
-A comunidade está em **beta**: a estrutura de dados e os arquivos estão criados, mas precisam de testes completos de ponta a ponta com contas reais antes de divulgação ampla.
-
-
 ---
 
-## 🟢 Comunidade 2.0: amigos online, avatares e fotos
+## ☾ Mangateca, Julya e projetos pessoais
 
-- **Online por servidor:** indicador Realtime Presence conta usuários distintos conectados àquele servidor (não contas cadastradas e nem abas abertas). Atualiza automaticamente, mas depende de uma conexão Realtime ativa.
-- **Lista de membros:** mostra quem está online/offline. No celular, toque no indicador “ONLINE” para abrir a lista.
-- **Foto de perfil:** clique no seu avatar ou no lápis do perfil para enviar ou remover a foto.
-- **Fotos no chat:** botão \`+\`, colar imagem com \`Ctrl + V\` ou arrastar até o campo de mensagem. Aceita JPG, PNG ou WEBP; o navegador converte para WEBP, reduz dimensão e remove metadados da imagem.
-- **Prévia:** o usuário confere a foto antes de enviar e pode remover o anexo.
-- **Visualização:** clique na imagem enviada para ampliar.
+O portfólio agora está voltado novamente para projetos pessoais e estudos, sem a aba antiga de comunidade. As áreas existentes de Julya, Tofu, mangás, animações, SENAI e projetos permanecem.
 
-### Storage e segurança
-
-- \`xq-avatars\`: fotos de perfil **públicas**, limitadas a **1 MB por arquivo convertido**.
-- \`xq-chat-media\`: imagens de canais em **bucket privado**, limitadas a **5 MB por arquivo convertido**. O servidor só gera URLs assinadas temporárias para membros autorizados.
-- Políticas RLS de \`storage.objects\` impedem uploads em pastas de outros usuários e restringem leitura de fotos de canais aos membros.
-- O banco valida que as imagens referenciadas por mensagens pertencem ao canal e à pessoa que enviou.
-- \`realtime.messages\`: políticas para canais privados de presença por servidor.
-- Fotos de perfil e imagens dos chats não ficam guardadas dentro do GitHub.
-- Não envie documentos pessoais, senhas, endereços ou fotos de colegas sem autorização. Servidores continuam **públicos para contas cadastradas** nesta versão.
-- Só quem estiver com o site aberto e conectado aparece online. Realtime pode desconectar em redes restritas, como a de algumas escolas.
-
-### Testes antes de divulgar
-
-Verifique com **duas contas diferentes**: cadastro/login, entrada no mesmo servidor, contagem online, upload/troca/remoção do avatar, envio da imagem com e sem texto, leitura do arquivo em outro login, restrição para quem não pertence ao servidor e layout no celular. Também monitore os limites de uso do Supabase Storage e Realtime.
-
-
----
-
-## ✳ Ajustes visuais na Comunidade e expansão do Mente em Flor
-
-### Comunidade
-
-Os controles de **editar foto de perfil** e o indicador de **pessoas online** receberam estilos escuros específicos, contraste, foco visível e espaçamento corrigido para celular. Os estilos essenciais desses controles estão embutidos no HTML, além do CSS principal, para evitar que versões desatualizadas do CSS deixem botões com aparência padrão.
-
-Para ver a versão atualizada, abra `projetos/comunidade/index.html` e atualize o navegador sem cache (`Ctrl + Shift + R`).
+- **Julya:** um capítulo pessoal dedicado à minha namorada.
+- **Mangateca:** títulos de mangás e quadrinhos que gosto ou quero conhecer.
+- **Mente em Flor:** recursos educativos e interativos sobre autocuidado, conversar com alguém e buscar apoio.
+- **Portfólio:** capítulos, filtros de projetos, preferências visuais e experiências locais com JavaScript.
 
 ### Mente em Flor
 
-O projeto `mente-em-flor/` ganhou três seções:
+O projeto em `mente-em-flor/` possui três novas áreas: kit com ideias de pausas opcionais, modelos de conversa para pedir apoio ou escutar um amigo e uma carta pessoal que pode ser exportada em TXT. O texto não é enviado a nenhum servidor; salvar no navegador é opcional e não é indicado em computadores compartilhados.
 
-- **Kit para dias diferentes:** ideias opcionais de pausa para cansaço, cabeça cheia, vontade de companhia e dificuldade de identificar sentimentos, com botão de próxima ideia e cópia.
-- **Conversas que acolhem:** mensagens-modelo para pedir companhia, escutar um amigo e procurar a orientação de um adulto. Não substitui atendimento.
-- **Uma carta pessoal:** textarea com contagem, exportação TXT, salvar local opcional e exclusão. O botão de salvar exige confirmar que se trata de dispositivo pessoal. **Nunca digite informações sensíveis em computadores compartilhados da escola.**
-- **Sobre o autor:** o site agora explica o vínculo do Luiz Eduardo com o SENAI e a motivação pessoal de ouvir e apoiar amigos.
+### Histórico
 
-Novo arquivo: `mente-em-flor/novidades.js`. Os antigos `index.html`, `style.css` e `script.js` continuam presentes.
-
-A atualização foi gravada no **GitHub**, sem publicar ou acionar um deploy manual na Vercel. Confirme visualmente o resultado após o próximo deploy da sua plataforma de hospedagem.
+A comunidade experimental foi retirada dos arquivos publicados no repositório. Versões anteriores continuam recuperáveis pelo histórico do Git. **Os registros do Supabase não foram excluídos**, para evitar apagar contas, mensagens e fotos sem um pedido específico.
