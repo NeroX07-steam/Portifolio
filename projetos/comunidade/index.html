@@ -9,7 +9,48 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./style.css?v=6">
+<link rel="stylesheet" href="./style.css?v=xq-ui7-20261016">
+
+<style id="xq-critical-ui-v7">
+/* Critical overrides travel with the HTML so stale stylesheet caches cannot
+   leave new UI controls with the browser's default white-button appearance. */
+#profile-dialog { width:min(470px,calc(100vw - 26px)); max-height:min(92dvh,880px); overflow-y:auto; }
+#profile-dialog #profile-form {display:flex; flex-direction:column; gap:11px; margin-top:13px;}
+#profile-dialog .edit-avatar {box-sizing:border-box;display:grid!important;place-items:center!important;overflow:hidden;width:104px;height:104px;margin:10px auto 7px;flex:0 0 auto;border-radius:29px;border:1px solid #ffffff45;background:linear-gradient(145deg,#43434c,#2a2b32);color:#f5ede2;box-shadow:0 13px 30px #0004;}
+#profile-dialog .edit-avatar #edit-avatar-fallback {font:64px/1 "Instrument Serif",Georgia,serif;color:#f5ede2;}
+#profile-dialog .edit-avatar img {display:block;width:100%;height:100%;object-fit:cover;}
+#profile-dialog .edit-avatar img[hidden],#profile-dialog .edit-avatar span[hidden] {display:none!important;}
+#profile-dialog .profile-photo-actions {display:grid!important;grid-template-columns:1fr 1fr;gap:9px;width:100%;align-items:stretch;margin:6px 0;}
+#profile-dialog .profile-photo-actions button {appearance:none!important;box-sizing:border-box;display:flex;align-items:center;justify-content:center;min-height:43px;white-space:normal;line-height:1.4;letter-spacing:.025em;text-align:center;padding:10px 9px!important;border-radius:9px!important;border:1px solid #ffffff36!important;background:#32343d!important;color:#f0e9df!important;font:500 10px/1.4 "DM Mono",monospace!important;cursor:pointer;transition:background .18s,border-color .18s,transform .18s;}
+#profile-dialog .profile-photo-actions button:hover {background:#444752!important;border-color:#d7c8ae88!important;transform:translateY(-2px);}
+#profile-dialog .profile-photo-actions button:focus-visible,#presence-pill:focus-visible {outline:2px solid #d9c9aa;outline-offset:3px;}
+#profile-dialog .profile-photo-actions #remove-avatar-button {color:#d6c7c1!important;background:#292b31!important;}
+#profile-dialog .photo-help {margin:4px 0 12px!important;color:#aeb0b5;font:11px/1.65 "DM Sans",sans-serif;text-align:center;}
+#profile-dialog #avatar-file[hidden] {display:none!important;}
+#profile-dialog #new-username {width:100%;min-height:48px;border-radius:8px;background:#15171b;border:1px solid #ffffff34;color:#f0eee9;padding:13px 14px;font:14px "DM Sans",sans-serif;}
+#profile-dialog label[for="new-username"] {margin-top:8px;}
+#profile-dialog #profile-form > .primary {min-height:47px;border-radius:8px;margin-top:12px;}
+#presence-pill {appearance:none!important;display:inline-flex!important;align-items:center;justify-content:center;gap:8px;flex-shrink:0;min-width:103px;min-height:37px;margin:0;border:1px solid #ffffff30!important;border-radius:10px!important;background:#262a30!important;color:#e8e5df!important;padding:8px 11px!important;font:500 10px/1 "DM Mono",monospace!important;letter-spacing:.075em;white-space:nowrap;cursor:pointer;}
+#presence-pill:hover {border-color:#c8c4b371!important;background:#343841!important;}
+#presence-pill #presence-pill-count {font:600 13px/1 "DM Sans",sans-serif;color:#fff;min-width:12px;text-align:center;}
+#presence-pill .status-dot {display:block;flex:0 0 auto;width:8px;height:8px;border-radius:50%;background:#92969e;}
+#presence-pill.presence-active .status-dot {background:#75d19a;box-shadow:0 0 11px #75d19a73;}
+#presence-pill span:last-child {font-size:9px;color:#c4c5c5;}
+.community-header-actions {display:flex;align-items:center;gap:11px;margin-left:auto;}
+#show-explore {appearance:none;display:inline-flex;align-items:center;justify-content:center;min-height:37px;border-radius:9px;white-space:nowrap;}
+@media(max-width:680px) {
+  #profile-dialog {width:calc(100vw - 24px);padding:22px;}
+  #profile-dialog h2 {font-size:clamp(42px,11vw,65px);line-height:.98;}
+  #profile-dialog .profile-photo-actions {gap:6px;}
+  #profile-dialog .profile-photo-actions button {font-size:9px!important;padding:10px 6px!important;}
+  #presence-pill {min-width:80px;padding:7px 8px!important;gap:5px;}
+  #presence-pill span:last-child {font-size:8px;}
+  #show-explore {display:none;}
+}
+@media(prefers-reduced-motion:reduce) {
+  #profile-dialog .profile-photo-actions button {transition:none;}
+}
+</style>
 </head>
 <body>
 <div class="noise" aria-hidden="true"></div>
@@ -49,6 +90,6 @@
 <dialog id="moderation-dialog" class="dialog dialog-wide"><div class="dialog-top"><span>MODERAÇÃO / 006</span><button type="button" data-close>×</button></div><h2>Cuidar da <em>comunidade.</em></h2><p>Aqui ficam denúncias do seu servidor. Revise com atenção. Você pode excluir mensagens e denunciar abusos à plataforma quando necessário.</p><div id="moderation-results" class="explore-results"></div></dialog>
 <dialog id="members-dialog" class="dialog dialog-wide"><div class="dialog-top"><span>AMIGOS ONLINE / 007</span><button type="button" data-close>×</button></div><h2>Quem está <em>por aqui?</em></h2><p id="members-dialog-hint">Pessoas conectadas ao servidor agora.</p><div class="members-modal-grid"><div><h3><span class="status-dot"></span> ONLINE <span id="mobile-online-count">—</span></h3><div id="mobile-online-members" class="member-list"></div></div><div><h3>OFFLINE <span id="mobile-offline-count">—</span></h3><div id="mobile-offline-members" class="member-list"></div></div></div></dialog><dialog id="image-dialog" class="dialog dialog-image"><div class="dialog-top"><span>IMAGEM / ARQUIVO</span><button type="button" data-close aria-label="Fechar imagem">×</button></div><img id="image-dialog-img" alt="Imagem compartilhada na conversa"><p id="image-dialog-caption"></p></dialog>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js" defer></script>
-<script src="./app.js?v=6" defer></script>
-<script src="./extras.js?v=6" defer></script>
+<script src="./app.js?v=xq-ui7-20261016" defer></script>
+<script src="./extras.js?v=xq-ui7-20261016" defer></script>
 </body></html>
