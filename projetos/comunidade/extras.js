@@ -53,6 +53,8 @@ function renderAvatar(node,userId){
 function applyOwnAvatar(){
  if(!state?.user)return;
  renderAvatar($("#own-avatar"),state.user.id);
+ // Same photo in the always-visible account button; never overwrite with a letter.
+ renderAvatar($("#header-avatar"),state.user.id);
  const preview=$("#edit-avatar-preview");
  const img=$("#edit-avatar-img");
  const fallback=$("#edit-avatar-fallback");
