@@ -105,6 +105,7 @@ async function selectServer(id){
 async function selectChannel(id){
  const channel=state.channels.find(c=>c.id===id);if(!channel)return;
  state.currentChannel=channel;
+ window.XqCommunity?.channelSelected(channel);
  if(state.realtime){await state.client.removeChannel(state.realtime);state.realtime=null;}
  const stamp=++state.pendingLoad;
  q("#channel-title").textContent=channel.name;
