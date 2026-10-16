@@ -1,154 +1,136 @@
 <div align="center">
 
-# ⚫ LUIZ EDUARDO — PORTFÓLIO
+# XQRENS · Portfólio
 
-**Desenvolvedor em formação • Sistemas • Web Design**
+**Projetos web, estudos no SENAI e um pouco do meu jeito de ver a internet.**
 
-Um espaço pessoal onde código, estética sombria, música, mangás e histórias se encontram.
+Sou Luiz Eduardo, estudante de Desenvolvimento de Sistemas. Uso este repositório para mostrar o que estou aprendendo com **HTML, CSS e JavaScript**, desde exercícios de aula até páginas mais completas.
 
-[🌐 Abrir portfólio](https://xqrens.vercel.app/) ·[📷 Instagram](https://www.instagram.com/lxqrens/)
+[**🌐 Conhecer o portfólio**](https://xqrens-portifolio.vercel.app/) · [**🧠 Conhecer o Mente em Flor**](./mente-em-flor/) · [**📚 Ver meus projetos**](./docs/PROJETOS.md)
 
-![Status](https://img.shields.io/badge/status-em%20desenvolvimento-6c5ce7?style=for-the-badge)
-![Feito com](https://img.shields.io/badge/feito%20com-HTML%20%7C%20CSS%20%7C%20JavaScript-171717?style=for-the-badge)
+![HTML5](https://img.shields.io/badge/HTML5-estudando-181818?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-estudando-181818?style=flat-square&logo=css&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-praticando-181818?style=flat-square&logo=javascript&logoColor=white)
+![Status](https://img.shields.io/badge/status-em%20evolução-6b7462?style=flat-square)
 
 </div>
 
 ---
 
-## 🕯️ Sobre o projeto
+## ✦ O projeto em 10 segundos
 
-Este é meu portfólio pessoal: um site para apresentar quem eu sou, o que estou aprendendo e as coisas que fazem parte da minha vida. A proposta mistura uma interface escura, detalhes em roxo e uma atmosfera inspirada em mangás, animes e na internet estranha.
+- **Portfólio pessoal:** visual inspirado em mangás, capítulos navegáveis, animações, temas e projetos reunidos em um só lugar.
+- **Mente em Flor:** site educativo sobre saúde mental com práticas opcionais, pausa guiada, ideias para conversar com alguém e caminhos para buscar apoio.
+- **Estudos de front-end:** um acervo de **19 páginas e exercícios**, feitos em diferentes momentos do meu aprendizado.
 
-O projeto está em desenvolvimento e serve também como espaço para praticar front-end, experimentar animações e melhorar minhas habilidades aos poucos.
+> Não é um produto pronto nem uma vitrine de alguém que já sabe tudo. É um registro de como venho aprendendo a criar para a web.
 
-## ✦ O que você encontra aqui
+## 🌱 Por onde começar
 
-- **Sobre mim** — minha trajetória e meus interesses.
-- **Aprendizado e tecnologias** — o que venho estudando em desenvolvimento web e Sistemas.
-- **Projetos** — trabalhos e experiências que estou construindo.
-- **Mangás, animes e leituras** — obras que fazem parte dos meus gostos.
-- **Julya e Tofu** — pessoas e momentos importantes da minha vida.
-- **Mente em Flor** — uma iniciativa pessoal para falar sobre saúde mental, acolhimento e a importância de conversar e apoiar uns aos outros.
-- **Interações visuais** — animações de entrada, efeitos nos cards, navegação suave e recursos pensados para uma experiência mais imersiva.
+| Projeto | O que é | Código |
+| --- | --- | --- |
+| **XQRENS · Portfólio** | Site pessoal com navegação por capítulos, referências a mangás, animações e experimentos com JavaScript. | [Abrir arquivos](./projetos/) |
+| **Mente em Flor** | Projeto educativo com dicas, check-in, pausa guiada, kit de cuidado e informações sobre onde procurar ajuda. | [Abrir arquivos](./mente-em-flor/) |
+| **Meu Site** | Uma das páginas que fiz durante os estudos iniciais de HTML. | [Ver exercício](./projetos/projeto_meuSite/index.html) |
+| **Currículo** | Exercício de estruturação de informações em uma página HTML. | [Ver exercício](./projetos/projeto_curriculo/index.html) |
+| **Álbum** | Página de álbum criada durante os exercícios de web. | [Ver exercício](./projetos/projeto_album/index.html) |
+| **Semáforo** | Exercício visual com os estados pare, atenção e ande. | [Ver exercício](./projetos/projeto_semáforo/index.html) |
 
-## 🛠️ Tecnologias
+**[→ Explorar o catálogo dos 19 trabalhos](./docs/PROJETOS.md)**
 
-| Tecnologia | Como utilizo |
-|---|---|
-| HTML5 | Estrutura e conteúdo das páginas |
-| CSS3 | Layout, identidade visual, responsividade e animações |
-| JavaScript | Interações, efeitos e comportamentos da interface |
-| Git e GitHub | Versionamento e organização do projeto |
-| Vercel | Publicação do portfólio |
+## 🖤 O que tem no portfólio?
 
-## 🚀 Como executar localmente
+O visual mistura uma estética editorial, lembranças de mangás psicológicos e elementos pessoais. Algumas partes são sobre mim, como meus gostos e minha trajetória; outras são experiências de interface que criei para praticar.
 
-1. Clone o repositório:
+- **Navegação por capítulos** e pesquisa rápida com `Ctrl + K`.
+- **Mangateca**, com títulos que gosto ou quero conhecer.
+- **Três atmosferas visuais**: papel, noite e ameixa.
+- **Animações, efeitos e pequenas experiências** feitas com JavaScript.
+- **Diário local opcional**, que usa o armazenamento do navegador e permite exportar texto.
+- **Adaptação para celular** e respeito à preferência de movimento reduzido.
+- **Links para os exercícios anteriores**, para acompanhar minha evolução.
 
-   ```bash
-   git clone https://github.com/NeroX07-steam/Portifolio.git
-   ```
+## 🧠 Mente em Flor
 
-2. Entre na pasta do projeto:
+Um dos projetos aos quais mais me dediquei. A ideia é reunir informações acolhedoras sobre saúde mental sem prometer respostas mágicas.
 
-   ```bash
-   cd Portifolio
-   ```
+A página inclui práticas cotidianas, um exercício de pausa guiada, registro de como a pessoa está se sentindo, um kit de sugestões simples, modelos de conversa e uma carta que pode ser exportada. Também reúne caminhos de apoio como **CVV 188**, UBS e CAPS.
 
-3. Abra o `index.html` no navegador, respeitando a estrutura de pastas do projeto. Para testar tudo como publicado, use a configuração de desenvolvimento ou hospedagem estática que corresponde à pasta raiz definida no projeto.
+**Importante:** o projeto é educativo, não oferece diagnóstico nem substitui profissionais de saúde. O conteúdo da carta não é enviado a servidores; se a pessoa optar por salvar, ele fica no navegador utilizado.
 
-## 📁 Estrutura do projeto
+[**→ Ver o código do Mente em Flor**](./mente-em-flor/)
+
+## 🛠️ Tecnologias e aprendizado
+
+| Tecnologia | O que pratico aqui |
+| --- | --- |
+| **HTML5** | Estrutura semântica, conteúdo, formulários e organização de páginas. |
+| **CSS3** | Layout responsivo, tipografia, temas, transições e animações. |
+| **JavaScript** | Interatividade, eventos, armazenamento local e navegação. |
+| **Git e GitHub** | Histórico das alterações e organização do repositório. |
+| **Vercel** | Hospedagem da página principal do portfólio. |
+
+Não há necessidade de instalar um framework para explorar os arquivos principais. Alguns efeitos e fontes podem depender de recursos que o navegador carrega pela internet.
+
+## 📁 Organização do repositório
 
 ```text
 Portifolio/
 ├── projetos/
+│   ├── index.html          # Portfólio principal
+│   ├── style.css           # Estilos e responsividade
+│   ├── script.js           # Interações e navegação
+│   ├── motion.js           # Animações complementares
+│   ├── Img/                # Imagens e ícones
+│   └── projeto_*/          # Exercícios e páginas anteriores
+├── mente-em-flor/
 │   ├── index.html
 │   ├── style.css
-│   └── script.js
-├── mente-em-flor/
-│   └── ...
+│   ├── script.js
+│   └── novidades.js
+├── docs/
+│   ├── PROJETOS.md         # Guia dos projetos
+│   └── DIVULGACAO.md       # Resumo para compartilhar e pedir feedback
 └── README.md
 ```
 
-> A estrutura acima é um resumo dos arquivos principais; imagens, fontes e outros recursos podem estar em pastas adicionais.
+## 💻 Executar no computador
 
-## 🧠 A ideia por trás do Mente em Flor
+**Opção simples:** abra a pasta no VS Code e use uma extensão de servidor local, como *Live Server*, no arquivo `projetos/index.html`.
 
-O Mente em Flor surgiu de uma experiência pessoal: perceber como conversar com amigos, ouvir sem julgar e aceitar apoio pode fazer diferença nos momentos difíceis. Quero usar o projeto para incentivar conversas honestas sobre saúde mental, sem tratar o assunto como algo simples ou igual para todo mundo.
+**Pelo terminal:** com Python 3 instalado, a partir da pasta raiz do repositório:
 
-O site não substitui ajuda profissional. Ele busca transmitir acolhimento e lembrar que ninguém precisa enfrentar tudo em silêncio.
+```bash
+git clone https://github.com/NeroX07-steam/Portifolio.git
+cd Portifolio
+python -m http.server 8000
+```
 
-## 🗺️ Próximos passos
+Depois abra:
 
-- [ ] Continuar refinando as animações e transições.
-- [ ] Melhorar a experiência em celulares e telas menores.
-- [ ] Adicionar novos projetos conforme eu for aprendendo.
-- [ ] Revisar acessibilidade, desempenho e organização do código.
+- **Portfólio:** http://localhost:8000/projetos/
+- **Mente em Flor:** http://localhost:8000/mente-em-flor/
 
-## 👤 Sobre mim
+> O site principal fica em `projetos/index.html`, não na raiz do repositório. Se for publicar em hospedagem estática, configure o diretório correto. A pasta `mente-em-flor` é um projeto separado dentro deste repositório.
 
-Sou Luiz Eduardo, estudante de desenvolvimento de sistemas e desenvolvedor em formação. Gosto de criar sites, explorar ideias visuais e aprender na prática. Este portfólio é um projeto vivo: ele muda conforme eu aprendo e descubro novas possibilidades.
+## 💬 Feedback e melhorias
 
-- **Portfólio:** https://xqrens.vercel.app
-- **Instagram:** https://www.instagram.com/lxqrens/
-- **GitHub:** https://github.com/NeroX07-steam
+Estou estudando e quero melhorar as páginas aos poucos. Se você encontrou um problema de layout, um botão que não funciona ou tem uma sugestão concreta, pode [abrir uma issue](https://github.com/NeroX07-steam/Portifolio/issues/new/choose).
+
+**[→ Como enviar feedback útil](./CONTRIBUTING.md)**
+
+Ideias para as próximas versões incluem revisar acessibilidade, desempenho, links e a experiência em telas menores.
+
+## ✉️ Contato
+
+[GitHub](https://github.com/NeroX07-steam) · [Instagram](https://www.instagram.com/lxqrens/) · [Site](https://xqrens-portifolio.vercel.app/)
 
 ---
+
+<sub>Este repositório reúne estudos e conteúdo pessoal. Ainda não há uma licença aberta declarada para reutilização do código e das imagens. Obras e referências de terceiros pertencem aos respectivos autores.</sub>
 
 <div align="center">
 
-*Feito com código, curiosidade e um pouco de caos.* 🖤
+*Aprendendo, errando e criando uma página de cada vez.* ✳
 
 </div>
-
----
-
-## ✳ Edição mangá interativo — Outubro de 2026
-
-O projeto original foi expandido mantendo os trabalhos do SENAI e a estrutura já existente em `projetos/`.
-
-### Novidades
-
-- **Capítulos editoriais:** índice navegável com 12 destinos principais.
-- **A Julya é minha namorada:** capítulo atualizado, com homenagem especial.
-- **Biblioteca pessoal:** obras que gosto e quero conhecer, sem reproduzir mangás protegidos por direitos autorais.
-- **Fragmentos pessoais:** cartões sobre música, código, SENAI, projetos e memórias.
-- **Laboratório:** frases aleatórias, cartas breves, partículas, controle de atmosfera e uma mini linha do tempo.
-- **Três atmosferas:** papel, noite e ameixa, salvas neste navegador.
-- **Diário local:** salva texto apenas no navegador, permite exportar TXT e apagar.
-- **Navegação rápida:** pressione `Ctrl + K` (ou `⌘ + K` no Mac).
-- **Movimento acessível:** as novas animações respeitam `prefers-reduced-motion`.
-- **Responsividade:** regras específicas de layout para celular e tablet.
-
-### Organização
-
-Os arquivos principais continuam em:
-
-- `projetos/index.html`
-- `projetos/style.css`
-- `projetos/script.js`
-
-**Observação sobre a publicação:** se a Vercel estiver configurada com a pasta `projetos` como raiz, o diretório irmão `mente-em-flor` não será servido automaticamente. É necessário configurar a publicação para incluir as duas pastas ou informar o endereço público separado do Mente em Flor.
-
-**Sobre a quantidade de código:** o site tem mais de seis mil linhas distribuídas entre HTML, CSS e JavaScript, incluindo o código preservado do projeto anterior. Quantidade de linhas não equivale a quantidade de recursos nem garante qualidade.
-
-
----
----
-
-## ☾ Mangateca, Julya e projetos pessoais
-
-O portfólio agora está voltado novamente para projetos pessoais e estudos, sem a aba antiga de comunidade. As áreas existentes de Julya, Tofu, mangás, animações, SENAI e projetos permanecem.
-
-- **Julya:** um capítulo pessoal dedicado à minha namorada.
-- **Mangateca:** títulos de mangás e quadrinhos que gosto ou quero conhecer.
-- **Mente em Flor:** recursos educativos e interativos sobre autocuidado, conversar com alguém e buscar apoio.
-- **Portfólio:** capítulos, filtros de projetos, preferências visuais e experiências locais com JavaScript.
-
-### Mente em Flor
-
-O projeto em `mente-em-flor/` possui três novas áreas: kit com ideias de pausas opcionais, modelos de conversa para pedir apoio ou escutar um amigo e uma carta pessoal que pode ser exportada em TXT. O texto não é enviado a nenhum servidor; salvar no navegador é opcional e não é indicado em computadores compartilhados.
-
-### Histórico
-
-A comunidade experimental foi retirada dos arquivos publicados no repositório. Versões anteriores continuam recuperáveis pelo histórico do Git. **Os registros do Supabase não foram excluídos**, para evitar apagar contas, mensagens e fotos sem um pedido específico.
