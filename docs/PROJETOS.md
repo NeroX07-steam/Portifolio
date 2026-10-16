@@ -2,7 +2,7 @@
 
 Este é um mapa rápido dos arquivos do meu repositório. Eu sou estudante de Desenvolvimento de Sistemas no SENAI e estou aprendendo programação web. Alguns projetos são pequenos exercícios de aula; outros eu desenvolvi para experimentar ideias pessoais.
 
-[← Voltar ao README](../README.md) · [🌐 Ver o portfólio](https://xqrens-portifolio.vercel.app/)
+[← Voltar ao README](../README.md) · [🌐 Ver o portfólio](https://portifolio-projetos-git-main-pedro-luiz.vercel.app/)
 
 ## ✦ Para conhecer primeiro
 
@@ -16,7 +16,7 @@ O projeto que reúne minha trajetória, meus gostos, mangás, seções pessoais 
 
 ### 02. Mente em Flor
 
-[Ver código do Mente em Flor](../mente-em-flor/index.html)
+[Abrir Mente em Flor](https://xqrens-portifolio.vercel.app/) · [Ver código](../mente-em-flor/index.html)
 
 Um site educativo pensado para conversar sobre saúde mental de um jeito acolhedor. Inclui dicas, uma pausa guiada, um check-in, sugestões para dias difíceis, ideias para conversar com alguém e caminhos para buscar apoio.
 
