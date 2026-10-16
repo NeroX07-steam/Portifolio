@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#111216">
+<meta name="description" content="XQRENS Comunidade: servidores, canais e conversas em tempo real.">
+<title>XQRENS / Comunidade</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css?v=3">
+</head>
+<body>
+<div class="noise" aria-hidden="true"></div>
+<div id="toasts" aria-live="polite" role="status" class="toast"></div>
+<main class="app">
+<aside class="server-rail" aria-label="Servidores">
+  <a class="rail-logo" href="../index.html" aria-label="Voltar ao portfólio">✳</a>
+  <div class="rail-divider"></div>
+  <div id="server-icons" class="server-icons"></div>
+  <button id="create-server-icon" title="Criar servidor" aria-label="Criar servidor" type="button" class="rail-create">+</button>
+  <button id="discover-icon" title="Explorar servidores" aria-label="Explorar servidores" type="button" class="rail-explore">⌕</button>
+  <a href="../index.html" class="rail-back" title="Portfólio" aria-label="Voltar ao site">↗</a>
+</aside>
+<aside class="channel-panel">
+  <div class="channel-top"><div><span class="eyebrow">XQRENS NETWORK</span><h1 id="server-title">Comunidade<span>↗</span></h1></div><button id="mobile-toggle" aria-label="Mostrar canais" class="mobile-toggle">☰</button></div>
+  <div id="signed-menu" hidden>
+    <div class="channel-group-title"><span>CANAIS DE TEXTO</span><button id="add-channel-button" title="Criar canal" hidden>+</button></div>
+    <nav id="channel-list" aria-label="Canais de texto"></nav>
+    <button id="explore-button" class="text-action">⌕ Explorar servidores</button>
+    <button id="new-server-button" class="text-action">✳ Criar servidor</button>
+  </div>
+  <div class="channel-quote"><span>UMA FRASE ALEATÓRIA</span><p>Às vezes um lugar na internet também vira uma lembrança.</p><i>✳</i></div>
+  <div class="profile-bar" id="profile-bar" hidden><div class="avatar" id="own-avatar">?</div><div class="profile-name"><strong id="profile-username">...</strong><small>conectado</small></div><button type="button" id="profile-edit" title="Editar nome">✎</button><button type="button" id="sign-out" title="Sair">⏻</button></div>
+</aside>
+<section class="conversation" aria-label="Conversa">
+  <header class="conversation-head"><div class="conversation-name"><span>#</span><strong id="channel-title">bem-vindo</strong><small id="channel-subtitle">um lugar para conversar e criar</small></div><button type="button" id="show-explore" class="header-action">EXPLORAR ↗</button></header>
+  <div class="welcome" id="welcome-panel"><span class="welcome-kicker">ONLINE / OUTUBRO DE 2026</span><div class="welcome-art" aria-hidden="true">☾</div><h2>Uma internet<br>mais <em>nossa.</em></h2><p>Crie uma conta, encontre servidores, abra canais de texto e converse com pessoas que também gostam de mangás, anime, música e código.</p><button type="button" class="primary" id="welcome-start">COMEÇAR <span>↗</span></button></div>
+  <div id="chat-screen" class="chat-screen" hidden><div class="chat-topic"><div class="topic-icon">#</div><h2 id="chat-topic-name">geral</h2><p>Esse é o começo deste canal. Seja gentil, compartilhe ideias e não publique dados privados.</p></div><div class="messages" id="message-list" role="log" aria-live="polite" aria-relevant="additions"></div><form id="message-form" class="composer"><label for="message-input" class="sr-only">Enviar mensagem</label><textarea id="message-input" placeholder="Mensagem para #geral" maxlength="2000" rows="1" required></textarea><span id="message-count">0/2000</span><button type="submit" id="send-button">ENVIAR ↑</button></form></div>
+</section>
+<aside class="right-panel"><span class="eyebrow">01 / INTERFACE</span><div class="right-emblem">✳</div><h2>Conexões<br><em>reais.</em></h2><p>Servidores criados por pessoas, conversas que acontecem em tempo real e um canto novo dentro do portfólio.</p><div class="right-stats"><div><strong id="server-count">0</strong><span>SERVIDORES</span></div><div><strong>24/7</strong><span>ESTILO MANGÁ</span></div></div><div class="right-rules"><span>NOTAS IMPORTANTES</span><p>Sem spam. Sem assédio. Não compartilhe informações pessoais nem marque encontros com desconhecidos.</p><p>Mensagens podem ser vistas por membros do servidor. Não use isto para conversas sensíveis.</p></div><a href="../index.html" class="right-link">← VOLTAR AO PORTFÓLIO</a></aside>
+</main>
+<dialog id="auth-dialog" class="dialog"><div class="dialog-top"><span>CONTA / 001</span><button type="button" data-close aria-label="Fechar">×</button></div><h2>Entre na <em>conversa.</em></h2><p>Use seu e-mail e senha. Se sua conta precisar de confirmação, confira a caixa de entrada.</p><form id="auth-form"><label for="auth-email">E-MAIL</label><input type="email" id="auth-email" autocomplete="email" maxlength="150" required placeholder="seu@email.com"><label for="auth-password">SENHA</label><input id="auth-password" type="password" autocomplete="current-password" minlength="6" maxlength="128" required placeholder="••••••••"><button class="primary" type="submit" id="auth-submit">ENTRAR ↗</button></form><button type="button" id="auth-mode" class="switch-action">Ainda não tenho conta → Criar</button><p class="dialog-hint" id="auth-status"></p></dialog>
+<dialog id="server-dialog" class="dialog"><div class="dialog-top"><span>NOVO SERVIDOR / 002</span><button type="button" data-close>×</button></div><h2>Um espaço <em>seu.</em></h2><p>Servidores são públicos nesta primeira versão. Quem tiver conta pode encontrá-los e entrar.</p><form id="server-form"><label for="server-name">NOME DO SERVIDOR</label><input id="server-name" required minlength="3" maxlength="48" placeholder="meu canto estranho"><label for="server-description">DESCRIÇÃO</label><textarea id="server-description" rows="3" maxlength="240" placeholder="Um lugar para conversar..."></textarea><button type="submit" class="primary">CRIAR SERVIDOR ↗</button></form></dialog>
+<dialog id="channel-dialog" class="dialog"><div class="dialog-top"><span>NOVO CANAL / 003</span><button type="button" data-close>×</button></div><h2>Mais um <em>capítulo.</em></h2><p>Apenas o criador do servidor pode adicionar canais.</p><form id="channel-form"><label for="channel-name">NOME DO CANAL</label><input id="channel-name" required minlength="2" maxlength="32" pattern="[a-z0-9-]{2,32}" placeholder="mangas-e-animes"><button class="primary" type="submit">CRIAR CANAL ↗</button></form></dialog>
+<dialog id="explore-dialog" class="dialog dialog-wide"><div class="dialog-top"><span>SERVIDORES PÚBLICOS / 004</span><button type="button" data-close>×</button></div><h2>Explore <em>mundos.</em></h2><label for="server-search" class="sr-only">Buscar servidor</label><input id="server-search" placeholder="Procurar servidor pelo nome..."><div id="explore-results" class="explore-results"></div></dialog>
+<dialog id="profile-dialog" class="dialog"><div class="dialog-top"><span>SEU PERFIL / 005</span><button type="button" data-close>×</button></div><h2>Como quer ser <em>chamado?</em></h2><form id="profile-form"><label for="new-username">NOME DE EXIBIÇÃO</label><input id="new-username" minlength="3" maxlength="32" required><button class="primary" type="submit">SALVAR NOME ↗</button></form></dialog>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js" defer></script>
+<script src="./app.js?v=3" defer></script>
+</body></html>
