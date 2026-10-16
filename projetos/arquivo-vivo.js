@@ -403,6 +403,44 @@
       filter();
     },"Mangateca");
 
+    /* EXTRA: FINDER DOS PROJETOS ANTIGOS • sem esconder links permanentemente */
+    safeTask(()=>{
+      const search=$("#xq2-project-search"),summary=$("#xq2-project-count");
+      const cards=$("#projetos .project-card");
+      if(!search||!summary||!cards.length)return;
+      let group="todos";
+      const empty=document.createElement("div");
+      empty.className="xq2-project-empty";
+      empty.setAttribute("role","status");
+      empty.textContent="Não encontrei esse projeto. Limpe a busca para ver os trabalhos novamente.";
+      const grid=$("#projetos .projects-grid");
+      const normalize=value=>String(value||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
+      function filter(){
+        let count=0;
+        const query=normalize(search.value.trim());
+        cards.forEach(card=>{
+          const title=$("h3",card)?.textContent||"";
+          const description=$(".project-content p",card)?.textContent||"";
+          const matchesText=!query||normalize(title+" "+description).includes(query);
+          const matchesKind=group==="todos"||card.dataset.projectKind===group;
+          card.hidden=!(matchesText&&matchesKind);
+          if(!card.hidden)count++;
+        });
+        text(summary,count+" DE "+cards.length+" PROJETOS VISÍVEIS");
+        if(count===0&&!empty.isConnected)grid?.append(empty);
+        else if(count>0)empty.remove();
+        $("[data-project-group]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.projectGroup===group)));
+      }
+      search.addEventListener("input",filter);
+      $("[data-project-group]").forEach(button=>button.addEventListener("click",()=>{
+        group=button.dataset.projectGroup||"todos";filter();
+      }));
+      $("#xq2-project-clear")?.addEventListener("click",()=>{
+        search.value="";group="todos";filter();search.focus();
+      });
+      filter();
+    },"filtro de projetos");
+
     /* 07: EASTER EGGS • armazenamento limitado a três fragmentos */
     safeTask(()=>{
       const known=["escuta","lembranca","amanha"];
