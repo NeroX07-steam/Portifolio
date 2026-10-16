@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./style.css?v=xq-ui7-20261016">
+<link rel="stylesheet" href="./style.css?v=xq-profile8-20261016">
 
 <style id="xq-critical-ui-v7">
 /* Critical overrides travel with the HTML so stale stylesheet caches cannot
@@ -51,6 +51,33 @@
   #profile-dialog .profile-photo-actions button {transition:none;}
 }
 </style>
+
+<style id="xq-account-access-v8">
+/* Conta sempre disponível, independente de ter servidor ou barra lateral aberta */
+#account-launch{appearance:none;display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:39px;max-width:150px;flex:0 0 auto;padding:5px 11px 5px 5px;border:1px solid #ffffff32;border-radius:11px;background:#292b33;color:#f5eee3;cursor:pointer;transition:background .2s,border-color .2s}
+#account-launch:hover{background:#3b3f48;border-color:#d4c8b47a}
+#account-launch:focus-visible{outline:2px solid #d4c8b4;outline-offset:3px}
+#header-avatar{display:grid;place-items:center;flex:0 0 auto;width:29px;height:29px;border-radius:9px;overflow:hidden;background:#d4c8b4;color:#1a1a1d;font:22px/1 "Instrument Serif",Georgia,serif}
+#header-avatar img{display:block;width:100%;height:100%;object-fit:cover;border-radius:inherit}
+#header-account-label{font:500 10px/1.2 "DM Mono",monospace;letter-spacing:.035em;white-space:nowrap}
+#account-launch[data-signed-in="true"]{background:#292c34}
+#account-launch[data-signed-in="true"] #header-avatar{background:#b9bbaf}
+@media(max-width:950px){
+  #account-launch{padding:4px;min-width:37px;min-height:37px;gap:0}
+  #header-account-label{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+  #header-avatar{width:28px;height:28px}
+}
+@media(max-width:680px){
+  #account-launch{max-width:40px;min-width:37px;padding:4px}
+  .community-header-actions{gap:6px!important}
+  #presence-pill{min-width:67px!important;padding:5px 7px!important}
+  #presence-pill span:last-child{font-size:7px!important}
+  .conversation-head{gap:5px}
+  .conversation-name{gap:7px!important}
+  .conversation-name strong{max-width:70px!important;overflow:hidden;text-overflow:ellipsis}
+}
+@media(prefers-reduced-motion:reduce){#account-launch{transition:none}}
+</style>
 </head>
 <body>
 <div class="noise" aria-hidden="true"></div>
@@ -76,7 +103,7 @@
   <div class="profile-bar" id="profile-bar" hidden><button type="button" class="avatar-button" id="avatar-edit" title="Trocar foto de perfil" aria-label="Trocar foto de perfil"><span class="avatar" id="own-avatar">✳</span><span class="avatar-camera">✎</span></button><div class="profile-name"><strong id="profile-username">...</strong><small>conectado</small></div><button type="button" id="profile-edit" title="Editar nome">✎</button><button type="button" id="sign-out" title="Sair">⏻</button></div>
 </aside>
 <section class="conversation" aria-label="Conversa">
-  <header class="conversation-head"><button type="button" id="mobile-open-channels" class="mobile-open-channels" aria-label="Abrir canais">☰</button><div class="conversation-name"><span>#</span><strong id="channel-title">bem-vindo</strong><small id="channel-subtitle">um lugar para conversar e criar</small></div><div class="community-header-actions"><button type="button" id="presence-pill" class="presence-pill" title="Ver quem está online" aria-label="Ver membros do servidor"><span class="status-dot"></span><strong id="presence-pill-count">—</strong><span>ONLINE</span></button><button type="button" id="show-explore" class="header-action">EXPLORAR ↗</button></div></header>
+  <header class="conversation-head"><button type="button" id="mobile-open-channels" class="mobile-open-channels" aria-label="Abrir canais">☰</button><div class="conversation-name"><span>#</span><strong id="channel-title">bem-vindo</strong><small id="channel-subtitle">um lugar para conversar e criar</small></div><div class="community-header-actions"><button type="button" id="presence-pill" class="presence-pill" title="Ver quem está online" aria-label="Ver membros do servidor"><span class="status-dot"></span><strong id="presence-pill-count">—</strong><span>ONLINE</span></button><button type="button" id="account-launch" class="account-launch" aria-label="Entrar ou editar meu perfil" title="Abrir minha conta"><span id="header-avatar" class="account-launch-avatar" aria-hidden="true">✳</span><span id="header-account-label" class="account-launch-label">ENTRAR</span></button><button type="button" id="show-explore" class="header-action">EXPLORAR ↗</button></div></header>
   <div class="welcome" id="welcome-panel"><span class="welcome-kicker">ONLINE / OUTUBRO DE 2026</span><div class="welcome-art" aria-hidden="true">☾</div><h2>Uma internet<br>mais <em>nossa.</em></h2><p>Crie uma conta, encontre servidores, abra canais de texto e converse com pessoas que também gostam de mangás, anime, música e código.</p><button type="button" class="primary" id="welcome-start">COMEÇAR <span>↗</span></button></div>
   <div id="chat-screen" class="chat-screen" hidden><div class="chat-topic"><div class="topic-icon">#</div><h2 id="chat-topic-name">geral</h2><p>Esse é o começo deste canal. Seja gentil, compartilhe ideias e não publique dados privados.</p></div><div class="messages" id="message-list" role="log" aria-live="polite" aria-relevant="additions"></div><div class="composer-wrapper"><div id="attachment-preview" class="attachment-preview" hidden><div class="attachment-preview-image"><img id="attachment-preview-img" alt="Prévia da imagem a enviar"></div><div class="attachment-preview-copy"><strong id="attachment-name">imagem.webp</strong><small>Será compartilhada com os membros do canal.</small></div><button type="button" id="attachment-remove" aria-label="Remover imagem anexada">×</button></div><form id="message-form" class="composer"><input type="file" id="chat-image-file" accept="image/jpeg,image/png,image/webp" hidden><button type="button" id="attach-image" class="attach-image" aria-label="Anexar imagem" title="Enviar uma foto">+</button><label for="message-input" class="sr-only">Enviar mensagem</label><textarea id="message-input" placeholder="Mensagem para #geral" maxlength="2000" rows="1"></textarea><span id="message-count">0/2000</span><button type="submit" id="send-button">ENVIAR ↑</button></form><p class="composer-hint">IMAGENS ATÉ 5 MB · JPG, PNG OU WEBP · NÃO ENVIE INFORMAÇÕES PESSOAIS</p></div></div>
 </section>
@@ -90,6 +117,6 @@
 <dialog id="moderation-dialog" class="dialog dialog-wide"><div class="dialog-top"><span>MODERAÇÃO / 006</span><button type="button" data-close>×</button></div><h2>Cuidar da <em>comunidade.</em></h2><p>Aqui ficam denúncias do seu servidor. Revise com atenção. Você pode excluir mensagens e denunciar abusos à plataforma quando necessário.</p><div id="moderation-results" class="explore-results"></div></dialog>
 <dialog id="members-dialog" class="dialog dialog-wide"><div class="dialog-top"><span>AMIGOS ONLINE / 007</span><button type="button" data-close>×</button></div><h2>Quem está <em>por aqui?</em></h2><p id="members-dialog-hint">Pessoas conectadas ao servidor agora.</p><div class="members-modal-grid"><div><h3><span class="status-dot"></span> ONLINE <span id="mobile-online-count">—</span></h3><div id="mobile-online-members" class="member-list"></div></div><div><h3>OFFLINE <span id="mobile-offline-count">—</span></h3><div id="mobile-offline-members" class="member-list"></div></div></div></dialog><dialog id="image-dialog" class="dialog dialog-image"><div class="dialog-top"><span>IMAGEM / ARQUIVO</span><button type="button" data-close aria-label="Fechar imagem">×</button></div><img id="image-dialog-img" alt="Imagem compartilhada na conversa"><p id="image-dialog-caption"></p></dialog>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js" defer></script>
-<script src="./app.js?v=xq-ui7-20261016" defer></script>
-<script src="./extras.js?v=xq-ui7-20261016" defer></script>
+<script src="./app.js?v=xq-profile8-20261016" defer></script>
+<script src="./extras.js?v=xq-profile8-20261016" defer></script>
 </body></html>
