@@ -28,6 +28,7 @@ const userLabel = userId => state.profileCache.get(userId)||("leitor-"+safe(user
 const dates = time => new Intl.DateTimeFormat("pt-BR",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"}).format(new Date(time));
 const make = (tag,className,text) => {const node=document.createElement(tag);if(className)node.className=className;if(text!==undefined)node.textContent=safe(text);return node;};
 function resetView(){
+ window.XqCommunity?.signedOut();
  state.currentChannel=null;state.currentServer=null;state.servers=[];state.memberships=[];
  if(state.realtime){state.client.removeChannel(state.realtime);state.realtime=null;}
  q("#server-icons").replaceChildren();q("#channel-list").replaceChildren();
@@ -37,10 +38,12 @@ function resetView(){
 }
 async function loadProfile(){
  if(!state.user)return;
- const {data,error}=await state.client.from("xq_profiles").select("user_id,username").eq("user_id",state.user.id).maybeSingle();
+ const {data,error}=await state.client.from("xq_profiles").select("user_id,username,avatar_path").eq("user_id",state.user.id).maybeSingle();
  if(error)throw error;
  const profile=data||{user_id:state.user.id,username:"leitor-"+state.user.id.slice(0,8)};
  state.profile=profile;state.profileCache.set(profile.user_id,profile.username);
+ window.XqCommunity?.registerProfiles([profile]);
+ window.XqCommunity?.ownProfileUpdated(profile);
  q("#profile-username").textContent=profile.username;q("#own-avatar").textContent=titleLetter(profile.username);
  show("#profile-bar",true);
 }
@@ -79,6 +82,7 @@ async function selectServer(id){
  if(!server)return;
  if(!state.memberships.some(m=>m.server_id===id))return toast("Entre no servidor antes.");
  state.currentServer=server;state.currentChannel=null;
+ window.XqCommunity?.serverSelected(server);
  q("#server-title").textContent=server.name+" ↗";
  qa(".server-icon").forEach(b=>b.classList.toggle("active",b.title===server.name));
  show("#signed-menu",true);
@@ -110,7 +114,7 @@ async function selectChannel(id){
  qa(".channel-button").forEach(b=>b.classList.toggle("active",b.textContent.trim()==="#"+channel.name));
  show("#welcome-panel",false);show("#chat-screen",true);
  const list=q("#message-list");list.replaceChildren(make("p","empty-messages","Carregando mensagens..."));
- const {data,error}=await state.client.from("xq_messages").select("id,user_id,channel_id,content,created_at").eq("channel_id",id).order("created_at",{ascending:false}).limit(80);
+ const {data,error}=await state.client.from("xq_messages").select("id,user_id,channel_id,content,image_path,created_at").eq("channel_id",id).order("created_at",{ascending:false}).limit(80);
  if(stamp!==state.pendingLoad)return;
  if(error)throw error;
  const rows=(data||[]).reverse();
@@ -135,12 +139,13 @@ async function selectChannel(id){
 async function cacheNames(userIds){
  const missing=[...new Set(userIds)].filter(x=>!state.profileCache.has(x));
  if(!missing.length)return;
- const {data,error}=await state.client.from("xq_profiles").select("user_id,username").in("user_id",missing);
+ const {data,error}=await state.client.from("xq_profiles").select("user_id,username,avatar_path").in("user_id",missing);
  if(error)return;
  (data||[]).forEach(profile=>state.profileCache.set(profile.user_id,profile.username));
+ window.XqCommunity?.registerProfiles(data||[]);
 }
 function renderMessage(message){
- if(!message?.id||!message?.content)return;
+ if(!message?.id||(!message?.content&&!message?.image_path))return;
  const el=make("article","message");el.dataset.messageId=safe(message.id);
  const avatar=make("div","message-avatar",titleLetter(userLabel(message.user_id)));
  const body=make("div","message-body"),info=make("div","message-info");
@@ -155,6 +160,7 @@ function renderMessage(message){
      const {error}=await state.client.from("xq_messages").delete().eq("id",message.id);
      if(error)return notifyError(error);
      el.remove();
+     window.XqCommunity?.messageDeleted(message);
    });actions.append(deleteButton);
  }else{
    const report=make("button","","⚑");report.title="Denunciar mensagem";
@@ -167,6 +173,7 @@ function renderMessage(message){
    });actions.append(report);
  }
  el.append(avatar,body,actions);q("#message-list").appendChild(el);
+ window.XqCommunity?.enhanceMessage(el,message);
 }
 function scrollMessages(){const list=q("#message-list");list.scrollTop=list.scrollHeight;}
 async function signInOrUp(event){
@@ -210,18 +217,38 @@ async function createChannel(event){
  await selectServer(serverId);await selectChannel(data.id);
  toast("Canal criado!");
 }
+
 async function sendMessage(event){
- event.preventDefault();if(!state.currentChannel||!state.user)return;
- const input=q("#message-input");const content=input.value.trim();
- if(!content||content.length>2000)return;
- const button=q("#send-button");button.disabled=true;
+ event.preventDefault();
+ if(!state.currentChannel||!state.user)return;
+ const input=q("#message-input"),content=input.value.trim();
+ const extras=window.XqCommunity;
+ const hasImage=Boolean(extras?.hasAttachment());
+ if((!content&&!hasImage)||content.length>2000)return;
+ const button=q("#send-button");
+ button.disabled=true;
+ let uploadedPath=null;
  try{
-   const {data,error}=await state.client.from("xq_messages").insert({channel_id:state.currentChannel.id,user_id:state.user.id,content}).select("id,user_id,channel_id,content,created_at").single();
+   if(hasImage)uploadedPath=await extras.uploadAttachment(state.currentServer.id,state.currentChannel.id);
+   const {data,error}=await state.client.from("xq_messages")
+    .insert({channel_id:state.currentChannel.id,user_id:state.user.id,content,image_path:uploadedPath})
+    .select("id,user_id,channel_id,content,image_path,created_at").single();
    if(error)throw error;
-   input.value="";input.style.height="auto";q("#message-count").textContent="0/2000";
-   if(!q('[data-message-id="'+data.id+'"]')){renderMessage(data);scrollMessages();}
- }catch(error){notifyError(error);}
- finally{button.disabled=false;input.focus();}
+   input.value="";
+   input.style.height="auto";
+   q("#message-count").textContent="0/2000";
+   extras?.clearAttachment();
+   if(!q('[data-message-id="'+data.id+'"]')){
+     renderMessage(data);
+     scrollMessages();
+   }
+ }catch(error){
+   if(uploadedPath)await state.client.storage.from("xq-chat-media").remove([uploadedPath]).catch(()=>{});
+   notifyError(error);
+ }finally{
+   button.disabled=false;
+   input.focus();
+ }
 }
 async function explore(){
  if(!state.user)return open("auth-dialog");
@@ -264,6 +291,7 @@ async function saveProfile(event){
  if(error)return notifyError(error);
  close("profile-dialog");await loadProfile();
  await selectChannel(state.currentChannel?.id).catch(()=>{});
+ window.XqCommunity?.ownProfileUpdated(state.profile);
  toast("Nome alterado.");
 }
 
@@ -337,6 +365,7 @@ async function boot(){
  bind();
  if(!window.supabase?.createClient){toast("Biblioteca de conexão não carregou. Verifique sua internet.");return;}
  state.client=window.supabase.createClient(URL,PUBLIC_KEY,{auth:{autoRefreshToken:true,persistSession:true,detectSessionInUrl:true}});
+ window.XqCommunity?.initialize(state,{toast,notifyError,selectChannel,cacheNames});
  state.client.auth.onAuthStateChange((_event,session)=>{setTimeout(()=>onAuthChange(session?.user||null).catch(notifyError),0);});
  try{
    const {data,error}=await state.client.auth.getSession();
