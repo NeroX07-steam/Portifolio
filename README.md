@@ -161,3 +161,30 @@ Inclui login e cadastro por e-mail, perfis com apelido, servidores **públicos**
 
 A comunidade está em **beta**: a estrutura de dados e os arquivos estão criados, mas precisam de testes completos de ponta a ponta com contas reais antes de divulgação ampla.
 
+
+---
+
+## 🟢 Comunidade 2.0: amigos online, avatares e fotos
+
+- **Online por servidor:** indicador Realtime Presence conta usuários distintos conectados àquele servidor (não contas cadastradas e nem abas abertas). Atualiza automaticamente, mas depende de uma conexão Realtime ativa.
+- **Lista de membros:** mostra quem está online/offline. No celular, toque no indicador “ONLINE” para abrir a lista.
+- **Foto de perfil:** clique no seu avatar ou no lápis do perfil para enviar ou remover a foto.
+- **Fotos no chat:** botão \`+\`, colar imagem com \`Ctrl + V\` ou arrastar até o campo de mensagem. Aceita JPG, PNG ou WEBP; o navegador converte para WEBP, reduz dimensão e remove metadados da imagem.
+- **Prévia:** o usuário confere a foto antes de enviar e pode remover o anexo.
+- **Visualização:** clique na imagem enviada para ampliar.
+
+### Storage e segurança
+
+- \`xq-avatars\`: fotos de perfil **públicas**, limitadas a **1 MB por arquivo convertido**.
+- \`xq-chat-media\`: imagens de canais em **bucket privado**, limitadas a **5 MB por arquivo convertido**. O servidor só gera URLs assinadas temporárias para membros autorizados.
+- Políticas RLS de \`storage.objects\` impedem uploads em pastas de outros usuários e restringem leitura de fotos de canais aos membros.
+- O banco valida que as imagens referenciadas por mensagens pertencem ao canal e à pessoa que enviou.
+- \`realtime.messages\`: políticas para canais privados de presença por servidor.
+- Fotos de perfil e imagens dos chats não ficam guardadas dentro do GitHub.
+- Não envie documentos pessoais, senhas, endereços ou fotos de colegas sem autorização. Servidores continuam **públicos para contas cadastradas** nesta versão.
+- Só quem estiver com o site aberto e conectado aparece online. Realtime pode desconectar em redes restritas, como a de algumas escolas.
+
+### Testes antes de divulgar
+
+Verifique com **duas contas diferentes**: cadastro/login, entrada no mesmo servidor, contagem online, upload/troca/remoção do avatar, envio da imagem com e sem texto, leitura do arquivo em outro login, restrição para quem não pertence ao servidor e layout no celular. Também monitore os limites de uso do Supabase Storage e Realtime.
+
