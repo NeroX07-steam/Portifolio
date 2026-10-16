@@ -83,6 +83,7 @@ async function selectServer(id){
  qa(".server-icon").forEach(b=>b.classList.toggle("active",b.title===server.name));
  show("#signed-menu",true);
  show("#add-channel-button",own(server.owner_id));
+ show("#moderate-button",own(server.owner_id));
  const {data,error}=await state.client.from("xq_channels").select("id,server_id,name,created_at").eq("server_id",id).order("created_at");
  if(error)throw error;
  state.channels=data||[];
@@ -147,7 +148,7 @@ function renderMessage(message){
  const time=make("time","",dates(message.created_at));time.dateTime=message.created_at;info.append(time);
  body.append(info,make("p","message-content",message.content));
  const actions=make("div","message-actions");
- if(own(message.user_id)){
+ if(own(message.user_id)||state.currentServer?.owner_id===state.user?.id){
    const deleteButton=make("button","","×");deleteButton.title="Apagar minha mensagem";
    deleteButton.addEventListener("click",async()=>{
      if(!confirm("Apagar esta mensagem?"))return;
@@ -265,12 +266,49 @@ async function saveProfile(event){
  await selectChannel(state.currentChannel?.id).catch(()=>{});
  toast("Nome alterado.");
 }
+
+async function reviewReports(){
+ if(!state.currentServer||state.currentServer.owner_id!==state.user?.id)return toast("Somente o criador pode moderar.");
+ open("moderation-dialog");
+ const list=q("#moderation-results");list.replaceChildren(make("p","","Carregando denúncias..."));
+ const {data:channels,error:channelError}=await state.client.from("xq_channels").select("id,name").eq("server_id",state.currentServer.id);
+ if(channelError)return notifyError(channelError);
+ const ids=(channels||[]).map(c=>c.id);
+ if(!ids.length){list.replaceChildren(make("p","","Sem canais."));return;}
+ const {data:msgs,error:msgError}=await state.client.from("xq_messages").select("id,content,channel_id,user_id").in("channel_id",ids);
+ if(msgError)return notifyError(msgError);
+ const messages=msgs||[];
+ if(!messages.length){list.replaceChildren(make("p","","Nenhuma denúncia pendente."));return;}
+ const map=new Map(messages.map(m=>[m.id,m]));
+ const {data:reports,error}=await state.client.from("xq_reports").select("id,message_id,reason,created_at").in("message_id",[...map.keys()]).order("created_at",{ascending:false}).limit(60);
+ if(error)return notifyError(error);
+ list.replaceChildren();
+ if(!(reports||[]).length){list.appendChild(make("p","","Nenhuma denúncia neste servidor."));return;}
+ (reports||[]).forEach(report=>{
+  const msg=map.get(report.message_id);if(!msg)return;
+  const row=make("article","explore-server moderation-item");
+  const content=make("div","explore-server-content");
+  content.append(make("h3","","⚑ "+report.reason),make("p","","Mensagem: "+msg.content.slice(0,350)));
+  const del=make("button","","EXCLUIR");
+  del.addEventListener("click",async()=>{
+   if(!confirm("Remover esta mensagem do servidor?"))return;
+   const {error:deleteError}=await state.client.from("xq_messages").delete().eq("id",msg.id);
+   if(deleteError)return notifyError(deleteError);
+   row.remove();
+   q('[data-message-id="'+msg.id+'"]')?.remove();
+   toast("Mensagem removida.");
+  });
+  row.append(content,del);list.appendChild(row);
+ });
+}
+
 function bind(){
  qa("[data-close]").forEach(button=>button.addEventListener("click",()=>button.closest("dialog").close()));
  q("#welcome-start").addEventListener("click",()=>state.user?explore():open("auth-dialog"));
  ["#explore-button","#discover-icon","#show-explore"].forEach(s=>q(s).addEventListener("click",()=>explore().catch(notifyError)));
  ["#new-server-button","#create-server-icon"].forEach(s=>q(s).addEventListener("click",()=>state.user?open("server-dialog"):open("auth-dialog")));
  q("#add-channel-button").addEventListener("click",()=>open("channel-dialog"));
+ q("#moderate-button").addEventListener("click",()=>reviewReports().catch(notifyError));
  q("#server-form").addEventListener("submit",e=>createServer(e).catch(notifyError));
  q("#channel-form").addEventListener("submit",e=>createChannel(e).catch(notifyError));
  q("#message-form").addEventListener("submit",e=>sendMessage(e).catch(notifyError));
