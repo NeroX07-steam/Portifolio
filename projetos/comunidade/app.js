@@ -27,8 +27,35 @@ const titleLetter = value => safe(value).trim().charAt(0).toUpperCase()||"✳";
 const userLabel = userId => state.profileCache.get(userId)||("leitor-"+safe(userId).slice(0,5));
 const dates = time => new Intl.DateTimeFormat("pt-BR",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"}).format(new Date(time));
 const make = (tag,className,text) => {const node=document.createElement(tag);if(className)node.className=className;if(text!==undefined)node.textContent=safe(text);return node;};
+
+function syncAccountEntry(){
+ const signedIn=Boolean(state.user);
+ const button=q("#account-launch");
+ if(!button)return;
+ button.dataset.signedIn=String(signedIn);
+ button.setAttribute("aria-label",signedIn?"Editar meu nome e foto de perfil":"Entrar na minha conta");
+ button.title=signedIn?"Minha conta: editar nome e foto":"Entrar ou criar conta";
+ const label=q("#header-account-label");
+ if(label)label.textContent=signedIn?"MEU PERFIL":"ENTRAR";
+ const avatar=q("#header-avatar");
+ if(!signedIn&&avatar)avatar.textContent="✳";
+ else if(signedIn){
+   const name=state.profile?.username||"";
+   if(avatar&&!avatar.querySelector("img"))avatar.textContent=titleLetter(name||"✳");
+ }
+}
+function openMyAccount(){
+ if(!state.user){open("auth-dialog");return;}
+ const input=q("#new-username");
+ if(input)input.value=state.profile?.username||"leitor-"+state.user.id.slice(0,8);
+ open("profile-dialog");
+ window.XqCommunity?.ownProfileUpdated(state.profile);
+}
+
 function resetView(){
  window.XqCommunity?.signedOut();
+ state.profile=null;
+ syncAccountEntry();
  state.currentChannel=null;state.currentServer=null;state.servers=[];state.memberships=[];
  if(state.realtime){state.client.removeChannel(state.realtime);state.realtime=null;}
  q("#server-icons").replaceChildren();q("#channel-list").replaceChildren();
@@ -44,8 +71,9 @@ async function loadProfile(){
  state.profile=profile;state.profileCache.set(profile.user_id,profile.username);
  window.XqCommunity?.registerProfiles([profile]);
  window.XqCommunity?.ownProfileUpdated(profile);
- q("#profile-username").textContent=profile.username;q("#own-avatar").textContent=titleLetter(profile.username);
+ q("#profile-username").textContent=profile.username;
  show("#profile-bar",true);
+ syncAccountEntry();
 }
 async function getMembers(){
  const {data,error}=await state.client.from("xq_members").select("server_id,user_id,role").eq("user_id",state.user.id);
@@ -191,12 +219,37 @@ async function signInOrUp(event){
  finally{button.disabled=false;}
 }
 async function onAuthChange(user){
- const previous=state.user?.id;state.user=user;
- if(!user){resetView();return;}
+ const previous=state.user?.id;
+ if(!user){
+   state.user=null;
+   resetView();
+   return;
+ }
+ state.user=user;
+ // Display account controls immediately, even without servers or profile lookup.
+ if(previous!==user.id)state.profile=null;
+ syncAccountEntry();
+ const fallbackName=state.profile?.username||"leitor-"+user.id.slice(0,8);
+ q("#profile-username").textContent=fallbackName;
+ show("#profile-bar",true);
+ show("#signed-menu",true);
  if(previous===user.id&&state.profile)return;
  try{
-   await loadProfile();show("#signed-menu",true);await refreshServers();
- }catch(error){notifyError(error);toast("O banco ainda pode estar inicializando. Tente novamente em instantes.");}
+   await loadProfile();
+ }catch(error){
+   // Profile editing must never disappear just because profile lookup failed.
+   notifyError(error);
+   state.profile={user_id:user.id,username:fallbackName,avatar_path:null};
+   q("#profile-username").textContent=fallbackName;
+   syncAccountEntry();
+   toast("Não foi possível buscar o perfil agora. Você ainda pode abrir Minha Conta.");
+ }
+ try{
+   await refreshServers();
+ }catch(error){
+   notifyError(error);
+   toast("Não consegui carregar os servidores, mas sua conta continua acessível.");
+ }
 }
 async function createServer(event){
  event.preventDefault();if(!state.user)return open("auth-dialog");
@@ -288,7 +341,7 @@ async function saveProfile(event){
  event.preventDefault();if(!state.user)return;
  const username=q("#new-username").value.trim();
  if(username.length<3||username.length>32)return toast("Nome entre 3 e 32 caracteres.");
- const {error}=await state.client.from("xq_profiles").update({username}).eq("user_id",state.user.id);
+ const {error}=await state.client.from("xq_profiles").upsert({user_id:state.user.id,username},{onConflict:"user_id"});
  if(error)return notifyError(error);
  close("profile-dialog");await loadProfile();
  await selectChannel(state.currentChannel?.id).catch(()=>{});
@@ -332,6 +385,7 @@ async function reviewReports(){
 }
 
 function bind(){
+ syncAccountEntry();
  qa("[data-close]").forEach(button=>button.addEventListener("click",()=>button.closest("dialog").close()));
  q("#welcome-start").addEventListener("click",()=>state.user?explore():open("auth-dialog"));
  ["#explore-button","#discover-icon","#show-explore"].forEach(s=>q(s).addEventListener("click",()=>explore().catch(notifyError)));
@@ -350,7 +404,8 @@ function bind(){
    q("#auth-status").textContent="";
  });
  q("#sign-out").addEventListener("click",async()=>{const {error}=await state.client.auth.signOut();if(error)notifyError(error);else toast("Você saiu.");});
- q("#profile-edit").addEventListener("click",()=>{q("#new-username").value=state.profile?.username||"";open("profile-dialog");});
+ q("#profile-edit").addEventListener("click",openMyAccount);
+ q("#account-launch").addEventListener("click",openMyAccount);
  q("#message-input").addEventListener("input",event=>{
    q("#message-count").textContent=event.target.value.length+"/2000";
    event.target.style.height="auto";event.target.style.height=Math.min(event.target.scrollHeight,150)+"px";
