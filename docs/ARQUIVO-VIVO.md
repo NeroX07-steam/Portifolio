@@ -61,11 +61,22 @@ Há filtros por tema, filtro por estado, busca de títulos, favoritos, contador 
 
 A página começa com **Oyasumi Punpun marcado como já tenho**, e com algumas obras citadas na lista de desejos como **quero ler**. Isso é só um estado inicial; cada pessoa pode alterar sua versão local.
 
-### Sala de Música
+### Sala de Música: reproduzir áudio de verdade
 
-A música que aparece no destaque é **escrita manualmente por quem visita a página e gravada somente no navegador usado**. Portanto ela **não é uma música que Luiz necessariamente está ouvindo**, e outros visitantes não recebem essa escolha.
+Esta edição oferece **duas opções de reprodução no navegador**:
 
-O site fornece acesso ao perfil público do Spotify e a pesquisas por clima. **Não há API, OAuth, acesso ao histórico ou reprodução automática**. Essa distinção é importante para não induzir visitantes ao erro.
+1. **Spotify Embed oficial**: copie o link público de uma faixa, playlist, álbum, episódio ou show, cole na Sala de Música e clique em **ABRIR PLAYER**. É criado um iframe do domínio oficial `open.spotify.com`; ele não começa sozinho e pode ter limitações de playback dependendo da conta e do conteúdo. O site aceita apenas identificadores de conteúdo do Spotify e não carrega outros endereços.
+2. **Áudio local**: escolha um arquivo MP3, M4A, OGG ou WAV de até **30 MB**. O navegador toca usando a tag HTML `audio`. Ele não é enviado a servidores nem persistido; ao recarregar a página será necessário selecioná-lo novamente.
+
+Os dois players são independentes. Para remover uma música, use o respectivo botão de limpar ou descarregar.
+
+A faixa em destaque anterior continua existindo e é **editada manualmente por quem visita**, salva apenas naquele navegador. Nem o destaque nem o Spotify Embed conseguem ler o que o Luiz está ouvindo ao vivo.
+
+#### Como deixar uma música fixa para todos os visitantes
+
+No Spotify: **Compartilhar → Incorporar música** (ou playlist) → copiar código. Para definir a mesma seleção permanentemente para os visitantes do seu portfólio, adicione no arquivo `projetos/index.html` o iframe fornecido pelo Spotify ou defina uma URL padrão no código do site e publique o commit. **Colar um link no formulário do site apenas modifica o navegador atual**, pois não existe painel de administrador nem servidor que grave essa escolha globalmente.
+
+**Atenção:** Spotify oferece a reprodução conforme o conteúdo e as regras da própria plataforma. Se optar por publicar arquivos de áudio hospedados no GitHub, certifique-se de ter os direitos necessários, e nunca inclua músicas comerciais sem autorização.
 
 ### Julya, Tofu e segredos
 
@@ -106,7 +117,7 @@ Essa é uma **base de acessibilidade**, não uma certificação WCAG. Os recurso
 2. Confira que as seções antigas, os 19 exercícios e o link do Mente em Flor continuam funcionando.
 3. Ative modo leitura, teste próximo, anterior e teclado; pressione Esc.
 4. Abra quatro cartas, teste os três controles do Tofu e reinicie a contagem.
-5. Grave um título e artista, recarregue a página e verifique o destaque. Limpe-o.
+5. Teste uma URL válida e uma inválida do Spotify, o botão remover e um MP3 local. Confira que nada toca automaticamente. Grave um título e artista, recarregue e limpe o destaque.
 6. Na seção Projetos, pesquise nomes, teste os filtros e depois limpe a busca.
 7. Na Mangateca, teste os três filtros, estados, favoritos, sorteio e recarregamento.
 8. Percorra as três tecnologias do SENAI, conferindo exemplos e links reais.
