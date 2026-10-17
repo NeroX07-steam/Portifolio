@@ -550,7 +550,46 @@
                   </div>
                 </form>
                 <div class="xq2-track-preview" aria-live="polite"><span class="xq2-kicker">DESTAQUE SALVO LOCALMENTE</span><strong id="xq2-track-summary">Nenhuma faixa escolhida.</strong><small id="xq2-track-artist-view">Você pode colocar uma música sem conectar nenhuma conta.</small></div>
-                <a class="xq2-action" href="https://open.spotify.com/user/31ydaudx7rf6gusyu7bned2tf65i" target="_blank" rel="noopener noreferrer">ABRIR MEU SPOTIFY ↗</a>
+                <a class="xq2-action" href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer">ABRIR SPOTIFY ↗</a>
+              </div>
+            </div>
+            <!-- Música real: Spotify Embed oficial ou áudio local, sem upload / sem autoplay -->
+            <div class="xq2-listening-room xq2-edition" id="xq2-listening-room">
+              <div class="xq2-listening-top">
+                <div><span class="xq2-kicker">PLAYER / ESCOLHA A SUA MÚSICA</span><h3>Agora dá para <em>ouvir.</em></h3></div>
+                <p>O player só carrega quando você escolhe uma música. Não começa a tocar sozinho, não acessa tua conta e não mostra o que o Luiz está ouvindo ao vivo.</p>
+              </div>
+              <div class="xq2-listening-grid">
+                <div class="xq2-listening-pane">
+                  <span class="xq2-listening-index">01 / SPOTIFY</span>
+                  <h4>Colar música ou playlist.</h4>
+                  <p>No Spotify, vá em <strong>Compartilhar → Copiar link</strong>. Cole abaixo para abrir o player dentro do site.</p>
+                  <form id="xq2-spotify-form" class="xq2-spotify-form">
+                    <label for="xq2-spotify-url">LINK DE MÚSICA, ÁLBUM OU PLAYLIST</label>
+                    <input type="url" id="xq2-spotify-url" placeholder="https://open.spotify.com/track/..." inputmode="url" maxlength="400" spellcheck="false" autocomplete="off" required>
+                    <div class="xq2-listening-actions">
+                      <button class="xq2-action xq2-action-primary" type="submit">ABRIR PLAYER ↗</button>
+                      <button class="xq2-action" type="button" id="xq2-spotify-clear">REMOVER</button>
+                    </div>
+                  </form>
+                  <p id="xq2-spotify-feedback" class="xq2-listening-status" role="status" aria-live="polite">Aceita links públicos de faixa, playlist, álbum ou episódio.</p>
+                  <div id="xq2-spotify-embed" class="xq2-spotify-embed" hidden></div>
+                  <p class="xq2-listening-disclaimer">O player é do Spotify, que controla quais músicas e trechos podem ser reproduzidos. Teu link escolhido fica salvo só neste navegador.</p>
+                </div>
+                <div class="xq2-listening-pane">
+                  <span class="xq2-listening-index">02 / ÁUDIO DO SEU COMPUTADOR</span>
+                  <h4>Ouvir um arquivo local.</h4>
+                  <p>Escolha uma música MP3, M4A, OGG ou WAV que você tem permissão para usar. O navegador toca o arquivo sem enviá-lo para o GitHub ou para a Vercel.</p>
+                  <label class="xq2-listening-file-label" for="xq2-local-audio">ESCOLHER ARQUIVO DE ÁUDIO +</label>
+                  <input type="file" id="xq2-local-audio" accept="audio/mpeg,audio/mp3,audio/mp4,audio/x-m4a,audio/ogg,audio/wav,audio/x-wav,.mp3,.m4a,.ogg,.wav">
+                  <div class="xq2-local-player" id="xq2-local-player" hidden>
+                    <span id="xq2-local-name" class="xq2-local-name"></span>
+                    <audio id="xq2-local-audio-player" controls preload="none">Seu navegador não suporta reprodução de áudio.</audio>
+                    <button type="button" class="xq2-action" id="xq2-local-clear">DESCARREGAR ÁUDIO ×</button>
+                  </div>
+                  <p id="xq2-local-feedback" class="xq2-listening-status" role="status" aria-live="polite">Nenhum arquivo foi escolhido. Limite recomendado: até 30 MB.</p>
+                  <p class="xq2-listening-disclaimer">O áudio local não fica no site publicado e precisa ser selecionado novamente depois de recarregar.</p>
+                </div>
               </div>
             </div>
             <div class="xq2-moods">
@@ -2225,7 +2264,7 @@
 
     <script src="./script.js?v=xqrens-social-20261016" defer></script>
     <script src="./motion.js?v=xqrens-motion-20261016" defer></script>
-    <script src="./arquivo-vivo.js?v=2.0.1" defer></script>
+    <script src="./arquivo-vivo.js?v=2.1.0" defer></script>
 
 </body>
 
