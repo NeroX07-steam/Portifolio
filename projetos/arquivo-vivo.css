@@ -258,3 +258,61 @@
   .xq2-project-tools{grid-template-columns:1fr;padding:21px}
   .xq2-project-choices button{font-size:9px;padding:10px 12px}
 }
+
+
+/* ===============================================================
+   Sala de Música / Player real e opcional (Spotify + arquivo local)
+   =============================================================== */
+.xq2-listening-room{margin:23px 0 38px;padding:clamp(20px,3.4vw,43px);border:1px solid var(--xq2-line);
+  background:var(--xq2-sheet);color:var(--xq2-ink)}
+.xq2-listening-top{display:grid;grid-template-columns:1fr minmax(200px,.65fr);align-items:end;
+  gap:24px;padding-bottom:24px;margin-bottom:20px;border-bottom:1px solid var(--xq2-line)}
+.xq2-listening-top h3{font:400 clamp(34px,4.5vw,58px)/1.04 var(--xq2-serif);
+  letter-spacing:-.035em;margin:10px 0 0}
+.xq2-listening-top p{max-width:390px;font:12px/1.85 var(--sans);color:var(--xq2-muted);margin:0}
+.xq2-listening-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.xq2-listening-pane{min-width:0;padding:clamp(20px,2.8vw,32px);background:var(--bg);
+  border:1px solid var(--xq2-line);display:flex;flex-direction:column;gap:12px}
+.xq2-listening-index{font:10px var(--mono);color:var(--xq2-muted);letter-spacing:.12em}
+.xq2-listening-pane h4{font:400 clamp(24px,2.6vw,38px)/1.06 var(--xq2-serif);margin:7px 0 0}
+.xq2-listening-pane p{font:12px/1.75 var(--sans);color:var(--xq2-muted);margin:0}
+.xq2-listening-pane strong{color:var(--xq2-ink)}
+.xq2-spotify-form{display:flex;flex-direction:column;gap:9px;margin-top:4px}
+.xq2-spotify-form label{font:10px/1.7 var(--mono);color:var(--xq2-muted)}
+.xq2-spotify-form input{width:100%;min-width:0;min-height:46px;border:1px solid var(--xq2-line);
+  padding:12px 13px;background:var(--xq2-sheet);color:var(--xq2-ink);font:12px var(--sans)}
+.xq2-spotify-form input:focus-visible{outline:2px solid var(--xq2-ink);outline-offset:2px}
+.xq2-listening-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.xq2-listening-actions .xq2-action{flex:1;min-width:125px}
+.xq2-listening-status{min-height:30px;color:var(--xq2-muted)!important;font:10px/1.7 var(--mono)!important}
+.xq2-listening-status.is-error{color:#b65c50!important}
+.xq2-spotify-embed{overflow:hidden;background:#121212;border-radius:12px;margin-top:10px;border:1px solid #ffffff18}
+.xq2-spotify-embed iframe{border:0;display:block;width:100%;height:352px;max-width:100%;background:#121212}
+.xq2-listening-disclaimer{border-top:1px solid var(--xq2-line);padding-top:12px;margin-top:auto!important;
+  font:10px/1.8 var(--mono)!important;color:var(--xq2-muted)!important}
+.xq2-listening-file-label{display:inline-flex;align-items:center;justify-content:center;cursor:pointer;min-height:46px;
+  margin-top:10px;padding:12px 18px;border:1px solid var(--xq2-ink);background:var(--xq2-ink);color:var(--bg);
+  text-align:center;font:10px/1.7 var(--mono);letter-spacing:.08em;transition:background .25s,color .25s}
+.xq2-listening-file-label:hover{background:var(--bg);color:var(--xq2-ink)}
+.xq2-listening-file-label:focus-within{outline:2px solid var(--xq2-ink);outline-offset:3px}
+.xq2-listening-pane input[type=file]{font:10px var(--sans);max-width:100%;color:var(--xq2-muted)}
+.xq2-local-player{display:flex;flex-direction:column;gap:14px;padding:18px;background:var(--xq2-sheet);
+  border:1px solid var(--xq2-line);margin:4px 0}
+.xq2-local-name{font:11px/1.6 var(--mono);color:var(--xq2-ink);overflow-wrap:anywhere}
+.xq2-local-player audio{display:block;width:100%;max-width:100%;height:54px}
+.xq2-local-player .xq2-action{align-self:start}
+.xq2-listening-room [hidden]{display:none!important}
+@media(max-width:900px){
+ .xq2-listening-top{grid-template-columns:1fr}
+ .xq2-listening-grid{grid-template-columns:1fr}
+ .xq2-listening-pane{padding:22px}
+}
+@media(max-width:500px){
+ .xq2-listening-room{padding:14px}
+ .xq2-listening-pane{padding:18px}
+ .xq2-spotify-embed iframe{height:352px}
+ .xq2-listening-actions .xq2-action{min-width:100%}
+}
+@media(prefers-reduced-motion:reduce){
+ .xq2-listening-file-label{transition:none}
+}
