@@ -40,7 +40,7 @@ Não é uma plataforma comercial. Não estou tentando parecer um desenvolvedor e
 | **01 · Modo Mangá** | Ler o portfólio por capítulos | Índice lateral, modo leitura, anterior/próximo e atalhos no teclado |
 | **02 · Julya.exe** | Quatro pequenas cartas para minha namorada | Botões alternam os textos sem recarregar |
 | **03 · Tofu World** | Meu e da Julya: nosso filho Tofu | Brincadeiras, respostas e contador de carinhos virtual |
-| **04 · Sala de Música** | Músicas e atmosferas | Destaque editável no navegador e links de descoberta no Spotify |
+| **04 · Sala de Música** | Músicas e atmosferas | Player oficial do Spotify por link, áudio local MP3/M4A/OGG/WAV, destaque manual e vinil interativo |
 | **05 · Laboratório SENAI** | Estudos de HTML, CSS e JavaScript | Comparações didáticas e links para exercícios verdadeiros |
 | **06 · Mangateca 2.0** | Acervo de **22 obras** | Busca, temas, lista de desejos, estados de leitura, favoritos e sorteio |
 | **07 · Evolução GitHub** | Marcos do aprendizado | Quatro etapas ligadas a arquivos e histórico reais |
@@ -176,7 +176,8 @@ Também dá para abrir `projetos/index.html` pelo *Live Server* do VS Code.
 ## ♡ Privacidade, conteúdo e limites
 
 - **Mangateca, carinhos do Tofu e destaque musical:** salvos em `localStorage`, apenas no navegador onde foram editados. Não são sincronizados com outros visitantes nem com meu site publicado.
-- **Spotify:** o site não lê a música que estou ouvindo ao vivo. Existem links para meu perfil e para pesquisas públicas; uma integração real precisaria de autorização.
+- **Spotify:** agora há um player incorporado oficial para links públicos de músicas, álbuns e playlists. Ele só carrega quando alguém cola um link e clica em abrir. O site **não lê a música que estou ouvindo ao vivo** e não acessa contas.
+- **Áudio local:** arquivos MP3/M4A/OGG/WAV são reproduzidos pelo próprio navegador, sem upload; não ficam disponíveis para outros visitantes. A reprodução depende do suporte do navegador e das permissões de conteúdo.
 - **Referências a animes e mangás:** são comentários e nomes de obras, não uma reprodução de capítulos ou páginas protegidas.
 - **Mente em Flor:** projeto educativo, não faz diagnóstico nem substitui ajuda profissional. Em situação de risco imediato, procure apoio presencial e os serviços de emergência.
 - **Código e imagens:** este repositório ainda não declara uma licença aberta. Não presuma autorização para republicar imagens pessoais ou reutilizar código sem pedir permissão.
@@ -193,6 +194,7 @@ Sou estudante e recebo bem observações específicas: bugs, sugestões de acess
 - [x] Busca dos 19 projetos, filtros de tema e contador de resultados
 - [x] Mangateca com busca, filtros e lista de leitura local
 - [x] Cartas para Julya, Tofu World e Sala de Música
+- [x] Spotify Embed por link e player de arquivos locais sem upload
 - [x] Comparações didáticas no Laboratório SENAI
 - [x] Linha do tempo com links para o código
 - [x] Segredos, navegação e cuidado com movimento reduzido
