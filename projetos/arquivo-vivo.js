@@ -150,6 +150,141 @@
       });
     },"sala de música");
 
+    /* SPOTIFY PLAYER OFICIAL + PLAYER LOCAL
+       Spotify only loads after explicit user interaction.
+       Never accepts arbitrary iframe URLs or uploads personal audio.
+    */
+    safeTask(()=>{
+      const form=$("#xq2-spotify-form"),input=$("#xq2-spotify-url");
+      const container=$("#xq2-spotify-embed"),status=$("#xq2-spotify-feedback");
+      const clearBtn=$("#xq2-spotify-clear"),key="spotify-embed-link";
+      if(!form||!input||!container||!status)return;
+
+      const allowedTypes=new Set(["track","playlist","album","episode","show"]);
+      function parseSpotify(inputString){
+        const raw=String(inputString||"").trim();
+        let type="",id="";
+        const uri=/^spotify:(track|playlist|album|episode|show):([A-Za-z0-9]{22})$/i.exec(raw);
+        if(uri){
+          type=uri[1].toLowerCase();
+          id=uri[2];
+        }else{
+          let url;
+          try{url=new URL(raw);}catch{return null;}
+          if(url.protocol!=="https:"||url.hostname!=="open.spotify.com"||url.port)return null;
+          const parts=url.pathname.split("/").filter(Boolean);
+          if(/^intl-[a-z]{2,3}$/i.test(parts[0]||""))parts.shift();
+          if(parts[0]==="embed")parts.shift();
+          if(parts.length!==2)return null;
+          type=parts[0].toLowerCase();
+          id=parts[1];
+        }
+        if(!allowedTypes.has(type)||!/^[A-Za-z0-9]{22}$/.test(id))return null;
+        return {
+          url:"https://open.spotify.com/"+type+"/"+id,
+          embed:"https://open.spotify.com/embed/"+type+"/"+id,
+          type
+        };
+      }
+      function message(value,error=false){
+        text(status,value);
+        status.classList.toggle("is-error",Boolean(error));
+      }
+      function clearPlayer(){
+        // Removing the iframe releases Spotify playback when changing tracks.
+        container.replaceChildren();
+        container.hidden=true;
+      }
+      function mount(data){
+        clearPlayer();
+        const frame=document.createElement("iframe");
+        frame.src=data.embed;
+        frame.title="Player incorporado do Spotify";
+        frame.loading="lazy";
+        frame.allow="autoplay; encrypted-media; fullscreen; picture-in-picture";
+        frame.referrerPolicy="strict-origin-when-cross-origin";
+        frame.setAttribute("allowfullscreen","");
+        frame.setAttribute("height","352");
+        frame.setAttribute("width","100%");
+        container.append(frame);
+        container.hidden=false;
+        message("Player do Spotify carregado. Clique em reproduzir dentro dele.");
+      }
+      const previouslySaved=local.get(key);
+      if(previouslySaved && parseSpotify(previouslySaved)){
+        input.value=previouslySaved;
+        message("Link anterior recuperado deste navegador. Clique em ABRIR PLAYER para carregar.");
+      }
+      form.addEventListener("submit",event=>{
+        event.preventDefault();
+        const data=parseSpotify(input.value);
+        if(!data){
+          clearPlayer();
+          message("Link inválido. Copie a URL de uma faixa, playlist, álbum ou episódio em open.spotify.com.",true);
+          input.focus();
+          return;
+        }
+        input.value=data.url;
+        mount(data);
+        local.set(key,data.url);
+      });
+      clearBtn?.addEventListener("click",()=>{
+        clearPlayer();
+        input.value="";
+        local.remove(key);
+        message("Player removido. Cole outro link para ouvir.");
+      });
+    },"spotify embed");
+
+    safeTask(()=>{
+      const input=$("#xq2-local-audio"),player=$("#xq2-local-audio-player");
+      const panel=$("#xq2-local-player"),name=$("#xq2-local-name");
+      const status=$("#xq2-local-feedback"),clear=$("#xq2-local-clear");
+      if(!input||!player||!panel)return;
+      let activeUrl=null;
+      const formats=new Set(["audio/mpeg","audio/mp3","audio/mp4","audio/x-m4a","audio/ogg","audio/wav","audio/x-wav"]);
+      const extensions=/\.(mp3|m4a|ogg|wav)$/i;
+      function unload(){
+        player.pause();
+        player.removeAttribute("src");
+        player.load();
+        if(activeUrl){URL.revokeObjectURL(activeUrl);activeUrl=null;}
+        panel.hidden=true;
+      }
+      input.addEventListener("change",()=>{
+        const file=input.files?.[0];
+        if(!file)return;
+        unload();
+        if(file.size===0||file.size>30*1024*1024){
+          text(status,"Escolha um arquivo de áudio de até 30 MB.");
+          input.value="";
+          return;
+        }
+        if((file.type&&!formats.has(file.type))||!extensions.test(file.name)){
+          text(status,"Formato não compatível. Use MP3, M4A, OGG ou WAV.");
+          input.value="";
+          return;
+        }
+        activeUrl=URL.createObjectURL(file);
+        player.src=activeUrl;
+        text(name,file.name);
+        panel.hidden=false;
+        text(status,"Arquivo carregado só neste navegador. Aperte Play para ouvir.");
+        toast("Áudio preparado. Não foi enviado para nenhum servidor.");
+      });
+      player.addEventListener("error",()=>{
+        if(activeUrl)text(status,"Esse formato de áudio não pôde ser reproduzido neste navegador.");
+      });
+      clear?.addEventListener("click",()=>{
+        unload();
+        input.value="";
+        text(status,"Arquivo descarregado. Escolha outro para ouvir.");
+      });
+      window.addEventListener("pagehide",()=>{
+        if(activeUrl)unload();
+      },{once:true});
+    },"arquivo de áudio local");
+
     /* 05: SENAI • exemplos didáticos, sem alegar serem commits históricos */
     safeTask(()=>{
       const lessons={
