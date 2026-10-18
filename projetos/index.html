@@ -1,2355 +1,359 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description" content="XQRENS: portfólio interativo do Luiz Eduardo, estudante do SENAI. Mangateca, capítulos estilo mangá, música, Julya, Tofu, projetos HTML/CSS/JS e Mente em Flor.">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="pt_BR">
-    <meta property="og:title" content="XQRENS · Arquivo Vivo | Luiz Eduardo">
-    <meta property="og:description" content="Um diário na internet feito de código, mangás, música e memórias. Conheça meus projetos e estudos no SENAI.">
-    <meta property="og:url" content="https://portifolio-projetos-git-main-pedro-luiz.vercel.app/">
-    <meta name="twitter:card" content="summary">
-    <link rel="canonical" href="https://portifolio-projetos-git-main-pedro-luiz.vercel.app/">
-    <meta name="theme-color" content="#e8e3d9">
-    <meta name="color-scheme" content="light dark">
-    <meta name="author" content="Luiz Eduardo Benta Souza">
-    <meta name="mental-project-url" content="https://xqrens-portifolio.vercel.app/">
-
-    <title>XQRENS · Arquivo Vivo | Portfólio de Luiz Eduardo</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="./style.css?v=xqrens-header-fix-20261018">
-    <link rel="stylesheet" href="./arquivo-vivo.css?v=2.0.1">
-    <link rel="stylesheet" href="./semana-arcade.css?v=1.0.1">
-    <!-- Favicon: os arquivos ficam dentro da pasta Img -->
-    <link rel="icon" href="./Img/favicon.ico?v=2" sizes="any">
-    <link rel="icon" type="image/png" sizes="16x16" href="./Img/favicon-16x16.png?v=2">
-    <link rel="icon" type="image/png" sizes="32x32" href="./Img/favicon-32x32.png?v=2">
-    <link rel="apple-touch-icon" sizes="180x180" href="./Img/apple-touch-icon.png?v=2">
-    <link rel="manifest" href="./Img/site.webmanifest?v=2">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Luiz Eduardo, estudante de Desenvolvimento de Sistemas no SENAI. Conheça projetos de HTML, CSS, JavaScript, Mente em Flor e meus trabalhos.">
+  <meta name="author" content="Luiz Eduardo Benta Souza">
+  <meta name="theme-color" content="#080b10">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Luiz Eduardo | Desenvolvedor em formação">
+  <meta property="og:description" content="Projetos web, SENAI e um pouco de personalidade. Portfólio de Luiz Eduardo.">
+  <meta property="og:url" content="https://portifolio-projetos-git-main-pedro-luiz.vercel.app/">
+  <meta property="og:image" content="https://portifolio-projetos-git-main-pedro-luiz.vercel.app/Img/2.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://portifolio-projetos-git-main-pedro-luiz.vercel.app/">
+  <meta name="mental-project-url" content="https://xqrens-portifolio.vercel.app/">
+  <title>Luiz Eduardo | Portfólio · XQRENS</title>
+  <link rel="icon" href="./Img/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="./Img/favicon-32x32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="./Img/apple-touch-icon.png">
+  <link rel="manifest" href="./Img/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css?v=xqrens-portfolio-v3-20261018">
+  <script defer src="./script.js?v=xqrens-portfolio-v3-20261018"></script>
 </head>
+<body>
+  <a class="skip-link" href="#sobre">Ir para o conteúdo</a>
 
-<body data-ink-palette="paper">
-    <a class="ink-skip" href="#sobre">Pular para o conteúdo</a>
-    <div class="ink-reading-progress" aria-hidden="true"><span></span></div>
-    <div class="ink-screen-noise" aria-hidden="true"></div>
+  <header class="site-header" id="inicio">
+    <div class="container header-content">
+      <a class="brand" href="#inicio" aria-label="Luiz Eduardo, voltar ao início">
+        <span class="brand-symbol" aria-hidden="true">&lt;/&gt;</span>
+        <span>LUIZ<span class="brand-dot">.</span><small>DEV / PORTFOLIO</small></span>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+        <a href="#sobre">Sobre mim</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#julya">Julya ♡</a>
+        <a href="#mente">Mente em Flor</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div class="header-right">
+        <a class="header-github" href="https://github.com/NeroX07-steam/Portifolio" target="_blank" rel="noopener noreferrer" aria-label="Ver o código do portfólio no GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.64c.55.1.76-.24.76-.53v-2.05c-3.08.67-3.73-1.3-3.73-1.3-.5-1.26-1.23-1.6-1.23-1.6-1.01-.7.08-.69.08-.69 1.12.08 1.71 1.15 1.71 1.15 1 .1.95 1.63 3.17 1.16.1-.72.39-1.2.7-1.47-2.46-.28-5.05-1.23-5.05-5.49 0-1.21.44-2.21 1.15-2.99-.11-.28-.5-1.41.11-2.94 0 0 .94-.3 3.05 1.14A10.6 10.6 0 0 1 12 6.28c.94 0 1.87.12 2.74.37 2.12-1.44 3.04-1.14 3.04-1.14.61 1.53.22 2.66.11 2.94.72.78 1.15 1.78 1.15 2.99 0 4.27-2.59 5.2-5.06 5.48.4.34.75 1.02.75 2.06v3.03c0 .3.2.64.77.53A11.1 11.1 0 0 0 12 .9Z"/></svg>
+          <span class="github-text">GitHub ↗</span>
+        </a>
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-controls="site-nav" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
 
-    <header>
-        <a href="#top" class="logo">LUIZ</a>
-
-        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="site-nav">
-            <span></span><span></span>
-        </button>
-
-
-
-        <nav id="site-nav" aria-label="Navegação principal">
-            <a href="#sobre">Sobre</a>
-            <a href="#trajetoria">Trajetória</a>
-            <a href="#julya">Julya ♡</a>
-            <a href="#tofu">Tofu</a>
-            <a href="#gostos">Gostos</a>
-            <a href="#leituras">Leituras</a>
-            <a href="#mangateca">Mangateca</a>
-            <a href="#mangas-da-semana">3 mangás/semana ✿</a>
-            <a href="#laboratorio">Laboratório</a>
-            <a href="#roleta-jjs">Roleta JJS 🎰</a>
-            <a href="#capitulos">Arquivo Vivo ✳</a>
-            <a href="#diario">Diário</a>
-            <a href="#saude-mental" class="nav-health-link">Saúde mental</a>
-            <a href="#tecnologias">Tecnologias</a>
-            <a href="#projetos">Projetos</a>
-            <a href="#contato">Contato</a>
-        </nav>
-
-        <div class="header-status">
-            <span>ONLINE</span> / <span data-year>2026</span>
+  <main>
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="hero-badges">
+            <span class="pill"><i aria-hidden="true"></i> DESENVOLVEDOR EM FORMAÇÃO</span>
+            <span class="pill">SENAI / 2026</span>
+          </div>
+          <h1 id="heroTitle"><span>Luiz</span><span class="outline-text">Eduardo.</span></h1>
+          <p class="lead">Estudante de <strong>Desenvolvimento de Sistemas</strong>, criando projetos com HTML, CSS e JavaScript. Gosto de transformar ideias em coisas que funcionam, com um pouco da estética dos animes que marcaram meus gostos.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#projetos">Explorar meus projetos <span aria-hidden="true">↗</span></a>
+            <a class="btn ghost" href="#sobre">Conhecer o Luiz <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero-tech">
+            <span>STACK PRINCIPAL</span><strong>HTML5</strong><strong>CSS3</strong><strong>JAVASCRIPT</strong><strong>GIT / GITHUB</strong>
+          </div>
         </div>
-    </header>
-
-
-<main id="top">
-
-        <!-- HERO -->
-
-        <section class="hero">
-
-            <div class="hero-content">
-
-                <div class="hero-status">
-                    DESENVOLVEDOR EM FORMAÇÃO
-                </div>
-
-                <h1>
-                    Luiz
-                    <span>Eduardo.</span>
-                </h1>
-
-                <p class="hero-subtitle">
-                    Eu ainda estou aprendendo, mas já descobri uma coisa:
-                    gosto de transformar ideias em alguma coisa que possa
-                    ser vista, usada e lembrada.
-                </p>
-
-                <div class="hero-buttons">
-                    <a href="#projetos">Ver projetos ↗</a>
-                    <a href="#sobre">Sobre mim</a>
-                    <a href="#saude-mental" class="hero-health-link">Saúde mental ↗</a>
-                </div>
-
-            </div>
-
-            <div class="hero-photo">
-                <img src="./Img/1.jpg" alt="Foto de Luiz Eduardo">
-            </div>
-</section>
-
-
-        <!-- SOBRE -->
-
-        <section id="sobre">
-
-            <div class="section-label">01 / SOBRE MIM</div>
-
-            <div class="about-grid">
-
-                <div>
-                    <div class="about-number">01</div>
-                </div>
-
-                <div>
-
-                    <h2 class="section-title">
-                        Quem sou eu?
-                    </h2>
-
-                    <p class="section-description">
-                        Meu nome é Luiz Eduardo. Estou estudando programação
-                        e construindo meu caminho aos poucos.
-                        Atualmente estudo no SENAI e venho aprendendo
-                        principalmente colocando a mão no código.
-                    </p>
-
-                    <p class="section-description">
-                        Já fiz vários exercícios e projetos durante meus estudos.
-                        Alguns ficaram bons, outros serviram mais para descobrir
-                        onde eu tinha errado KKKKK.
-                    </p>
-
-                    <p class="section-description">
-                        Gosto de ver uma ideia saindo da cabeça e virando alguma
-                        coisa que realmente funciona na tela.
-                    </p>
-
-                    <div class="about-tags">
-                        <span>programação</span>
-                        <span>web</span>
-                        <span>SENAI</span>
-                        <span>projetos</span>
-                        <span>aprendendo na prática</span>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- TRAJETÓRIA -->
-
-        <section id="trajetoria" class="timeline-section">
-
-            <div class="section-label">02 / TRAJETÓRIA</div>
-
-            <h2 class="section-title">
-                Aprendendo fazendo.
-            </h2>
-
-            <p class="section-description">
-                Minha evolução aconteceu muito mais fazendo projeto,
-                errando e tentando de novo do que só ficando olhando teoria.
-            </p>
-
-            <div class="timeline">
-
-                <div class="timeline-item">
-
-                    <span class="timeline-year">
-                        01 — PRIMEIROS CÓDIGOS
-                    </span>
-
-                    <h3>
-                        Começando pela base
-                    </h3>
-
-                    <p>
-                        Comecei pelos fundamentos e fui entendendo aos poucos
-                        como uma página realmente funciona.
-                    </p>
-
-                </div>
-
-
-                <div class="timeline-item">
-
-                    <span class="timeline-year">
-                        02 — SENAI
-                    </span>
-
-                    <h3>
-                        Aprendendo na prática
-                    </h3>
-
-                    <p>
-                        No SENAI comecei a colocar mais coisa em prática,
-                        fazendo exercícios, atividades e projetos.
-                    </p>
-
-                </div>
-
-
-                <div class="timeline-item">
-
-                    <span class="timeline-year">
-                        03 — MEUS PROJETOS
-                    </span>
-
-                    <h3>
-                        Começando a criar sozinho
-                    </h3>
-
-                    <p>
-                        Depois fui juntando o que aprendi e criando projetos
-                        próprios para testar ideias e aprender coisas novas.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- ARQUIVO VIVO / LINHA DO TEMPO -->
-        <section class="xq2-edition xq2-section" id="evolucao" aria-labelledby="xq2-evolucao-title">
-          <div class="xq2-wrap">
-            <div class="xq2-topline"><span>ARQUIVO VIVO / 001</span><span>GITHUB · UMA HISTÓRIA EM COMMITS</span></div>
-            <div class="xq2-intro"><div><span class="xq2-kicker">NÃO EXISTE EVOLUÇÃO SEM TENTATIVAS</span><h2 id="xq2-evolucao-title">Ainda estou <em>me tornando.</em></h2></div><p>Não é uma linha do tempo inventada com conquistas mirabolantes. São fases que dá para acompanhar nos arquivos e no histórico do GitHub.</p></div>
-            <div class="xq2-timeline">
-              <article class="xq2-milestone xq2-reveal"><span>CAPÍTULO / 01</span><strong>O primeiro HTML.</strong><p>Aprender a colocar conteúdo numa página e perceber que cada tag tem seu papel.</p><a href="./projeto_meuSite/index.html">VISITAR EXERCÍCIO ↗</a></article>
-              <article class="xq2-milestone xq2-reveal"><span>CAPÍTULO / 02</span><strong>Estudando no SENAI.</strong><p>Praticar seletores, espaçamento, páginas, estruturas e pequenas atividades de front-end.</p><a href="./projeto_seletor/index.html">VER ATIVIDADE ↗</a></article>
-              <article class="xq2-milestone xq2-reveal"><span>CAPÍTULO / 03</span><strong>Meu próprio espaço.</strong><p>Juntar meus gostos, o que aprendo e experiências com animações num portfólio pessoal.</p><a href="https://github.com/NeroX07-steam/Portifolio/tree/main/projetos" target="_blank" rel="noopener noreferrer">ABRIR CÓDIGO ↗</a></article>
-              <article class="xq2-milestone xq2-reveal"><span>CAPÍTULO / 04</span><strong>Mente em Flor.</strong><p>Um projeto educativo para falar de saúde mental, conversas e caminhos de apoio com cuidado.</p><a href="https://xqrens-portifolio.vercel.app/" target="_blank" rel="noopener noreferrer">CONHECER SITE ↗</a></article>
-            </div>
-            <div class="xq2-git-foot"><span>O GitHub guarda os erros, as mudanças e as versões. Isso também é aprendizado.</span><a href="https://github.com/NeroX07-steam/Portifolio/commits/main/" target="_blank" rel="noopener noreferrer">ACOMPANHAR COMMITS REAIS ↗</a></div>
-          </div>
-        </section>
-
-
-
-        <!-- JULYA -->
-
-        <section id="julya" class="julya-section">
-
-            <div class="julya-layout">
-
-                <div class="julya-photo">
-
-                    <img
-                        src="./Img/19.jpg"
-                        alt="Julya"
-                    >
-
-                </div>
-
-                <div class="julya-text">
-
-                    <span class="mini-title">
-                        MINHA NAMORADA / PRIORIDADE 01
-                    </span>
-
-                    <h2>
-                        Julya
-                        <span>♡</span>
-                    </h2>
-
-                    <p>SIM, A GENTE ESTÁ NAMORANDO. ♡</p>
-
-                    <p>
-                        Ela é a única guria com quem eu sinto que posso falar de tudo e realmente ser ouvido.
-                        É especial encontrar alguém que gosta de tantas coisas parecidas comigo,
-                        que entende minhas referências e compartilha meus gostos.
-                    </p>
-
-                    <p>
-                        Julya, me desculpa quando eu não sei demonstrar carinho do jeito que você merece.
-                        Às vezes eu travo para colocar sentimentos em palavras ou gestos,
-                        mas isso nunca significa que você é menos importante para mim.
-                        Eu te amo demais, de verdade. Obrigado por me escutar,
-                        por estar comigo e por gostar desse nosso mundinho de coisas estranhas.
-                    </p>
-
-                    <div class="julya-points">
-
-                        <div>
-                            PRIORIDADE 01
-                        </div>
-
-                        <div>
-                            TEMOS GOSTOS PARECIDOS
-                        </div>
-
-                        <div>
-                            ELA ME ESCUTA
-                        </div>
-
-                        <div>
-                            EU AMO ELA
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- ARQUIVO VIVO / CARTAS PARA JULYA -->
-        <section class="xq2-edition xq2-section xq2-love" id="julya-exe" aria-labelledby="xq2-julya-title">
-          <div class="xq2-wrap">
-            <div class="xq2-topline"><span>ARQUIVO VIVO / 002</span><span>UM CAPÍTULO QUE EU QUERO GUARDAR ♡</span></div>
-            <div class="xq2-intro"><div><span class="xq2-kicker">PRIORIDADE 01 / NOSSAS PEQUENAS COISAS</span><h2 id="xq2-julya-title">Julya<span aria-hidden="true">.</span><em>exe ♡</em></h2></div><p>Não é sobre escrever a frase mais bonita da internet. É sobre lembrar o que importa. Escolhe uma carta e vê o que eu queria conseguir dizer.</p></div>
-            <div class="xq2-love-grid">
-              <div class="xq2-letter-list" role="group" aria-label="Quatro cartas para Julya">
-                <button class="xq2-letter-trigger" type="button" data-letter="escuta" aria-pressed="true"><span>CARTA / 01</span><strong>Quando você escuta.</strong><span>ABRIR ↗</span></button>
-                <button class="xq2-letter-trigger" type="button" data-letter="gostos" aria-pressed="false"><span>CARTA / 02</span><strong>Nosso mundo estranho.</strong><span>ABRIR ↗</span></button>
-                <button class="xq2-letter-trigger" type="button" data-letter="gestos" aria-pressed="false"><span>CARTA / 03</span><strong>Quando faltam palavras.</strong><span>ABRIR ↗</span></button>
-                <button class="xq2-letter-trigger" type="button" data-letter="futuro" aria-pressed="false"><span>CARTA / 04</span><strong>O que quero cuidar.</strong><span>ABRIR ↗</span></button>
-              </div>
-              <article class="xq2-letter-card xq2-reveal" aria-live="polite" aria-atomic="true">
-                <span class="xq2-kicker" id="xq2-letter-number">CARTA 01 / PRA JULYA</span>
-                <h3 id="xq2-letter-heading">Obrigado por me escutar.</h3>
-                <p id="xq2-letter-body">Entre tantas conversas, tem uma coisa que eu nunca quero tratar como pequena: poder ser eu mesmo perto de você.</p>
-                <span class="xq2-stamp">ESCRITO COM CARINHO · LUIZ ♡</span>
-              </article>
+        <div class="hero-visual">
+          <div class="visual-top-label"><span>VISUAL_REFERENCES/</span><span class="signal"><i aria-hidden="true"></i> SYSTEM ONLINE</span></div>
+          <div class="visual-window">
+            <div class="window-bar"><div class="window-lights" aria-hidden="true"><i></i><i></i><i></i></div><span>lain_reference.jpg</span><span>✳ 01</span></div>
+            <div class="visual-image">
+              <img src="./Img/2.jpg" alt="Arte de referência inspirada em Serial Experiments Lain, com personagem de anime diante de uma tela de computador" fetchpriority="high" width="736" height="417">
+              <div class="visual-image-caption"><span>Mais do que escrever código, quero criar experiências.</span><b>アニメ / 1998</b></div>
             </div>
           </div>
-        </section>
-
-
-
-        <!-- TOFU -->
-
-        <section id="tofu" class="tofu-section">
-
-            <div class="section-label">
-                04 / MEMBRO DA FAMÍLIA
-            </div>
-
-            <div class="tofu-card">
-
-                <img
-                    src="./Img/20.jpg"
-                    alt="Tofu"
-                >
-
-                <div class="tofu-content">
-
-                    <span class="tofu-label">
-                        NOSSO FILHO
-                    </span>
-
-                    <h2>
-                        Tofu.
-                    </h2>
-
-                    <p>
-                        Uma criatura oficialmente reconhecida como nosso filho.
-                    </p>
-
-                    <p>
-                        Não trabalha, não paga conta, provavelmente não sabe
-                        o que é HTML e ainda assim conseguiu ganhar um espaço
-                        nesse portfólio.
-                    </p>
-
-                    <span class="tofu-tag">
-                        filho meu e da Julya
-                    </span>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- ARQUIVO VIVO / TOFU WORLD -->
-        <section class="xq2-edition xq2-section xq2-tofu-world" id="tofu-world" aria-labelledby="xq2-tofu-title">
-          <div class="xq2-wrap">
-            <div class="xq2-topline"><span>ARQUIVO VIVO / 003</span><span>FAMÍLIA / NOSSO FILHO</span></div>
-            <div class="xq2-intro"><div><span class="xq2-kicker">PEQUENA CRIATURA · GRANDE PRESENÇA</span><h2 id="xq2-tofu-title">Tofu <em>World.</em></h2></div><p>Uma página para o Tofu, porque alguém aqui precisava ganhar um espaço interativo sem escrever uma linha de código.</p></div>
-            <div class="xq2-tofu-layout">
-              <figure class="xq2-tofu-photo xq2-reveal"><img src="./Img/20.jpg" alt="Foto do Tofu, que Luiz e Julya chamam carinhosamente de filho" loading="lazy"><figcaption class="xq2-photo-label">TOFU / ARQUIVO DE FAMÍLIA</figcaption></figure>
-              <article class="xq2-tofu-card xq2-reveal">
-                <span class="xq2-kicker">SIMULADOR COMPLETAMENTE NÃO CIENTÍFICO</span>
-                <h3>Um carinho no Tofu.</h3>
-                <p>Interage com esta versão virtual do nosso filho. Os carinhos são apenas uma brincadeira salva neste navegador; o Tofu real continua merecendo atenção de verdade.</p>
-                <div class="xq2-tofu-choices" role="group" aria-label="Interagir com Tofu">
-                  <button type="button" data-pet-action="carinho">♡ FAZER CARINHO</button>
-                  <button type="button" data-pet-action="brincar">✳ CHAMAR PRA BRINCAR</button>
-                  <button type="button" data-pet-action="foto">◌ OLHAR FOTO</button>
-                </div>
-                <p id="xq2-tofu-response" class="xq2-tofu-response" role="status" aria-live="polite">Tofu está oficialmente de folga.</p>
-                <div class="xq2-tofu-meter"><span>CARINHOS VIRTUAIS</span><strong id="xq2-tofu-count">0</strong><span class="xq2-tofu-hearts" aria-hidden="true">♡ ♡ ♡</span><button class="xq2-text-button" id="xq2-tofu-reset" type="button">REINICIAR</button></div>
-              </article>
-            </div>
-          </div>
-        </section>
-
-
-
-        <!-- GOSTOS -->
-
-        <section id="gostos" class="tastes-section">
-
-            <div class="section-label">
-                05 / COISAS QUE EU GOSTO
-            </div>
-
-            <h2 class="section-title">
-                Um pouco do meu gosto.
-            </h2>
-
-            <p class="section-description">
-                Nem tudo aqui é sobre programação. Também tem as coisas
-                que eu curto quando não estou mexendo em código.
-            </p>
-
-            <div class="taste-grid">
-
-                <article class="taste-card main-taste">
-
-                    <span>
-                        ANIME / FAVORITO
-                    </span>
-
-                    <h3>
-                        A Voz do Silêncio
-                    </h3>
-
-                    <p>
-                        Um dos animes que mais gosto. É daqueles que ficam
-                        na cabeça depois que termina.
-                    </p>
-
-                </article>
-
-
-                <article class="taste-card">
-
-                    <span>
-                        ANIME
-                    </span>
-
-                    <h3>
-                        Serial Experiments Lain
-                    </h3>
-
-                    <p>
-                        Estranho, psicológico e com aquela estética de internet
-                        que eu curto.
-                    </p>
-
-                </article>
-
-
-                <article class="taste-card">
-
-                    <span>
-                        MANGÁ
-                    </span>
-
-                    <h3>
-                        Oyasumi Punpun
-                    </h3>
-
-                    <p>
-                        Um dos mangás que mais marcou meu gosto.
-                    </p>
-
-                </article>
-
-
-                <article class="taste-card">
-
-                    <span>
-                        ESTÉTICA
-                    </span>
-
-                    <h3>
-                        Internet estranha
-                    </h3>
-
-                    <p>
-                        Sites, imagens, músicas e aquela estética meio
-                        melancólica que combina comigo.
-                    </p>
-
-                </article>
-
-
-                <article class="taste-card">
-
-                    <span>
-                        PROJETOS
-                    </span>
-
-                    <h3>
-                        Fazer coisas
-                    </h3>
-
-                    <p>
-                        Quando tenho uma ideia, gosto de tentar transformar
-                        ela em alguma coisa de verdade.
-                    </p>
-
-                </article>
-
-            </div>
-
-        </section>
-
-        <!-- ARQUIVO VIVO / SALA DE MÚSICA -->
-        <section class="xq2-edition xq2-section xq2-music-section" id="sala-musica" aria-labelledby="xq2-music-title">
-          <div class="xq2-wrap">
-            <div class="xq2-topline"><span>ARQUIVO VIVO / 004</span><span>MÚSICA PARA LER / CODAR / EXISTIR</span></div>
-            <div class="xq2-intro"><div><span class="xq2-kicker">UM POUCO DO QUE CABE NOS FONES</span><h2 id="xq2-music-title">Sala de <em>Música.</em></h2></div><p>Um cantinho para guardar músicas, descobrir sons por clima e visitar meu Spotify. O status abaixo é editado manualmente, não finge que lê meu player em tempo real.</p></div>
-            <div class="xq2-music-feature">
-              <div class="xq2-vinyl-panel xq2-reveal" id="xq2-vinyl-panel">
-                <span class="xq2-kicker">DISCO / 001 · SALA PARTICULAR</span>
-                <div class="xq2-record" aria-hidden="true"><div class="xq2-record-center">L.</div></div>
-                <button type="button" class="xq2-vinyl-button" id="xq2-vinyl-toggle" aria-pressed="false">GIRAR O DISCO ♫</button>
-                <span class="xq2-stamp" style="color:#d7c7bd">SEM AUTOPLAY · UMA ATMOSFERA, NÃO UM STREAMING</span>
-              </div>
-              <div class="xq2-music-panel xq2-reveal">
-                <span class="xq2-kicker">MINHA VITRINE MUSICAL</span>
-                <h3>O que está <em>na minha cabeça?</em></h3>
-                <p>Adiciono uma faixa quando quero destacar alguma coisa. Se este campo estiver vazio, não significa que eu parei de ouvir música.</p>
-                <form id="xq2-track-form" autocomplete="off">
-                  <label class="xq2-track-label" for="xq2-track-title">FAIXA EM DESTAQUE / EDITAR NESTE DISPOSITIVO</label>
-                  <div class="xq2-track-inputs">
-                    <input id="xq2-track-title" maxlength="90" placeholder="Nome da música" aria-label="Nome da música">
-                    <input id="xq2-track-artist" maxlength="80" placeholder="Artista" aria-label="Nome do artista">
-                  </div>
-                  <div class="xq2-track-form-actions">
-                    <button type="submit" class="xq2-action xq2-action-primary">GUARDAR DESTAQUE ♫</button>
-                    <button type="button" class="xq2-action" id="xq2-track-clear">LIMPAR</button>
-                  </div>
-                </form>
-                <div class="xq2-track-preview" aria-live="polite"><span class="xq2-kicker">DESTAQUE SALVO LOCALMENTE</span><strong id="xq2-track-summary">Nenhuma faixa escolhida.</strong><small id="xq2-track-artist-view">Você pode colocar uma música sem conectar nenhuma conta.</small></div>
-                <a class="xq2-action" href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer">ABRIR SPOTIFY ↗</a>
-              </div>
-            </div>
-            <!-- Música real: Spotify Embed oficial ou áudio local, sem upload / sem autoplay -->
-            <div class="xq2-listening-room xq2-edition" id="xq2-listening-room">
-              <div class="xq2-listening-top">
-                <div><span class="xq2-kicker">PLAYER / ESCOLHA A SUA MÚSICA</span><h3>Agora dá para <em>ouvir.</em></h3></div>
-                <p>O player só carrega quando você escolhe uma música. Não começa a tocar sozinho, não acessa tua conta e não mostra o que o Luiz está ouvindo ao vivo.</p>
-              </div>
-              <div class="xq2-listening-grid">
-                <div class="xq2-listening-pane">
-                  <span class="xq2-listening-index">01 / SPOTIFY</span>
-                  <h4>Colar música ou playlist.</h4>
-                  <p>No Spotify, vá em <strong>Compartilhar → Copiar link</strong>. Cole abaixo para abrir o player dentro do site.</p>
-                  <form id="xq2-spotify-form" class="xq2-spotify-form">
-                    <label for="xq2-spotify-url">LINK DE MÚSICA, ÁLBUM OU PLAYLIST</label>
-                    <input type="url" id="xq2-spotify-url" placeholder="https://open.spotify.com/track/..." inputmode="url" maxlength="400" spellcheck="false" autocomplete="off" required>
-                    <div class="xq2-listening-actions">
-                      <button class="xq2-action xq2-action-primary" type="submit">ABRIR PLAYER ↗</button>
-                      <button class="xq2-action" type="button" id="xq2-spotify-clear">REMOVER</button>
-                    </div>
-                  </form>
-                  <p id="xq2-spotify-feedback" class="xq2-listening-status" role="status" aria-live="polite">Aceita links públicos de faixa, playlist, álbum ou episódio.</p>
-                  <div id="xq2-spotify-embed" class="xq2-spotify-embed" hidden></div>
-                  <p class="xq2-listening-disclaimer">O player é do Spotify, que controla quais músicas e trechos podem ser reproduzidos. Teu link escolhido fica salvo só neste navegador.</p>
-                </div>
-                <div class="xq2-listening-pane">
-                  <span class="xq2-listening-index">02 / ÁUDIO DO SEU COMPUTADOR</span>
-                  <h4>Ouvir um arquivo local.</h4>
-                  <p>Escolha uma música MP3, M4A, OGG ou WAV que você tem permissão para usar. O navegador toca o arquivo sem enviá-lo para o GitHub ou para a Vercel.</p>
-                  <label class="xq2-listening-file-label" for="xq2-local-audio">ESCOLHER ARQUIVO DE ÁUDIO +</label>
-                  <input type="file" id="xq2-local-audio" accept="audio/mpeg,audio/mp3,audio/mp4,audio/x-m4a,audio/ogg,audio/wav,audio/x-wav,.mp3,.m4a,.ogg,.wav">
-                  <div class="xq2-local-player" id="xq2-local-player" hidden>
-                    <span id="xq2-local-name" class="xq2-local-name"></span>
-                    <audio id="xq2-local-audio-player" controls preload="none">Seu navegador não suporta reprodução de áudio.</audio>
-                    <button type="button" class="xq2-action" id="xq2-local-clear">DESCARREGAR ÁUDIO ×</button>
-                  </div>
-                  <p id="xq2-local-feedback" class="xq2-listening-status" role="status" aria-live="polite">Nenhum arquivo foi escolhido. Limite recomendado: até 30 MB.</p>
-                  <p class="xq2-listening-disclaimer">O áudio local não fica no site publicado e precisa ser selecionado novamente depois de recarregar.</p>
-                </div>
-              </div>
-            </div>
-            <div class="xq2-moods">
-              <article class="xq2-mood xq2-reveal"><span>FREQUÊNCIA / 01</span><strong>Chuva e silêncio.</strong><a href="https://open.spotify.com/search/ambient%20rain" target="_blank" rel="noopener noreferrer">EXPLORAR NO SPOTIFY ↗</a></article>
-              <article class="xq2-mood xq2-reveal"><span>FREQUÊNCIA / 02</span><strong>Uma noite de código.</strong><a href="https://open.spotify.com/search/lofi%20coding" target="_blank" rel="noopener noreferrer">EXPLORAR NO SPOTIFY ↗</a></article>
-              <article class="xq2-mood xq2-reveal"><span>FREQUÊNCIA / 03</span><strong>Fim de capítulo.</strong><a href="https://open.spotify.com/search/indie%20melancholic" target="_blank" rel="noopener noreferrer">EXPLORAR NO SPOTIFY ↗</a></article>
-            </div>
-          </div>
-        </section>
-
-
-
-        <!-- TECNOLOGIAS -->
-
-        <section id="tecnologias">
-
-            <div class="section-label">
-                07 / O QUE ESTOU APRENDENDO
-            </div>
-
-            <h2 class="section-title">
-                Tecnologias.
-            </h2>
-
-            <p class="section-description">
-                Algumas coisas que já usei ou estou aprendendo durante meus estudos.
-            </p>
-
-            <div class="tech-grid">
-
-                <div class="tech-card">
-                    <span>01</span>
-                    <strong>HTML</strong>
-                </div>
-
-                <div class="tech-card">
-                    <span>02</span>
-                    <strong>CSS</strong>
-                </div>
-
-                <div class="tech-card">
-                    <span>03</span>
-                    <strong>JavaScript</strong>
-                </div>
-
-                <div class="tech-card">
-                    <span>04</span>
-                    <strong>Python</strong>
-                </div>
-
-                <div class="tech-card">
-                    <span>05</span>
-                    <strong>Banco de dados</strong>
-                </div>
-
-                <div class="tech-card">
-                    <span>06</span>
-                    <strong>Sistemas</strong>
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- ARQUIVO VIVO / SENAI -->
-        <section class="xq2-edition xq2-section xq2-study" id="senai-lab" aria-labelledby="xq2-senai-title">
-          <div class="xq2-wrap">
-            <div class="xq2-topline"><span>ARQUIVO VIVO / 005</span><span>DESENVOLVIMENTO DE SISTEMAS / SENAI</span></div>
-            <div class="xq2-intro"><div><span class="xq2-kicker">LABORATÓRIO DE APRENDIZADO</span><h2 id="xq2-senai-title">Do primeiro <em>código</em> ao próximo.</h2></div><p>Um pequeno laboratório para mostrar a diferença entre estrutura, aparência e comportamento. Estes exemplos são didáticos; meus exercícios verdadeiros estão nos links abaixo.</p></div>
-            <div class="xq2-study-tabs" role="group" aria-label="Escolher tecnologia para comparar">
-              <button type="button" data-study-topic="html" aria-pressed="true">01 / HTML</button>
-              <button type="button" data-study-topic="css" aria-pressed="false">02 / CSS</button>
-              <button type="button" data-study-topic="js" aria-pressed="false">03 / JAVASCRIPT</button>
-            </div>
-            <div class="xq2-study-stage">
-              <article class="xq2-study-pane xq2-reveal"><span class="xq2-kicker">PASSO 01 / ENTENDER O BÁSICO</span><strong id="xq2-study-before-title">A estrutura</strong><pre><code id="xq2-study-before">&lt;h1&gt;Meu primeiro site&lt;/h1&gt;</code></pre></article>
-              <article class="xq2-study-pane xq2-reveal"><span class="xq2-kicker">PASSO 02 / TENTAR MELHORAR</span><strong id="xq2-study-after-title">Mais significado</strong><pre><code id="xq2-study-after">&lt;main&gt;...&lt;/main&gt;</code></pre><p id="xq2-study-explanation">Organizar títulos, conteúdo e regiões semânticas ajuda quem navega pelo site e quem usa tecnologias assistivas.</p></article>
-            </div>
-            <div class="xq2-study-links">
-              <a href="./projeto_meuSite/index.html">PRIMEIRO SITE ↗</a>
-              <a href="./projeto_seletor/index.html">EXERCÍCIO CSS ↗</a>
-              <a href="./projeto_semáforo/index.html">SEMÁFORO ↗</a>
-              <a href="https://github.com/NeroX07-steam/Portifolio/tree/main/projetos" target="_blank" rel="noopener noreferrer">TODOS OS ARQUIVOS ↗</a>
-            </div>
-          </div>
-        </section>
-
-
-
-        <!-- PROJETO DE SAÚDE MENTAL -->
-
-        <section id="saude-mental" class="mental-project-section">
-
-            <div class="section-label">06 / UM PROJETO COM PROPÓSITO</div>
-
-            <div class="mental-project-layout">
-                <div class="mental-project-copy">
-                    <span class="mental-kicker"><i></i> PROJETO AUTORAL · BEM-ESTAR</span>
-                    <h2 class="section-title">Saúde mental também merece <em>espaço.</em></h2>
-                    <p class="section-description">
-                        Esse projeto também tem um lado pessoal. Nem sempre foi fácil entender o que eu sentia,
-                        mas aprendi que não precisava guardar tudo sozinho. Conversar com meus amigos foi uma parte
-                        importante desse processo — poder falar, ser ouvido e perceber que eu não estava sozinho fez diferença.
-                    </p>
-                    <p class="mental-project-note">
-                        O Gabriel, o Felipe e o João fizeram parte dessa caminhada. Sou especialmente grato ao João,
-                        porque o apoio dele significou muito para mim. Com o tempo, também tentei estar presente para
-                        meus amigos nos momentos difíceis, ouvindo sem julgar e oferecendo companhia quando precisavam.
-                        Isso me mostrou que, às vezes, uma conversa sincera pode ser um começo importante.
-                    </p>
-                    <p class="mental-project-note">
-                        Foi uma das razões para criar o <strong>Mente em Flor</strong>: compartilhar acolhimento,
-                        falar sobre saúde mental sem fingir que tudo é simples e lembrar que pedir ajuda não é fraqueza.
-                        Cada pessoa vive as coisas de um jeito; conversar com alguém de confiança pode ajudar, e buscar
-                        apoio profissional também é válido quando necessário.
-                    </p>
-                    <a class="mental-project-cta" href="https://xqrens-portifolio.vercel.app/" data-mental-project-link target="_blank" rel="noopener noreferrer">
-                        Conheça o Mente em Flor <span aria-hidden="true">↗</span>
-                    </a>
-                    <span class="mental-project-caption">UM PROJETO DE CONSCIENTIZAÇÃO · FEITO COM HTML, CSS E JS</span>
-                </div>
-
-                <div class="mental-project-art" aria-label="Resumo do projeto Mente em Flor">
-                    <div class="mental-art-orbit mental-art-orbit-one"></div>
-                    <div class="mental-art-orbit mental-art-orbit-two"></div>
-                    <div class="mental-art-center"><span>mf</span><i>✳</i></div>
-                    <div class="mental-art-card mental-art-card-top"><span>01 / CONVERSAR</span><strong>Você não precisa guardar tudo.</strong></div>
-                    <div class="mental-art-card mental-art-card-bottom"><span>02 / ESTAR PRESENTE</span><strong>Ouvir alguém também é cuidado.</strong></div>
-                    <div class="mental-art-stamp">CUIDADO<br>SEM PRESSA</div>
-                </div>
-            </div>
-
-            <div class="mental-feature-row">
-                <article><span>01</span><div><strong>Minha experiência</strong><p>Aprendi a importância de conversar e aceitar apoio.</p></div></article>
-                <article><span>02</span><div><strong>Amizades que apoiam</strong><p>Gabriel, Felipe e João fizeram parte da minha caminhada.</p></div></article>
-                <article><span>03</span><div><strong>Retribuir o cuidado</strong><p>Tento estar presente para meus amigos quando eles passam por momentos difíceis.</p></div></article>
-            </div>
-
-        </section>
-
-
-        <!-- FRASE -->
-
-        <section class="quote-section">
-
-            <blockquote>
-                Ainda não cheguei onde quero,
-                mas já estou muito longe de onde comecei.
-            </blockquote>
-
-            <p class="quote-author">
-                — Luiz Eduardo
-            </p>
-
-        </section>
-
-
-        <!-- PROJETOS -->
-
-        <section id="projetos">
-
-            <div class="projects-header">
-
-                <div>
-
-                    <div class="section-label">
-                        08 / COISAS QUE EU FIZ
-                    </div>
-
-                    <h2 class="section-title">
-                        Projetos.
-                    </h2>
-
-                </div>
-
-                <div class="project-counter">
-
-                    <strong>
-                        00
-                    </strong>
-
-                    <br>
-
-                    PROJETOS
-
-                </div>
-
-            </div>
-
-
-            <div class="xq2-project-tools xq2-edition" aria-label="Pesquisar exercícios e projetos">
-                <div class="xq2-project-toolbar-copy"><strong>19 EXPERIMENTOS, DIFERENTES FASES.</strong><span>Procure um projeto ou escolha um tipo de atividade.</span></div>
-                <label class="ink-visually-hidden" for="xq2-project-search">Buscar projeto pelo nome</label>
-                <input type="search" id="xq2-project-search" placeholder="PROCURAR PROJETO..." maxlength="90" autocomplete="off">
-                <div class="xq2-project-choices" role="group" aria-label="Filtrar projetos por tipo">
-                    <button type="button" data-project-group="todos" aria-pressed="true">TODOS</button>
-                    <button type="button" data-project-group="html" aria-pressed="false">ESTRUTURA</button>
-                    <button type="button" data-project-group="css" aria-pressed="false">ESTILO CSS</button>
-                    <button type="button" data-project-group="pagina" aria-pressed="false">PÁGINAS</button>
-                </div>
-                <div class="xq2-project-summary" aria-live="polite"><span id="xq2-project-count">19 PROJETOS VISÍVEIS</span><button type="button" id="xq2-project-clear">LIMPAR BUSCA ×</button></div>
-            </div>
-
-            <div class="projects-grid">
-
-
-                <!-- 01 -->
-
-                <a
-                    href="./projeto_erro/index.html"
-                    class="project-card" data-project-kind="html"
-                >
-
-                    <div class="project-image">
-                        <img
-                            src="./Img/2.jpg"
-                            alt="Projeto Erro"
-                        >
-                    </div>
-
-                    <div class="project-content">
-
-                        <span class="project-number">
-                            01
-                        </span>
-
-                        <h3>
-                            Projeto Erro
-                        </h3>
-
-                        <p>
-                            Exercício que faz parte das minhas primeiras práticas com HTML.
-                        </p>
-
-                        <span class="project-link">
-                            Abrir projeto
-                        </span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- 02 -->
-
-                <a
-                    href="./projeto_album/index.html"
-                    class="project-card" data-project-kind="pagina"
-                >
-
-                    <div class="project-image">
-                        <img
-                            src="./Img/3.jpg"
-                            alt="Projeto Álbum"
-                        >
-                    </div>
-
-                    <div class="project-content">
-
-                        <span class="project-number">
-                            02
-                        </span>
-
-                        <h3>
-                            Projeto Álbum
-                        </h3>
-
-                        <p>
-                            Prática de organização de imagens e conteúdo em uma página.
-                        </p>
-
-                        <span class="project-link">
-                            Abrir projeto
-                        </span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- 03 -->
-
-                <a
-                    href="./projeto_botao/index.html"
-                    class="project-card" data-project-kind="css"
-                >
-
-                    <div class="project-image">
-                        <img
-                            src="./Img/4.jpg"
-                            alt="Projeto Botão"
-                        >
-                    </div>
-
-                    <div class="project-content">
-
-                        <span class="project-number">
-                            03
-                        </span>
-
-                        <h3>
-                            Projeto Botão
-                        </h3>
-
-                        <p>
-                            Explorando estilos de botões e propriedades do CSS.
-                        </p>
-
-                        <span class="project-link">
-                            Abrir projeto
-                        </span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- 04 -->
-
-                <a
-                    href="./projeto_curriculo/index.html"
-                    class="project-card" data-project-kind="pagina"
-                >
-
-                    <div class="project-image">
-                        <img
-                            src="./Img/5.jpg"
-                            alt="Projeto Currículo"
-                        >
-                    </div>
-
-                    <div class="project-content">
-
-                        <span class="project-number">
-                            04
-                        </span>
-
-                        <h3>
-                            Projeto Currículo
-                        </h3>
-
-                        <p>
-                            Estrutura HTML para apresentar formação e informações profissionais.
-                        </p>
-
-                        <span class="project-link">
-                            Abrir projeto
-                        </span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- 05 -->
-
-                <a
-                    href="./projeto_diario/index.html"
-                    class="project-card" data-project-kind="pagina"
-                >
-
-                    <div class="project-image">
-                        <img
-                            src="./Img/6.jpg"
-                            alt="Projeto Diário"
-                        >
-                    </div>
-
-                    <div class="project-content">
-
-                        <span class="project-number">
-                            05
-                        </span>
-
-                        <h3>
-                            Projeto Diário
-                        </h3>
-
-                        <p>
-                            Página de registros de partidas e treinos, organizada por dias.
-                        </p>
-
-                        <span class="project-link">
-                            Abrir projeto
-                        </span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- 06 -->
-
-                <a
-                    href="./projeto_evento/index.html"
-                    class="project-card" data-project-kind="pagina"
-                >
-
-                    <div class="project-image">
-                        <img
-                            src="./Img/7.jpg"
-                            alt="Projeto Evento"
-                        >
-                    </div>
-
-                    <div class="project-content">
-
-                        <span class="project-number">
-                            06
-                        </span>
-
-                        <h3>
-                            Projeto Evento
-                        </h3>
-
-                        <p>
-                            Exercício de organização de informações para um evento.
-                        </p>
-
-                        <span class="project-link">
-                            Abrir projeto
-                        </span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- 07 -->
-
-                <a
-                    href="./projeto_fundo/index.html"
-                    class="project-card" data-project-kind="css"
-                >
-
-                    <div class="project-image">
-                        <img
-                            src="./Img/8.jpg"
-                            alt="Projeto Fundo"
-                        >
-                    </div>
-
-                    <div class="project-content">
-
-                        <span class="project-number">
-                            07
-                        </span>
-
-                        <h3>
-                            Projeto Fundo
-                        </h3>
-
-                        <p>
-                            Estudando imagens de fundo, cores e apresentação visual.
-                        </p>
-
-                        <span class="project-link">
-                            Abrir projeto
-                        </span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- 08 -->
-
-                <a
-                    href="./projeto_margin/index.html"
-                    class="project-card" data-project-kind="css"
-                >
-
-                    <div class="project-image">
-                        <img
-                            src="./Img/9.jpg"
-                            alt="Projeto Margin"
-                        >
-                    </div>
-
-                    <div class="project-content">
-
-                        <span class="project-number">
-                            08
-                        </span>
-
-                        <h3>
-                            Projeto Margin
-                        </h3>
-
-                        <p>
-                            Testes de margens e espaçamento entre elementos HTML.
-                        </p>
-
-                        <span class="project-link">
-                            Abrir projeto
-                        </span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- 09 -->
-
-                <a
-                    href="./projeto_meuSite/index.html"
-                    class="project-card" data-project-kind="html"
-                >
-
-                    <div class="project-image">
-                        <img
-                            src="./Img/10.jpg"
-                            alt="Meu Site"
-                        >
-                    </div>
-
-                    <div class="project-content">
-
-                        <span class="project-number">
-                            09
-                        </span>
-
-                        <h3>
-                            Meu Site
-                        </h3>
-
-                        <p>
-                            Um dos meus primeiros experimentos de página pessoal.
-                        </p>
-
-                        <span class="project-link">
-                            Abrir projeto
-                        </span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- 10 -->
-
-                <a
-                    href="./projeto_passatempo/index.html"
-                    class="project-card" data-project-kind="pagina"
-                >
-
-                    <div class="project-image">
-                        <img
-                            src="./Img/11.jpg"
-                            alt="Projeto Passatempo"
-                        >
-                    </div>
-
-                    <div class="project-content">
-
-                        <span class="project-number">
-                            10
-                        </span>
-
-                        <h3>
-                            Projeto Passatempo
-                        </h3>
-
-                        <p>
-                            Prática de página com conteúdo sobre interesses pessoais.
-                        </p>
-
-                        <span class="project-link">
-                            Abrir projeto
-                        </span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- 11 -->
-
-                <a
-                    href="./projeto_perfil/index.html"
-                    class="project-card" data-project-kind="pagina"
-                >
-
-                    <div class="project-image">
-                        <img
-                            src="./Img/12.jpg"
-                            alt="Projeto Perfil"
-                        >
-                    </div>
-
-                    <div class="project-content">
-
-                        <span class="project-number">
-                            11
-                        </span>
-
-                        <h3>
-                            Projeto Perfil
-                        </h3>
-
-                        <p>
-                            Estruturando informações de um perfil com HTML e CSS.
-                        </p>
-
-                        <span class="project-link">
-                            Abrir projeto
-                        </span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- 12 -->
-
-                <a
-                    href="./projeto_planejador/index.html"
-                    class="project-card" data-project-kind="pagina"
-                >
-
-                    <div class="project-image">
-                        <img
-                            src="./Img/13.jpg"
-                            alt="Projeto Planejador"
-                        >
-                    </div>
-
-                    <div class="project-content">
-
-                        <span class="project-number">
-                            12
-                        </span>
-
-                        <h3>
-                            Projeto Planejador
-                        </h3>
-
-                        <p>
-                            Página de organização de itens relacionados a jogos.
-                        </p>
-
-                        <span class="project-link">
-                            Abrir projeto
-                        </span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- 13 -->
-
-                <a
-                    href="./projeto_receita/index.html"
-                    class="project-card" data-project-kind="pagina"
-                >
-
-                    <div class="project-image">
-                        <img
-                            src="./Img/14.jpg"
-                            alt="Projeto Receita"
-                        >
-                    </div>
-
-                    <div class="project-content">
-
-                        <span class="project-number">
-                            13
-                        </span>
-
-                        <h3>
-                            Projeto Receita
-                        </h3>
-
-                        <p>
-                            Organização de ingredientes e instruções numa página web.
-                        </p>
-
-                        <span class="project-link">
-                            Abrir projeto
-                        </span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- 14 -->
-
-                <a
-                    href="./projeto_seletor/index.html"
-                    class="project-card" data-project-kind="css"
-                >
-
-                    <div class="project-image">
-                        <img
-                            src="./Img/15.jpg"
-                            alt="Projeto Seletor"
-                        >
-                    </div>
-
-                    <div class="project-content">
-
-                        <span class="project-number">
-                            14
-                        </span>
-
-                        <h3>
-                            Projeto Seletor
-                        </h3>
-
-                        <p>
-                            Praticando como selecionar e estilizar elementos.
-                        </p>
-
-                        <span class="project-link">
-                            Abrir projeto
-                        </span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- 15 -->
-
-                <a
-                    href="./projeto_semáforo/index.html"
-                    class="project-card" data-project-kind="html"
-                >
-
-                    <div class="project-image">
-                        <img
-                            src="./Img/16.jpg"
-                            alt="Projeto Semáforo"
-                        >
-                    </div>
-
-                    <div class="project-content">
-
-                        <span class="project-number">
-                            15
-                        </span>
-
-                        <h3>
-                            Projeto Semáforo
-                        </h3>
-
-                        <p>
-                            Exercício visual com os estados pare, atenção e ande.
-                        </p>
-
-                        <span class="project-link">
-                            Abrir projeto
-                        </span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- 16 -->
-
-                <a
-                    href="./projeto_video/index.html"
-                    class="project-card" data-project-kind="pagina"
-                >
-
-                    <div class="project-image">
-                        <img
-                            src="./Img/17.jpg"
-                            alt="Projeto Vídeo"
-                        >
-                    </div>
-
-                    <div class="project-content">
-
-                        <span class="project-number">
-                            16
-                        </span>
-
-                        <h3>
-                            Projeto Vídeo
-                        </h3>
-
-                        <p>
-                            Experimento de incorporação de vídeo numa página.
-                        </p>
-
-                        <span class="project-link">
-                            Abrir projeto
-                        </span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- 17 -->
-
-                <a
-                    href="./projeto_visita/index.html"
-                    class="project-card" data-project-kind="pagina"
-                >
-
-                    <div class="project-image">
-                        <img
-                            src="./Img/18.jpg"
-                            alt="Projeto Visita"
-                        >
-                    </div>
-
-                    <div class="project-content">
-
-                        <span class="project-number">
-                            17
-                        </span>
-
-                        <h3>
-                            Projeto Visita
-                        </h3>
-
-                        <p>
-                            Prática de cartão de visita digital em HTML.
-                        </p>
-
-                        <span class="project-link">
-                            Abrir projeto
-                        </span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- 18 -->
-
-                <a
-                    href="./prova/index.html"
-                    class="project-card" data-project-kind="html"
-                >
-
-                    <div class="project-image">
-                        <img
-                            src="./Img/21.jpg"
-                            alt="Prova"
-                        >
-                    </div>
-
-                    <div class="project-content">
-
-                        <span class="project-number">
-                            18
-                        </span>
-
-                        <h3>
-                            Prova
-                        </h3>
-
-                        <p>
-                            Atividade de avaliação dos conteúdos estudados.
-                        </p>
-
-                        <span class="project-link">
-                            Abrir projeto
-                        </span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- 19 -->
-
-                <a
-                    href="./revisao_prova/index.html"
-                    class="project-card" data-project-kind="html"
-                >
-
-                    <div class="project-image">
-                        <img
-                            src="./Img/22.jpg"
-                            alt="Revisão Prova"
-                        >
-                    </div>
-
-                    <div class="project-content">
-
-                        <span class="project-number">
-                            19
-                        </span>
-
-                        <h3>
-                            Revisão Prova
-                        </h3>
-
-                        <p>
-                            Revisão de conceitos praticados nas aulas de web.
-                        </p>
-
-                        <span class="project-link">
-                            Abrir projeto
-                        </span>
-
-                    </div>
-
-                </a>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ================================================================
-             XQRENS / NOVA EDIÇÃO — MANGÁ INTERATIVO
-             Interações progressivas com suporte a movimento reduzido.
-             ================================================================ -->
-        <section class="ink-intermission" aria-label="Intervalo ilustrado">
-            <div class="ink-intermission-lines" aria-hidden="true"></div>
-            <div class="ink-intermission-inner">
-                <span class="ink-eyebrow">INTERLÚDIO · 00:00</span>
-                <p>Tem dias que a internet parece um lugar estranho.</p>
-                <strong>Eu gosto de deixar um pouco disso nos meus sites.</strong>
-                <span class="ink-intermission-star" aria-hidden="true">✳</span>
-            </div>
-            <span class="ink-ribbon">ATÉ A PRÓXIMA PÁGINA ↗</span>
-        </section>
-
-        <section id="leituras" class="ink-section ink-reading-room">
-            <div class="ink-section-overline">
-                <span>CAPÍTULO VI</span>
-                <span>08 ARQUIVOS / EM CONSTRUÇÃO</span>
-            </div>
-            <div class="ink-section-title">
-                <div>
-                    <span class="ink-kicker">MEU CANTO DA INTERNET</span>
-                    <h2>Uma estante de <em>sentimentos.</em></h2>
-                </div>
-                <p>Algumas histórias me acompanham. Outras ainda estão esperando a vez de sair da lista de desejos.</p>
-            </div>
-            <div class="ink-bookshelf" data-ink-stagger>
-                
-                <article class="ink-book" data-book="silencio" tabindex="0">
-                    <div class="ink-book-index">01 <span>✳</span></div>
-                    <div class="ink-book-icon" aria-hidden="true">☾</div>
-                    <div class="ink-book-details">
-                        <span class="ink-book-kicker">ANIME / FAVORITO</span>
-                        <h3>A Voz do Silêncio</h3>
-                        <p>Sobre culpa, escuta, crescimento e reconexão.</p>
-                    </div>
-                    <span class="ink-book-foot">ARQUIVO 01 / 08</span>
-                </article>
-
-                <article class="ink-book" data-book="punpun" tabindex="0">
-                    <div class="ink-book-index">02 <span>✳</span></div>
-                    <div class="ink-book-icon" aria-hidden="true">✺</div>
-                    <div class="ink-book-details">
-                        <span class="ink-book-kicker">MANGÁ / NA ESTANTE</span>
-                        <h3>Oyasumi Punpun</h3>
-                        <p>Uma história emocionalmente intensa sobre crescer.</p>
-                    </div>
-                    <span class="ink-book-foot">ARQUIVO 02 / 08</span>
-                </article>
-
-                <article class="ink-book" data-book="lain" tabindex="0">
-                    <div class="ink-book-index">03 <span>✳</span></div>
-                    <div class="ink-book-icon" aria-hidden="true">⌁</div>
-                    <div class="ink-book-details">
-                        <span class="ink-book-kicker">ANIME / INTERNET</span>
-                        <h3>Serial Experiments Lain</h3>
-                        <p>Identidade, redes e a sensação de estranheza.</p>
-                    </div>
-                    <span class="ink-book-foot">ARQUIVO 03 / 08</span>
-                </article>
-
-                <article class="ink-book" data-book="mariko" tabindex="0">
-                    <div class="ink-book-index">04 <span>✳</span></div>
-                    <div class="ink-book-icon" aria-hidden="true">✿</div>
-                    <div class="ink-book-details">
-                        <span class="ink-book-kicker">MANGÁ / NA LISTA</span>
-                        <h3>My Broken Mariko</h3>
-                        <p>Uma história curta sobre luto e amizade.</p>
-                    </div>
-                    <span class="ink-book-foot">ARQUIVO 04 / 08</span>
-                </article>
-
-                <article class="ink-book" data-book="flores" tabindex="0">
-                    <div class="ink-book-index">05 <span>✳</span></div>
-                    <div class="ink-book-icon" aria-hidden="true">◌</div>
-                    <div class="ink-book-details">
-                        <span class="ink-book-kicker">MANGÁ / NA LISTA</span>
-                        <h3>As Flores do Mal</h3>
-                        <p>Juventude, inquietação e escolhas difíceis.</p>
-                    </div>
-                    <span class="ink-book-foot">ARQUIVO 05 / 08</span>
-                </article>
-
-                <article class="ink-book" data-book="borboleta" tabindex="0">
-                    <div class="ink-book-index">06 <span>✳</span></div>
-                    <div class="ink-book-icon" aria-hidden="true">❋</div>
-                    <div class="ink-book-details">
-                        <span class="ink-book-kicker">LIVRO / NA LISTA</span>
-                        <h3>A Depressão é uma Borboleta Azul</h3>
-                        <p>Uma leitura que quero conhecer melhor.</p>
-                    </div>
-                    <span class="ink-book-foot">ARQUIVO 06 / 08</span>
-                </article>
-
-                <article class="ink-book" data-book="manga" tabindex="0">
-                    <div class="ink-book-index">07 <span>✳</span></div>
-                    <div class="ink-book-icon" aria-hidden="true">◍</div>
-                    <div class="ink-book-details">
-                        <span class="ink-book-kicker">MANGÁ / QUERO TER</span>
-                        <h3>A Voz do Silêncio (mangá)</h3>
-                        <p>A história em sua versão original impressa.</p>
-                    </div>
-                    <span class="ink-book-foot">ARQUIVO 07 / 08</span>
-                </article>
-
-                <article class="ink-book" data-book="futuro" tabindex="0">
-                    <div class="ink-book-index">08 <span>✳</span></div>
-                    <div class="ink-book-icon" aria-hidden="true">∞</div>
-                    <div class="ink-book-details">
-                        <span class="ink-book-kicker">PRÓXIMOS CAPÍTULOS</span>
-                        <h3>Livros que ainda não encontrei</h3>
-                        <p>Sempre existe alguma página esperando.</p>
-                    </div>
-                    <span class="ink-book-foot">ARQUIVO 08 / 08</span>
-                </article>
-            </div>
-            <p class="ink-disclaimer">* Esta é uma lista pessoal de gostos e leituras, não uma biblioteca de páginas reproduzidas.</p>
-        </section>
-
-        <section class="xq-manga-world xq2-manga-upgraded xq2-edition" id="mangateca">
-<div class="xq-kicker"><span>ARQUIVO DE MANGÁS</span><span>22 OBRAS PARA DESCOBRIR</span></div>
-<div class="xq-manga-title"><span>DO MEU JEITO.</span><h2>Histórias que deixam <i>alguma coisa.</i></h2><p>Uma seleção de mangás e quadrinhos com temas psicológicos, emocionais ou uma estética que combina com meu gosto. Alguns eu já conheço; outros estão na minha lista para descobrir. Não são todos recomendações de leitura leve.</p></div>
-<div class="xq-manga-filters" role="group" aria-label="Ordenar estante"><button data-xq-order="default" class="is-active" type="button">ORDEM ORIGINAL</button><button data-xq-order="az" type="button">A → Z</button><button data-xq-order="za" type="button">Z → A</button></div>
-
-<div class="xq2-manga-tools xq2-edition" aria-label="Busca e filtros de mangás">
-  <label class="ink-visually-hidden" for="xq2-manga-search">Buscar título na mangateca</label>
-  <input type="search" id="xq2-manga-search" maxlength="90" placeholder="PROCURAR MANGÁ OU QUADRINHO..." autocomplete="off">
-  <label class="ink-visually-hidden" for="xq2-manga-genre">Filtrar por tema</label>
-  <select id="xq2-manga-genre" aria-label="Filtrar por tema"><option value="todos">TODOS OS TEMAS</option><option value="psicologico">PSICOLÓGICO</option><option value="drama">DRAMA</option><option value="arte">ARTE / CRIAÇÃO</option><option value="fantasia">FANTASIA</option></select>
-  <label class="ink-visually-hidden" for="xq2-manga-state">Filtrar por estado de leitura</label>
-  <select id="xq2-manga-state" aria-label="Filtrar por estado de leitura"><option value="todos">TODOS OS ESTADOS</option><option value="tenho">JÁ TENHO</option><option value="lendo">LENDO</option><option value="quero">QUERO LER</option><option value="explorar">DESCOBRIR</option><option value="favorito">FAVORITOS ♡</option></select>
-</div>
-<div class="xq2-manga-stats" role="status" aria-live="polite">
- <span><strong id="xq2-manga-visible">22</strong> MOSTRADOS</span>
- <span><strong id="xq2-manga-owned">1</strong> NA ESTANTE FÍSICA</span>
- <span><strong id="xq2-manga-wish">0</strong> NA LISTA DE DESEJOS</span>
- <button type="button" class="xq2-text-button" id="xq2-manga-random">ME SURPREENDA ✳</button>
- <button type="button" class="xq2-text-button" id="xq2-manga-reset">LIMPAR FILTROS</button>
-</div>
-<div class="xq-manga-grid" id="xq-manga-grid"><article class="xq-manga-panel" data-title="My Solo Exchange Diary"><span class="xq-manga-number">01 / 22</span><div class="xq-manga-sigil" aria-hidden="true">☾</div><h3>My Solo Exchange Diary</h3><p>Memórias, identidade e intimidade em quadrinhos.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="Solanin"><span class="xq-manga-number">02 / 22</span><div class="xq-manga-sigil" aria-hidden="true">✳</div><h3>Solanin</h3><p>Juventude, sonhos interrompidos e mudanças.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="Homunculus"><span class="xq-manga-number">03 / 22</span><div class="xq-manga-sigil" aria-hidden="true">◌</div><h3>Homunculus</h3><p>Um mergulho perturbador na percepção de si.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="Blue"><span class="xq-manga-number">04 / 22</span><div class="xq-manga-sigil" aria-hidden="true">✿</div><h3>Blue</h3><p>Uma história delicada e introspectiva.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="River's Edge"><span class="xq-manga-number">05 / 22</span><div class="xq-manga-sigil" aria-hidden="true">⌁</div><h3>River's Edge</h3><p>Retrato desconfortável da adolescência.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="My Brain is Different: Stories of ADHD and Other Developmental Disorders"><span class="xq-manga-number">06 / 22</span><div class="xq-manga-sigil" aria-hidden="true">✦</div><h3>My Brain is Different: Stories of ADHD and Other Developmental Disorders</h3><p>Vivências pessoais sobre diferenças e cotidiano.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="Look Back"><span class="xq-manga-number">07 / 22</span><div class="xq-manga-sigil" aria-hidden="true">☷</div><h3>Look Back</h3><p>Arte, amizade e o tempo que passa.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="Goodbye, Eri"><span class="xq-manga-number">08 / 22</span><div class="xq-manga-sigil" aria-hidden="true">⋆</div><h3>Goodbye, Eri</h3><p>Memória, cinema e a linha entre fato e ficção.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="My Lesbian Experience with Loneliness"><span class="xq-manga-number">09 / 22</span><div class="xq-manga-sigil" aria-hidden="true">☾</div><h3>My Lesbian Experience with Loneliness</h3><p>Relato autobiográfico sobre solidão e identidade.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="Hikari no Machi"><span class="xq-manga-number">10 / 22</span><div class="xq-manga-sigil" aria-hidden="true">✳</div><h3>Hikari no Machi</h3><p>Histórias interligadas sobre pessoas e solidão.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="Nijigahara Holograph"><span class="xq-manga-number">11 / 22</span><div class="xq-manga-sigil" aria-hidden="true">◌</div><h3>Nijigahara Holograph</h3><p>Drama psicológico sombrio e não linear.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="Tekkonkinkreet"><span class="xq-manga-number">12 / 22</span><div class="xq-manga-sigil" aria-hidden="true">✿</div><h3>Tekkonkinkreet</h3><p>Cidade, infância e contrastes emocionais.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="Blue Period"><span class="xq-manga-number">13 / 22</span><div class="xq-manga-sigil" aria-hidden="true">⌁</div><h3>Blue Period</h3><p>Arte, estudo e o desejo de se descobrir.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="A Menina do Outro Lado"><span class="xq-manga-number">14 / 22</span><div class="xq-manga-sigil" aria-hidden="true">✦</div><h3>A Menina do Outro Lado</h3><p>Fábula sombria com atmosfera delicada.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="Monster"><span class="xq-manga-number">15 / 22</span><div class="xq-manga-sigil" aria-hidden="true">☷</div><h3>Monster</h3><p>Thriller psicológico cheio de escolhas difíceis.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="Helter Skelter"><span class="xq-manga-number">16 / 22</span><div class="xq-manga-sigil" aria-hidden="true">⋆</div><h3>Helter Skelter</h3><p>Pressões da aparência e da fama.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="Haru's Curse"><span class="xq-manga-number">17 / 22</span><div class="xq-manga-sigil" aria-hidden="true">☾</div><h3>Haru's Curse</h3><p>Drama íntimo sobre perda e relações.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="My Broken Mariko"><span class="xq-manga-number">18 / 22</span><div class="xq-manga-sigil" aria-hidden="true">✳</div><h3>My Broken Mariko</h3><p>Luto e uma amizade que continua na memória.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="As Flores do Mal"><span class="xq-manga-number">19 / 22</span><div class="xq-manga-sigil" aria-hidden="true">◌</div><h3>As Flores do Mal</h3><p>Inquietações, vergonha e juventude.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="Oyasumi Punpun"><span class="xq-manga-number">20 / 22</span><div class="xq-manga-sigil" aria-hidden="true">✿</div><h3>Oyasumi Punpun</h3><p>Crescer nem sempre é simples.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-
-<article class="xq-manga-panel" data-title="A Voz do Silêncio"><span class="xq-manga-number">21 / 22</span><div class="xq-manga-sigil" aria-hidden="true">♡</div><h3>A Voz do Silêncio</h3><p>Comunicação, arrependimento, amizade e a tentativa de mudar.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article>
-<article class="xq-manga-panel" data-title="A Depressão é uma Borboleta Azul"><span class="xq-manga-number">22 / 22</span><div class="xq-manga-sigil" aria-hidden="true">✿</div><h3>A Depressão é uma Borboleta Azul</h3><p>Uma obra que quero conhecer, com temas emocionais e delicados.</p><span class="xq-manga-bottom">ESTANTE / XQRENS <b>↗</b></span></article></div>
-</section>
-
-        <!-- XQRENS / 3 MANGÁS POR SEMANA -->
-        <section class="xq-weekly xq-weekly-books xq2-edition" id="mangas-da-semana" aria-labelledby="xq-weekly-title">
-          <div class="xq2-wrap">
-            <div class="xq-weekly-topline"><span>ARQUIVO VIVO / LEITURA QUE MUDA</span><span>03 OBRAS · 07 DIAS · SEM REPETIÇÃO NA SEMANA</span></div>
-            <div class="xq-weekly-head">
-              <div><span class="xq-weekly-eyebrow">CLUBE DE LEITURA / SEMANA 01</span><h2 id="xq-weekly-title">Três histórias para <em>sentir e pensar.</em></h2></div>
-              <div class="xq-weekly-week"><span>EDIÇÃO ATUAL</span><strong id="xq-weekly-date">12 A 18 OUT · 2026</strong><small id="xq-weekly-next">NOVAS ESCOLHAS NA SEGUNDA-FEIRA</small></div>
-            </div>
-            <p class="xq-weekly-lead">Toda semana, três mangás diferentes sobre saúde mental, solidão, identidade, luto ou afeto. Alguns são leves; outros podem ser difíceis. Você escolhe o ritmo, sem obrigação de terminar tudo.</p>
-            <div id="xq-weekly-manga-grid" class="xq-weekly-manga-grid" aria-live="polite" aria-label="Três mangás recomendados nesta semana">
-              <article class="xq-weekly-manga-card">
-                <span class="xq-weekly-num">01 / 03</span><span class="xq-weekly-illustration" aria-hidden="true">声</span>
-                <span class="xq-weekly-tag">EMPATIA E BULLYING</span><h3>A Voz do Silêncio</h3><p>Uma história sobre isolamento e tentativas de reparar erros.</p>
-                <a href="https://www.google.com/search?q=A+Voz+do+Silencio+manga+editora" target="_blank" rel="noopener noreferrer">CONHECER A OBRA ↗</a>
-              </article>
-              <article class="xq-weekly-manga-card">
-                <span class="xq-weekly-num">02 / 03</span><span class="xq-weekly-illustration" aria-hidden="true">✳</span>
-                <span class="xq-weekly-tag">PRESSÃO E IDENTIDADE</span><h3>Blue Period</h3><p>Arte, expectativas e coragem de tentar.</p>
-                <a href="https://www.google.com/search?q=Blue+Period+manga+editora" target="_blank" rel="noopener noreferrer">CONHECER A OBRA ↗</a>
-              </article>
-              <article class="xq-weekly-manga-card">
-                <span class="xq-weekly-num">03 / 03</span><span class="xq-weekly-illustration" aria-hidden="true">◌</span>
-                <span class="xq-weekly-tag">NEURODIVERGÊNCIA</span><h3>My Brain is Different</h3><p>Experiências reais sobre encontrar caminhos próprios.</p>
-                <a href="https://sevenseasentertainment.com/series/my-brain-is-different-stories-of-adhd-and-other-developmental-disorders/" target="_blank" rel="noopener noreferrer">CONHECER A OBRA ↗</a>
-              </article>
-            </div>
-            <div class="xq-weekly-foot">
-              <div><span class="xq-weekly-tiny">MEU RITMO / SEM CORRIDA</span><strong id="xq-weekly-readcount">0 DE 3 MARCADOS COMO LIDOS</strong></div>
-              <details class="xq-weekly-history"><summary>VER RECOMENDAÇÕES ANTERIORES <span aria-hidden="true">↗</span></summary><div id="xq-weekly-history-list"><p>A primeira semana começa em 12 de outubro de 2026.</p></div></details>
-            </div>
-            <p class="xq-weekly-disclaimer">Essas obras são ficção ou relatos pessoais, não substituem cuidado em saúde mental. Os avisos de conteúdo aparecem nos cards. Os links abrem informações oficiais quando disponíveis ou uma busca por edições legais, nunca cópias não autorizadas.</p>
-          </div>
-        </section>
-
-<section class="ink-section ink-fragments" id="fragmentos">
-            <div class="ink-section-overline">
-                <span>FRAGMENTOS / 001—012</span>
-                <span>ANOTAÇÕES QUE FICARAM</span>
-            </div>
-            <div class="ink-section-title">
-                <div>
-                    <span class="ink-kicker">PENSAMENTOS SOLTOS</span>
-                    <h2>Não sou feito só de <em>código.</em></h2>
-                </div>
-                <p>Detalhes pequenos e meio aleatórios também fazem parte da minha história.</p>
-            </div>
-            <div class="ink-note-grid" data-ink-stagger>
-                
-                <article class="ink-note" tabindex="0">
-                    <span class="ink-note-index">01 / FRAGMENTO</span>
-                    <p>Gosto de sites que parecem ter personalidade, não só botões.</p>
-                    <strong>UM TEMA</strong>
-                </article>
-
-                <article class="ink-note" tabindex="0">
-                    <span class="ink-note-index">02 / FRAGMENTO</span>
-                    <p>Histórias psicológicas sempre chamam minha atenção.</p>
-                    <strong>UM GOSTO</strong>
-                </article>
-
-                <article class="ink-note" tabindex="0">
-                    <span class="ink-note-index">03 / FRAGMENTO</span>
-                    <p>Quero fazer projetos que as pessoas realmente usem.</p>
-                    <strong>UMA IDEIA</strong>
-                </article>
-
-                <article class="ink-note" tabindex="0">
-                    <span class="ink-note-index">04 / FRAGMENTO</span>
-                    <p>O SENAI faz parte da minha trajetória de estudos.</p>
-                    <strong>UM LUGAR</strong>
-                </article>
-
-                <article class="ink-note" tabindex="0">
-                    <span class="ink-note-index">05 / FRAGMENTO</span>
-                    <p>Prefiro aprender testando e descobrindo os erros.</p>
-                    <strong>UM JEITO</strong>
-                </article>
-
-                <article class="ink-note" tabindex="0">
-                    <span class="ink-note-index">06 / FRAGMENTO</span>
-                    <p>Música combina com ficar horas mexendo em CSS.</p>
-                    <strong>UM SOM</strong>
-                </article>
-
-                <article class="ink-note" tabindex="0">
-                    <span class="ink-note-index">07 / FRAGMENTO</span>
-                    <p>Preto, cinza e tons de papel fazem sentido aqui.</p>
-                    <strong>UMA COR</strong>
-                </article>
-
-                <article class="ink-note" tabindex="0">
-                    <span class="ink-note-index">08 / FRAGMENTO</span>
-                    <p>A Julya é minha namorada e ocupa um lugar único.</p>
-                    <strong>UMA PESSOA</strong>
-                </article>
-
-                <article class="ink-note" tabindex="0">
-                    <span class="ink-note-index">09 / FRAGMENTO</span>
-                    <p>O Tofu é nosso filho, mesmo sem pagar boletos.</p>
-                    <strong>UMA CRIATURA</strong>
-                </article>
-
-                <article class="ink-note" tabindex="0">
-                    <span class="ink-note-index">10 / FRAGMENTO</span>
-                    <p>Projetos antigos também mostram que estou evoluindo.</p>
-                    <strong>UMA MEMÓRIA</strong>
-                </article>
-
-                <article class="ink-note" tabindex="0">
-                    <span class="ink-note-index">11 / FRAGMENTO</span>
-                    <p>Levo a sério aprender, sem fingir ser especialista.</p>
-                    <strong>UMA ESCOLHA</strong>
-                </article>
-
-                <article class="ink-note" tabindex="0">
-                    <span class="ink-note-index">12 / FRAGMENTO</span>
-                    <p>Nem toda história precisa estar resolvida hoje.</p>
-                    <strong>UM LEMBRETE</strong>
-                </article>
-            </div>
-        </section>
-
-        <section id="laboratorio" class="ink-section ink-lab">
-            <div class="ink-section-overline">
-                <span>CAPÍTULO VIII</span>
-                <span>EXPERIMENTOS INTERATIVOS</span>
-            </div>
-            <div class="ink-section-title">
-                <div>
-                    <span class="ink-kicker">APERTE ALGUMA COISA</span>
-                    <h2>Laboratório <em>estranho.</em></h2>
-                </div>
-                <p>A parte do portfólio em que JavaScript deixa de ser texto e começa a responder.</p>
-            </div>
-            <div class="ink-lab-grid">
-                <article class="ink-lab-card ink-lab-card-featured">
-                    <header class="ink-card-head"><span>01 / GERADOR DE CAPÍTULOS</span><span>↗</span></header>
-                    <div class="ink-oracle" aria-live="polite">
-                        <span class="ink-oracle-symbol" aria-hidden="true">☾</span>
-                        <blockquote id="ink-oracle-text">Toda história muda um pouco quando você vira a página.</blockquote>
-                    </div>
-                    <button type="button" id="ink-oracle-button" class="ink-button">PRÓXIMA FRASE <span>↗</span></button>
-                </article>
-                <article class="ink-lab-card">
-                    <header class="ink-card-head"><span>02 / CONTROLE DE ATMOSFERA</span><span>◉</span></header>
-                    <h3>Escolhe a cor do silêncio.</h3>
-                    <p>Mude a temperatura visual sem abandonar o preto e branco.</p>
-                    <div class="ink-palettes" role="group" aria-label="Paleta de cores">
-                        <button type="button" class="ink-palette is-selected" data-ink-palette="paper" aria-pressed="true"><i></i>PAPEL</button>
-                        <button type="button" class="ink-palette" data-ink-palette="night" aria-pressed="false"><i></i>NOITE</button>
-                        <button type="button" class="ink-palette" data-ink-palette="plum" aria-pressed="false"><i></i>AMEIXA</button>
-                    </div>
-                </article>
-                <article class="ink-lab-card">
-                    <header class="ink-card-head"><span>03 / MÁQUINA DE ESTRELAS</span><span>✳</span></header>
-                    <h3>Faça chover pontinhos.</h3>
-                    <p>Um experimento de partículas em tela, sem biblioteca externa.</p>
-                    <div class="ink-particle-sky" id="ink-particle-sky" aria-hidden="true"></div>
-                    <button type="button" class="ink-button ink-button-secondary" id="ink-particles-button">ACENDER O CÉU <span>✳</span></button>
-                </article>
-                <article class="ink-lab-card">
-                    <header class="ink-card-head"><span>04 / CARTA ALEATÓRIA</span><span>✉</span></header>
-                    <h3>Uma mensagem breve.</h3>
-                    <p>Para quando faltam palavras e sobram abas abertas.</p>
-                    <div id="ink-letter-preview" class="ink-letter-preview" aria-live="polite">Ainda dá tempo de fazer uma coisa bonita hoje.</div>
-                    <button type="button" class="ink-button ink-button-secondary" id="ink-letter-button">OUTRA MENSAGEM <span>↗</span></button>
-                </article>
-                <article class="ink-lab-card ink-lab-card-wide">
-                    <header class="ink-card-head"><span>05 / CONSOLE DE MEMÓRIAS</span><span>⌘</span></header>
-                    <h3>Eu comecei por aqui.</h3>
-                    <p>Uma pequena linha do tempo em formato de registros. Clique em cada ponto para ler.</p>
-                    <ol class="ink-stops">
-                    <li class="ink-stop">
-                        <span>01</span>
-                        <div>
-                            <strong>PRIMEIRA PÁGINA</strong>
-                            <p>Cada site começa com uma tag e uma ideia meio confusa.</p>
-                        </div>
-                    </li>
-
-                    <li class="ink-stop">
-                        <span>02</span>
-                        <div>
-                            <strong>TENTATIVA DOIS</strong>
-                            <p>Quando não funciona, eu volto e testo de outro jeito.</p>
-                        </div>
-                    </li>
-
-                    <li class="ink-stop">
-                        <span>03</span>
-                        <div>
-                            <strong>UMA COISA NOVA</strong>
-                            <p>Depois do CSS vem o JavaScript, e aí tudo fica mais estranho.</p>
-                        </div>
-                    </li>
-
-                    <li class="ink-stop">
-                        <span>04</span>
-                        <div>
-                            <strong>SENAI</strong>
-                            <p>Aprender sistemas é também entender o que existe por trás das telas.</p>
-                        </div>
-                    </li>
-
-                    <li class="ink-stop">
-                        <span>05</span>
-                        <div>
-                            <strong>PROJETOS</strong>
-                            <p>Pequenos trabalhos viraram meu laboratório de aprendizado.</p>
-                        </div>
-                    </li>
-
-                    <li class="ink-stop">
-                        <span>06</span>
-                        <div>
-                            <strong>AGORA</strong>
-                            <p>Ainda estou construindo a pessoa e o desenvolvedor que quero ser.</p>
-                        </div>
-                    </li>
-                    </ol>
-                </article>
-            </div>
-        </section>
-
-        <!-- XQRENS / JJS - 3 PERSONAGENS DA SEMANA -->
-        <section class="xq-weekly xq-jjs-section xq2-edition" id="roleta-jjs" aria-labelledby="xq-jjs-title">
-          <div class="xq2-wrap">
-            <div class="xq-weekly-topline"><span>JUJUTSU SHENANIGANS / DESAFIO SEMANAL</span><span>03 PICKS · 01 SEMANA · 0 REROLLS</span></div>
-            <div class="xq-weekly-head">
-              <div><span class="xq-weekly-eyebrow">XQRENS / SORTEIO SEM ROUBAR</span><h2 id="xq-jjs-title">Deixa o destino <em>escolher teus bonecos.</em></h2></div>
-              <div class="xq-weekly-week xq-jjs-week"><span>TRIO VÁLIDO ATÉ DOMINGO</span><strong id="xq-jjs-week">12 A 18 OUT · 2026</strong><small>REINICIA NA SEGUNDA-FEIRA · BRASÍLIA</small></div>
-            </div>
-            <p class="xq-weekly-lead">Gira três vezes. A roleta escolhe <strong>3 personagens diferentes</strong> que você vai usar na semana. Sorteio travado depois do terceiro giro, até virar a semana. Chega de girar 80 vezes até sair teu favorito. KKKK</p>
-            <div class="xq-jjs-layout">
-              <div class="xq-jjs-visual">
-                <div class="xq-jjs-wheel-frame">
-                  <span class="xq-jjs-pointer" aria-hidden="true"></span>
-                  <canvas id="xq-jjs-wheel" width="640" height="640" aria-label="Roleta visual com os personagens gratuitos de Jujutsu Shenanigans">A roleta visual precisa de JavaScript e de um navegador com Canvas.</canvas>
-                  <div class="xq-jjs-wheel-center" aria-hidden="true"><span>JJS</span><small>× 03</small></div>
-                </div>
-                <div class="xq-jjs-visual-bottom"><span><i aria-hidden="true"></i> APENAS PERSONAGENS DISPONÍVEIS PUBLICAMENTE</span><span id="xq-jjs-remaining">21 NOMES NA ROLETA</span></div>
-              </div>
-              <div class="xq-jjs-console">
-                <div class="xq-jjs-console-top"><span>FICHA SEMANAL / XQRENS</span><span id="xq-jjs-round">00 / 03</span></div>
-                <h3>Teu trio <em>da semana.</em></h3>
-                <p class="xq-jjs-console-desc">Cada boneco sorteado sai dos próximos giros. Os resultados ficam guardados no navegador e são os mesmos para a semana, mesmo se você atualizar a página.</p>
-                <ol class="xq-jjs-picked-list" id="xq-jjs-picks" aria-label="Personagens escolhidos nesta semana">
-                  <li><span>01</span><div><strong>???</strong><small>AGUARDANDO SORTEIO</small></div></li>
-                  <li><span>02</span><div><strong>???</strong><small>AGUARDANDO SORTEIO</small></div></li>
-                  <li><span>03</span><div><strong>???</strong><small>AGUARDANDO SORTEIO</small></div></li>
-                </ol>
-                <button type="button" class="xq-jjs-spin" id="xq-jjs-spin">GIRAR A ROLETA <span aria-hidden="true">↗</span></button>
-                <p class="xq-jjs-live" id="xq-jjs-result" role="status" aria-live="polite" aria-atomic="true">TRÊS GIROS DISPONÍVEIS. BOA SORTE.</p>
-                <div class="xq-jjs-rules"><span>SEM REPETIR PERSONAGENS</span><span>SEM EARLY ACCESS</span><span>SEM RE-ROLL</span></div>
-              </div>
-            </div>
-            <details class="xq-jjs-roster">
-              <summary>CONFERIR OS 21 PERSONAGENS DA ROLETA <span aria-hidden="true">↗</span></summary>
-              <div class="xq-jjs-roster-grid" id="xq-jjs-roster-list"><p>A lista carrega com JavaScript. Ela inclui nomes do menu de personagens do JJS, com o nome conhecido do anime entre parênteses.</p></div>
-            </details>
-            <div class="xq-jjs-footer"><span>ELENCO BASEADO NOS PERSONAGENS PÚBLICOS DE JJS, EM OUTUBRO DE 2026. PASSES, BONECOS DE ADM E MAHORAGA NÃO ENTRAM NA ROLETA.</span><a href="https://jujutsushenaniganswiki.com/wiki/characters/" target="_blank" rel="noopener noreferrer">VER FONTES DO ELENCO ↗</a></div>
-          </div>
-        </section>
-
-
-        <!-- ARQUIVO VIVO / SEGREDOS -->
-        <section class="xq2-edition xq2-section xq2-secret-section" id="segredos" aria-labelledby="xq2-secret-title">
-          <div class="xq2-wrap">
-            <div class="xq2-topline"><span>ARQUIVO VIVO / ???</span><span>NEM TODAS AS PÁGINAS ESTÃO NO ÍNDICE</span></div>
-            <div class="xq2-intro"><div><span class="xq2-kicker">NÃO PRECISA ENTENDER TUDO</span><h2 id="xq2-secret-title">Pequenos <em>segredos.</em></h2></div><p>Existem três fragmentos escondidos pelas novas seções. Procure símbolos ✳, experimente os botões e descubra uma pequena mensagem ao reunir os três.</p></div>
-            <div class="xq2-secret-grid">
-              <button class="xq2-secret-tile" type="button" data-egg="escuta" aria-pressed="false"><span>FRAGMENTO / 01</span><strong>Uma voz que fica.</strong><small>GUARDAR FRAGMENTO ↗</small></button>
-              <button class="xq2-secret-tile" type="button" data-egg="lembranca" aria-pressed="false"><span>FRAGMENTO / 02</span><strong>Uma pequena lembrança.</strong><small>GUARDAR FRAGMENTO ↗</small></button>
-              <button class="xq2-secret-tile" type="button" data-egg="amanha" aria-pressed="false"><span>FRAGMENTO / 03</span><strong>Uma página em branco.</strong><small>GUARDAR FRAGMENTO ↗</small></button>
-            </div>
-            <div class="xq2-secret-progress"><span id="xq2-secret-count">0 / 3 FRAGMENTOS REUNIDOS</span><button type="button" class="xq2-action" id="xq2-secret-open" disabled>ABRIR MENSAGEM SECRETA ↗</button><span>DICA EXTRA: ALGUNS SITES ESCONDEM CÓDIGOS DE TECLADO.</span></div>
-          </div>
-        </section>
-        <div id="xq2-secret-panel" class="xq2-secret-panel" role="dialog" aria-modal="false" aria-labelledby="xq2-secret-panel-title" hidden>
-          <div class="xq2-secret-head"><span class="xq2-kicker">ARQUIVO SECRETO / DESBLOQUEADO</span><button id="xq2-secret-close" type="button" aria-label="Fechar mensagem secreta">×</button></div>
-          <h2 id="xq2-secret-panel-title">Ainda estou aqui.</h2>
-          <p>Se você encontrou isso, leu mais do que parecia necessário. Obrigado por dedicar um pouco do seu tempo ao meu pequeno canto da internet. Até o próximo capítulo. ♡</p>
+          <div class="visual-corner"><img src="./Img/15.jpg" alt="Arte de referência com personagem de anime sob relâmpagos" loading="lazy" width="736" height="417"></div>
+          <span class="corner-label">LAIN / SIGNAL_01</span>
+          <div class="visual-bottom"><span>PERSONAL ARCHIVE / REFERENCES</span><code>STATUS: APRENDENDO</code></div>
         </div>
-
-
-        <section class="ink-love-letter" aria-labelledby="ink-love-title">
-            <div class="ink-love-text">
-                <span class="ink-kicker">PARA MINHA NAMORADA / JULYA</span>
-                <h2 id="ink-love-title">Tem pessoas que tornam a história <em>mais bonita.</em></h2>
-                <p>A Julya é minha namorada. Ela tem esse jeito revoltadinho, uma memória absurda e um lugar que ninguém mais ocupa na minha vida. Essa página também é um pedacinho da nossa história.</p>
-                <a href="#julya" class="ink-love-link">VOLTAR AO CAPÍTULO DA JULYA <span>↗</span></a>
-            </div>
-            <div class="ink-love-visual" aria-hidden="true">
-                <span class="ink-love-circle">♡</span>
-                <span class="ink-love-floating ink-love-floating-one">PARA JULYA</span>
-                <span class="ink-love-floating ink-love-floating-two">01 + 01</span>
-                <span class="ink-love-floating ink-love-floating-three">∞</span>
-            </div>
-        </section>
-
-        <section id="diario" class="ink-section ink-diary">
-            <div class="ink-section-overline">
-                <span>CAPÍTULO X</span>
-                <span>SEU ESPAÇO PESSOAL / NESTE DISPOSITIVO</span>
-            </div>
-            <div class="ink-section-title">
-                <div>
-                    <span class="ink-kicker">UMA PÁGINA SÓ SUA</span>
-                    <h2>Diário <em>sem título.</em></h2>
-                </div>
-                <p>Uma caixinha de texto para guardar um pensamento. O conteúdo fica neste navegador e você pode exportar quando quiser.</p>
-            </div>
-            <div class="ink-diary-paper">
-                <div class="ink-diary-topline">
-                    <span>NOTA LOCAL / 001</span>
-                    <span id="ink-diary-date">...</span>
-                </div>
-                <label for="ink-diary-input">O que passou pela tua cabeça hoje?</label>
-                <textarea id="ink-diary-input" maxlength="4000" rows="7" placeholder="escreva por aqui..."></textarea>
-                <div class="ink-diary-actions">
-                    <span id="ink-diary-count" aria-live="polite">0 / 4000</span>
-                    <span class="ink-diary-status" id="ink-diary-status" role="status">Salvo automaticamente neste navegador.</span>
-                    <button type="button" id="ink-diary-export">EXPORTAR .TXT ↓</button>
-                    <button type="button" id="ink-diary-clear">APAGAR NOTA ×</button>
-                </div>
-            </div>
-        </section>
-
-        <section class="ink-chapters ink-section" id="capitulos">
-            <div class="ink-section-overline">
-                <span>SUMÁRIO / 22 CAPÍTULOS</span>
-                <span>ESSE SITE É UMA HISTÓRIA EM ANDAMENTO</span>
-            </div>
-            <div class="ink-section-title">
-                <div>
-                    <span class="ink-kicker">ESCOLHA UMA PÁGINA</span>
-                    <h2>Índice <em>de capítulos.</em></h2>
-                </div>
-                <p>Nem tudo precisa ser lido na ordem. Você pode pular direto para o que chamou sua atenção.</p>
-            </div>
-            <div class="ink-chapter-list">
-                <a href="#sobre" class="ink-chapter-item">
-                    <span>01</span>
-                    <strong>Quem é o Luiz?</strong>
-                    <small>Uma introdução sem fingir que sei tudo.</small>
-                    <span aria-hidden="true">↗</span>
-                </a>
-
-                <a href="#trajetoria" class="ink-chapter-item">
-                    <span>02</span>
-                    <strong>Aprender fazendo</strong>
-                    <small>Do primeiro HTML aos projetos de agora.</small>
-                    <span aria-hidden="true">↗</span>
-                </a>
-
-                <a href="#julya" class="ink-chapter-item">
-                    <span>03</span>
-                    <strong>Julya</strong>
-                    <small>Minha namorada. Minha pessoa favorita.</small>
-                    <span aria-hidden="true">↗</span>
-                </a>
-
-                <a href="#tofu" class="ink-chapter-item">
-                    <span>04</span>
-                    <strong>Tofu</strong>
-                    <small>Nosso pequeno caos em forma de filho.</small>
-                    <span aria-hidden="true">↗</span>
-                </a>
-
-                <a href="#gostos" class="ink-chapter-item">
-                    <span>05</span>
-                    <strong>Coisas que ficam</strong>
-                    <small>Música, histórias, mangás e internet estranha.</small>
-                    <span aria-hidden="true">↗</span>
-                </a>
-
-                <a href="#leituras" class="ink-chapter-item">
-                    <span>06</span>
-                    <strong>Estante</strong>
-                    <small>Histórias que me fizeram sentir coisas.</small>
-                    <span aria-hidden="true">↗</span>
-                </a>
-
-                <a href="#tecnologias" class="ink-chapter-item">
-                    <span>07</span>
-                    <strong>Código</strong>
-                    <small>O que sei, o que erro e o que estou aprendendo.</small>
-                    <span aria-hidden="true">↗</span>
-                </a>
-
-                <a href="#laboratorio" class="ink-chapter-item">
-                    <span>08</span>
-                    <strong>Laboratório</strong>
-                    <small>Experimentos que você pode tocar.</small>
-                    <span aria-hidden="true">↗</span>
-                </a>
-
-                <a href="#projetos" class="ink-chapter-item">
-                    <span>09</span>
-                    <strong>Projetos</strong>
-                    <small>Páginas que saíram do papel.</small>
-                    <span aria-hidden="true">↗</span>
-                </a>
-
-                <a href="#diario" class="ink-chapter-item">
-                    <span>10</span>
-                    <strong>Diário</strong>
-                    <small>Um espaço para deixar pensamentos.</small>
-                    <span aria-hidden="true">↗</span>
-                </a>
-
-                <a href="#saude-mental" class="ink-chapter-item">
-                    <span>11</span>
-                    <strong>Mente em Flor</strong>
-                    <small>Conversa também pode ser cuidado.</small>
-                    <span aria-hidden="true">↗</span>
-                </a>
-
-                <a href="#contato" class="ink-chapter-item">
-                    <span>12</span>
-                    <strong>Contato</strong>
-                    <small>Até a próxima página.</small>
-                    <span aria-hidden="true">↗</span>
-                </a>
-
-                <a href="#evolucao" class="ink-chapter-item"><span>13</span><strong>Evolução GitHub</strong><small>Aprender sem apagar as primeiras tentativas.</small><span aria-hidden="true">↗</span></a>
-                <a href="#julya-exe" class="ink-chapter-item"><span>14</span><strong>Julya.exe ♡</strong><small>Quatro pequenas cartas interativas.</small><span aria-hidden="true">↗</span></a>
-                <a href="#tofu-world" class="ink-chapter-item"><span>15</span><strong>Tofu World</strong><small>Carinhos virtuais para nosso filho.</small><span aria-hidden="true">↗</span></a>
-                <a href="#sala-musica" class="ink-chapter-item"><span>16</span><strong>Sala de Música</strong><small>Um lugar para guardar faixas e atmosferas.</small><span aria-hidden="true">↗</span></a>
-                <a href="#senai-lab" class="ink-chapter-item"><span>17</span><strong>Laboratório SENAI</strong><small>O caminho do HTML ao JavaScript.</small><span aria-hidden="true">↗</span></a>
-                <a href="#mangateca" class="ink-chapter-item"><span>18</span><strong>Mangateca 2.0</strong><small>22 obras para buscar, filtrar e guardar.</small><span aria-hidden="true">↗</span></a>
-                <a href="#segredos" class="ink-chapter-item"><span>19</span><strong>Segredos</strong><small>Três fragmentos esperando por alguém.</small><span aria-hidden="true">↗</span></a>
-                <a href="#fragmentos" class="ink-chapter-item"><span>20</span><strong>Fragmentos</strong><small>Algumas anotações do meu mundo.</small><span aria-hidden="true">↗</span></a>
-            
-                <a href="#mangas-da-semana" class="ink-chapter-item"><span>21</span><strong>3 mangás por semana ✿</strong><small>Recomendações de saúde mental, recomeços e afeto.</small><span aria-hidden="true">↗</span></a>
-                <a href="#roleta-jjs" class="ink-chapter-item"><span>22</span><strong>Roleta JJS 🎰</strong><small>Três bonecos diferentes para usar por sete dias.</small><span aria-hidden="true">↗</span></a>
-</div>
-        </section>
-
-
-                <!-- GALERIA -->
-
-        <section class="gallery-section">
-
-            <div class="section-label">
-                09 / GALERIA
-            </div>
-
-            <h2 class="section-title">
-                Algumas imagens.
-            </h2>
-
-            <p class="section-description">
-                Um pouco das coisas que fazem parte desse projeto e da minha história.
-                Clica nas imagens.
-            </p>
-
-            <div class="gallery">
-
-                <div class="gallery-item">
-                    <img src="./Img/1.jpg" alt="Imagem 01">
-                </div>
-
-                <div class="gallery-item">
-                    <img src="./Img/2.jpg" alt="Imagem 02">
-                </div>
-
-                <div class="gallery-item">
-                    <img src="./Img/3.jpg" alt="Imagem 03">
-                </div>
-
-                <div class="gallery-item">
-                    <img src="./Img/4.jpg" alt="Imagem 04">
-                </div>
-
-                <div class="gallery-item">
-                    <img src="./Img/5.jpg" alt="Imagem 05">
-                </div>
-
-                <div class="gallery-item">
-                    <img src="./Img/6.jpg" alt="Imagem 06">
-                </div>
-
-                <div class="gallery-item">
-                    <img src="./Img/7.jpg" alt="Imagem 07">
-                </div>
-
-                <div class="gallery-item">
-                    <img src="./Img/8.jpg" alt="Imagem 08">
-                </div>
-
-                <div class="gallery-item">
-                    <img src="./Img/9.jpg" alt="Imagem 09">
-                </div>
-
-                <div class="gallery-item">
-                    <img src="./Img/10.jpg" alt="Imagem 10">
-                </div>
-
-                <div class="gallery-item">
-                    <img src="./Img/11.jpg" alt="Imagem 11">
-                </div>
-
-                <div class="gallery-item">
-                    <img src="./Img/12.jpg" alt="Imagem 12">
-                </div>
-
-                <div class="gallery-item">
-                    <img src="./Img/13.jpg" alt="Imagem 13">
-                </div>
-
-                <div class="gallery-item">
-                    <img src="./Img/14.jpg" alt="Imagem 14">
-                </div>
-
-                <div class="gallery-item">
-                    <img src="./Img/15.jpg" alt="Imagem 15">
-                </div>
-
-                <div class="gallery-item">
-                    <img src="./Img/16.jpg" alt="Imagem 16">
-                </div>
-
-                <div class="gallery-item">
-                    <img src="./Img/17.jpg" alt="Imagem 17">
-                </div>
-
-                <div class="gallery-item">
-                    <img src="./Img/18.jpg" alt="Imagem 18">
-                </div>
-
-                <div class="gallery-item">
-                    <img src="./Img/19.jpg" alt="Imagem 19">
-                </div>
-
-                <div class="gallery-item">
-                    <img src="./Img/20.jpg" alt="Imagem 20">
-                </div>
-
-                <div class="gallery-item">
-                    <img src="./Img/21.jpg" alt="Imagem 21">
-                </div>
-
-                <div class="gallery-item">
-                    <img src="./Img/22.jpg" alt="Imagem 22">
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- CONTATO -->
-
-        <section id="contato" class="contact-section">
-
-            <div class="section-label">
-                10 / CONTATO
-            </div>
-
-            <h2 class="section-title">
-                Me encontra por aí.
-            </h2>
-
-            <p class="section-description">
-                Se quiser ver mais coisas minhas, esses são os lugares onde eu apareço.
-            </p>
-
-            <div class="social-grid">
-
-                <a
-                    class="social-card"
-                    href="https://www.instagram.com/lxqrens/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-
-                    <span>
-                        01 / INSTAGRAM
-                    </span>
-
-                    <strong>
-                        @lxqrens
-                    </strong>
-
-                    <small>
-                        abrir perfil ↗
-                    </small>
-
-                </a>
-
-
-                <a
-                    class="social-card"
-                    href="https://open.spotify.com/user/31ydaudx7rf6gusyu7bned2tf65i"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-
-                    <span>
-                        02 / SPOTIFY
-                    </span>
-
-                    <strong>
-                        Luiz Eduardo
-                    </strong>
-
-                    <small>
-                        abrir perfil ↗
-                    </small>
-
-                </a>
-
-
-                <a
-                    class="social-card"
-                    href="https://github.com/NeroX07-steam"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-
-                    <span>
-                        03 / GITHUB
-                    </span>
-
-                    <strong>
-                        NeroX07-steam
-                    </strong>
-
-                    <small>
-                        ver projetos ↗
-                    </small>
-
-                </a>
-
-            </div>
-
-        </section>
-
-    </main>
-    <div id="ink-toast" class="ink-toast" role="status" aria-live="polite"></div>
-    <button type="button" class="ink-command-launch" id="ink-command-launch" title="Abrir navegação rápida (Ctrl+K)" aria-label="Navegação rápida">⌘ <span>IR</span></button>
-    <div class="ink-command-backdrop" id="ink-command-backdrop" hidden>
-        <div class="ink-command-dialog" role="dialog" aria-modal="true" aria-labelledby="ink-command-title">
-            <div class="ink-command-header"><h2 id="ink-command-title">Ir para um capítulo</h2><button type="button" id="ink-command-close" aria-label="Fechar">×</button></div>
-            <label for="ink-command-search" class="ink-visually-hidden">Pesquisar capítulo</label>
-            <input id="ink-command-search" autocomplete="off" placeholder="Digite uma palavra ou capítulo...">
-            <div id="ink-command-results" class="ink-command-results"></div>
-            <p>CTRL + K PARA ABRIR · ESC PARA FECHAR</p>
-        </div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-label="Resumo: desenvolvimento web, projetos e SENAI">
+      <div class="container ticker-inner"><span>DESENVOLVIMENTO WEB</span><span>PROJETOS REAIS DE ESTUDO</span><span>EM CONSTANTE EVOLUÇÃO</span></div>
     </div>
 
-
-    <footer>
-
-        <div>
-            <strong>
-                LUIZ.
-            </strong>
+    <section class="section" id="sobre" aria-labelledby="aboutTitle">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">01 <span class="line"></span> QUEM SOU</span><h2 id="aboutTitle">Sobre <span class="accent">mim.</span></h2></div>
+          <p>Um pouco da pessoa por trás das linhas de código, sem fingir que já sei tudo.</p>
         </div>
-
-        <div>
-            feito por Luiz Eduardo
+        <div class="about-layout">
+          <div class="about-copy">
+            <p>Meu nome é <strong>Luiz Eduardo</strong>. Estudo programação no <strong>SENAI</strong> e estou construindo meu caminho aos poucos. Aprendo principalmente criando páginas, testando ideias e tentando de novo quando alguma coisa dá errado.</p>
+            <p>Já fiz vários exercícios e projetos durante meus estudos. Alguns ficaram bons; outros serviram mais para descobrir o que eu precisava melhorar. Faz parte.</p>
+            <p>Gosto de ver uma ideia sair da cabeça e virar alguma coisa que funciona na tela. Também gosto de animes, mangás e histórias que fazem pensar. Essas referências aparecem no visual do site, mas o foco aqui continua sendo <strong>meu trabalho e o que estou aprendendo</strong>.</p>
+            <div class="about-facts">
+              <div class="fact"><small>FORMAÇÃO</small><strong>Desenvolvimento de Sistemas</strong></div>
+              <div class="fact"><small>ONDE ESTUDO</small><strong>SENAI</strong></div>
+              <div class="fact"><small>MINHA ÁREA</small><strong>Desenvolvimento Web</strong></div>
+              <div class="fact"><small>STATUS</small><strong>Aprendendo na prática</strong></div>
+            </div>
+            <div class="stack-heading">TECNOLOGIAS QUE ESTOU ESTUDANDO</div>
+            <div class="stack-list" aria-label="Tecnologias"><span class="stack-tag">HTML5</span><span class="stack-tag">CSS3</span><span class="stack-tag">JavaScript</span><span class="stack-tag">Git</span><span class="stack-tag">GitHub</span><span class="stack-tag">Python (básico)</span><span class="stack-tag">Banco de dados (básico)</span></div>
+          </div>
+          <aside class="about-terminal" aria-label="Resumo pessoal em formato de terminal">
+            <div class="term-head"><span>about-me.json</span><div class="term-lights" aria-hidden="true"><i></i><i></i><i></i></div></div>
+            <div class="term-body">
+              <p class="command">$ cat /home/luiz/about-me.json</p>
+              <p><span class="key">"nome"</span>: <span class="value">"Luiz Eduardo"</span>,<br><span class="key">"formacao"</span>: <span class="value">"SENAI"</span>,<br><span class="key">"foco"</span>: <span class="value">"Desenvolvimento Web"</span>,<br><span class="key">"aprendendo"</span>: [<span class="value">"HTML", "CSS", "JS"</span>],<br><span class="key">"status"</span>: <span class="value">"em evolução"</span></p>
+              <p class="comment">// Referências visuais também contam histórias.</p>
+              <div class="term-image">
+                <figure><img src="./Img/5.jpg" alt="Arte de anime com Rei Ayanami e interface de computador retrô" loading="lazy" width="736" height="417"><figcaption>EVANGELION / REI</figcaption></figure>
+                <figure><img src="./Img/10.jpg" alt="Ilustração em preto e branco de personagem de anime com detalhe laranja" loading="lazy" width="736" height="417"><figcaption>ANIME / ART STUDY</figcaption></figure>
+              </div>
+            </div>
+            <div class="term-foot">luiz@portfolio:~$ <span class="mint">▌</span> ready for new projects</div>
+          </aside>
         </div>
+      </div>
+    </section>
 
-        <div>
-            © <span data-year>2026</span>
+    <section class="section projects-section" id="projetos" aria-labelledby="projectsTitle">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="eyebrow">02 <span class="line"></span> REPOSITÓRIO / TRABALHOS</span><h2 id="projectsTitle">Meus <span class="accent">projetos.</span></h2></div>
+          <div class="projects-stats"><div class="metric"><b>19</b><span>EXERCÍCIOS</span></div><div class="metric"><b>02</b><span>DESTAQUES</span></div></div>
         </div>
+        <div class="feature-grid">
+          <article class="feature feature-primary">
+            <div class="feature-art" aria-hidden="true"></div>
+            <div class="feature-top"><span class="feature-type">DESTAQUE / 01</span><span class="feature-state">PROJETO PESSOAL</span></div>
+            <h3>Mente em Flor ✳</h3>
+            <p>Um site educativo de conscientização sobre saúde mental, com práticas simples, pausas e informações de onde buscar apoio.</p>
+            <div class="feature-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>ACOLHIMENTO</span></div>
+            <div class="feature-bottom"><a class="btn mint-button" href="https://xqrens-portifolio.vercel.app/" target="_blank" rel="noopener noreferrer">Visitar projeto ↗</a><a class="card-link" href="https://github.com/NeroX07-steam/Portifolio/tree/main/mente-em-flor" target="_blank" rel="noopener noreferrer">Ver código ↗</a></div>
+          </article>
+          <article class="feature feature-secondary">
+            <div class="feature-art" aria-hidden="true"></div>
+            <div class="feature-top"><span class="feature-type">DESTAQUE / 02</span><span class="feature-state">PORTFÓLIO PESSOAL</span></div>
+            <h3>Este portfólio.</h3>
+            <p>Uma vitrine dos meus estudos com HTML semântico, CSS responsivo, JavaScript e referências de anime no visual.</p>
+            <div class="feature-tags"><span>FRONT-END</span><span>RESPONSIVO</span><span>GITHUB</span></div>
+            <div class="feature-bottom"><a class="btn ghost" href="https://github.com/NeroX07-steam/Portifolio/tree/main/projetos" target="_blank" rel="noopener noreferrer">Explorar código ↗</a></div>
+          </article>
+        </div>
+        <div class="repo-bar">
+          <div class="repo-bar-copy"><h3>Atividades e exercícios</h3><p>/projetos · SENAI · 19 páginas HTML</p></div>
+          <div class="project-search"><label for="projectSearch" aria-hidden="true">⌕</label><input id="projectSearch" type="search" placeholder="Pesquisar um trabalho..." maxlength="80" autocomplete="off" aria-label="Pesquisar um trabalho pelo nome ou descrição"></div>
+        </div>
+        <div class="filter-row" role="group" aria-label="Filtrar os trabalhos">
+          <button class="filter-btn" type="button" data-filter="todos" aria-pressed="true">Todos</button>
+          <button class="filter-btn" type="button" data-filter="html" aria-pressed="false">HTML</button>
+          <button class="filter-btn" type="button" data-filter="css" aria-pressed="false">CSS</button>
+          <button class="filter-btn" type="button" data-filter="pagina" aria-pressed="false">Páginas</button>
+        </div>
+        <div class="project-grid" id="projectGrid" aria-label="Lista dos meus 19 exercícios">
+          <article class="project-card" data-category="html" data-title="Projeto Erro">
+            <div class="project-top"><span class="project-index">/01</span><span class="project-category">HTML</span></div>
+            <h4>Projeto Erro</h4>
+            <p>Exercício que faz parte das minhas primeiras práticas com HTML.</p>
+            <a class="card-link" href="./projeto_erro/index.html" aria-label="Abrir Projeto Erro">Ver projeto <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project-card" data-category="pagina" data-title="Projeto Álbum">
+            <div class="project-top"><span class="project-index">/02</span><span class="project-category">PÁGINA</span></div>
+            <h4>Projeto Álbum</h4>
+            <p>Prática de organização de imagens e conteúdo em uma página.</p>
+            <a class="card-link" href="./projeto_album/index.html" aria-label="Abrir Projeto Álbum">Ver projeto <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project-card" data-category="css" data-title="Projeto Botão">
+            <div class="project-top"><span class="project-index">/03</span><span class="project-category">CSS</span></div>
+            <h4>Projeto Botão</h4>
+            <p>Explorando estilos de botões e propriedades do CSS.</p>
+            <a class="card-link" href="./projeto_botao/index.html" aria-label="Abrir Projeto Botão">Ver projeto <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project-card" data-category="pagina" data-title="Projeto Currículo">
+            <div class="project-top"><span class="project-index">/04</span><span class="project-category">PÁGINA</span></div>
+            <h4>Projeto Currículo</h4>
+            <p>Estrutura HTML para apresentar formação e informações profissionais.</p>
+            <a class="card-link" href="./projeto_curriculo/index.html" aria-label="Abrir Projeto Currículo">Ver projeto <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project-card" data-category="pagina" data-title="Projeto Diário">
+            <div class="project-top"><span class="project-index">/05</span><span class="project-category">PÁGINA</span></div>
+            <h4>Projeto Diário</h4>
+            <p>Página de registros de partidas e treinos, organizada por dias.</p>
+            <a class="card-link" href="./projeto_diario/index.html" aria-label="Abrir Projeto Diário">Ver projeto <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project-card" data-category="pagina" data-title="Projeto Evento">
+            <div class="project-top"><span class="project-index">/06</span><span class="project-category">PÁGINA</span></div>
+            <h4>Projeto Evento</h4>
+            <p>Exercício de organização de informações para um evento.</p>
+            <a class="card-link" href="./projeto_evento/index.html" aria-label="Abrir Projeto Evento">Ver projeto <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project-card" data-category="css" data-title="Projeto Fundo">
+            <div class="project-top"><span class="project-index">/07</span><span class="project-category">CSS</span></div>
+            <h4>Projeto Fundo</h4>
+            <p>Estudando imagens de fundo, cores e apresentação visual.</p>
+            <a class="card-link" href="./projeto_fundo/index.html" aria-label="Abrir Projeto Fundo">Ver projeto <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project-card" data-category="css" data-title="Projeto Margin">
+            <div class="project-top"><span class="project-index">/08</span><span class="project-category">CSS</span></div>
+            <h4>Projeto Margin</h4>
+            <p>Testes de margens e espaçamento entre elementos HTML.</p>
+            <a class="card-link" href="./projeto_margin/index.html" aria-label="Abrir Projeto Margin">Ver projeto <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project-card" data-category="html" data-title="Meu Site">
+            <div class="project-top"><span class="project-index">/09</span><span class="project-category">HTML</span></div>
+            <h4>Meu Site</h4>
+            <p>Um dos meus primeiros experimentos de página pessoal.</p>
+            <a class="card-link" href="./projeto_meuSite/index.html" aria-label="Abrir Meu Site">Ver projeto <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project-card" data-category="pagina" data-title="Projeto Passatempo">
+            <div class="project-top"><span class="project-index">/10</span><span class="project-category">PÁGINA</span></div>
+            <h4>Projeto Passatempo</h4>
+            <p>Prática de página com conteúdo sobre interesses pessoais.</p>
+            <a class="card-link" href="./projeto_passatempo/index.html" aria-label="Abrir Projeto Passatempo">Ver projeto <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project-card" data-category="pagina" data-title="Projeto Perfil">
+            <div class="project-top"><span class="project-index">/11</span><span class="project-category">PÁGINA</span></div>
+            <h4>Projeto Perfil</h4>
+            <p>Estruturando informações de um perfil com HTML e CSS.</p>
+            <a class="card-link" href="./projeto_perfil/index.html" aria-label="Abrir Projeto Perfil">Ver projeto <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project-card" data-category="pagina" data-title="Projeto Planejador">
+            <div class="project-top"><span class="project-index">/12</span><span class="project-category">PÁGINA</span></div>
+            <h4>Projeto Planejador</h4>
+            <p>Página de organização de itens relacionados a jogos.</p>
+            <a class="card-link" href="./projeto_planejador/index.html" aria-label="Abrir Projeto Planejador">Ver projeto <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project-card" data-category="pagina" data-title="Projeto Receita">
+            <div class="project-top"><span class="project-index">/13</span><span class="project-category">PÁGINA</span></div>
+            <h4>Projeto Receita</h4>
+            <p>Organização de ingredientes e instruções numa página web.</p>
+            <a class="card-link" href="./projeto_receita/index.html" aria-label="Abrir Projeto Receita">Ver projeto <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project-card" data-category="css" data-title="Projeto Seletor">
+            <div class="project-top"><span class="project-index">/14</span><span class="project-category">CSS</span></div>
+            <h4>Projeto Seletor</h4>
+            <p>Praticando como selecionar e estilizar elementos.</p>
+            <a class="card-link" href="./projeto_seletor/index.html" aria-label="Abrir Projeto Seletor">Ver projeto <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project-card" data-category="html" data-title="Projeto Semáforo">
+            <div class="project-top"><span class="project-index">/15</span><span class="project-category">HTML</span></div>
+            <h4>Projeto Semáforo</h4>
+            <p>Exercício visual com os estados pare, atenção e ande.</p>
+            <a class="card-link" href="./projeto_sem%C3%A1foro/index.html" aria-label="Abrir Projeto Semáforo">Ver projeto <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project-card" data-category="pagina" data-title="Projeto Vídeo">
+            <div class="project-top"><span class="project-index">/16</span><span class="project-category">PÁGINA</span></div>
+            <h4>Projeto Vídeo</h4>
+            <p>Experimento de incorporação de vídeo numa página.</p>
+            <a class="card-link" href="./projeto_video/index.html" aria-label="Abrir Projeto Vídeo">Ver projeto <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project-card" data-category="pagina" data-title="Projeto Visita">
+            <div class="project-top"><span class="project-index">/17</span><span class="project-category">PÁGINA</span></div>
+            <h4>Projeto Visita</h4>
+            <p>Prática de cartão de visita digital em HTML.</p>
+            <a class="card-link" href="./projeto_visita/index.html" aria-label="Abrir Projeto Visita">Ver projeto <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project-card" data-category="html" data-title="Prova">
+            <div class="project-top"><span class="project-index">/18</span><span class="project-category">HTML</span></div>
+            <h4>Prova</h4>
+            <p>Atividade de avaliação dos conteúdos estudados.</p>
+            <a class="card-link" href="./prova/index.html" aria-label="Abrir Prova">Ver projeto <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="project-card" data-category="html" data-title="Revisão Prova">
+            <div class="project-top"><span class="project-index">/19</span><span class="project-category">HTML</span></div>
+            <h4>Revisão Prova</h4>
+            <p>Revisão de conceitos praticados nas aulas de web.</p>
+            <a class="card-link" href="./revisao_prova/index.html" aria-label="Abrir Revisão Prova">Ver projeto <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+        <p id="noProjects" class="empty-results" role="status" hidden>Nenhum projeto encontrado. Tenta outra palavra ou limpa os filtros.</p>
+        <div class="project-footer"><span id="projectCount" role="status" aria-live="polite">19 projetos disponíveis</span><button class="btn ghost" type="button" id="showAllProjects" aria-expanded="false">Ver todos os 19 trabalhos ↓</button></div>
+      </div>
+    </section>
 
-    </footer>
+    <div class="anime-mood" aria-label="Galeria de referências visuais de animes que gosto">
+      <div class="container">
+        <div class="mood-grid">
+          <figure class="mood-image"><img src="./Img/3.jpg" loading="lazy" width="736" height="417" alt="Arte glitch colorida inspirada em Serial Experiments Lain"><figcaption>LAIN / EXPERIMENTAL</figcaption></figure>
+          <figure class="mood-image"><img src="./Img/17.jpg" loading="lazy" width="736" height="1102" alt="Ilustração monocromática de personagem em estilo mangá psicológico"><figcaption>MANGÁ / P&amp;B</figcaption></figure>
+          <figure class="mood-image"><img src="./Img/13.jpg" loading="lazy" width="736" height="417" alt="Imagem com referência estética ao personagem Punpun sob um céu azul"><figcaption>PUNPUN / VISUAL</figcaption></figure>
+        </div>
+        <div class="mood-footer"><span>REFERÊNCIAS QUE JÁ FAZIAM PARTE DO MEU ARQUIVO</span><span>ANIME / ARTE / WEB</span></div>
+      </div>
+    </div>
 
+    <section class="section julya-section" id="julya" aria-labelledby="julyaTitle">
+      <div class="container julya-layout">
+        <div class="julya-copy">
+          <span class="eyebrow">03 <span class="line"></span> ALÉM DO CÓDIGO</span>
+          <h2 id="julyaTitle">Julya, <span>minha namorada.</span> ♡</h2>
+          <p>Nem tudo aqui é sobre tecnologia. Também queria deixar um espaço para alguém que faz parte da minha vida.</p>
+          <p>A Julya é minha namorada. Gosto de poder conversar com ela, dividir minhas referências e descobrir que a gente tem tantas coisas parecidas. Ela consegue me escutar mesmo quando eu tenho dificuldade de explicar o que estou pensando.</p>
+          <div class="julya-memory"><strong>Julya,</strong> obrigado por estar comigo, por me escutar e por fazer parte do nosso mundinho. Eu te amo muito. ♡</div>
+          <div class="julya-tags"><span>MINHA NAMORADA</span><span>GOSTOS PARECIDOS</span><span>NOSSAS MEMÓRIAS</span></div>
+        </div>
+        <div class="julya-art" aria-label="Ilustração dedicada à Julya">
+          <div class="julya-portrait"><img src="./Img/19.jpg" loading="lazy" width="736" height="736" alt="Ilustração em preto e branco de dois personagens fofos juntos, com corações, dedicada à Julya"></div>
+          <span class="julya-corner-label">JULYA / ♡ 01</span>
+        </div>
+      </div>
+    </section>
 
-    <script src="./script.js?v=xqrens-social-20261016" defer></script>
-    <script src="./motion.js?v=xqrens-motion-20261016" defer></script>
-    <script src="./arquivo-vivo.js?v=2.1.0" defer></script>
-    <script src="./leituras-da-semana.js?v=1.0.0" defer></script>
-    <script src="./semana-arcade.js?v=1.0.0" defer></script>
+    <section class="section mente-section" id="mente" aria-labelledby="menteTitle">
+      <div class="container">
+        <div class="mente-wrap">
+          <div class="mente-layout">
+            <div class="mente-copy">
+              <span class="eyebrow mint">04 <span class="line"></span> PROJETO EM DESTAQUE</span>
+              <h2 id="menteTitle">Mente <em>em Flor.</em></h2>
+              <p>Criei o Mente em Flor para falar sobre saúde mental de um jeito acolhedor. A ideia é reunir dicas práticas, espaços de reflexão, pausas e informações de onde procurar ajuda.</p>
+              <p>É um trabalho educativo e pessoal, feito para conscientizar e incentivar conversas importantes. Não oferece diagnóstico nem substitui acompanhamento profissional.</p>
+              <div class="mente-tags"><span>SAÚDE MENTAL</span><span>AUTOCUIDADO</span><span>HTML + CSS + JS</span></div>
+              <div class="mente-links"><a class="btn mint-button" href="https://xqrens-portifolio.vercel.app/" target="_blank" rel="noopener noreferrer">Abrir Mente em Flor ↗</a><a class="btn ghost" href="https://github.com/NeroX07-steam/Portifolio/tree/main/mente-em-flor" target="_blank" rel="noopener noreferrer">Ver no GitHub ↗</a></div>
+              <div class="mente-note">CVV 188 · RECURSOS E APOIO ESTÃO DISPONÍVEIS NO PROJETO</div>
+            </div>
+            <div class="mente-preview" aria-label="Prévia ilustrativa do projeto Mente em Flor">
+              <div class="mente-preview-head"><i aria-hidden="true"></i> mente-em-flor / index.html <span aria-hidden="true">↗</span></div>
+              <div class="mente-preview-body"><div class="flower" aria-hidden="true">✳</div><div><strong>um respiro<br>de cada vez.</strong><p>Cuidar de si também pode começar com uma pequena pausa.</p></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section class="section contact-section" id="contato" aria-labelledby="contactTitle">
+      <div class="container contact-panel">
+        <div class="contact-copy">
+          <span class="eyebrow">05 <span class="line"></span> ENTRE EM CONTATO</span>
+          <h2 id="contactTitle">Vamos trocar <span class="accent">uma ideia?</span></h2>
+          <p>Quer ver meus projetos, mandar um feedback ou acompanhar o que estou estudando? Estes são meus links principais.</p>
+          <a class="btn primary" href="https://github.com/NeroX07-steam/Portifolio/issues/new/choose" target="_blank" rel="noopener noreferrer">Deixar uma sugestão ↗</a>
+        </div>
+        <div class="contact-socials">
+          <a class="social-link" href="https://github.com/NeroX07-steam" target="_blank" rel="noopener noreferrer"><span><strong>GitHub</strong><small>github.com/NeroX07-steam</small></span><b aria-hidden="true">↗</b></a>
+          <a class="social-link" href="https://www.instagram.com/lxqrens/" target="_blank" rel="noopener noreferrer"><span><strong>Instagram</strong><small>@lxqrens</small></span><b aria-hidden="true">↗</b></a>
+          <a class="social-link" href="https://github.com/NeroX07-steam/Portifolio" target="_blank" rel="noopener noreferrer"><span><strong>Código do portfólio</strong><small>NeroX07-steam / Portifolio</small></span><b aria-hidden="true">↗</b></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>© 2026 · Luiz Eduardo / XQRENS. Feito com HTML, CSS e JavaScript.</small>
+      <div class="footer-links"><a href="#inicio">Voltar ao topo ↑</a><a href="https://github.com/NeroX07-steam/Portifolio" target="_blank" rel="noopener noreferrer">Repositório ↗</a></div>
+    </div>
+  </footer>
 </body>
-
 </html>
