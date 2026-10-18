@@ -1,263 +1,159 @@
 <div align="center">
 
-<img src="./assets/arquivo-vivo-banner.svg" width="100%" alt="XQRENS Arquivo Vivo, um diário na internet feito de código, mangás e memórias" />
+<img src="./assets/portfolio-banner.svg" width="100%" alt="Luiz Eduardo. Desenvolvimento web, projetos de estudo e referências pessoais.">
 
-<br>
+# Luiz Eduardo · Portfólio
 
-# XQRENS · ARQUIVO VIVO
+**Estudante de Desenvolvimento de Sistemas no SENAI | HTML • CSS • JavaScript**
 
-### Um portfólio que parece um diário, lê como um mangá e cresce junto comigo.
+Uma vitrine dos projetos que estou criando enquanto aprendo desenvolvimento web.
 
-Sou **Luiz Eduardo**, estudante de **Desenvolvimento de Sistemas no SENAI**. Crio sites para aprender HTML, CSS, JavaScript e descobrir como uma interface pode ter personalidade.
+[![Ver portfólio](https://img.shields.io/badge/VER_PORTFÓLIO-BEB7FF?style=for-the-badge&logo=vercel&logoColor=10111a)](https://portifolio-projetos-git-main-pedro-luiz.vercel.app/)
+[![Mente em Flor](https://img.shields.io/badge/MENTE_EM_FLOR-92BDA6?style=for-the-badge&logoColor=0d1d17)](https://xqrens-portifolio.vercel.app/)
+[![Exercícios](https://img.shields.io/badge/19_EXERCÍCIOS-202938?style=for-the-badge&logoColor=white)](./docs/PROJETOS.md)
 
-[![Portfólio](https://img.shields.io/badge/✳_ABRIR_PORTFÓLIO-19191d?style=for-the-badge)](https://portifolio-projetos-git-main-pedro-luiz.vercel.app/)
-[![Mente em Flor](https://img.shields.io/badge/✿_MENTE_EM_FLOR-586b59?style=for-the-badge)](https://xqrens-portifolio.vercel.app/)
-[![Projetos](https://img.shields.io/badge/◌_19_EXERCÍCIOS-504b48?style=for-the-badge)](./docs/PROJETOS.md)
-
-![HTML](https://img.shields.io/badge/HTML5-em_aprendizado-E34F26?logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS3-em_aprendizado-1572B6?logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-praticando-F7DF1E?logo=javascript&logoColor=black)
-![GitHub](https://img.shields.io/badge/GitHub-versões_e_estudos-181717?logo=github&logoColor=white)
-
-**[Visitar site](https://portifolio-projetos-git-main-pedro-luiz.vercel.app/) · [Explorar os projetos](./docs/PROJETOS.md) · [Documentação da edição](./docs/ARQUIVO-VIVO.md) · [Enviar feedback](./CONTRIBUTING.md)**
+![HTML5](https://img.shields.io/badge/HTML5-em%20estudo-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-em%20estudo-1572B6?style=flat-square&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-praticando-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![Git](https://img.shields.io/badge/Git-versionamento-F05032?style=flat-square&logo=git&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-deploy-111111?style=flat-square&logo=vercel&logoColor=white)
 
 </div>
 
 ---
 
-## ✦ O que é este projeto, em dez segundos?
+## ✦ Sobre este repositório
 
-Um **portfólio pessoal feito com HTML, CSS e JavaScript**, com estética editorial inspirada nos mangás que gosto. Ele reúne páginas do meu aprendizado, experiências interativas, música, pessoas importantes da minha vida e um projeto separado de conscientização sobre saúde mental.
+Meu nome é **Luiz Eduardo**. Estudo programação no **SENAI** e uso este repositório para compartilhar meus trabalhos, acompanhar minha evolução e aprender a organizar projetos no GitHub.
 
-Não é uma plataforma comercial. Não estou tentando parecer um desenvolvedor experiente. Quero mostrar **o que aprendi, o que errei e o que ainda quero construir**.
+O portfólio principal é um site estático criado com **HTML, CSS e JavaScript**, com interface escura, navegação direta e algumas imagens de anime que já faziam parte da minha coleção de referências.
 
-> **Dois sites diferentes:** o [portfólio original](https://portifolio-projetos-git-main-pedro-luiz.vercel.app/) apresenta meus trabalhos. O [Mente em Flor](https://xqrens-portifolio.vercel.app/) é o projeto educativo de saúde mental. Os dois têm código neste repositório.
+A ideia é simples: mostrar **quem sou, meus projetos, o Mente em Flor e como entrar em contato comigo**, sem inventar experiência profissional que ainda não tenho.
 
-## ☾ ED. 02 / O que tem de novo?
+### O que você encontra no site
 
-| Capítulo | Experiência | O que funciona |
-| :--- | :--- | :--- |
-| **01 · Modo Mangá** | Ler o portfólio por capítulos | Índice lateral, modo leitura, anterior/próximo e atalhos no teclado |
-| **02 · Julya.exe** | Quatro pequenas cartas para minha namorada | Botões alternam os textos sem recarregar |
-| **03 · Tofu World** | Meu e da Julya: nosso filho Tofu | Brincadeiras, respostas e contador de carinhos virtual |
-| **04 · Sala de Música** | Músicas e atmosferas | Player oficial do Spotify por link, áudio local MP3/M4A/OGG/WAV, destaque manual e vinil interativo |
-| **05 · Laboratório SENAI** | Estudos de HTML, CSS e JavaScript | Comparações didáticas e links para exercícios verdadeiros |
-| **06 · Mangateca 2.0** | Acervo de **22 obras** | Busca, temas, lista de desejos, estados de leitura, favoritos e sorteio |
-| **07 · Evolução GitHub** | Marcos do aprendizado | Quatro etapas ligadas a arquivos e histórico reais |
-| **08 · Segredos** | Fragmentos escondidos | Três fragmentos, mensagem desbloqueável e um código no teclado |
-
-Esses recursos **complementam** o portfólio que já existia, com as seções Sobre, Julya, Tofu, projetos, SENAI, mangás, Mente em Flor e contato. A grade dos **19 exercícios** agora também tem **busca sem acentos, filtros por tipo de atividade e contador de resultados visíveis**.
-
-<details>
-<summary><b>✳ Interações extras, para quem gosta de explorar</b></summary>
-
-- Pesquisar títulos por nome e filtrar por **psicológico, drama, arte ou fantasia**.
-- Pesquisar os **19 projetos** pelo nome e filtrar por estrutura, estilos CSS e páginas.
-- Marcar uma obra como **descobrir, quero ler, lendo ou já tenho**, e alternar favoritos.
-- Sortear uma sugestão da estante visível.
-- Trocar entre **papel, noite e ameixa**.
-- Explorar os capítulos com o modo leitura usando as setas **← →**, ou pelos controles na tela.
-- Ler cartas interativas, brincar com o Tofu e guardar fragmentos secretos.
-- Acessar a navegação rápida do site original com **Ctrl + K**.
-- Exportar ou apagar uma anotação do diário original.
-- Usar o site no celular, respeitando a opção do dispositivo por movimento reduzido.
-
-</details>
-
-## ✿ SEMANA VIVA · Mangás + JJS
-
-Duas novas experiências no [portfólio original](https://portifolio-projetos-git-main-pedro-luiz.vercel.app/), feitas para mudar de **segunda a domingo, no horário de Brasília**.
-
-### 📖 Três mangás para a semana
-
-[**→ Abrir recomendações desta semana**](https://portifolio-projetos-git-main-pedro-luiz.vercel.app/#mangas-da-semana)
-
-- **Três obras diferentes por semana**, com tema, autoria, resumo curto e aviso de conteúdo sensível.
-- O assunto é amplo: saúde mental, solidão, empatia, luto, identidade, amizade e autoconhecimento.
-- Dá para marcar como **lido**, acompanhar progresso e consultar as últimas semanas.
-- **30 obras iniciais** distribuídas em dez trincas. A seleção gira automaticamente toda segunda, mesmo que a atualização editorial falhe.
-- Uma rotina programada **tenta pesquisar e publicar mais três mangás inéditos toda semana**. Cada edição pode ser definida especificamente para a segunda seguinte, sem reescrever as anteriores.
-- Links apontam para páginas de editoras ou buscas por edições legais, **não para cópias piratas**. Nem todas as obras oferecem leitura completa gratuita.
-- O conteúdo é literatura e reflexão, não tratamento de saúde mental. Algumas obras têm temas difíceis e classificação adulta; consulte o aviso de cada card.
-
-### 🎰 Roleta JJS: exatamente três bonecos
-
-[**→ Abrir a roleta de Jujutsu Shenanigans**](https://portifolio-projetos-git-main-pedro-luiz.vercel.app/#roleta-jjs)
-
-- Um disco interativo com **21 personagens disponíveis ao público**, usando os nomes do menu do jogo e aliases do anime.
-- O jogo **sorteia três nomes diferentes, sem reposição**. Cada giro revela uma das escolhas.
-- **Não existe botão de reroll**. Os três personagens continuam iguais até a próxima semana, inclusive após atualizar a página.
-- A roleta se renova toda segunda-feira às 00h, **horário de Brasília**.
-- O algoritmo usa a semana como semente. O trio é estável durante cada semana, inclusive entre dispositivos. A lista de personagens exclui o **Register (Early Access)**, Mahoraga como invocação e bonecos de administradores ou eventos.
-- Fonte do elenco: [Jujutsu Shenanigans Wiki · Characters](https://jujutsushenaniganswiki.com/wiki/characters/) e [notas da atualização V1.83](https://jjs-wiki.com/wiki/update-log/). A disponibilidade pode mudar em atualizações futuras.
-
-### Arquivos da funcionalidade
-
-| Arquivo | Função |
+| Seção | Conteúdo |
 | --- | --- |
-| [**leituras-da-semana.js**](./projetos/leituras-da-semana.js) | Catálogo, avisos, links e edições específicas |
-| [**semana-arcade.js**](./projetos/semana-arcade.js) | Regras de data, cards semanais, canvas da roleta e sorteios |
-| [**semana-arcade.css**](./projetos/semana-arcade.css) | Visual editorial responsivo, animações e menu adaptado |
+| **Sobre mim** | Minha apresentação, estudos no SENAI e tecnologias que estou aprendendo |
+| **Projetos** | Dois destaques e os **19 exercícios reais** guardados neste repositório |
+| **Julya ♡** | Uma seção pessoal dedicada à minha namorada |
+| **Mente em Flor** | Apresentação e link para meu site educativo sobre saúde mental |
+| **Contato** | GitHub, Instagram e canal para sugestões |
 
-> As marcações de leitura e progresso de giros são guardados no navegador. Não há conta, rastreamento próprio ou integração com a sessão Roblox.
+Os exercícios têm **busca pelo nome, filtros HTML/CSS/Páginas e uma opção para expandir a lista completa**. Não é necessário instalar bibliotecas nem criar uma conta.
 
-## 🧩 Projetos em destaque
+## 🚀 Projetos em destaque
 
 <table>
-<tr>
-  <td width="50%" valign="top">
-    <h3>01 / XQRENS — Portfólio</h3>
-    Um diário interativo em forma de site: capítulos, mangás, animações e pequenos experimentos.
-    <br><br>
-    <a href="./projetos/index.html">Código do portfólio ↗</a> ·
-    <a href="https://portifolio-projetos-git-main-pedro-luiz.vercel.app/">Abrir site ↗</a>
-  </td>
-  <td width="50%" valign="top">
-    <h3>02 / Mente em Flor</h3>
-    Um espaço educativo com pausas, propostas de autocuidado, cartas e informações de apoio.
-    <br><br>
-    <a href="./mente-em-flor/index.html">Código do Mente em Flor ↗</a> ·
-    <a href="https://xqrens-portifolio.vercel.app/">Abrir site ↗</a>
-  </td>
-</tr>
-<tr>
-  <td valign="top">
-    <h3>03 / Meus estudos no SENAI</h3>
-    Exercícios de estrutura HTML, CSS, páginas, semáforo, currículo e outros trabalhos de aula.
-    <br><br>
-    <a href="./docs/PROJETOS.md">Explorar os 19 exercícios ↗</a>
-  </td>
-  <td valign="top">
-    <h3>04 / Arquivo Vivo</h3>
-    O módulo da edição 02, feito em arquivos separados para não bagunçar a base do site.
-    <br><br>
-    <a href="./projetos/arquivo-vivo.js">JavaScript ↗</a> ·
-    <a href="./projetos/arquivo-vivo.css">CSS ↗</a>
-  </td>
-</tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>01 · Portfólio pessoal</h3>
+      <p>Meu espaço na web. Interface responsiva, referências visuais de anime e cards para explorar os trabalhos do SENAI.</p>
+      <p><b>HTML • CSS • JavaScript</b></p>
+      <p><a href="https://portifolio-projetos-git-main-pedro-luiz.vercel.app/">Visitar site ↗</a> · <a href="./projetos/">Ver código ↗</a></p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>02 · Mente em Flor</h3>
+      <p>Projeto educativo sobre saúde mental: conteúdo de acolhimento, pausas, reflexões e caminhos para buscar ajuda.</p>
+      <p><b>HTML • CSS • JavaScript</b></p>
+      <p><a href="https://xqrens-portifolio.vercel.app/">Visitar site ↗</a> · <a href="./mente-em-flor/">Ver código ↗</a></p>
+    </td>
+  </tr>
 </table>
 
-## 🛠️ O que estou aprendendo
+> **Importante:** o Mente em Flor é educativo. Não oferece diagnóstico nem substitui apoio profissional. O portfólio e o Mente em Flor são **dois projetos diferentes da Vercel**, embora o código esteja no mesmo repositório.
 
-| Tecnologia | Uso no repositório |
+### Trabalhos do SENAI
+
+São **19 exercícios** de várias fases dos meus estudos, incluindo currículo, álbum, semáforo, receita, páginas de perfil, seletores CSS e outros.
+
+**[→ Acessar a lista completa dos 19 exercícios](./docs/PROJETOS.md)**
+
+## 🧰 Tecnologias
+
+| Ferramenta | Aplicação |
 | --- | --- |
-| **HTML5** | Estrutura semântica, conteúdo, botões, links e formulários |
-| **CSS3** | Layout responsivo, modo noturno, tipografia e animações |
-| **JavaScript** | Eventos, filtros, controles de leitura e interatividade |
-| **localStorage** | Guardar preferências neste navegador, sem conta |
-| **Git / GitHub** | Commits, histórico, organização e colaboração |
-| **Vercel** | Publicação dos projetos estáticos |
-| **Python e banco de dados** | Outros assuntos que estudo, ainda não são o foco deste site |
+| **HTML5** | Estrutura de páginas, conteúdo semântico e links |
+| **CSS3** | Layout, responsividade, tipografia e apresentação |
+| **JavaScript** | Navegação em celular, busca e filtros dos projetos |
+| **Git & GitHub** | Histórico de mudanças e organização do código |
+| **Vercel** | Hospedagem dos dois sites |
 
-O foco desta edição foi **progressive enhancement**: se um extra falhar, o conteúdo HTML principal continua disponível. Não há bibliotecas obrigatórias para os módulos novos nem um serviço externo de autenticação.
+Também estudo um pouco de **Python** e **banco de dados**, mas o foco deste repositório é a web.
 
-## 🗂️ Organização dos arquivos
+## 🗂️ Estrutura do repositório
 
 ```text
 Portifolio/
 ├── assets/
-│   └── arquivo-vivo-banner.svg   # Capa original deste README
+│   └── portfolio-banner.svg        # Banner do README
 │
 ├── projetos/
-│   ├── index.html                # Portfólio e capítulos
-│   ├── style.css                 # Estilos anteriores, preservados
-│   ├── script.js                 # Interações anteriores
-│   ├── motion.js                 # Animações editoriais
-│   ├── arquivo-vivo.css          # Estilos da edição 02
-│   ├── arquivo-vivo.js           # Interações da edição 02
-│   ├── leituras-da-semana.js     # Catálogo de mangás e edições semanais
-│   ├── semana-arcade.css        # Visual dos mangás e roleta
-│   ├── semana-arcade.js         # Semana brasileira e sorteios fixos
-│   ├── Img/                      # Imagens já usadas no portfólio
-│   └── projeto_*/                # Trabalhos e exercícios antigos
+│   ├── index.html                  # Site principal
+│   ├── style.css                   # Estilos e responsividade
+│   ├── script.js                   # Interações e filtros
+│   ├── Img/                        # Fotos e referências visuais
+│   ├── projeto_album/
+│   ├── projeto_botao/
+│   ├── projeto_curriculo/
+│   └── ...                         # Demais exercícios e avaliações
 │
 ├── mente-em-flor/
-│   ├── index.html
+│   ├── index.html                  # Site de saúde mental
 │   ├── style.css
 │   ├── script.js
 │   └── novidades.js
 │
 ├── docs/
-│   ├── ARQUIVO-VIVO.md           # Manual da nova edição
-│   ├── PROJETOS.md               # Acervo dos exercícios
-│   └── DIVULGACAO.md             # Textos para apresentar e pedir feedback
-├── CONTRIBUTING.md               # Como sugerir melhorias
+│   ├── PROJETOS.md                 # Catálogo com 19 trabalhos
+│   └── DIVULGACAO.md               # Apresentações para compartilhar
+│
+├── CONTRIBUTING.md                 # Sugestões e bugs
 └── README.md
 ```
 
-## ▶️ Executar localmente
+## 💻 Rodar localmente
 
-Você não precisa instalar React ou outras dependências para explorar este código.
-
-1. Faça o clone e entre na pasta:
+Você pode abrir os arquivos pelo **Live Server** do VS Code ou iniciar um servidor local usando Python 3:
 
 ```bash
 git clone https://github.com/NeroX07-steam/Portifolio.git
 cd Portifolio
-```
-
-2. Com Python 3 instalado, inicie um servidor local:
-
-```bash
 python -m http.server 8000
 ```
 
-3. Abra no navegador:
+Depois acesse:
 
-| Site | Endereço local |
-| --- | --- |
-| Portfólio | http://localhost:8000/projetos/ |
-| Mente em Flor | http://localhost:8000/mente-em-flor/ |
+- **Portfólio:** http://localhost:8000/projetos/
+- **Mente em Flor:** http://localhost:8000/mente-em-flor/
 
-Também dá para abrir `projetos/index.html` pelo *Live Server* do VS Code.
+Os dois projetos usam caminhos relativos, então execute o servidor a partir da raiz clonada.
 
-> **Hospedagem:** o portfólio principal e o Mente em Flor são **projetos Vercel diferentes**. Um commit no GitHub nem sempre aparece imediatamente nos dois endereços; confira a versão publicada antes de compartilhar.
+## 🎨 Visual e referências
 
-## ♡ Privacidade, conteúdo e limites
+Escolhi uma estética escura e minimalista, inspirada em interfaces de editores de código e na atmosfera de obras como *Serial Experiments Lain* e *Neon Genesis Evangelion*. As imagens de anime utilizadas já estavam no diretório `projetos/Img/`.
 
-- **Mangateca, carinhos do Tofu e destaque musical:** salvos em `localStorage`, apenas no navegador onde foram editados. Não são sincronizados com outros visitantes nem com meu site publicado.
-- **Spotify:** agora há um player incorporado oficial para links públicos de músicas, álbuns e playlists. Ele só carrega quando alguém cola um link e clica em abrir. O site **não lê a música que estou ouvindo ao vivo** e não acessa contas.
-- **Áudio local:** arquivos MP3/M4A/OGG/WAV são reproduzidos pelo próprio navegador, sem upload; não ficam disponíveis para outros visitantes. A reprodução depende do suporte do navegador e das permissões de conteúdo.
-- **Referências a animes e mangás:** são comentários e nomes de obras, não uma reprodução de capítulos ou páginas protegidas.
-- **Mente em Flor:** projeto educativo, não faz diagnóstico nem substitui ajuda profissional. Em situação de risco imediato, procure apoio presencial e os serviços de emergência.
-- **Código e imagens:** este repositório ainda não declara uma licença aberta. Não presuma autorização para republicar imagens pessoais ou reutilizar código sem pedir permissão.
+São **referências visuais de terceiros**, não artes criadas por mim nem material sob uma licença declarada neste repositório. Direitos das obras e imagens pertencem aos respectivos autores e titulares.
 
-## ✉️ Contribuições e feedback
+## 💬 Feedback
 
-Sou estudante e recebo bem observações específicas: bugs, sugestões de acessibilidade, ajustes de responsividade e organização do código. Não precisa pedir desculpa por apontar algo que não funciona, é assim que eu descubro o que melhorar.
+Se encontrar um erro de responsividade, um link quebrado ou tiver uma sugestão de melhoria, pode [abrir uma issue](https://github.com/NeroX07-steam/Portifolio/issues/new/choose). Há modelos para bugs e ideias de melhoria.
 
-**[Abrir uma issue](https://github.com/NeroX07-steam/Portifolio/issues/new/choose)** · [Ler como contribuir](./CONTRIBUTING.md) · [Explorar o catálogo](./docs/PROJETOS.md)
+Consulte o [guia de contribuições](./CONTRIBUTING.md).
 
-## 🌱 Próximas melhorias
+## 📫 Contatos
 
-- [x] Índice e modo leitura em capítulos
-- [x] Busca dos 19 projetos, filtros de tema e contador de resultados
-- [x] Mangás semanais com catálogo de reserva e histórico
-- [x] Roleta JJS com três picks fixos, sem repetição e sem reroll
-- [x] Navegação até os capítulos novos e interface responsiva
-- [x] Mangateca com busca, filtros e lista de leitura local
-- [x] Cartas para Julya, Tofu World e Sala de Música
-- [x] Spotify Embed por link e player de arquivos locais sem upload
-- [x] Comparações didáticas no Laboratório SENAI
-- [x] Linha do tempo com links para o código
-- [x] Segredos, navegação e cuidado com movimento reduzido
-- [ ] Fazer testes visuais em vários navegadores e tamanhos de tela
-- [ ] Adicionar imagens de obras com autorização dos detentores dos direitos, quando possível
-- [ ] Configurar uma integração oficial do Spotify, caso faça sentido
-- [ ] Melhorar o desempenho e documentar testes de acessibilidade
-
-## 🌐 Contato
-
-[GitHub](https://github.com/NeroX07-steam) · [Instagram](https://www.instagram.com/lxqrens/) · [Portfólio](https://portifolio-projetos-git-main-pedro-luiz.vercel.app/) · [Mente em Flor](https://xqrens-portifolio.vercel.app/)
+- **GitHub:** [@NeroX07-steam](https://github.com/NeroX07-steam)
+- **Instagram:** [@lxqrens](https://www.instagram.com/lxqrens/)
+- **Portfólio:** [portifolio-projetos-git-main-pedro-luiz.vercel.app](https://portifolio-projetos-git-main-pedro-luiz.vercel.app/)
+- **Mente em Flor:** [xqrens-portifolio.vercel.app](https://xqrens-portifolio.vercel.app/)
 
 ---
 
 <div align="center">
 
-### Uma página de cada vez.
+<sub>Feito por Luiz Eduardo · 2026</sub>
 
-*Feito para aprender, lembrar e continuar criando.* ♡
-
-<sub>© 2026 · Luiz Eduardo · XQRENS / ARQUIVO VIVO</sub>
+**Aprendendo, criando e melhorando um projeto de cada vez.**
 
 </div>
