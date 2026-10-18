@@ -54,14 +54,28 @@
       return node;
     }
     const currWeek=zoneWeek();
-    const seen=new Set(store.read("lidos",[])||[]);
+    const storedReading=store.read("lidos",[]);
+    const seen=new Set(Array.isArray(storedReading)?storedReading.filter(id=>typeof id==="string"):[]);
     const catalog=window.XQ_MANGAS_SEMANA;
     const books=Array.isArray(catalog?.itens)?catalog.itens.filter(book=>(
       typeof book.titulo==="string"&&typeof book.id==="string"&&typeof book.descricao==="string"
     )):[];
     const groups=Math.floor(books.length/3);
-    const activeGroup=groups?currWeek.weekIndex%groups:0;
-    const weekBooks=books.slice(activeGroup*3,activeGroup*3+3);
+    function mondayKeyForWeek(weekIndex){
+      return new Date(Date.UTC(2026,9,12)+weekIndex*msWeek).toISOString().slice(0,10);
+    }
+    function booksForWeek(weekIndex){
+      const key=mondayKeyForWeek(weekIndex);
+      const edition=catalog?.edicoes?.[key];
+      if(Array.isArray(edition)&&edition.length===3){
+        const resolved=edition.map(id=>books.find(item=>item.id===id));
+        if(resolved.every(Boolean)&&new Set(resolved.map(x=>x.id)).size===3)return resolved;
+      }
+      if(!groups)return [];
+      const index=weekIndex%groups;
+      return books.slice(index*3,index*3+3);
+    }
+    const weekBooks=booksForWeek(currWeek.weekIndex);
     const readingGrid=$("#xq-weekly-manga-grid");
 
     function drawWeeklyBooks(){
@@ -126,16 +140,15 @@
         }else{
           const first=Math.max(0,currWeek.weekIndex-5);
           for(let w=currWeek.weekIndex-1;w>=first;w--){
-            const index=w%groups;
-            const names=books.slice(index*3,index*3+3).map(b=>b.titulo);
+            const names=booksForWeek(w).map(b=>b.titulo);
             const row=tag("div","xq-weekly-history-row");
             row.append(tag("span","","SEMANA "+String(w+1).padStart(2,"0")),tag("p","",names.join(" · ")));
             previous.append(row);
           }
         }
       }
-      if(currWeek.weekIndex>=groups){
-        setText("#xq-weekly-next","CATÁLOGO EM RODÍZIO · NOVOS TÍTULOS SÃO ADICIONADOS SEMANALMENTE");
+      if(currWeek.weekIndex>=groups&&!catalog?.edicoes?.[currWeek.key]){
+        setText("#xq-weekly-next","CATÁLOGO EM RODÍZIO · NOVOS TÍTULOS PODEM ENTRAR NAS PRÓXIMAS SEMANAS");
       }
     }
     function updateProgress(){
