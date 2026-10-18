@@ -1,13 +1,13 @@
 {
-  "name": "XQRENS · Arquivo Vivo | Luiz Eduardo",
-  "short_name": "XQRENS",
-  "description": "Portfólio pessoal de Luiz Eduardo. Um diário na internet sobre código, mangás, música e projetos do SENAI.",
+  "name": "Luiz Eduardo | Portfólio XQRENS",
+  "short_name": "LUIZ.",
+  "description": "Portfólio pessoal de Luiz Eduardo. Projetos do SENAI, HTML, CSS, JavaScript e Mente em Flor.",
   "lang": "pt-BR",
   "start_url": "../",
   "scope": "../",
   "display": "standalone",
-  "background_color": "#101011",
-  "theme_color": "#e8e3d9",
+  "background_color": "#080b10",
+  "theme_color": "#080b10",
   "icons": [
     {
       "src": "./android-chrome-192x192.png",
