@@ -6,7 +6,7 @@ O foco é mostrar o que estou aprendendo e pedir feedback útil, sem prometer n�
 
 ## Em português · apresentação curta
 
-> Oi! Sou o Luiz Eduardo, estudante de Desenvolvimento de Sistemas no SENAI. Estou aprendendo HTML, CSS e JavaScript e reuni meus exercícios e projetos em um portfólio com visual inspirado em mangás.
+> Oi! Sou o Luiz Eduardo, estudante de Desenvolvimento de Sistemas no SENAI. Estou aprendendo HTML, CSS e JavaScript e reuni meus exercícios e projetos num portfólio simples, responsivo, com referências visuais a animes.
 >
 > Também fiz o Mente em Flor, um site educativo sobre saúde mental com interações e informações de apoio.
 >
@@ -22,7 +22,7 @@ O foco é mostrar o que estou aprendendo e pedir feedback útil, sem prometer n�
 
 > Hey! I'm Luiz Eduardo, a student learning web development and building projects with HTML, CSS and JavaScript.
 >
-> I've put together a personal portfolio with manga-inspired visuals and a collection of earlier exercises. One project I'm particularly interested in improving is Mente em Flor, an educational website about mental health awareness.
+> I've put together a personal portfolio with anime-inspired visuals and a collection of school exercises. One project I'm particularly interested in improving is Mente em Flor, an educational website about mental health awareness.
 >
 > Website: https://portifolio-projetos-git-main-pedro-luiz.vercel.app/
 >
@@ -34,7 +34,7 @@ O foco é mostrar o que estou aprendendo e pedir feedback útil, sem prometer n�
 
 ## Três coisas para mostrar em uma conversa
 
-1. **Interface:** o portfólio tem capítulos, temas, animações e pequenas interações feitas com JavaScript.
+1. **Interface:** o portfólio apresenta meus trabalhos, navegação responsiva e busca com filtros feita em JavaScript.
 2. **Projeto com propósito:** o Mente em Flor reúne conteúdo educativo e ferramentas simples de reflexão e cuidado.
 3. **Evolução:** os 19 exercícios mais antigos mostram diferentes fases dos meus estudos.
 
