@@ -85,7 +85,7 @@ img {
     max-width: 100%;
 }
 
-header {
+body > header {
     position: fixed;
     inset: 0 0 auto;
     height: 76px;
@@ -105,7 +105,7 @@ header {
         backdrop-filter .3s ease;
 }
 
-header.scrolled {
+body > header.scrolled {
     background: rgba(7,7,7,.78);
     backdrop-filter: blur(18px);
     border-color: var(--border);
@@ -1181,7 +1181,7 @@ footer strong {
 
 @media (max-width: 1050px) {
 
-    header {
+    body > header {
         gap: 18px;
     }
 
@@ -1204,7 +1204,7 @@ footer strong {
 
 @media (max-width: 850px) {
 
-    header {
+    body > header {
         justify-content: space-between;
     }
 
@@ -1267,7 +1267,7 @@ footer strong {
 
 @media (max-width: 600px) {
 
-    header {
+    body > header {
         height: 65px;
         padding: 0 18px;
     }
@@ -1444,7 +1444,7 @@ body::before {
     background: var(--purple-light);
 }
 
-header.scrolled {
+body > header.scrolled {
     background: rgba(7, 7, 9, .84);
     box-shadow: 0 12px 35px rgba(0, 0, 0, .16);
 }
@@ -1967,7 +1967,7 @@ section:not(.hero) .section-title {
 }
 
 @media (max-width: 850px) {
-    header { gap: 12px; }
+    body > header { gap: 12px; }
     .menu-toggle { display: inline-flex; margin-left: auto; }
     #site-nav {
         position: absolute;
@@ -2087,11 +2087,11 @@ body::after {
     will-change: transform;
 }
 
-header {
+body > header {
     transition: background .35s ease, border-color .35s ease, box-shadow .35s ease, height .35s ease;
 }
 
-header.scrolled {
+body > header.scrolled {
     height: 68px;
     border-bottom-color: rgba(173, 138, 255, .13);
     background: rgba(7, 7, 9, .83);
@@ -2449,7 +2449,7 @@ button:focus-visible,
 }
 
 @media (max-width: 850px) {
-    header.scrolled { height: 65px; }
+    body > header.scrolled { height: 65px; }
     .hero-photo, .mental-project-art { transform: none !important; }
     .back-to-top { right: 15px; bottom: 15px; width: 42px; height: 42px; }
 }
@@ -2543,9 +2543,9 @@ body {
     transition: background-color .5s, color .5s;
 }
 body::before { display: none; }
-header { background: var(--bg); border-bottom: 1px solid var(--ink-line); }
-header.scrolled { background: color-mix(in srgb, var(--bg) 91%, transparent); }
-header, nav, .logo, .header-status { color: var(--text); }
+body > header { background: var(--bg); border-bottom: 1px solid var(--ink-line); }
+body > header.scrolled { background: color-mix(in srgb, var(--bg) 91%, transparent); }
+body > header, nav, .logo, .header-status { color: var(--text); }
 .hero { position: relative; isolation: isolate; }
 .hero::after {
     content: "CHAPTER 00 / STILL LEARNING";
