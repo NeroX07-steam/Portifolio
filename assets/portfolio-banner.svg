@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="490" viewBox="0 0 1280 490" role="img" aria-labelledby="title description">
+<title id="title">Luiz Eduardo | Portfólio de desenvolvedor</title>
+<desc id="description">Banner escuro com detalhes lilás, grade técnica, título Luiz Eduardo e uma interface de editor de código.</desc>
+<defs>
+  <linearGradient id="back" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0a1016"/><stop offset=".56" stop-color="#131723"/><stop offset="1" stop-color="#151a22"/></linearGradient>
+  <radialGradient id="glow" cx=".75" cy=".45" r=".6"><stop stop-color="#8c84d0" stop-opacity=".25"/><stop offset="1" stop-color="#8c84d0" stop-opacity="0"/></radialGradient>
+  <pattern id="grid" patternUnits="userSpaceOnUse" width="37" height="37"><path d="M37 0H0V37" fill="none" stroke="#a2b1c5" stroke-width=".4" opacity=".15"/></pattern>
+</defs>
+<rect width="1280" height="490" rx="22" fill="url(#back)"/>
+<rect width="1280" height="490" rx="22" fill="url(#glow)"/>
+<rect width="1280" height="490" rx="22" fill="url(#grid)"/>
+<path d="M47 65H1233M47 423H1233" stroke="#8792aa" stroke-opacity=".35"/>
+<g font-family="monospace" fill="#b1bbcf" font-size="14" letter-spacing="1.7">
+  <text x="61" y="47">NEROX07-STEAM / PORTIFOLIO</text>
+  <text x="990" y="47">BRANCH: MAIN</text>
+  <text x="61" y="451">HTML5 / CSS3 / JAVASCRIPT / GIT</text>
+  <text x="1081" y="451">SENAI · 2026</text>
+</g>
+<rect x="56" y="101" width="160" height="37" rx="18.5" fill="#132a25" stroke="#477c68"/>
+<circle cx="78" cy="119" r="5" fill="#87d7ae"/>
+<text x="94" y="124" font-family="monospace" font-size="11" fill="#bfe7d1">EM FORMAÇÃO</text>
+<text x="52" y="254" font-family="Arial, sans-serif" font-weight="700" letter-spacing="-7" font-size="103" fill="#f4f4f6">Luiz <tspan fill="#bcb5ff">Eduardo.</tspan></text>
+<text x="59" y="305" font-family="Arial,sans-serif" font-size="23" fill="#c5cedf">Desenvolvimento web, projetos reais de estudo</text>
+<text x="59" y="344" font-family="Arial,sans-serif" font-size="23" fill="#c5cedf">e referências que fazem parte de mim.</text>
+<g transform="translate(844,95)">
+  <rect x="0" y="0" width="370" height="280" rx="14" fill="#0b1018" stroke="#5c6580" stroke-width="1.2"/>
+  <path d="M0 37H370" stroke="#48536a"/>
+  <circle cx="22" cy="18.5" r="5.5" fill="#c6818d"/>
+  <circle cx="40" cy="18.5" r="5.5" fill="#e2bd79"/>
+  <circle cx="58" cy="18.5" r="5.5" fill="#8bccac"/>
+  <text x="215" y="24" font-family="monospace" fill="#9cacc2" font-size="11">portfolio.js</text>
+  <g font-family="monospace" font-size="16">
+    <text x="24" y="86" fill="#8192aa">01</text><text x="61" y="86" fill="#c1b7ff">const</text><text x="127" y="86" fill="#eae6f1">luiz</text><text x="166" y="86" fill="#c8ccd8"> = {</text>
+    <text x="24" y="118" fill="#8192aa">02</text><text x="79" y="118" fill="#b7d4c7">estudando</text><text x="179" y="118" fill="#c8ccd8">:</text><text x="193" y="118" fill="#e8c9a7">'SENAI'</text><text x="264" y="118" fill="#c8ccd8">,</text>
+    <text x="24" y="150" fill="#8192aa">03</text><text x="79" y="150" fill="#b7d4c7">stack</text><text x="135" y="150" fill="#c8ccd8">: [</text><text x="164" y="150" fill="#e8c9a7">'HTML'</text><text x="226" y="150" fill="#c8ccd8">,</text>
+    <text x="24" y="182" fill="#8192aa">04</text><text x="164" y="182" fill="#e8c9a7">'CSS', 'JS'</text><text x="262" y="182" fill="#c8ccd8">],</text>
+    <text x="24" y="214" fill="#8192aa">05</text><text x="79" y="214" fill="#b7d4c7">status</text><text x="145" y="214" fill="#c8ccd8">:</text><text x="165" y="214" fill="#e8c9a7">'learning'</text>
+    <text x="24" y="246" fill="#8192aa">06</text><text x="61" y="246" fill="#c8ccd8">};</text><text x="109" y="246" fill="#8299af">// build and learn</text>
+  </g>
+</g>
+</svg>
