@@ -84,6 +84,50 @@ As cartas são textos originais do site e mudam quando o visitante clica, sem re
 
 Na área de segredos, cada um dos três cartões registra um fragmento em `localStorage`; ao reunir três, uma mensagem fica disponível. Há também um atalho secreto clássico do teclado, para quem descobrir.
 
+## Semana Viva: atualizações sem trocar a identidade do portfólio
+
+### Mangás recomendados (3 por semana)
+
+A área **#mangas-da-semana** busca seus dados em `projetos/leituras-da-semana.js`. O catálogo contém:
+
+- `inicio`: segunda-feira de início, hoje `2026-10-12`;
+- `timezone`: `America/Sao_Paulo`;
+- `itens`: registros com `id` único, título, autor, tema, descrição, aviso de conteúdo e link;
+- `edicoes`: mapa de datas de segunda-feira (`YYYY-MM-DD`) para três IDs de livros selecionados.
+
+O código exibe exatamente a trinca da data da semana; se não houver `edicoes` para a semana, mostra a próxima trinca disponível do catálogo de reserva, atualmente com 30 obras para dez semanas. As obras das edições anteriores podem aparecer no histórico da página.
+
+A curadoria semanal programada pesquisa **três livros novos aos domingos**, prepara a edição da segunda-feira seguinte e tenta salvar a atualização no GitHub e publicar o portfólio. Esse trabalho externo pode falhar, por exemplo por indisponibilidade de ferramentas ou limite da Vercel. **O modo reserva não depende dessa rotina para girar as recomendações toda semana**.
+
+#### Adicionar uma edição manualmente
+
+1. Abra `projetos/leituras-da-semana.js` no GitHub.
+2. Adicione **três objetos inéditos** ao array `itens`, sem usar IDs repetidos.
+3. No objeto `edicoes`, crie a chave da próxima segunda-feira, por exemplo `2026-10-19`, com um array dos três IDs novos.
+4. Faça commit; publique a versão mais recente do projeto Vercel `portifolio-projetos` se o deploy automático não acontecer.
+5. Confirme as obras no endereço `https://portifolio-projetos-git-main-pedro-luiz.vercel.app/#mangas-da-semana`.
+
+Use editoras e links de leitura autorizados, não repositórios de scans não licenciados. Inclua alertas para temas delicados e classificações etárias conhecidas. Mangás podem abordar saúde mental, mas não são substitutos de orientação profissional.
+
+### Roleta JJS: 21 personagens e três escolhas imutáveis por semana
+
+O elenco está em `projetos/semana-arcade.js`, baseado nas listas públicas de outubro de 2026. Ficam de fora `Register` (Early Access), `Mahoraga` (forma invocada), personagens Overpowered, de eventos ou administradores. `Sky Assassin` entra porque passou a ser gratuito no patch 1.83.
+
+A cada segunda-feira do calendário de Brasília:
+
+1. O sistema calcula a data da segunda atual.
+2. Uma mistura pseudoaleatória de 21 personagens é calculada a partir da data e de uma semente pública no código.
+3. Os **três primeiros personagens distintos** dessa lista serão as escolhas fixas da semana, sem intervenção do visitante no resultado.
+4. Os **três giros da roleta** revelam as escolhas em ordem; cada sorteado sai visualmente dos próximos giros.
+5. `localStorage` grava quantos giros a pessoa já revelou. Atualizar o navegador não muda a ordem nem os vencedores da semana.
+6. Na segunda-feira seguinte, uma nova semente gera um novo trio.
+
+> A roleta não se comunica com Roblox, não altera o jogo e não lê o inventário da conta. O trio é igual para todos na mesma semana, mas cada navegador controla quantas revelações já fez.
+
+O canvas possui lista textual acessível do elenco, atualização do estado em texto e respeito à preferência de movimento reduzido. A regra é uma brincadeira de desafio semanal, não um sistema competitivo oficial.
+
+Fontes: [personagens no wiki](https://jujutsushenaniganswiki.com/wiki/characters/) e [atualização 1.83](https://jjs-wiki.com/wiki/update-log/).
+
 ## Privacidade / dados salvos
 
 O módulo usa armazenamento local **apenas** para:
@@ -95,6 +139,8 @@ O módulo usa armazenamento local **apenas** para:
 | `tofu-pets` | Número de carinhos virtuais |
 | `track` | Título e artista inseridos manualmente |
 | `fragments` | Identificadores de até três fragmentos |
+| `xqrens:semana:v1:lidos` | IDs de recomendações marcadas como lidas |
+| `xqrens:semana:v1:jjs-progress:DATA` | Número de giros revelados durante a semana |
 
 Ele não envia esses dados para GitHub, Vercel, Spotify ou Supabase e não sabe quem está visitando o site. Navegadores em modo privado e computadores compartilhados podem apagar os dados ao fechar a sessão, ou permitir que outras pessoas vejam dados gravados no mesmo perfil.
 
