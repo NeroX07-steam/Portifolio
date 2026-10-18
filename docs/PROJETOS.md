@@ -1,6 +1,6 @@
-# 📚 Projetos e exercícios
+# Projetos e exercícios · Luiz Eduardo
 
-Este é um mapa rápido dos arquivos do meu repositório. Eu sou estudante de Desenvolvimento de Sistemas no SENAI e estou aprendendo programação web. Alguns projetos são pequenos exercícios de aula; outros eu desenvolvi para experimentar ideias pessoais.
+Este arquivo reúne meus **19 exercícios de HTML e CSS** e os dois projetos que destaco no portfólio. Sou estudante de Desenvolvimento de Sistemas no SENAI; os trabalhos mostram etapas reais do aprendizado, desde páginas simples até projetos maiores.
 
 [← Voltar ao README](../README.md) · [🌐 Ver o portfólio](https://portifolio-projetos-git-main-pedro-luiz.vercel.app/)
 
@@ -10,9 +10,9 @@ Este é um mapa rápido dos arquivos do meu repositório. Eu sou estudante de De
 
 [Ver código do portfólio](../projetos/index.html)
 
-O projeto que reúne minha trajetória, meus gostos, mangás, seções pessoais e trabalhos anteriores. Usei HTML, CSS e JavaScript para criar uma interface com capítulos, animações, temas e pequenas interações.
+O site principal, com **Sobre mim, Trabalhos, Julya, Mente em Flor e Contato**. Refiz a interface para destacar os repositórios, o aprendizado no SENAI e referências visuais de anime sem esconder o conteúdo em efeitos.
 
-**O que pratiquei:** organização de uma página maior, responsividade, estilos visuais, eventos JavaScript e navegação.
+**O que pratiquei:** HTML semântico, organização de CSS, responsividade, navegação acessível, busca e filtros de trabalhos com JavaScript.
 
 ### 02. Mente em Flor
 
