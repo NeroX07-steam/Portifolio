@@ -191,3 +191,37 @@
 @media(prefers-reduced-motion:reduce){
  .xq-weekly .xq-weekly-manga-card,.xq-weekly .xq-jjs-spin,.xq-weekly .xq-jjs-picked-list li{transition:none!important;transform:none!important}
 }
+
+
+/* As seções originais são limitadas a uma coluna central. As duas novas
+   são intencionalmente full-bleed, com miolo limitado por .xq2-wrap. */
+section.xq-weekly{width:100%;max-width:none;margin:0;padding-block:clamp(92px,9vw,148px)}
+section.xq-weekly>.xq2-wrap{width:min(1210px,calc(100% - 72px));margin-inline:auto}
+@media(max-width:570px){
+ section.xq-weekly{padding-block:84px}
+ section.xq-weekly>.xq2-wrap{width:calc(100% - 36px)}
+}
+/* O cabeçalho antigo tem muitos links. Mostrar menu retrátil em telas
+   intermediárias evita texto cortado depois dos novos atalhos. */
+@media(min-width:851px) and (max-width:1680px){
+ header:has(#site-nav){justify-content:space-between}
+ header .menu-toggle{display:inline-flex;margin-left:auto}
+ header #site-nav{
+   position:absolute;top:calc(100% + 8px);right:15px;left:auto;z-index:1001;
+   display:flex;flex-direction:column;align-items:stretch;gap:0;
+   width:min(460px,calc(100vw - 30px));padding:9px;
+   max-height:calc(100dvh - 110px);overflow-y:auto;
+   border:1px solid rgba(255,255,255,.15);border-radius:16px;
+   background:rgba(12,11,15,.97);box-shadow:0 22px 60px rgba(0,0,0,.45);
+   visibility:hidden;opacity:0;transform:translateY(-7px) scale(.985);
+   transform-origin:top right;pointer-events:none;
+   transition:opacity .2s,transform .2s,visibility .2s
+ }
+ header #site-nav.is-open{visibility:visible;opacity:1;transform:none;pointer-events:auto}
+ header #site-nav a{padding:13px 14px;border-radius:8px;color:#e9e5dd;font-size:10px;letter-spacing:.06em}
+ header #site-nav a::after{display:none}
+ header #site-nav a:hover{background:#ffffff17;color:#fff}
+}
+@media(max-width:850px){
+ header #site-nav{max-height:calc(100dvh - 95px);overflow-y:auto;overscroll-behavior:contain}
+}
