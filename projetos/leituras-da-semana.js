@@ -277,5 +277,12 @@ window.XQ_MANGAS_SEMANA = Object.freeze({
       "aviso": "Desafios de comunicação e preconceito",
       "link": "https://www.google.com/search?q=A+Sign+of+Affection+manga+Kodansha"
     }
-  ]
+  ],
+  "edicoes": {
+    "2026-10-12": [
+      "semana-01-1",
+      "semana-01-2",
+      "semana-01-3"
+    ]
+  }
 });
