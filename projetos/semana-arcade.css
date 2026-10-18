@@ -1,0 +1,193 @@
+/* ================================================================
+   XQRENS / Semana Viva
+   Mangás: 3 recomendações toda segunda • JJS: 3 escolhas por semana
+   Isolado para não interferir no CSS do portfólio principal.
+   ================================================================ */
+.xq-weekly{--week-serif:"Instrument Serif",Georgia,serif;--week-mono:"DM Mono",monospace;
+  font-family:"DM Sans",sans-serif;position:relative;isolation:isolate;overflow:hidden;color:var(--text);
+  padding:clamp(92px,9vw,148px) 0;border-top:1px solid var(--ink-line,rgba(45,42,37,.16))}
+.xq-weekly *, .xq-weekly *::before,.xq-weekly *::after{box-sizing:border-box}
+.xq-weekly [hidden]{display:none!important}
+.xq-weekly button{cursor:pointer;font-family:inherit}
+.xq-weekly a{text-underline-offset:5px;color:inherit}
+.xq-weekly a:focus-visible,.xq-weekly button:focus-visible,.xq-weekly summary:focus-visible{
+  outline:2px solid #a8ae90;outline-offset:4px}
+.xq-weekly-books{background:var(--bg)}
+.xq-weekly-topline{display:flex;justify-content:space-between;align-items:center;gap:15px;
+  padding-top:15px;border-top:1px solid var(--ink-line,rgba(45,42,37,.16));
+  color:var(--muted);font:9px/1.75 var(--week-mono);letter-spacing:.14em;text-transform:uppercase}
+.xq-weekly-head{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(220px,.48fr);
+  align-items:end;gap:32px;margin:clamp(34px,5.2vw,70px) 0 22px}
+.xq-weekly-eyebrow{font:10px/1.6 var(--week-mono);color:var(--muted);letter-spacing:.15em;text-transform:uppercase}
+.xq-weekly-head h2{font:400 clamp(47px,6.7vw,92px)/.96 var(--week-serif);letter-spacing:-.055em;
+  margin:15px 0 0;max-width:950px}
+.xq-weekly-head h2 em{font-weight:400}
+.xq-weekly-week{display:flex;flex-direction:column;gap:9px;min-width:0;padding:22px 0 0;
+  border-top:1px solid var(--ink-line,rgba(45,42,37,.2))}
+.xq-weekly-week span{font:9px var(--week-mono);letter-spacing:.13em;color:var(--muted)}
+.xq-weekly-week strong{font:400 30px/1.1 var(--week-serif);letter-spacing:-.015em}
+.xq-weekly-week small{font:9px/1.65 var(--week-mono);color:var(--muted);letter-spacing:.06em}
+.xq-weekly-lead{max-width:720px;margin:0 0 clamp(28px,3.5vw,52px);font:14px/1.95 "DM Sans",sans-serif;
+  color:var(--muted)}
+.xq-weekly-lead strong{color:var(--text)}
+/* 3 cards: typography-driven, no borrowed cover art */
+.xq-weekly-manga-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.xq-weekly-manga-card{min-width:0;min-height:500px;padding:clamp(20px,2.5vw,32px);
+  display:flex;flex-direction:column;position:relative;overflow:hidden;
+  border:1px solid var(--ink-line,rgba(45,42,37,.19));background:var(--ink-sheet,var(--card));
+  transition:background .3s,border-color .3s,transform .45s cubic-bezier(.16,1,.3,1)}
+.xq-weekly-manga-card:hover{transform:translateY(-5px);border-color:var(--text)}
+.xq-weekly-manga-card:nth-child(2){background:var(--card)}
+.xq-weekly-manga-card:nth-child(3){background:var(--card-hover)}
+.xq-weekly-num{font:10px var(--week-mono);color:var(--muted);letter-spacing:.16em;position:relative;z-index:1}
+.xq-weekly-illustration{height:165px;flex:0 0 165px;display:grid;place-items:center;
+  font:400 clamp(80px,12vw,158px)/1 var(--week-serif);color:var(--text);opacity:.095;
+  position:relative;letter-spacing:-.06em;user-select:none}
+.xq-weekly-manga-card:nth-child(2) .xq-weekly-illustration{font-style:italic;transform:rotate(-12deg)}
+.xq-weekly-manga-card:nth-child(3) .xq-weekly-illustration{transform:rotate(13deg)}
+.xq-weekly-tag{font:9px/1.6 var(--week-mono);color:var(--muted);letter-spacing:.13em;text-transform:uppercase}
+.xq-weekly-manga-card h3{font:400 clamp(30px,3.2vw,45px)/1.04 var(--week-serif);
+  letter-spacing:-.045em;margin:14px 0;overflow-wrap:anywhere}
+.xq-weekly-manga-card p{font:12px/1.8 "DM Sans",sans-serif;color:var(--muted);margin:0 0 18px}
+.xq-weekly-author{font:10px/1.55 var(--week-mono);color:var(--muted);margin:0 0 14px}
+.xq-weekly-alert{display:block;width:fit-content;max-width:100%;padding:9px 11px;
+  border:1px solid var(--ink-line);font:10px/1.55 "DM Sans",sans-serif;color:var(--muted);margin:0 0 17px}
+.xq-weekly-card-bottom{margin-top:auto;display:flex;flex-direction:column;gap:11px;padding-top:18px;
+  border-top:1px solid var(--ink-line,rgba(45,42,37,.16))}
+.xq-weekly-card-bottom a{font:10px/1.65 var(--week-mono);letter-spacing:.03em;overflow-wrap:anywhere;
+  text-decoration:underline;text-decoration-color:var(--muted)}
+.xq-weekly-read{width:fit-content;background:transparent;border:1px solid var(--ink-line);
+  padding:11px 14px;color:var(--text);font:10px var(--week-mono);letter-spacing:.07em;
+  transition:background .2s,color .2s}
+.xq-weekly-read:hover,.xq-weekly-read[aria-pressed="true"]{background:var(--text);color:var(--bg)}
+.xq-weekly-foot{margin:26px 0 0;display:flex;flex-wrap:wrap;justify-content:space-between;
+  align-items:center;gap:22px;padding:19px 0;border-top:1px solid var(--ink-line);
+  border-bottom:1px solid var(--ink-line)}
+.xq-weekly-foot>div:first-child{display:flex;flex-direction:column;gap:6px}
+.xq-weekly-tiny{font:9px var(--week-mono);color:var(--muted);letter-spacing:.15em}
+#xq-weekly-readcount{font:400 22px var(--week-serif)}
+.xq-weekly-history summary,.xq-jjs-roster summary{list-style:none;cursor:pointer;
+  display:flex;align-items:center;gap:18px;color:var(--text);font:10px/1.65 var(--week-mono);
+  letter-spacing:.07em;padding:9px 0}
+.xq-weekly-history summary::-webkit-details-marker,.xq-jjs-roster summary::-webkit-details-marker{display:none}
+.xq-weekly-history[open] summary span,.xq-jjs-roster[open] summary span{transform:rotate(45deg)}
+.xq-weekly-history>div{padding-top:15px;max-width:470px}
+.xq-weekly-history>div p{font:11px/1.75 "DM Sans",sans-serif;color:var(--muted)}
+.xq-weekly-history>div a{font:11px/1.75 "DM Sans",sans-serif}
+.xq-weekly-history-list{display:grid;gap:8px}
+.xq-weekly-history-row{display:flex;flex-wrap:wrap;gap:11px;align-items:center;justify-content:space-between;
+  padding:9px 0;border-bottom:1px solid var(--ink-line);font:11px/1.6 "DM Sans",sans-serif}
+.xq-weekly-history-row span{font:9px var(--week-mono);color:var(--muted)}
+.xq-weekly-disclaimer{font:11px/1.8 "DM Sans",sans-serif;color:var(--muted);max-width:980px;margin:20px 0 0}
+/* ================================================================
+   JJS / editorial red and carbon roulette
+   ================================================================ */
+.xq-jjs-section{--jjs-bg:#141519;--jjs-panel:#1b1c21;--jjs-cream:#f3ebdc;
+  --jjs-red:#df6d5a;--jjs-soft:#aea8a1;
+  color:var(--jjs-cream);background:var(--jjs-bg)}
+.xq-jjs-section::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:-1;
+  background:radial-gradient(circle at 24% 42%,rgba(175,76,72,.075),transparent 38%),
+    repeating-linear-gradient(0deg,transparent,transparent 79px,rgba(255,255,255,.015) 80px)}
+.xq-jjs-section .xq-weekly-topline{color:#bdb3a9;border-color:#ffffff36}
+.xq-jjs-section .xq-weekly-eyebrow{color:#d1a297}
+.xq-jjs-section .xq-weekly-week{border-color:#ffffff33}
+.xq-jjs-section .xq-weekly-week span,.xq-jjs-section .xq-weekly-week small{color:#aca89e}
+.xq-jjs-section .xq-weekly-head h2{color:var(--jjs-cream)}
+.xq-jjs-section .xq-weekly-lead{color:#c7bfb5}
+.xq-jjs-section .xq-weekly-lead strong{color:#f8ece0}
+.xq-jjs-layout{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(310px,.88fr);gap:18px}
+.xq-jjs-visual{min-width:0;border:1px solid #ffffff28;background:#19191e;display:flex;
+  flex-direction:column;justify-content:center;padding:clamp(14px,2.1vw,28px)}
+.xq-jjs-wheel-frame{width:min(100%,610px);aspect-ratio:1;position:relative;margin:auto;
+  padding:18px;display:grid;place-items:center}
+#xq-jjs-wheel{width:100%;height:100%;aspect-ratio:1;display:block;max-width:100%;border-radius:50%;
+  filter:drop-shadow(0 13px 23px rgba(0,0,0,.27))}
+.xq-jjs-pointer{position:absolute;z-index:5;top:5px;left:50%;transform:translateX(-50%);
+  width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;
+  border-top:34px solid var(--jjs-cream);filter:drop-shadow(0 2px 1px #0009)}
+.xq-jjs-wheel-center{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:22%;aspect-ratio:1;
+  border:4px solid #e8e0cf;box-shadow:0 9px 33px #0008,inset 0 0 0 2px #ffffff16;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;flex-direction:column;background:#17181d;
+  pointer-events:none;color:#eee7db}
+.xq-jjs-wheel-center span{font:400 clamp(27px,5vw,62px)/.9 var(--week-serif)}
+.xq-jjs-wheel-center small{font:9px/1 var(--week-mono);color:#d3a093;letter-spacing:.1em;margin-top:5px}
+.xq-jjs-visual-bottom{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;
+  border-top:1px solid #ffffff24;padding-top:18px;margin-top:6px;
+  color:#b1aaa2;font:9px/1.65 var(--week-mono);letter-spacing:.07em}
+.xq-jjs-visual-bottom i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#d4a190;margin-right:6px}
+.xq-jjs-console{border:1px solid #ffffff2d;background:#202126;padding:clamp(23px,3.1vw,45px);
+  display:flex;flex-direction:column;min-width:0}
+.xq-jjs-console-top{display:flex;justify-content:space-between;gap:10px;font:9px/1.6 var(--week-mono);
+  color:#baada1;letter-spacing:.1em;padding-bottom:17px;border-bottom:1px solid #ffffff29}
+.xq-jjs-console h3{font:400 clamp(39px,4.2vw,66px)/.98 var(--week-serif);
+  letter-spacing:-.045em;margin:25px 0 12px;color:var(--jjs-cream)}
+.xq-jjs-console-desc{max-width:410px;color:#c2b9ae;font:12px/1.85 "DM Sans",sans-serif;margin:0 0 25px}
+.xq-jjs-picked-list{margin:0 0 23px;padding:0;list-style:none;display:grid;gap:8px}
+.xq-jjs-picked-list li{min-height:85px;border:1px solid #ffffff24;
+  display:flex;align-items:center;gap:17px;padding:12px 19px;background:#19191e;
+  transition:background .3s,border-color .3s}
+.xq-jjs-picked-list li>span{font:35px/.95 var(--week-serif);color:#77777a;min-width:45px}
+.xq-jjs-picked-list li strong{display:block;font:400 clamp(23px,2.8vw,34px)/1.06 var(--week-serif)}
+.xq-jjs-picked-list li small{display:block;font:9px/1.7 var(--week-mono);color:#99938c;margin-top:8px}
+.xq-jjs-picked-list li.is-picked{background:#28262a;border-color:#a27569}
+.xq-jjs-picked-list li.is-picked>span{color:var(--jjs-red)}
+.xq-jjs-picked-list li.is-picked small{color:#d4afa0}
+.xq-jjs-spin{border:1px solid #df8070;min-height:64px;width:100%;padding:15px 22px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  background:var(--jjs-red);color:#231d1c;letter-spacing:.11em;
+  font:600 12px/1.4 var(--week-mono);transition:background .25s,color .25s,transform .25s}
+.xq-jjs-spin:hover:not(:disabled){background:#f09c87;transform:translateY(-2px)}
+.xq-jjs-spin:disabled{cursor:not-allowed;opacity:.55;transform:none}
+.xq-jjs-spin>span{font-size:19px}
+.xq-jjs-live{min-height:40px;font:10px/1.8 var(--week-mono);color:#e6b3a8;letter-spacing:.035em;
+  padding:13px 0 3px;margin:0}
+.xq-jjs-rules{display:flex;flex-wrap:wrap;gap:7px;padding-top:15px;border-top:1px solid #ffffff28;margin-top:auto}
+.xq-jjs-rules span{font:9px/1.65 var(--week-mono);color:#c0b2a5;padding:6px 8px;border:1px solid #ffffff24}
+.xq-jjs-roster{border-top:1px solid #ffffff29;border-bottom:1px solid #ffffff29;margin-top:28px}
+.xq-jjs-roster summary{color:#ede4d6;justify-content:space-between;padding:19px 0}
+.xq-jjs-roster-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;padding:8px 0 22px}
+.xq-jjs-roster-item{padding:16px;border:1px solid #ffffff25;background:#1d1e23}
+.xq-jjs-roster-item strong{font:400 23px/1.1 var(--week-serif);display:block}
+.xq-jjs-roster-item small{font:10px/1.5 "DM Sans",sans-serif;color:#b9b0a6;margin-top:6px;display:block}
+.xq-jjs-roster-item b{font:9px var(--week-mono);letter-spacing:.06em;color:#d3a398}
+.xq-jjs-footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:15px;margin-top:21px;
+  font:9px/1.85 var(--week-mono);letter-spacing:.05em;color:#c3b8ad}
+.xq-jjs-footer span{max-width:780px}
+.xq-jjs-footer a{color:#f4d7cf;text-decoration:underline}
+@media(max-width:1050px){
+ .xq-weekly-head{grid-template-columns:1fr}
+ .xq-weekly-week{max-width:390px}
+ .xq-jjs-layout{grid-template-columns:1fr}
+ .xq-jjs-visual{max-width:100%}
+ .xq-jjs-wheel-frame{max-width:530px}
+ .xq-jjs-roster-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:800px){
+ .xq-weekly-manga-grid{grid-template-columns:1fr 1fr}
+ .xq-weekly-manga-card{min-height:440px}
+ .xq-jjs-roster-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:570px){
+ .xq-weekly{padding:84px 0}
+ .xq-weekly .xq2-wrap{width:min(100% - 36px,650px)}
+ .xq-weekly-topline{flex-direction:column;align-items:flex-start;gap:4px}
+ .xq-weekly-head{gap:16px;margin:32px 0 20px}
+ .xq-weekly-head h2{font-size:clamp(44px,12vw,61px)}
+ .xq-weekly-manga-grid{grid-template-columns:1fr;gap:11px}
+ .xq-weekly-manga-card{min-height:0;padding:23px}
+ .xq-weekly-illustration{height:120px;flex-basis:120px;font-size:102px}
+ .xq-weekly-manga-card h3{font-size:35px}
+ .xq-weekly-foot{align-items:flex-start;flex-direction:column}
+ .xq-jjs-visual{padding:9px}
+ .xq-jjs-wheel-frame{padding:13px}
+ .xq-jjs-pointer{top:2px;border-left-width:10px;border-right-width:10px;border-top-width:24px}
+ .xq-jjs-wheel-center{border-width:3px}
+ .xq-jjs-console{padding:25px 18px}
+ .xq-jjs-console h3{font-size:44px}
+ .xq-jjs-roster-grid{grid-template-columns:1fr}
+ .xq-jjs-picked-list li{min-height:80px}
+ .xq-jjs-footer{flex-direction:column}
+}
+@media(prefers-reduced-motion:reduce){
+ .xq-weekly .xq-weekly-manga-card,.xq-weekly .xq-jjs-spin,.xq-weekly .xq-jjs-picked-list li{transition:none!important;transform:none!important}
+}
