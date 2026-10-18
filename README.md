@@ -64,6 +64,43 @@ Esses recursos **complementam** o portfólio que já existia, com as seções So
 
 </details>
 
+## ✿ SEMANA VIVA · Mangás + JJS
+
+Duas novas experiências no [portfólio original](https://portifolio-projetos-git-main-pedro-luiz.vercel.app/), feitas para mudar de **segunda a domingo, no horário de Brasília**.
+
+### 📖 Três mangás para a semana
+
+[**→ Abrir recomendações desta semana**](https://portifolio-projetos-git-main-pedro-luiz.vercel.app/#mangas-da-semana)
+
+- **Três obras diferentes por semana**, com tema, autoria, resumo curto e aviso de conteúdo sensível.
+- O assunto é amplo: saúde mental, solidão, empatia, luto, identidade, amizade e autoconhecimento.
+- Dá para marcar como **lido**, acompanhar progresso e consultar as últimas semanas.
+- **30 obras iniciais** distribuídas em dez trincas. A seleção gira automaticamente toda segunda, mesmo que a atualização editorial falhe.
+- Uma rotina programada **tenta pesquisar e publicar mais três mangás inéditos toda semana**. Cada edição pode ser definida especificamente para a segunda seguinte, sem reescrever as anteriores.
+- Links apontam para páginas de editoras ou buscas por edições legais, **não para cópias piratas**. Nem todas as obras oferecem leitura completa gratuita.
+- O conteúdo é literatura e reflexão, não tratamento de saúde mental. Algumas obras têm temas difíceis e classificação adulta; consulte o aviso de cada card.
+
+### 🎰 Roleta JJS: exatamente três bonecos
+
+[**→ Abrir a roleta de Jujutsu Shenanigans**](https://portifolio-projetos-git-main-pedro-luiz.vercel.app/#roleta-jjs)
+
+- Um disco interativo com **21 personagens disponíveis ao público**, usando os nomes do menu do jogo e aliases do anime.
+- O jogo **sorteia três nomes diferentes, sem reposição**. Cada giro revela uma das escolhas.
+- **Não existe botão de reroll**. Os três personagens continuam iguais até a próxima semana, inclusive após atualizar a página.
+- A roleta se renova toda segunda-feira às 00h, **horário de Brasília**.
+- O algoritmo usa a semana como semente. O trio é estável durante cada semana, inclusive entre dispositivos. A lista de personagens exclui o **Register (Early Access)**, Mahoraga como invocação e bonecos de administradores ou eventos.
+- Fonte do elenco: [Jujutsu Shenanigans Wiki · Characters](https://jujutsushenaniganswiki.com/wiki/characters/) e [notas da atualização V1.83](https://jjs-wiki.com/wiki/update-log/). A disponibilidade pode mudar em atualizações futuras.
+
+### Arquivos da funcionalidade
+
+| Arquivo | Função |
+| --- | --- |
+| [**leituras-da-semana.js**](./projetos/leituras-da-semana.js) | Catálogo, avisos, links e edições específicas |
+| [**semana-arcade.js**](./projetos/semana-arcade.js) | Regras de data, cards semanais, canvas da roleta e sorteios |
+| [**semana-arcade.css**](./projetos/semana-arcade.css) | Visual editorial responsivo, animações e menu adaptado |
+
+> As marcações de leitura e progresso de giros são guardados no navegador. Não há conta, rastreamento próprio ou integração com a sessão Roblox.
+
 ## 🧩 Projetos em destaque
 
 <table>
@@ -128,6 +165,9 @@ Portifolio/
 │   ├── motion.js                 # Animações editoriais
 │   ├── arquivo-vivo.css          # Estilos da edição 02
 │   ├── arquivo-vivo.js           # Interações da edição 02
+│   ├── leituras-da-semana.js     # Catálogo de mangás e edições semanais
+│   ├── semana-arcade.css        # Visual dos mangás e roleta
+│   ├── semana-arcade.js         # Semana brasileira e sorteios fixos
 │   ├── Img/                      # Imagens já usadas no portfólio
 │   └── projeto_*/                # Trabalhos e exercícios antigos
 │
@@ -192,6 +232,9 @@ Sou estudante e recebo bem observações específicas: bugs, sugestões de acess
 
 - [x] Índice e modo leitura em capítulos
 - [x] Busca dos 19 projetos, filtros de tema e contador de resultados
+- [x] Mangás semanais com catálogo de reserva e histórico
+- [x] Roleta JJS com três picks fixos, sem repetição e sem reroll
+- [x] Navegação até os capítulos novos e interface responsiva
 - [x] Mangateca com busca, filtros e lista de leitura local
 - [x] Cartas para Julya, Tofu World e Sala de Música
 - [x] Spotify Embed por link e player de arquivos locais sem upload
