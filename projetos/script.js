@@ -919,7 +919,9 @@
             ["17", "Laboratório SENAI", "senai-lab"],
             ["18", "Mangateca 2.0", "mangateca"],
             ["19", "Segredos", "segredos"],
-            ["20", "Fragmentos", "fragmentos"]
+            ["20", "Fragmentos", "fragmentos"],
+            ["21", "Mangás da semana", "mangas-da-semana"],
+            ["22", "Roleta JJS", "roleta-jjs"]
         ];
         const modal = select("#ink-command-backdrop");
         const commandSearch = select("#ink-command-search");
