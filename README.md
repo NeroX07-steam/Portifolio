@@ -10,7 +10,7 @@ Uma vitrine dos projetos que estou criando enquanto aprendo desenvolvimento web.
 
 [![Ver portfólio](https://img.shields.io/badge/VER_PORTFÓLIO-BEB7FF?style=for-the-badge&logo=vercel&logoColor=10111a)](https://portifolio-projetos-git-main-pedro-luiz.vercel.app/)
 [![Mente em Flor](https://img.shields.io/badge/MENTE_EM_FLOR-92BDA6?style=for-the-badge&logoColor=0d1d17)](https://xqrens-portifolio.vercel.app/)
-[![Exercícios](https://img.shields.io/badge/19_EXERCÍCIOS-202938?style=for-the-badge&logoColor=white)](./docs/PROJETOS.md)
+[![Exercícios](https://img.shields.io/badge/24_PROJETOS-202938?style=for-the-badge&logoColor=white)](./docs/PROJETOS.md)
 
 ![HTML5](https://img.shields.io/badge/HTML5-em%20estudo-E34F26?style=flat-square&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-em%20estudo-1572B6?style=flat-square&logo=css3&logoColor=white)
@@ -35,12 +35,27 @@ A ideia é simples: mostrar **quem sou, meus projetos, o Mente em Flor e como en
 | Seção | Conteúdo |
 | --- | --- |
 | **Sobre mim** | Minha apresentação, estudos no SENAI e tecnologias que estou aprendendo |
-| **Projetos** | Dois destaques e os **19 exercícios reais** guardados neste repositório |
+| **Projetos** | **24 projetos:** 19 atividades de estudo e cinco miniapps interativos com JavaScript |
+| **Referências visuais** | Seis imagens do meu arquivo pessoal: mangá, arte monocromática e memes |
 | **Julya ♡** | Uma seção pessoal dedicada à minha namorada |
 | **Mente em Flor** | Apresentação e link para meu site educativo sobre saúde mental |
 | **Contato** | GitHub, Instagram e canal para sugestões |
 
-Os exercícios têm **busca pelo nome, filtros HTML/CSS/Páginas e uma opção para expandir a lista completa**. Não é necessário instalar bibliotecas nem criar uma conta.
+Os projetos têm **busca pelo nome, filtros HTML/CSS/Páginas/JavaScript e uma opção para expandir a lista completa**. Não é necessário instalar bibliotecas nem criar uma conta.
+
+## ✳ Cinco miniapps JavaScript novos
+
+Experimentos separados, feitos com **HTML, CSS e JavaScript puro**, sem bibliotecas, cadastros ou dependências de instalação.
+
+| Projeto | O que faz | Testar |
+| --- | --- | --- |
+| **Paleta Lab** | Gera cinco cores, trava tons e copia códigos HEX | [Abrir](./projetos/lab-paletas/) |
+| **Focus Room** | Timer de foco e pausas com controles funcionais | [Abrir](./projetos/lab-foco/) |
+| **Quiz do Dev** | Perguntas sobre HTML, CSS e JS com respostas explicadas | [Abrir](./projetos/lab-quiz/) |
+| **Memory.exe** | Jogo da memória de seis pares e contador de tentativas | [Abrir](./projetos/lab-memoria/) |
+| **Notas no navegador** | Guarda até 30 notas usando localStorage | [Abrir](./projetos/lab-notas/) |
+
+O site também ganhou uma **galeria com seis imagens enviadas por mim**, animações de entrada ao rolar, movimento sutil na capa, uma barra de progresso de leitura e efeitos nos cartões. Tudo respeita a opção do dispositivo de reduzir movimento.
 
 ## 🚀 Projetos em destaque
 
@@ -117,7 +132,7 @@ Portifolio/
 Você pode abrir os arquivos pelo **Live Server** do VS Code ou iniciar um servidor local usando Python 3:
 
 ```bash
-git clone https://github.com/NeroX07-steam/Portifolio.git
+git clone https://github.com/xqrens/Portifolio.git
 cd Portifolio
 python -m http.server 8000
 ```
@@ -131,19 +146,19 @@ Os dois projetos usam caminhos relativos, então execute o servidor a partir da 
 
 ## 🎨 Visual e referências
 
-Escolhi uma estética escura e minimalista, inspirada em interfaces de editores de código e na atmosfera de obras como *Serial Experiments Lain* e *Neon Genesis Evangelion*. As imagens de anime utilizadas já estavam no diretório `projetos/Img/`.
+Escolhi uma estética escura e minimalista, inspirada em interfaces de editores de código e na atmosfera de obras como *Serial Experiments Lain* e *Neon Genesis Evangelion*. As imagens de anime utilizadas já estavam no diretório `projetos/Img/`. A nova galeria usa seis fotos fornecidas pelo autor e reunidas numa folha WebP compacta em `projetos/Img/xqrens-moods.webp`.
 
 São **referências visuais de terceiros**, não artes criadas por mim nem material sob uma licença declarada neste repositório. Direitos das obras e imagens pertencem aos respectivos autores e titulares.
 
 ## 💬 Feedback
 
-Se encontrar um erro de responsividade, um link quebrado ou tiver uma sugestão de melhoria, pode [abrir uma issue](https://github.com/NeroX07-steam/Portifolio/issues/new/choose). Há modelos para bugs e ideias de melhoria.
+Se encontrar um erro de responsividade, um link quebrado ou tiver uma sugestão de melhoria, pode [abrir uma issue](https://github.com/xqrens/Portifolio/issues/new/choose). Há modelos para bugs e ideias de melhoria.
 
 Consulte o [guia de contribuições](./CONTRIBUTING.md).
 
 ## 📫 Contatos
 
-- **GitHub:** [@NeroX07-steam](https://github.com/NeroX07-steam)
+- **GitHub:** [@xqrens](https://github.com/xqrens)
 - **Instagram:** [@lxqrens](https://www.instagram.com/lxqrens/)
 - **Portfólio:** [portifolio-projetos-git-main-pedro-luiz.vercel.app](https://portifolio-projetos-git-main-pedro-luiz.vercel.app/)
 - **Mente em Flor:** [xqrens-portifolio.vercel.app](https://xqrens-portifolio.vercel.app/)
