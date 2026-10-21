@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080b10"><meta name="description" content="Um bloco de notas simples. O texto é salvo apenas neste navegador, sem servidor ou cadastro.">
+<title>Notas no navegador | XQRENS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../labs/shared.css?v=1">
+<script src="../labs/shared.js?v=1" defer></script></head>
+<body data-app="notes">
+<header class="lab-header"><div class="shell"><a class="lab-brand" href="../">LUIZ<b>.</b> / LABS</a><nav class="lab-nav" aria-label="Navegação"><a href="../#projetos">← Projetos</a><a href="https://github.com/xqrens/Portifolio/tree/main/projetos/lab-notas" target="_blank" rel="noopener noreferrer">Ver código ↗</a></nav></div></header>
+<main class="shell"><section class="lab-hero reveal"><span class="overline">EXPERIMENTO / XQRENS LABS / 2026</span><h1>Ideias que ficam.</h1><p>Um bloco de notas simples. O texto é salvo apenas neste navegador, sem servidor ou cadastro.</p><div class="lab-tags"><span>LOCALSTORAGE</span><span>FORMULÁRIOS</span><span>DOM</span></div></section>
+<section class="lab-window reveal" aria-label="Aplicativo Notas no navegador"><div class="lab-windowbar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span>lab-notas/index.html</span><span>STATUS: ONLINE</span></div><div class="lab-content"><form id="noteForm" class="notes-form"><label class="overline" for="noteText">NOVA NOTA</label><textarea class="field" id="noteText" maxlength="240" placeholder="Uma ideia, um lembrete, um projeto…"></textarea><div class="row"><button class="btn primary" type="submit">+ Guardar nota</button><span class="help">Máximo 240 caracteres por nota · 30 notas</span></div></form><div class="row" style="justify-content:space-between;margin-bottom:15px"><span class="overline">CADERNO LOCAL</span><span class="help" id="noteCount">0 notas</span></div><div id="noteList" class="notes-list"></div><p class="status" id="status" role="status" aria-live="polite"></p></div></section></main>
+<footer class="lab-footer"><div class="shell"><span>© 2026 · LUIZ EDUARDO · HTML/CSS/JS</span><a href="../#projetos">Voltar para o portfólio ↗</a></div></footer>
+</body></html>
