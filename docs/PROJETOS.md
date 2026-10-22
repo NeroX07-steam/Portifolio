@@ -10,7 +10,7 @@ Este arquivo reúne meus **19 exercícios de HTML e CSS** e os dois projetos que
 
 [Ver código do portfólio](../projetos/index.html)
 
-O site principal, com **Sobre mim, Trabalhos, Julya, Mente em Flor e Contato**. Refiz a interface para destacar os repositórios, o aprendizado no SENAI e referências visuais de anime sem esconder o conteúdo em efeitos.
+O site principal, com **Sobre mim, Referências, Trabalhos, Entrelinhas, Mente em Flor e Contato**. Refiz a interface para destacar os repositórios, o aprendizado no SENAI e referências visuais de anime sem esconder o conteúdo em efeitos.
 
 **O que pratiquei:** HTML semântico, organização de CSS, responsividade, navegação acessível, busca e filtros de trabalhos com JavaScript.
 

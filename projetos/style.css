@@ -236,26 +236,28 @@ p{margin-top:0}
   font:500 10px var(--mono);letter-spacing:.05em}
 .mood-footer{display:flex;justify-content:space-between;gap:12px;padding:0 0 17px;
   color:var(--muted);font:500 10px var(--mono);text-transform:uppercase}
-/* Julya */
-.julya-section{background:radial-gradient(ellipse at 78% 35%,rgba(197,172,228,.065),transparent 52%),var(--bg)}
-.julya-layout{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:clamp(45px,7vw,105px)}
-.julya-copy h2{font:680 clamp(47px,6.5vw,87px)/1.03 var(--display);letter-spacing:-.078em;margin:19px 0 24px}
-.julya-copy h2 span{color:#d6b2d6}
-.julya-copy p{color:var(--soft);max-width:570px;font-size:15px;line-height:1.95}
-.julya-memory{margin-top:29px;padding:18px 21px;border:1px solid #b899bd47;border-left:3px solid #ceafd9;
-  border-radius:0 9px 9px 0;background:#2118257a;color:#e3d4e0;font:400 15px/1.8 var(--sans)}
-.julya-memory strong{color:#fff}
-.julya-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
-.julya-tags span{font:500 10px var(--mono);padding:8px 11px;border:1px solid #725e8159;border-radius:8px;color:#d9bfe4}
-.julya-art{position:relative;border-radius:16px;border:1px solid #725b7b76;
-  background:linear-gradient(145deg,#e8dce6,#b8adc9);padding:28px;min-height:400px;overflow:hidden}
-.julya-art::before{content:"♡";position:absolute;right:-30px;top:-90px;color:#fff9;opacity:.4;
-  font:400 350px Georgia,serif;pointer-events:none}
-.julya-portrait{margin:auto;position:relative;width:min(100%,430px);aspect-ratio:1;border-radius:13px;overflow:hidden;
-  background:#fff;box-shadow:0 17px 75px #180c2a42;transform:rotate(-2deg)}
-.julya-portrait img{width:100%;height:100%;object-fit:cover}
-.julya-corner-label{position:absolute;left:22px;bottom:20px;border:1px solid #bdadc4;background:#f5eef5;
-  color:#3b2d3f;padding:9px 13px;border-radius:7px;font:600 10px var(--mono)}
+/* ENTRELINHAS / uma página pessoal sem depender de imagem romântica */
+.inner-weather-section{background:radial-gradient(ellipse at 84% 26%,rgba(155,151,201,.10),transparent 47%),var(--bg)}
+.inner-weather-layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);align-items:center;gap:clamp(38px,6vw,90px)}
+.inner-weather-copy h2{font:680 clamp(48px,6.5vw,86px)/1.035 var(--display);letter-spacing:-.076em;margin:20px 0 28px;overflow-wrap:anywhere}
+.inner-weather-copy h2 span{color:#c2b8e5}
+.inner-weather-copy>p{color:var(--soft);max-width:590px;font-size:15px;line-height:1.95}
+.inner-weather-copy strong{color:var(--text)}
+.inner-weather-note{margin-top:30px;padding:22px 25px;border:1px solid #9695c249;border-left:3px solid #b5acd9;border-radius:0 10px 10px 0;background:#1d1d2b9c}
+.inner-weather-note>span{display:block;color:#bfb8db;font:500 10px/1.7 var(--mono);letter-spacing:.1em;margin-bottom:12px}
+.inner-weather-note strong{display:block;color:#f0eafc;font:550 clamp(20px,2.3vw,28px)/1.24 var(--display);letter-spacing:-.03em}
+.inner-weather-note p{color:#bdb9cf;font:400 13px/1.8 var(--sans);margin:12px 0 0}
+.inner-weather-tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:21px}
+.inner-weather-tags span{font:500 10px var(--mono);padding:9px 11px;border:1px solid #8f87bb60;border-radius:8px;color:#c9c3e9}
+.inner-weather-art{position:relative;min-width:0;padding:19px 21px 32px;border-radius:15px;border:1px solid #77738976;background:linear-gradient(155deg,#22202d,#0e1017);overflow:hidden}
+.inner-weather-art::after{content:"✳";position:absolute;right:-38px;top:-110px;color:#aca5d1;font:400 380px Georgia,serif;opacity:.08;pointer-events:none}
+.inner-weather-portrait{position:relative;width:min(100%,430px);margin:0 auto;aspect-ratio:4/5.1;border:1px solid #ffffff24;border-radius:10px;overflow:hidden;background:#08090e;box-shadow:0 15px 55px #0006}
+.inner-weather-portrait img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 40%;filter:grayscale(1) contrast(1.08)}
+.inner-weather-portrait::after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,#07090ede);pointer-events:none}
+.inner-weather-portrait figcaption{position:absolute;z-index:1;left:22px;bottom:23px;display:grid;gap:9px}
+.inner-weather-portrait figcaption span{color:#d0c8df;font:500 10px var(--mono);letter-spacing:.1em}
+.inner-weather-portrait figcaption strong{color:#fff;font:550 24px/1.12 var(--display);max-width:220px}
+.inner-weather-corner-label{position:absolute;bottom:9px;right:22px;color:#a7a0b8;font:500 9px var(--mono);letter-spacing:.13em}
 /* Mental-health project */
 .mente-section{background:#0d1517}
 .mente-wrap{border:1px solid #375b50;border-radius:20px;background:radial-gradient(ellipse at 88% 40%,#29443c88,transparent 46%),#121e20;
@@ -312,7 +314,7 @@ p{margin-top:0}
  .site-nav{gap:13px}.site-nav a{font-size:10px}.hero-grid{gap:39px}
  .hero h1{font-size:clamp(60px,7vw,85px)}
  .visual-image{height:380px}
- .about-layout{gap:42px}.julya-layout{gap:38px}
+ .about-layout{gap:42px}.inner-weather-layout{gap:38px}
 }
 @media(max-width:900px){
  .container{width:min(var(--shell),calc(100% - 40px))}
@@ -337,8 +339,8 @@ p{margin-top:0}
  .feature-grid{grid-template-columns:1fr 1fr}
  .project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
  .mood-image{height:195px}
- .julya-layout{grid-template-columns:1fr}
- .julya-art{max-width:540px;width:100%;margin:0 auto}
+ .inner-weather-layout{grid-template-columns:1fr}
+ .inner-weather-art{max-width:540px;width:100%;margin:0 auto}
  .mente-layout{grid-template-columns:1fr}
  .mente-preview{max-width:550px;width:100%;transform:none}
  .contact-panel{grid-template-columns:1fr;gap:23px}
@@ -377,8 +379,8 @@ p{margin-top:0}
  .mood-image{height:188px}
  .mood-image:last-child{display:none}
  .mood-footer{font-size:9px;line-height:1.6}
- .julya-copy h2{font-size:58px}
- .julya-art{min-height:330px;padding:21px}
+ .inner-weather-copy h2{font-size:clamp(46px,11vw,60px)}
+ .inner-weather-art{padding:18px 18px 29px}
  .mente-wrap{padding:27px 21px}
  .mente-copy h2{font-size:49px}
  .mente-preview-body{min-height:235px;padding:24px}
@@ -393,8 +395,8 @@ p{margin-top:0}
  .section-head h2{font-size:35px}
  .about-facts{grid-template-columns:1fr}
  .mood-image{height:150px}
- .julya-art{min-height:280px}
- .julya-copy h2{font-size:50px}
+ .inner-weather-art{padding:12px 12px 25px}
+ .inner-weather-copy h2{font-size:clamp(42px,11vw,52px)}
 }
 @media(prefers-reduced-motion:reduce){
  html{scroll-behavior:auto}

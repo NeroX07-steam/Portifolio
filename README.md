@@ -37,7 +37,7 @@ A ideia é simples: mostrar **quem sou, meus projetos, o Mente em Flor e como en
 | **Sobre mim** | Minha apresentação, estudos no SENAI e tecnologias que estou aprendendo |
 | **Projetos** | **24 projetos:** 19 atividades de estudo e cinco miniapps interativos com JavaScript |
 | **Referências visuais** | Seis imagens do meu arquivo pessoal: mangá, arte monocromática e memes |
-| **Julya ♡** | Uma seção pessoal dedicada à minha namorada |
+| **Entrelinhas** | Uma seção mais pessoal: “Estavelmente não bem.”, música, leituras e reflexões |
 | **Mente em Flor** | Apresentação e link para meu site educativo sobre saúde mental |
 | **Contato** | GitHub, Instagram e canal para sugestões |
 
